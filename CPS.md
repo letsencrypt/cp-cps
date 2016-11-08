@@ -2,6 +2,26 @@
 
 ## 1.1 Overview
 
+This Certification Practice Statement ("CPS") document outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
+
+ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing Certificates in accordance with the requirements of the ISRG Certificate Policy (CP). It is recommended that readers familiarize themselves with the ISRG CP prior to reading this document.
+
+ISRG PKI services are most commonly, but not necessarily exclusively, provided under the brand/trademark "Let's Encrypt".
+
+The ISRG PKI conforms to the current version of the guidelines adopted by the Certification Authority/Browser Forum (“CAB Forum”) when issuing publicly trusted certificates, including the Baseline Requirements for the Issuance and Management of Publicly Trusted Certificates (“Baseline Requirements”). CAB Forum documents can be found at https://www.cabforum.org. If there is any conflict between this CPS and a relevant CAB Forum requirement or guideline, then the CAB Forum requirement or guideline shall take precedence.
+
+Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at https://letsencrypt.org/repository/.
+
+Per IETF PKIX RFC 3647, this CPS is divided into nine components that cover security controls, practices, and procedures for certification services provided by the ISRG PKI.
+
+The following Certification Authorities are covered under this CPS:
+
+[Table of ISRG Roots]
+
+This work is licensed under the Creative Commons Attribution 4.0 International License. To
+view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
 ## 1.2 Document name and identification
 
 ## 1.3 PKI participants
