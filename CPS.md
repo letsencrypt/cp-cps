@@ -566,14 +566,14 @@ Each Relying Party represents and warrants that, prior to relying on an ISRG cer
 4. Verified both the ISRG certificate and the certificates in the certificate chain using the relevant CRL or OCSP,
 5. Will not use an ISRG certificate if the certificate has expired or been revoked, and
 6. Will take all reasonable steps to minimize the risk associated with relying on a digital signature, including only relying on an ISRG certificate after considering:
-  a. Applicable law and the legal requirements for identification of a party, protection of the confidentiality or privacy of information, and enforceability of the transaction;
-  b. The intended use of the certificate as listed in the certificate or this CPS,
-  c. The data listed in the certificate,
-  d. The economic value of the transaction or communication,
-  e. The potential loss or damage that would be caused by an erroneous identification or a loss of confidentiality or privacy of information in the application, transaction, or communication,
-  f. The Relying Party’s previous course of dealing with the Subscriber,
-  g. The Relying Party’s understanding of trade, including experience with computer-based methods of trade, and 
-  h. Any other indicia of reliability or unreliability pertaining to the Subscriber and/or the application, communication, or transaction.
+  * Applicable law and the legal requirements for identification of a party, protection of the confidentiality or privacy of information, and enforceability of the transaction;
+  * The intended use of the certificate as listed in the certificate or this CPS,
+  * The data listed in the certificate,
+  * The economic value of the transaction or communication,
+  * The potential loss or damage that would be caused by an erroneous identification or a loss of confidentiality or privacy of information in the application, transaction, or communication,
+  * The Relying Party’s previous course of dealing with the Subscriber,
+  * The Relying Party’s understanding of trade, including experience with computer-based methods of trade, and 
+  * Any other indicia of reliability or unreliability pertaining to the Subscriber and/or the application, communication, or transaction.
 
 Any unauthorized reliance on a certificate is at a party’s own risk.
 
