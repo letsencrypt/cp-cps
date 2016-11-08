@@ -442,106 +442,235 @@
 
 ### 9.1.1 Certificate issuance or renewal fees
 
+ISRG does not charge any fees for certificate issuance or renewal.
+
 ### 9.1.2 Certificate access fees
+
+No stipulation.
 
 ### 9.1.3 Revocation or status information access fees
 
+ISRG does not charge any fees for certificate revocation or for checking the validity status of an issued certificate using a CRL or OSCP.
+
 ### 9.1.4 Fees for other services
 
+No stipulation.
+
 ### 9.1.5 Refund policy
+
+ISRG collects no fees, and so provides no refunds.
 
 ## 9.2 Financial responsibility
 
 ### 9.2.1 Insurance coverage
 
+No stipulation.
+
 ### 9.2.2 Other assets
 
+No stipulation.
+
 ### 9.2.3 Insurance or warranty coverage for end-entities
+
+No stipulation.
 
 ## 9.3 Confidentiality of business information
 
 ### 9.3.1 Scope of confidential information
 
+No stipulation.
+
 ### 9.3.2 Information not within the scope of confidential information
 
+No stipulation.
+
 ### 9.3.3 Responsibility to protect confidential information
+
+ISRG employees, agents, and contractors are responsible for protecting confidential information and are bound by ISRG’s policies with respect to the treatment of confidential information or are contractually obligated to do so. Employees receive training on how to handle confidential information.
 
 ## 9.4 Privacy of personal information
 
 ### 9.4.1 Privacy plan
 
+ISRG follows the privacy policy posted on its website (https://letsencrypt.org/repository/) when handling personal information.
+
 ### 9.4.2 Information treated as private
+
+The privacy policy posted on ISRG’s website (https://letsencrypt.org/repository/) identifies information that ISRG treats as private.
 
 ### 9.4.3 Information not deemed private
 
+The privacy policy posted on ISRG’s website (https://letsencrypt.org/repository/) identifies information that ISRG does not treat as private.
+
 ### 9.4.4 Responsibility to protect private information
+
+ISRG employees and contractors are subject to policies or contractual obligations requiring them to comply with ISRG’s privacy policy (https://letsencrypt.org/repository/) or contractual obligations at least as protective of private information as ISRG’s privacy policy.
 
 ### 9.4.5 Notice and consent to use private information
 
+ISRG follows the privacy policy posted on its website (https://letsencrypt.org/repository/) when using personal information.
+
 ### 9.4.6 Disclosure pursuant to judicial or administrative process
+
+ISRG may disclose personal information if compelled to do so by court order or other compulsory legal process, provided that ISRG will oppose such disclosure with all legal and technical tools reasonably available to ISRG.
 
 ### 9.4.7 Other information disclosure circumstances
 
+ISRG may disclose personal information under other circumstances that are described in the privacy policy posted on its website (https://letsencrypt.org/repository/).
+
 ## 9.5 Intellectual property rights
+
+ISRG and/or its business partners own the intellectual property rights in ISRG’s services, including the certificates, trademarks used in providing the services, and this CPS. Certificate and revocation information are the property of ISRG. ISRG grants permission to reproduce and distribute certificates on a non-exclusive and royalty-free basis, provided that they are reproduced and distributed in full. Private Keys and Public Keys remain the property of the Subscribers who rightfully hold them.
+
+Notwithstanding the foregoing, third party software (including open source software) used by ISRG to provide its services is licensed, not owned, by ISRG.
 
 ## 9.6 Representations and warranties
 
 ### 9.6.1 CA representations and warranties
 
+Except as expressly stated in this CPS or in a separate agreement with a Subscriber, ISRG does not make any representations or warranties regarding its products or services. ISRG represents and warrants, to the extent specified in this CPS, that:
+
+1. ISRG complies, in all material aspects, with the CP and this CPS,
+2. ISRG publishes and updates CRLs and OCSP responses on a regular basis,
+3. All certificates issued under this CPS will be verified in accordance with this CPS and meet the minimum requirements found herein and in the CA/B Forum Baseline Requirements, and
+4. ISRG will maintain a repository of public information on its website.
+
 ### 9.6.2 RA representations and warranties
+
+Each RA represents and warrants that:
+
+1. The RA’s certificate issuance and management services conform to the ISRG CP and this CPS,
+2. Information provided by the RA does not contain any false or misleading information,
+3. Translations performed by the RA are an accurate translation of the original information, and
+4. All certificates requested by the RA meet the requirements of this CPS.
+
+ISRG’s agreement with the RA may contain additional representations and warranties.
 
 ### 9.6.3 Subscriber representations and warranties
 
+1. Each Subscriber warrants to ISRG and the public-at-large that Subscriber is the legitimate registrant of the Internet domain name that is, or is going to be, the subject of the ISRG certificate issued to Subscriber, or that Subscriber is the duly authorized agent of such registrant.
+2. Each Subscriber warrants to ISRG and the public-at-large that either (a) Subscriber did not obtain control of such domain name as the result of a seizure of such domain name, or (b) such domain name had no ongoing lawful uses at the time of such seizure.
+3. Each Subscriber warrants that all information in the ISRG certificate issued to Subscriber regarding Subscriber or its domain name is accurate, current, reliable, complete, and not misleading.
+4. Each Subscriber warrants that all information provided by Subscriber to ISRG is accurate, current, complete, reliable, complete, and not misleading.
+5. Each Subscriber warrants that Subscriber rightfully holds the Private Key corresponding to the Public Key listed in the ISRG certificate issued to Subscriber.
+6. Each Subscriber warrants that Subscriber has taken all appropriate, reasonable, and necessary steps to secure and keep Subscriber’s Private Key secret.
+7. Each Subscriber acknowledges and accepts that ISRG is entitled to revoke Subscriber’s ISRG certificates immediately if the Subscriber violates the terms of the Subscriber Agreement or if ISRG discovers that any of Subscriber’s ISRG certificates are being used to enable criminal activities such as phishing attacks, fraud, or the distribution of malware.
+
 ### 9.6.4 Relying party representations and warranties
+
+Each Relying Party represents and warrants that, prior to relying on an ISRG certificate, it:
+
+1. Obtained sufficient knowledge on the use of digital certificates and PKI,
+2. Studied the applicable limitations on the usage of certificates and agrees to ISRG’s limitations on its liability related to the use of certificates,
+3. Has read, understands, and agrees to this CPS,
+4. Verified both the ISRG certificate and the certificates in the certificate chain using the relevant CRL or OCSP,
+5. Will not use an ISRG certificate if the certificate has expired or been revoked, and
+6. Will take all reasonable steps to minimize the risk associated with relying on a digital signature, including only relying on an ISRG certificate after considering:
+  a. Applicable law and the legal requirements for identification of a party, protection of the confidentiality or privacy of information, and enforceability of the transaction;
+  b. The intended use of the certificate as listed in the certificate or this CPS,
+  c. The data listed in the certificate,
+  d. The economic value of the transaction or communication,
+  e. The potential loss or damage that would be caused by an erroneous identification or a loss of confidentiality or privacy of information in the application, transaction, or communication,
+  f. The Relying Party’s previous course of dealing with the Subscriber,
+  g. The Relying Party’s understanding of trade, including experience with computer-based methods of trade, and 
+  h. Any other indicia of reliability or unreliability pertaining to the Subscriber and/or the application, communication, or transaction.
+
+Any unauthorized reliance on a certificate is at a party’s own risk.
 
 ### 9.6.5 Representations and warranties of other participants
 
+No stipulation.
+
 ## 9.7 Disclaimers of warranties
 
+ISRG CERTIFICATES AND SERVICES ARE PROVIDED “AS-IS.” ISRG DISCLAIMS ANY AND ALL WARRANTIES OF ANY TYPE, WHETHER EXPRESS OR IMPLIED, INCLUDING AND WITHOUT LIMITATION ANY IMPLIED WARRANTY OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE, IN CONNECTION WITH ANY ISRG SERVICE OR ISRG CERTIFICATE.
+
 ## 9.8 Limitations of liability
+
+ISRG DOES NOT ACCEPT ANY LIABILITY FOR ANY LOSS, HARM, CLAIM, OR ATTORNEY’S FEES IN CONNECTION WITH ANY CERTIFICATES. ISRG WILL NOT BE LIABLE FOR ANY DAMAGES, ATTORNEY’S FEES, OR RECOVERY, REGARDLESS OF WHETHER SUCH DAMAGES ARE DIRECT, CONSEQUENTIAL, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR COMPENSATORY, EVEN IF ISRG HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THIS LIMITATION ON LIABILITY APPLIES IRRESPECTIVE OF THE THEORY OF LIABILITY, I.E., WHETHER THE THEORY OF LIABILITY IS BASED UPON CONTRACT, WARRANTY, INDEMNIFICATION, CONTRIBUTION, TORT, EQUITY, STATUTE OR REGULATION, COMMON LAW, OR ANY OTHER SOURCE OF LAW, STANDARD OF CARE, CATEGORY OF CLAIM, NOTION OF FAULT OR RESPONSIBILITY, OR THEORY OF RECOVERY. THIS DISCLAIMER IS INTENDED TO BE CONSTRUED TO THE FULLEST EXTENT ALLOWED BY APPLICABLE LAW.
+
+WITHOUT WAIVING OR LIMITING THE FOREGOING IN ANY WAY, ISRG DOES NOT MAKE, AND ISRG EXPRESSLY DISCLAIMS, ANY WARRANTY REGARDING ITS RIGHT TO USE ANY TECHNOLOGY, INVENTION, TECHNICAL DESIGN, PROCESS, OR BUSINESS METHOD USED IN EITHER ISSUING CERTIFICATES OR PROVIDING ANY OF ISRG’S SERVICES. EACH SUBSCRIBER AFFIRMATIVELY AND EXPRESSLY WAIVES THE RIGHT TO HOLD ISRG RESPONSIBLE IN ANY WAY, OR SEEK INDEMNIFICATION AGAINST ISRG, FOR ANY INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS, INCLUDING PATENT, TRADEMARK, TRADE SECRET, OR COPYRIGHT.
 
 ## 9.9 Indemnities
 
 ### 9.9.1 Indemnification by ISRG
 
+The CA does not provide any indemnification except as described in Section 9.9.1 of the Certificate Policy.
+
 ### 9.9.2 Indemnification by Subscribers
 
+Each Subscriber will indemnify and hold harmless ISRG and its directors, officers, employees, agents, and affiliates from any and all liabilities, claims, demands, damages, losses, costs, and expenses, including attorneys’ fees, arising out of or related to: (i) any misrepresentation or omission of material fact by Subscriber to ISRG, irrespective of whether such misrepresentation or omission was intentional, (ii) Subscriber’s violation of the Subscriber Agreement, (iii) any compromise or unauthorized use of an ISRG certificate or corresponding Private Key, or (iv) Subscriber’s misuse of an ISRG certificate. If applicable law prohibits Subscriber from providing indemnification for another party’s negligence or acts, such restriction, or any other restriction required by law for this indemnification provision to be enforceable, shall be deemed to be part of this indemnification provision.
+
 ### 9.9.3 Indemnification by Relying Parties
+
+To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney’s fees, related to the Relying Party’s (i) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CPS, or applicable law; (ii) unreasonable reliance on a certificate; or (iii) failure to check the certificate’s status prior to use.
 
 ## 9.10 Term and termination
 
 ### 9.10.1 Term
 
+This CPS and any amendments to this CPS are effective when published to the ISRG online repository and remain in effect until replaced with a newer version.
+
 ### 9.10.2 Termination
+
+This CPS and any amendments remain in effect until replaced with a newer version.
 
 ### 9.10.3 Effect of termination and survival
 
+ISRG will communicate the conditions and effect of this CPS’s termination via the ISRG Repository. The communication will specify which provisions survive termination. At a minimum, all responsibilities related to protecting confidential information will survive termination. All Subscriber Agreements remain effective until the certificate is revoked or expired, even if this CPS terminates.
+
 ## 9.11 Individual notices and communications with participants
+
+ISRG accepts notices related to this CPS at the locations specified in Section 1.5.2 of this CPS. Notices are deemed effective after the sender receives a valid and digitally signed acknowledgment of receipt from ISRG. If an acknowledgement of receipt is not received within five days, the sender must resend the notice in paper form to the street address specified in Section 1.5.2 of this CPS using either a courier service that confirms delivery or via certified or registered mail with postage prepaid and return receipt requested. ISRG may allow other forms of notice in its Subscriber Agreements.
 
 ## 9.12 Amendments
 
 ### 9.12.1 Procedure for amendment
 
+This CPS is reviewed at least annually and may be reviewed more frequently. Amendments are made by posting an updated version of the CPS to the online repository. Controls are in place that are designed to reasonably ensure that this CPS is not amended and published without the prior authorization of the ISRG PMA.
+
 ### 9.12.2 Notification mechanism and period
+
+ISRG posts CPS revisions to its Repository. ISRG does not guarantee or set a notice-and-comment period and may make changes to this CPS without notice.
 
 ### 9.12.3 Circumstances under which OID must be changed
 
+The ISRG PMA is solely responsible for determining whether an amendment to the CPS requires an OID change.
+
 ## 9.13 Dispute resolution provisions
+
+Any claim, suit or proceeding arising out of this CPS or any ISRG product or service must be brought in a state or federal court located in San Jose, California. ISRG may seek injunctive or other relief in any state, federal, or national court of competent jurisdiction for any actual or alleged infringement of its, its affiliates, or any third party’s intellectual property or other proprietary rights.
 
 ## 9.14 Governing law
 
+The laws of the state of California, United States of America, govern the interpretation, construction, and enforcement of this CPS and all proceedings related to ISRG products and services, including tort claims, without regard to any conflicts of law principles. The United Nations Convention for the International Sale of Goods does not apply to this CPS.
+
 ## 9.15 Compliance with applicable law
+
+This CPS is subject to all applicable laws and regulations, including United States restrictions on the export of software and cryptography products.
 
 ## 9.16 Miscellaneous provisions
 
 ### 9.16.1 Entire agreement
 
+ISRG contractually obligates each RA to comply with this CPS and applicable industry guidelines. ISRG also requires each party using its products and services to enter into an agreement that delineates the terms associated with the product or service. If an agreement has provisions that differ from this CPS, then the agreement with that party controls, but solely with respect to that party. Third parties may not rely on or bring action to enforce such agreement.
+
 ### 9.16.2 Assignment
+
+Any entities operating under this CPS may not assign their rights or obligations without the prior written consent of ISRG. Unless specified otherwise in a contract with a party, ISRG does not provide notice of assignment.
 
 ### 9.16.3 Severability
 
+If any provision of this CPS is held invalid or unenforceable by a competent court or tribunal, the remainder of the CPS will remain valid and enforceable. Each provision of this CPS that provides for a limitation of liability, disclaimer of a warranty, or an exclusion of damages is severable and independent of any other provision.
+
 ### 9.16.4 Enforcement (attorneys' fees and waiver of rights)
+
+ISRG may seek indemnification and attorneys’ fees from a party for damages, losses, and expenses related to that party’s conduct. ISRG’s failure to enforce a provision of this CPS does not waive ISRG’s right to enforce the same provision later or right to enforce any other provision of this CPS. To be effective, waivers must be in writing and signed by ISRG.
 
 ### 9.16.5 Force Majeure
 
+ISRG is not liable for any delay or failure to perform an obligation under this CPS to the extent that the delay or failure is caused by an occurrence beyond ISRG’s reasonable control. The operation of the Internet is beyond ISRG’s reasonable control.
+
 ## 9.17 Other provisions
+
+No stipulation.
