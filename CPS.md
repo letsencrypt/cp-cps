@@ -16,7 +16,9 @@ Per IETF PKIX RFC 3647, this CPS is divided into nine components that cover secu
 
 The following Certification Authorities are covered under this CPS:
 
-[Table of ISRG Roots]
+| CA Type | Distinguished Name | Key Pair Type and Parameters | SHA-256 Key Fingerprint | Validity Period |
+|---------|--------------------|------------------------------|-------------------------|-----------------|
+| Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X1 | RSA, n has 4096 bits, e=65537 | 96:BC:EC:06:26:49:76:F3:<br>74:60:77:9A:CF:28:C5:A7:<br>CF:E8:A3:C0:AA:E1:1A:8F:<br>FC:EE:05:C0:BD:DF:08:C6 | Not Before: Jun  4 11:04:38 2015 GMT,<br>Not After: Jun  4 11:04:38 2035 GMT |
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. To
 view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
