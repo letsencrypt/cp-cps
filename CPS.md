@@ -44,13 +44,29 @@ The following revisions have been made:
 
 ### 1.3.1 Certification authorities
 
+ISRG is a CA that provides services including, but not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates. These services are performed in accordance with the requirements of the ISRG Certificate Policy (CP) and this CPS. These services are provided to the general public with exceptions as deemed appropriate by ISRG management or in accordance with relevant law.
+
+ISRG PKI services are most commonly, but not necessarily exclusively, provided under the brand/trademark "Let's Encrypt".
+
 ### 1.3.2 Registration authorities
+
+ISRG serves as its own RA. RA services are not performed by third parties.
 
 ### 1.3.3 Subscribers
 
+See definition of "Subscriber" in Section 1.6.1 Definitions.
+
 ### 1.3.4 Relying parties
 
+See definition of "Relying Party" in Section 1.6.1 Definitions.
+
+Relying Parties must verify the validity of certificates via CRL or OCSP prior to relying on certificates. CRL and OCSP location information is provided within certificates.
+
 ### 1.3.5 Other participants
+
+Other participants include CAs that cross-sign or issue subordinates to the ISRG PKI.
+
+ISRG PKI vendors and service providers with access to confidential information or privileged systems are required to operate in compliance with the ISRG CP.
 
 ## 1.4 Certificate usage
 
