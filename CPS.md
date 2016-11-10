@@ -89,11 +89,26 @@ Also, note that Certificates do not guarantee anything regarding reputation, hon
 
 ### 1.5.1 Organization administering the document
 
+This CPS document is maintained by the ISRG PMA.
+
 ### 1.5.2 Contact person
+
+The ISRG PMA can be contacted at:
+
+```
+Policy Management Authority
+Internet Security Research Group
+1 Letterman Drive, Suite D4700
+San Francisco, CA 94129
+```
 
 ### 1.5.3 Person determining CPS suitability for the policy
 
+The ISRG PMA is responsible for determining the suitability of this CPS. The ISRG PMA is informed by the results and recommendations received from an independent auditor.
+
 ### 1.5.4 CPS approval procedures
+
+The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ## 1.6 Definitions and acronyms
 
