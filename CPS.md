@@ -112,6 +112,10 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ## 1.6 Definitions and acronyms
 
+### 1.6.1 Definitions
+
+### 1.6.2 Acronyms
+
 # 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
 
 ## 2.1 Repositories
