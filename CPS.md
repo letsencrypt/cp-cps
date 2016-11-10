@@ -104,7 +104,7 @@ San Francisco, CA 94129
 
 ### 1.5.3 Person determining CPS suitability for the policy
 
-The ISRG PMA is responsible for determining the suitability of this CPS. The ISRG PMA is informed by the results and recommendations received from an independent auditor.
+The ISRG PMA is responsible for determining the suitability of this CPS. The ISRG PMA is informed by results and recommendations received from an independent auditor.
 
 ### 1.5.4 CPS approval procedures
 
