@@ -72,7 +72,18 @@ ISRG PKI vendors and service providers with access to confidential information o
 
 ### 1.4.1 Appropriate certificate uses
 
+Certificates issued by ISRG PKI can be used only to establish secure online communication between hosts (as identified by the FQDN provided in the Certificate) and clients using the TLS protocol.
+
 ### 1.4.2 Prohibited certificate uses
+
+Certificates may not be used:
+
+* For any purpose not explicitly defined in Section 1.4.1 of this document
+* For any application requiring fail-safe performance such as a) the operation of nuclear power facilities b) air traffic control systems c) aircraft navigation systems d) weapons control systems e) any other system in which failure could lead to injury, death, or environmental damage.
+* For software or hardware architectures that provide facilities for interference with encrypted communications, including but not limited to a) active eavesdropping (e.g., Man-in-the-middle attacks) b) traffic management of domain names or internet protocol (IP) addresses that the organization does not own or control. Note that these restrictions shall apply regardless of whether a relying party communicating through the software or hardware architecture has knowledge of its providing facilities for interference with encrypted communications.
+* When prohibited by law.
+
+Also, note that Certificates do not guarantee anything regarding reputation, honesty, or the current state of endpoint security. A Certificate only represents that the information contained in it was verified as reasonably correct when the Certificate was issued.
 
 ## 1.5 Policy administration
 
