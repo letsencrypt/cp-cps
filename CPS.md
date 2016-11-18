@@ -114,7 +114,41 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ### 1.6.1 Definitions
 
+* Applicant
+  * An entity applying for a certificate.
+* Key Pair
+  * A Private Key and its associated Public Key.
+* Private Key
+  * The key in a Key Pair that must be kept secret. Used to create digital signatures that can be verified by the corresponding Public Key or to decrypt messages encrypted by the corresponding Public Key.
+* Public Key
+  * The only key in a Key Pair that can safely be publicly disclosed. Used by Relying Parties to verify digital signatures from the corresponding private key or to encrypt messages that can only be decrypted by the corresponding private key.
+* Relying Party
+  * An entity that relies upon information contained within certificates issued by ISRG PKI services.
+* Subscriber
+  * An entity that has agreed to a Subscriber Agreement and is using ISRG PKI services.
+
 ### 1.6.2 Acronyms
+
+* CA
+  * Certificate Authority
+* CP
+  * Certificate Policy
+* CPS
+  * Certification Practice Statement
+* IDN
+  * Internationalized Domain Name
+* IP
+  * Internet Protocol
+* ISRG
+  * Internet Security Research Group
+* PKI
+  * Public Key Infrastructure
+* PMA
+  * Policy Management Authority
+* RA
+  * Registration Authority
+* TLD
+  * Top Level Domain
 
 # 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
 
