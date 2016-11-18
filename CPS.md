@@ -137,6 +137,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * Certificate Policy
 * CPS
   * Certification Practice Statement
+* DV
+  * Domain Validation
 * IDN
   * Internationalized Domain Name
 * IP
@@ -184,15 +186,35 @@ Read only access to the Policy and Legal Repository and certificate information 
 
 ### 3.1.1 Types of names
 
+Certificate distinguished names and subject alternative names are compliant with the CP.
+
 ### 3.1.2 Need for names to be meaningful
+
+ISRG certificates include a "Subject" field which identifies the subject entity (i.e. organization or domain). The subject entity is identified using a distinguished name.
+
+ISRG certificates include an "Issuer" field which identifies the issuing entity. The issuing entity is identified using a distinguished name.
 
 ### 3.1.3 Anonymity or pseudonymity of subscribers
 
+Subscribers are not identified in DV certificates, which have subject fields identifying only domains (not people or organizations). Relying parties should consider DV certificate subscribers to be anonymous.
+
 ### 3.1.4 Rules for interpreting various name forms
+
+Distinguished names in certificates are to be interpreted using X.500 standards and ASN.1 syntax. RFC 2253 and RFC 2616 provide more information.
+
+Certificates do not assert any specific relationship between subscribers and registrants of domain names contained in certificates.
+
+Regarding Internationalized Domain Names, ISRG will have no objection so long as the domain is resolvable via DNS. It is the CA’s position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
 
 ### 3.1.5 Uniqueness of names
 
+No stipulation.
+
 ### 3.1.6 Recognition, authentication, and role of trademarks
+
+ISRG reserves the right to make all decisions regarding Subscriber names in certificates. Entities requesting certificates will be required to demonstrate their right to use names (e.g. demonstrate control of a domain name), but trademark rights are not verified.
+
+While ISRG will comply with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement repsonsibility for domain names should lie primarily with domain registrars and the legal system.
 
 ## 3.2 Initial identity validation
 
