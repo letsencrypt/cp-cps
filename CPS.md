@@ -116,6 +116,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 * Applicant
   * An entity applying for a certificate.
+* Policy and Legal Repository
+  * A repository of policy and legal documents related to the ISRG PKI. It is located at: https://letsencrypt.org/repository/
 * Key Pair
   * A Private Key and its associated Public Key.
 * Private Key
@@ -154,11 +156,27 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ## 2.1 Repositories
 
+ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in our Policy and Legal Repository, which can be found at:
+
+https://letsencrypt.org/repository/
+
 ## 2.2 Publication of certification information
+
+Records of all ISRG root and intermediate certificates, including those that have been revoked, are available at:
+
+https://letsencrypt.org/certificates/
+
+ISRG certificates contain URLs to locations where certificate-related information is published, including revocation information via OCSP and/or CRLs.
 
 ## 2.3 Time or frequency of publication
 
+New or updated ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval.
+
+New or updated ISRG root and intermediate certificates are made publicly available as soon as possible. This typically means within seven days of creation.
+
 ## 2.4 Access controls on repositories
+
+Read only access to the Policy and Legal Repository and certificate information is unrestricted. Write access is protected by logical and physical controls.
 
 # 3. IDENTIFICATION AND AUTHENTICATION
 
