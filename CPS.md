@@ -220,7 +220,7 @@ While ISRG will comply with U.S. law and associated legal orders, it is ISRG's p
 
 ### 3.2.1 Method to prove possession of private key
 
-### 3.2.2 Authentication of organization identity
+### 3.2.2 Authentication of organization and domain identity
 
 ### 3.2.3 Authentication of individual identity
 
