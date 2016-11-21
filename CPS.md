@@ -246,7 +246,7 @@ Non-verified Applicant information is not included in ISRG certificates.
 
 ISRG does not issue certificates to organizations, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
 
-Organizations have the option to specify CA issuance authority via CAA records, which Let's Encrypt respects.
+Organizations have the option to specify CA issuance authority via CAA records, which ISRG respects.
 
 ### 3.2.6 Criteria for interoperation
 
