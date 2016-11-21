@@ -116,6 +116,10 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 * Applicant
   * An entity applying for a certificate.
+* Certificate Repository
+  * A repository of information about ISRG certificates. It is located at: https://letsencrypt.org/certificates/
+* Cross Certificate
+  * A certificate that is used to establish a trust relationship between two Root CAs.
 * Policy and Legal Repository
   * A repository of policy and legal documents related to the ISRG PKI. It is located at: https://letsencrypt.org/repository/
 * Key Pair
@@ -133,6 +137,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 * CA
   * Certificate Authority
+* CAA
+  * Certificate Authority Authorization
 * CP
   * Certificate Policy
 * CPS
@@ -158,13 +164,13 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ## 2.1 Repositories
 
-ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in our Policy and Legal Repository, which can be found at:
+ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in the Policy and Legal Repository, which can be found at:
 
 https://letsencrypt.org/repository/
 
 ## 2.2 Publication of certification information
 
-Records of all ISRG root and intermediate certificates, including those that have been revoked, are available at:
+Records of all ISRG root and intermediate certificates, including those that have been revoked, are available in the Certificate Repository:
 
 https://letsencrypt.org/certificates/
 
@@ -218,23 +224,47 @@ While ISRG will comply with U.S. law and associated legal orders, it is ISRG's p
 
 ## 3.2 Initial identity validation
 
+ISRG may elect not to issue any certificate at its sole discretion.
+
 ### 3.2.1 Method to prove possession of private key
+
+Applicants are required to prove possession of the Private Key corresponding to the Public Key in a Certificate request, which can be done by signing the request with the Private Key.
 
 ### 3.2.2 Authentication of organization and domain identity
 
+
+
 ### 3.2.3 Authentication of individual identity
+
+ISRG does not issue certificates to individuals, and thus does not authenticate individual identities.
 
 ### 3.2.4 Non-verified subscriber information
 
+Non-verified Applicant information is not included in ISRG certificates.
+
 ### 3.2.5 Validation of authority
+
+ISRG does not issue certificates to organizations, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
+
+Organizations have the option to specify CA issuance authority via CAA records, which Let's Encrypt respects.
 
 ### 3.2.6 Criteria for interoperation
 
+ISRG discloses Cross Certificates in its Certificate Repository:
+
+https://letsencrypt.org/certificates/
+
 ## 3.3 Identification and authentication for re-key requests
+
+ISRG does not support re-key requests. Subscribers must request new certificates.
 
 ### 3.3.1 Identification and authentication for routine re-key
 
+See Section 3.3 text.
+
 ### 3.3.2 Identification and authentication for re-key after revocation
+
+See Section 3.3 text.
 
 ## 3.4 Identification and authentication for revocation request
 
