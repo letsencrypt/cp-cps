@@ -114,6 +114,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ### 1.6.1 Definitions
 
+* ACME Protocol
+  * A protocol used for valiation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
 * Applicant
   * An entity applying for a certificate.
 * Certificate Repository
@@ -135,6 +137,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ### 1.6.2 Acronyms
 
+* ACME
+	Automated Certificate Management Environment
 * CA
   * Certificate Authority
 * CAA
@@ -145,6 +149,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * Certification Practice Statement
 * DV
   * Domain Validation
+* FQDN
+  * Fully Qualified Domain Name
 * IDN
   * Internationalized Domain Name
 * IP
@@ -157,6 +163,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * Policy Management Authority
 * RA
   * Registration Authority
+* SAN
+  * Subject Alternative Name
 * TLD
   * Top Level Domain
 
@@ -232,7 +240,19 @@ Applicants are required to prove possession of the Private Key corresponding to 
 
 ### 3.2.2 Authentication of organization and domain identity
 
+ISRG only issues Domain Validation (DV) certificates. Wildcard certificates are not supported. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
 
+Validation for DV certicates involves demonstrating proper control over a domain. ISRG validates domain control primarily in an automated fashion via the ACME protocol. In exceptional cases control may be validated using methods similar to those employed by ACME, but performed manually.
+
+There are three methods used for demonstrating domain control:
+
+1) Agreed-Upon Change to Website: Confirming the Applicant’s control over the requested FQDN by confirming the the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects.
+
+2) DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '_acme-challenge'.
+
+3) TLS Using a Random Number: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443.
+
+Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section. The Public Suffix List is updated when new gTLDs are added, and never includes new gTLDs before they are resolvable.
 
 ### 3.2.3 Authentication of individual identity
 
