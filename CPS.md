@@ -286,9 +286,7 @@ See Section 3.3 text.
 
 ## 3.4 Identification and authentication for revocation request
 
-Certificates can be revoked if ISRG is presented with the Private Key matching the Public Key in a certificate. No other information is required in such cases.
-
-Certificates can also be revoked if ISRG is presented with the private ACME account key for the account from which the certificate was issued. No other information is required in such cases.
+Identification and authentication for revocation requests is performed by ISRG in compliance with Section 4.9 of this document.
 
 Identification and authentication is not required when revocation is being requested by ISRG.
 
@@ -401,6 +399,10 @@ No stipulation.
 ## 4.9 Certificate revocation and suspension
 
 ### 4.9.1 Circumstances for revocation
+
+Certificates can be revoked if ISRG is presented with the Private Key matching the Public Key in a certificate. No other information is required in such cases.
+
+Certificates can also be revoked if ISRG is presented with the private ACME account key for the account from which the certificate was issued. No other information is required in such cases.
 
 ### 4.9.2 Who can request revocation
 
