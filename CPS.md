@@ -254,6 +254,10 @@ There are three methods used for demonstrating domain control:
 
 Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section. The Public Suffix List is updated when new gTLDs are added, and never includes new gTLDs before they are resolvable.
 
+ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
+
+The ‘.mil’ TLD and its subdomains will always be considered high risk and under no circumstances will the CA issue certificates for them.
+
 ### 3.2.3 Authentication of individual identity
 
 ISRG does not issue certificates to individuals, and thus does not authenticate individual identities.
