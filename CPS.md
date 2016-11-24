@@ -252,12 +252,6 @@ There are three methods used for demonstrating domain control:
 
 3) TLS Using a Random Number: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443.
 
-Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section. The Public Suffix List is updated when new gTLDs are added, and never includes new gTLDs before they are resolvable.
-
-ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
-
-The ‘.mil’ TLD and its subdomains will always be considered high risk and under no circumstances will the CA issue certificates for them.
-
 ### 3.2.3 Authentication of individual identity
 
 ISRG does not issue certificates to individuals, and thus does not authenticate individual identities.
@@ -298,15 +292,37 @@ See Section 3.3 text.
 
 ### 4.1.1 Who can submit a certificate application
 
+Anyone may submit an application for a certificate via the ACME protocol. Issuance will depend on proper validation and compliance with ISRG policies.
+
 ### 4.1.2 Enrollment process and responsibilities
+
+The enrollment process involves the following steps, in no particular order:
+
+* Generating a key pair using secure methods
+* Submitting a request for a certificate containing all necessary information, including the public key
+* Agreeing to the relevant Subscriber Greement
 
 ## 4.2 Certificate application processing
 
 ### 4.2.1 Performing identification and authentication functions
 
+ISRG performs all identification and authentication functions in accordance with the ISRG CP. This includes validation per CPS Section 3.2.2.
+
+ISRG checks for relevant CAA records prior to issuing certificates. The CA acts in accordance with CAA records if present. The CA’s CAA identifying domain is ‘letsencrypt.org’.
+
 ### 4.2.2 Approval or rejection of certificate applications
 
+Approval requires successful completion of validation per Section 3.2.2 as well as compliance with all CA policies.
+
+Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section. The Public Suffix List is updated when new gTLDs are added, and never includes new gTLDs before they are resolvable.
+
+ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
+
+The ‘.mil’ TLD and its subdomains will always be considered high risk and under no circumstances will the CA issue certificates for them.
+
 ### 4.2.3 Time to process certificate applications
+
+No stipulation.
 
 ## 4.3 Certificate issuance
 
