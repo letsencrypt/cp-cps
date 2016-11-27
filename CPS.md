@@ -132,6 +132,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * The only key in a Key Pair that can safely be publicly disclosed. Used by Relying Parties to verify digital signatures from the corresponding private key or to encrypt messages that can only be decrypted by the corresponding private key.
 * Relying Party
   * An entity that relies upon information contained within certificates issued by ISRG PKI services.
+* Root CA
+  * The top level Certification Authority whose Root Certificate is distributed by Application Software Suppliers and that issues Subordinate CA Certificates.
 * Subscriber
   * An entity that has agreed to a Subscriber Agreement and is using ISRG PKI services.
 
@@ -332,7 +334,15 @@ No stipulation.
 
 ### 4.3.1 CA actions during certificate issuance
 
+Certificates issued by the Root CA require an individual authorized by ISRG to deliberately issue a direct command in order for the Root CA to perform a certificate signing operation.
+
+The source of a certificate request is confirmed before issuance. CA processes are protected from unauthorized modification during certificate issuance. Issued certificates are stored in a database and then made available to the Subscriber.
+
 ### 4.3.2 Notification to subscriber by the CA of issuance of certificate
+
+End-entity certificates are made available to Subscribers via the ACME protocol as soon after issuance as reasonably possible. Typically this happens within a few seconds.
+
+All end-entity certificates are logged to Certificate Transparency servers as soon as reasonably possible. Typically this happens within a few seconds.
 
 ## 4.4 Certificate acceptance
 
