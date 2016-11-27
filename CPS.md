@@ -348,9 +348,24 @@ All end-entity certificates are logged to Certificate Transparency servers as so
 
 ### 4.4.1 Conduct constituting certificate acceptance
 
+The following conduct constitutes certificate acceptance:
+
+* Use of a certificate
+* Failure to object to the Certificate or its contents within 30 days
+
+By accepting a Certificate, the Applicant or Subscriber warrants that all of the information provided and included in the Certificate, and all representations made by the Applicant, are true and not misleading.
+
 ### 4.4.2 Publication of the certificate by the CA
 
+All root and intermediate certificates are made available publicly via the Certificate Repository.
+
+All end-entity certificates are made available to Subscribers and the general public via the ACME protocol.
+
+All end-entity certificates are logged to Certificate Transparency servers.
+
 ### 4.4.3 Notification of certificate issuance by the CA to other entities
+
+See Section 4.4.2.
 
 ## 4.5 Key pair and certificate usage
 
