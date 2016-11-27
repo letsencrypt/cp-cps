@@ -375,51 +375,99 @@ See Section 4.4.2.
 
 ## 4.6 Certificate renewal
 
+Certificate renewal requests are treated as applications for new certificates.
+
 ### 4.6.1 Circumstance for certificate renewal
+
+No stipulation.
 
 ### 4.6.2 Who may request renewal
 
+See Section 4.1.1.
+
 ### 4.6.3 Processing certificate renewal requests
+
+See Section 4.2.
 
 ### 4.6.4 Notification of new certificate issuance to subscriber
 
+See Section 4.3.2.
+
 ### 4.6.5 Conduct constituting acceptance of a renewal certificate
+
+See Section 4.4.1.
 
 ### 4.6.6 Publication of the renewal certificate by the CA
 
+See Section 4.4.2.
+
 ### 4.6.7 Notification of certificate issuance by the CA to other entities
+
+See Section 4.4.3.
 
 ## 4.7 Certificate re-key
 
+Certificate re-key requests are treated as applications for new certificates.
+
 ### 4.7.1 Circumstance for certificate re-key
+
+No stipulation.
 
 ### 4.7.2 Who may request certification of a new public key
 
+See Section 4.1.1.
+
 ### 4.7.3 Processing certificate re-keying requests
+
+See Section 4.2.
 
 ### 4.7.4 Notification of new certificate issuance to subscriber
 
+See Section 4.3.2.
+
 ### 4.7.5 Conduct constituting acceptance of a re-keyed certificate
+
+See Section 4.4.1.
 
 ### 4.7.6 Publication of the re-keyed certificate by the CA
 
+See Section 4.4.2.
+
 ### 4.7.7 Notification of certificate issuance by the CA to other entities
+
+See Section 4.4.3.
 
 ## 4.8 Certificate modification
 
+Certificate modification requests are treated as applications for new certificates.
+
 ### 4.8.1 Circumstance for certificate modification
+
+No stipulation.
 
 ### 4.8.2 Who may request certificate modification
 
+See Section 4.1.1.
+
 ### 4.8.3 Processing certificate modification requests
+
+See Section 4.2.
 
 ### 4.8.4 Notification of new certificate issuance to subscriber
 
+See Section 4.3.2.
+
 ### 4.8.5 Conduct constituting acceptance of modified certificate
+
+See Section 4.4.1.
 
 ### 4.8.6 Publication of the modified certificate by the CA
 
+See Section 4.4.2.
+
 ### 4.8.7 Notification of certificate issuance by the CA to other entities
+
+See Section 4.4.3.
 
 ## 4.9 Certificate revocation and suspension
 
