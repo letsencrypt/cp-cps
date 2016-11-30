@@ -371,7 +371,19 @@ See Section 4.4.2.
 
 ### 4.5.1 Subscriber private key and certificate usage
 
+Subscribers are obligated to generate Key Pairs using reasonably trustworthy systems.
+
+Subscribers are obligated to take reasonable measures to protect their Private Keys from unauthorized use or disclosure (which constitutes compromise). Subscribers must discontinue use of any Private Keys that are known or suspected to have been compromised.
+
+Certificates must be used in accordance with their intended purpose, which is outline in this CPS and the associated CP. Subscribers must cease use of certificates being used outside of their intended purpose.
+
 ### 4.5.2 Relying party public key and certificate usage
+
+Relying Parties must fully evaluate the context in which they are relying on certificates and the information contained in them, and decide to what extent the risk of reliance is acceptable. If the risk of relying on a certificate is determined to be unacceptable, then Relying Parties should not use the certificate or should obtain additional assurances before using the certificate.
+
+ISRG does not warrant that any software used by Relying Parties to evaluate or otherwise handle certificates does so properly.
+
+Relying Parties ignoring certificate expiration, revocation data provided via OCSP or CRL, or other pertinent information do so at their own risk.
 
 ## 4.6 Certificate renewal
 
