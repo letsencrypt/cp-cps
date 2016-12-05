@@ -118,6 +118,10 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * A protocol used for valiation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
 * Applicant
   * An entity applying for a certificate.
+* Baseline Requirements
+  * A document published by the CA/B Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
+* CA/B Forum
+  * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (https://cabforum.org/)
 * Certificate Repository
   * A repository of information about ISRG certificates. It is located at: https://letsencrypt.org/certificates/
 * Cross Certificate
@@ -140,7 +144,9 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 ### 1.6.2 Acronyms
 
 * ACME
-	Automated Certificate Management Environment
+  * Automated Certificate Management Environment
+* BRs
+  * Baseline Requirements
 * CA
   * Certificate Authority
 * CAA
@@ -741,19 +747,51 @@ Certificates can also be revoked if ISRG is presented with the private ACME acco
 
 # 8. COMPLIANCE AUDIT AND OTHER ASSESSMENTS
 
+WebTrust compliance audits are indended to ensure a CA's compliance with its CP and CPS and relevant WebTrust audit criteria.
+
 ## 8.1 Frequency or circumstances of assessment
+
+WebTrust compliance audit periods cover no more than one year and are scheduled by ISRG annually, every year with no gaps.
+
+See Section 8.7 for information about the frequency of self-audits.
 
 ## 8.2 Identity/qualifications of assessor
 
+ISRG's WebTrust compliance audits are performed by a qualified auditor. A qualified auditor means a natural person, legal entity, or group of natural persons or legal entities that collectively possess the following qualifications and skills:
+
+1) Independence from the subject of the audit (which is ISRG);
+2) The ability to conduct an audit that addresses the relevant criteria
+3) Employs individuals who have proficiency in examining Public Key Infrastructure technology, information security tools and techniques, information technology and security auditing, and the third-party attestation function;
+4) (For audits conducted in accordance with any one of the ETSI standards) accredited in accordance with ISO 17065 applying the requirements specified in ETSI EN 319 403;
+5) (For audits conducted in accordance with the WebTrust standard) licensed by WebTrust;
+6) Bound by law, government regulation, or professional code of ethics; and
+7) Except in the case of an Internal Government Auditing Agency, maintains Professional Liability/Errors & Omissions insurance with policy limits of at least one million US dollars in coverage
+
 ## 8.3 Assessor's relationship to assessed entity
+
+ISRG's WebTrust auditors shall have no financial interest in, or other type of relationship with, ISRG, which might cause the auditors to have a bias for or against ISRG.
 
 ## 8.4 Topics covered by assessment
 
+Compliance audits cover ISRG's compliance with the ISRG CP and this CPS, as well as the following WebTrust principles and criteria:
+
+* Principles and Criteria for Certification Authorities
+* WebTrust Principles and Criteria for Certification Authorities – SSL Baseline with Network Security
+
 ## 8.5 Actions taken as a result of deficiency
+
+Noncompliance with relevant requirements will be documented by auditors (internal or external), the ISRG PMA will be informed, and the ISRG PMA will ensure that steps are taken to address the issues as quickly as reasonably possible.
 
 ## 8.6 Communication of results
 
+Audit results are reported to the ISRG PMA and any other entity entitled to the results by law, regulation, or agreement. This includes a number of Web user agent (i.e. browser) root programs.
+
+ISRG is not required to publicly disclose any audit finding that does not impact the overall audit opinion.
+
 ## 8.7 Self-Audits
+
+ISRG performs a quarterly internal audit of at least 3% of issuance since the last WebTrust audit period.
+The sample is randomly selected. Results are saved and provided to auditors upon request.
 
 # 9. OTHER BUSINESS AND LEGAL MATTERS
 
