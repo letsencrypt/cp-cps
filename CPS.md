@@ -544,21 +544,39 @@ ISRG does not issue CRLs for end-entity certificates.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
+When a CRL is requested by a Relying Party the time to receive a response will be less than ten seconds under normal operating conditions.
+
 ### 4.9.9 On-line revocation/status checking availability
+
+Revocation information for all certificates is made available via OCSP. OCSP responses are available at all times (24x7x365) if possible.
 
 ### 4.9.10 On-line revocation checking requirements
 
+See Section 4.9.6.
+
 ### 4.9.11 Other forms of revocation advertisements available
+
+ISRG allows for OCSP stapling.
 
 ### 4.9.12 Special requirements re key compromise
 
+No stipulation.
+
 ### 4.9.13 Circumstances for suspension
+
+ISRG does not suspend certificates.
 
 ### 4.9.14 Who can request suspension
 
+Not applicable.
+
 ### 4.9.15 Procedure for suspension request
 
+Not applicable.
+
 ### 4.9.16 Limits on suspension period
+
+Not applicable.
 
 ## 4.10 Certificate status services
 
