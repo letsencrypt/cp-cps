@@ -582,9 +582,17 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
+CRL entries for intermediate certificates will remain in place until the certificates expire. ISRG does not provide CRLs for end-entity certificates.
+
+OCSP responses will be made available for all unexpired certificates.
+
 ### 4.10.2 Service availability
 
+All certificate status services are made available at all times (24x7x365) if possible.
+
 ### 4.10.3 Optional features
+
+No stipulation.
 
 ## 4.11 End of subscription
 
