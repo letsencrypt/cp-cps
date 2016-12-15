@@ -489,23 +489,58 @@ See Section 4.4.3.
 
 ## 4.9 Certificate revocation and suspension
 
+Certificate revocation permanently ends the certificate's operational period prior to its stated validity period.
+
 ### 4.9.1 Circumstances for revocation
 
-Certificates can be revoked if ISRG is presented with the Private Key matching the Public Key in a certificate. No other information is required in such cases.
+ISRG will follow the ISRG CP and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the ISRG CP.
 
-Certificates can also be revoked if ISRG is presented with the private ACME account key for the account from which the certificate was issued. No other information is required in such cases.
+ISRG maintains a continuous (24x7x365) ability to accept and respond to revocation requests and related inquiries.
 
 ### 4.9.2 Who can request revocation
 
+Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases. A number of ACME clients support this functionality.
+
+Anyone can revoke any certificate via the ACME API if they can demonstrate control over all domains covered by the certificate. No other information is required in such cases. A number of ACME clients support this functionality.
+
+Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation requst with the associated account private key. No other information is required in such cases. A number of ACME clients support this.
+
+Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law.
+
 ### 4.9.3 Procedure for revocation request
+
+Revocation requests may be made at any time via the ACME API.
+
+All other requests for revocation must be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
+
+An investigation into whether revocation or other appropriate action is warranted will be based on at least the following criteria:
+
+1. The nature of the alleged problem;
+2. The number of Certificate Problem Reports received about a particular Certificate or Subscriber;
+3. The entity making the complaint; and
+4. Relevant legislation.
 
 ### 4.9.4 Revocation request grace period
 
+There is no grace period for a revocation request. A revocation request must be made as soon as circumstances requiring revocation are confirmed.
+
 ### 4.9.5 Time within which CA must process the revocation request
+
+Investigation into a revocation request will begin within 24 hours of receiving the request.
+
+Once a decision has been made to revoke a certificate, revocation will be carried out within 24 hours.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
+Relying Parties who cannot or choose not to check revocation status, but decide to rely on a certificate anyway, do so at their own risk.
+
+See Section 4.5.2.
+
 ### 4.9.7 CRL issuance frequency (if applicable)
+
+ISRG will issue updated CRLs for intermediate certificates with a frequency great than or equal to that required by the ISRG CP.
+
+ISRG does not issue CRLs for end-entity certificates.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
