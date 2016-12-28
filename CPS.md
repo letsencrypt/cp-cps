@@ -138,6 +138,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * An entity that relies upon information contained within certificates issued by ISRG PKI services.
 * Root CA
   * The top level Certification Authority whose Root Certificate is distributed by Application Software Suppliers and that issues Subordinate CA Certificates.
+* Secure PKI Facilities
+  * Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
 * Subscriber
   * An entity that has agreed to a Subscriber Agreement and is using ISRG PKI services.
 
@@ -608,19 +610,43 @@ No stipulation.
 
 ### 5.1.1 Site location and construction
 
+ISRG Secure PKI Facilities are located in the United States, as are all copies of CA root and intermediate private keys.
+
+ISRG maintains at least two Secure PKI Facilities at all times for the sake of redundancy.
+
+Secure PKI Facilities are constructed so as to prevent unautohrized entry or interference.
+
+Secure PKI Facilities are monitored at all times (24x7x365) so as to prevent unautohrized entry or interference.
+
 ### 5.1.2 Physical access
+
+Physical access to ISRG Secure PKI Facilities is restricted to authorized ISRG employees, vendors, and contractors, for whom access is required in order to execute their jobs. Access restrictions are strongly enforced via multi-factor authentication mechanisms.
 
 ### 5.1.3 Power and air conditioning
 
+Redundant power sources are readily available at each Secure PKI Facility, and are designed to meet ISRG's operating requirements.
+
+Air conditioning systems at each Secure PKI Facility are designed to meet ISRG's operating requirements.
+
 ### 5.1.4 Water exposures
+
+ISRG Secure PKI Facilities are designed to protect ISRG infrastructure from water exposure/damage.
 
 ### 5.1.5 Fire prevention and protection
 
+ISRG Secure PKI Facilities are designed to prevent fire and provide suppression if necessary.
+
 ### 5.1.6 Media storage
+
+ISRG Secure PKI Facilities are designed to prevent accidental damage or unauthorized access to media.
 
 ### 5.1.7 Waste disposal
 
+ISRG prohibits any media that contains or has contained sensitive data from leaving organizational control in such a state that it may still be operational, or contain recoverable data. Such media may include printed documents or digital storage devices. When media that has contained sensitive information reaches its end of life, the media is physically destroyed such that recovery is reasonably believed to be impossible.
+
 ### 5.1.8 Off-site backup
+
+ISRG maintains multiple backups of private keys split between multiple Secure PKI Facilities. All backups are stored on devices meeting FIPS 140 Level 3 criteria.
 
 ## 5.2 Procedural controls
 
