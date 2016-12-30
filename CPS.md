@@ -142,6 +142,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
 * Subscriber
   * An entity that has agreed to a Subscriber Agreement and is using ISRG PKI services.
+* Trusted Role
+  * A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
 
 ### 1.6.2 Acronyms
 
@@ -652,11 +654,32 @@ ISRG maintains multiple backups of private keys split between multiple Secure PK
 
 ### 5.2.1 Trusted roles
 
+All persons, employees or otherwise, with the ability to materially impact the operation of ISRG PKI systems and services, or the ability to view CA confidential information, must do so while designated as serving in a Trusted Role.
+
+Trusted Roles include, but are not limited to:
+
+* Management
+  * May view confidential information but may not directly impact CA operations. Strong decision-making authority.
+* Security Officers
+  * May view confidential information but may not directly impact CA operations. Strong decision-making authority.
+* Systems Administrators
+  * May view confidential information and directly impact CA operations. Decision-making authority is limited.
+* Engineering Liaisons
+  * May view confidential information but may not directly impact CA operations. No decision-making authority.
+
+Each Trusted Role requires an appropriate level of training and legal obligation.
+
 ### 5.2.2 Number of persons required per task
+
+A number of tasks, such as key generation and entering areas physically containing operating ISRG PKI systems, require at least two people in Trusted Roles to be present.
 
 ### 5.2.3 Identification and authentication for each role
 
+Anyone performing work in a Trusted Role must identify and authenticate themselves before accessing ISRG PKI systems or confidential information.
+
 ### 5.2.4 Roles requiring separation of duties
+
+Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Administrators) may have the ability to commit code to core CA software. The reverse is also true.
 
 ## 5.3 Personnel controls
 
