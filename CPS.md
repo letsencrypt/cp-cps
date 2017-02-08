@@ -785,17 +785,35 @@ ISRG Security Officers perform a risk assessment at least annually. This risk as
 
 ### 5.5.1 Types of records archived
 
+ISRG archives all audit logs, the contents of which are described in Section 5.4.1. ISRG may also archive any other information deemed critical to understanding the historical performance of the CA's duties.
+
 ### 5.5.2 Retention period for archive
+
+ISRG retains all documentation relating to certificate requests and the verification thereof, and all Certificates and revocation thereof, for at least seven years after any Certificate based on that documentation ceases to be valid.
 
 ### 5.5.3 Protection of archive
 
+Archives are protected from unauthorized modification or destruction by strong security and environmental controls at primary and offsite storage facilities.
+
 ### 5.5.4 Archive backup procedures
+
+Archives are backed up at primary CA facilities as well as at secure off-site facilities.
 
 ### 5.5.5 Requirements for time-stamping of records
 
+Records are time-stamped as they are created.
+
+Machine-created records use system time, which is synchronized automatically with third-party time sources. Machines without network access have the time set manually.
+
+Manual records use a manually entered date and time, complete with time zone in use.
+
 ### 5.5.6 Archive collection system (internal or external)
 
+No stipulation.
+
 ### 5.5.7 Procedures to obtain and verify archive information
+
+No stipulation.
 
 ## 5.6 Key changeover
 
