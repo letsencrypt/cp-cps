@@ -733,19 +733,53 @@ Trusted Contributors are provided with all documentation necessary to perform th
 
 ### 5.4.1 Types of events recorded
 
+Audit logs are generated for all events related to CA security (physical and logical) and certificate issuance. Logs are automatically generated whenever possible. When it is necessary to manually log information, logs are kept on paper with written confirmation from a witness and securely stored. All audit logs, electronic or otherwise, shall be retained and made available to compliance auditors upon request.
+
+At a minimum, each audit record includes:
+
+* Date and time of entry;
+* Identity of the person (or machine) making the entry; and
+* Description of the entry.
+
 ### 5.4.2 Frequency of processing log
+
+No stipulation.
 
 ### 5.4.3 Retention period for audit log
 
+Audit logs are retained for at least seven years and will be made available to compliance auditors upon request.
+
 ### 5.4.4 Protection of audit log
+
+Audit logs, whether in production or archived, are protected using both physical and logical access controls.
 
 ### 5.4.5 Audit log backup procedures
 
+ISRG makes regular backup copies of audit logs. Audit log backup copies are sent for secure offsite storage at least once per month.
+
 ### 5.4.6 Audit collection system (internal vs. external)
+
+Audit data is automatically generated and reported/recorded by operating systems, CA software applications, and network devices. Systems are in place to ensure proper reporting and recording of audit data, and the failure of such systems may lead to suspension of CA services until proper audit log reporting is restored.
 
 ### 5.4.7 Notification to event-causing subject
 
+No stipulation.
+
 ### 5.4.8 Vulnerability assessments
+
+Audit logs are monitored by Trusted Contributors, including operations and engineering staff. Anomalies indicating attempted breaches of CA security are reported and investigated.
+
+Automated internal and external vulnerability scans occur at least every two weeks, though more typically every week.
+
+Extensive vulnerability assessments for ISRG infrastructure and primary CA application code are conducted at least annually by qualified third parties.
+
+ISRG Security Officers perform a risk assessment at least annually. This risk assessment:
+
+1. Identifies foreseeable internal and external threats that could result in unauthorized access, disclosure, misuse, alteration, or destruction of any Certificate Data or Certificate Management Processes;
+
+2. Assesses the likelihood and potential damage of these threats, taking into consideration the sensitivity of the Certificate Data and Certificate Management Processes; and
+
+3. Assesses the sufficiency of the policies, procedures, information systems, technology, and other arrangements that the CA has in place to counter such threats.
 
 ## 5.5 Records archival
 
