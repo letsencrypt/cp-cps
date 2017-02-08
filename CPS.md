@@ -142,6 +142,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
 * Subscriber
   * An entity that has agreed to a Subscriber Agreement and is using ISRG PKI services.
+* Trusted Contributor
+  * A contributor who performs in a Trusted Role. Trusted Contributors may be employees, contractors, or community members. Trusted Contributors must be properly trained and qualified, and have the proper legal obligations in place before performing in a Trusted Role.
 * Trusted Role
   * A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
 
@@ -685,19 +687,47 @@ Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Adm
 
 ### 5.3.1 Qualifications, experience, and clearance requirements
 
+ISRG management is responsible for making sure that Trusted Contributors are trustworthy and competent, which includes having proper qualifications and experience.
+
+ISRG managment ensures this with appropriate interviewing practices, training, background checks, and regular monitoring and review of Trusted Contributor job performance.
+
 ### 5.3.2 Background check procedures
+
+Trusted Contributors must undergo a background check prior to performing in a trusted role. ISRG management will review the results of background checks for problematic issues prior to approving performance of a trusted role.
+
+Background checks include, but are not limited to, criminal background and employment history.
 
 ### 5.3.3 Training requirements
 
+Trusted Contributors must be trained on topics relevant to the role in which they will perform.
+
+Training programs are developed for each role by ISRG management and Security Officers.
+
 ### 5.3.4 Retraining frequency and requirements
+
+Training is repeated for each Trusted Contributor on an annual basis and re-covers all topics relevant to their trusted role.
+
+Training is also offered whenever changes in the industry or operations require it in order for contributors to competently perform in their trusted roles.
 
 ### 5.3.5 Job rotation frequency and sequence
 
+No stipulation.
+
 ### 5.3.6 Sanctions for unauthorized actions
+
+Action will be taken to safeguard ISRG and its subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CPS.
+
+Actions taken in response to non-compliance may include termination, removal from trusted roles, or reporting to legal authorities.
+
+Once management becomes aware of non-compliance the Trusted Contributor(s) in question will be removed from trusted roles until a review of their actions is complete.
 
 ### 5.3.7 Independent contractor requirements
 
+Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CPS and the accompanying CP. This includes those described in Section 5.3. Potential sanctions for unauthorized activities by independent contractors are described in Section 5.3.6.
+
 ### 5.3.8 Documentation supplied to personnel
+
+Trusted Contributors are provided with all documentation necessary to perform their duties. This always includes, at a minimum, a copy of the ISRG CP, CPS, and Information Security Policy.
 
 ## 5.4 Audit logging procedures
 
