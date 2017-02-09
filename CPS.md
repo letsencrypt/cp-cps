@@ -602,11 +602,19 @@ No stipulation.
 
 ## 4.11 End of subscription
 
+A Subscriber's subscription ends once all of Subscriber's ISRG certificates have expired or been revoked.
+
+Prior to the end of subscription, ISRG will send the Subscriber notice of pending Certificate expiration, in the form of a renewal notification, when 20% of the certificate’s lifetime remains, if a contact email address was provided.
+
 ## 4.12 Key escrow and recovery
 
 ### 4.12.1 Key escrow and recovery policy and practices
 
+Not applicable.
+
 ### 4.12.2 Session key encapsulation and recovery policy and practices
+
+Not applicable.
 
 # 5. FACILITY, MANAGEMENT, AND OPERATIONAL CONTROLS
 
