@@ -837,13 +837,41 @@ When a CA certificate is nearing expiration, a key changeover procedure is used 
 
 ### 5.7.1 Incident and compromise handling procedures
 
+ISRG has created and maintains incident response procedures for a range of potential compromise and disaster situations. Such situations include, but are not limited to, natural disasters, security incidents, and equipment failure. Incident response plans are reviewed, potentially updated, and tested on at least an annual basis.
+
 ### 5.7.2 Computing resources, software, and/or data are corrupted
+
+In the event that computing resources, software, and/or data are corrupted or otherwise damaged, ISRG will assess the situation, including its impact on CA integrity and security, and take appropriate action. CA operations may be suspended until mitigation is complete. Subscribers may be notified if corruption or damage has a material impact on the service provided to them.
 
 ### 5.7.3 Entity private key compromise procedures
 
+In the event that a CA Private Key is compromised, or suspected to be compromised, ISRG will immediately launch a thorough investigation. Forensic evidence will be collected and secured as quickly as possible. If it cannot be determined with a high degree of certainty that the private key in question was not compromised, then the following steps may be taken in whatever order is deemed most appropriate by ISRG Security Officers:
+
+* Certificates relying on the private key in question will be revoked.
+* ISRG will notify root programs relying on the integrity of the key in question.
+* ISRG will notify Subscribers relying on the integrity of the key in question.
+
 ### 5.7.4 Business continuity capabilities after a disaster
 
+ISRG maintains multiple geographically diverse facilities, each of which is capable of operating ISRG CA systems independently. In the event that a disaster entirely disables one facility, ISRG CA operations will fail over to another facility.
+
 ## 5.8 CA or RA termination
+
+In the event that ISRG CA services are to be terminated:
+
+* All affected parties, including root programs and Subscribers, will be provided with notice as far in advance as reasonably possible.
+* A termination plan will be created and review by the ISRG PMA.
+
+If a suitable successor entity exists, the following steps will be taken:
+
+* CA Private Keys, records, logs, and other critical documentation will be transferred to the successor organization in a secure and compliant manner.
+* Arrangements will be made for compliant continuation of CA responsibilities.
+
+If a suitable successor entity does not exist, the following steps will be taken:
+
+* All certificates issued will be revoked and final CRLs will be published.
+* CA Private Keys will be destroyed.
+* CA records, logs, and other critical documentation will be transferred to a third party or government entity with appropriate legal controls in place to protect information while allowing its use in compliance with relevant policies and the law.
 
 # 6. TECHNICAL SECURITY CONTROLS
 
