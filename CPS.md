@@ -115,7 +115,7 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 ### 1.6.1 Definitions
 
 * ACME Protocol
-  * A protocol used for valiation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
+  * A protocol used for validation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
 * Applicant
   * An entity applying for a certificate.
 * Baseline Requirements
@@ -242,7 +242,7 @@ No stipulation.
 
 ISRG reserves the right to make all decisions regarding Subscriber names in certificates. Entities requesting certificates will be required to demonstrate their right to use names (e.g. demonstrate control of a domain name), but trademark rights are not verified.
 
-While ISRG will comply with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement repsonsibility for domain names should lie primarily with domain registrars and the legal system.
+While ISRG will comply with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement responsibility for domain names should lie primarily with domain registrars and the legal system.
 
 ## 3.2 Initial identity validation
 
@@ -256,7 +256,7 @@ Applicants are required to prove possession of the Private Key corresponding to 
 
 ISRG only issues Domain Validation (DV) certificates. Wildcard certificates are not supported. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
 
-Validation for DV certicates involves demonstrating proper control over a domain. ISRG validates domain control primarily in an automated fashion via the ACME protocol. In exceptional cases control may be validated using methods similar to those employed by ACME, but performed manually.
+Validation for DV certificates involves demonstrating proper control over a domain. ISRG validates domain control primarily in an automated fashion via the ACME protocol. In exceptional cases control may be validated using methods similar to those employed by ACME, but performed manually.
 
 There are three methods used for demonstrating domain control:
 
@@ -318,7 +318,7 @@ The enrollment process involves the following steps, in no particular order:
 
 * Generating a key pair using secure methods
 * Submitting a request for a certificate containing all necessary information, including the public key
-* Agreeing to the relevant Subscriber Greement
+* Agreeing to the relevant Subscriber Agreement
 
 ## 4.2 Certificate application processing
 
@@ -509,7 +509,7 @@ Anyone can revoke any certificate via the ACME API if they can sign the revocati
 
 Anyone can revoke any certificate via the ACME API if they can demonstrate control over all domains covered by the certificate. No other information is required in such cases. A number of ACME clients support this functionality.
 
-Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation requst with the associated account private key. No other information is required in such cases. A number of ACME clients support this.
+Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases. A number of ACME clients support this.
 
 Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law.
 
@@ -626,9 +626,9 @@ ISRG Secure PKI Facilities are located in the United States, as are all copies o
 
 ISRG maintains at least two Secure PKI Facilities at all times for the sake of redundancy.
 
-Secure PKI Facilities are constructed so as to prevent unautohrized entry or interference.
+Secure PKI Facilities are constructed so as to prevent unauthorized entry or interference.
 
-Secure PKI Facilities are monitored at all times (24x7x365) so as to prevent unautohrized entry or interference.
+Secure PKI Facilities are monitored at all times (24x7x365) so as to prevent unauthorized entry or interference.
 
 ### 5.1.2 Physical access
 
@@ -697,7 +697,7 @@ Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Adm
 
 ISRG management is responsible for making sure that Trusted Contributors are trustworthy and competent, which includes having proper qualifications and experience.
 
-ISRG managment ensures this with appropriate interviewing practices, training, background checks, and regular monitoring and review of Trusted Contributor job performance.
+ISRG management ensures this with appropriate interviewing practices, training, background checks, and regular monitoring and review of Trusted Contributor job performance.
 
 ### 5.3.2 Background check procedures
 
@@ -831,7 +831,7 @@ When a CA certificate is nearing expiration, a key changeover procedure is used 
 
 2. A new key pair is generated and a new CA certificate is created containing the new key pair's public key. This new key pair is used to sign new certificates.
 
-3. If necessary or desired, the old private key associated with the expriring certificate may be used to cross-sign the new certificate.
+3. If necessary or desired, the old private key associated with the expiring certificate may be used to cross-sign the new certificate.
 
 ## 5.7 Compromise and disaster recovery
 
@@ -955,7 +955,7 @@ When a CA certificate is nearing expiration, a key changeover procedure is used 
 
 # 8. COMPLIANCE AUDIT AND OTHER ASSESSMENTS
 
-WebTrust compliance audits are indended to ensure a CA's compliance with its CP and CPS and relevant WebTrust audit criteria.
+WebTrust compliance audits are intended to ensure a CA's compliance with its CP and CPS and relevant WebTrust audit criteria.
 
 ## 8.1 Frequency or circumstances of assessment
 
