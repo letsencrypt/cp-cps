@@ -947,43 +947,93 @@ ISRG CA Private Keys are stored on HSMs meeting the requirements stated in Secti
 
 ### 6.2.8 Method of activating private key
 
+ISRG CA Private Keys are always stored on HSMs and activated using the mechanisms provided by the HSM manufacturer. Activation data and devices are protected.
+
 ### 6.2.9 Method of deactivating private key
+
+ISRG CA Private Keys are always stored on HSMs and deactivated using the mechanisms provided by the HSM manufacturer.
 
 ### 6.2.10 Method of destroying private key
 
+ISRG CA Private Keys are destroyed by Trusted Contributors using a FIPS 140-2 (or higher) validated zeroize method provided by the HSMs storing the keys. Physical destruction of the HSM is not required.
+
+Subscribers are obligated to securely destroy private keys when they should no longer be used, in most cases by securely deleting all copies of private key files from storage media.
+
 ### 6.2.11 Cryptographic Module Rating
+
+See Section 6.2.1.
 
 ## 6.3 Other aspects of key pair management
 
 ### 6.3.1 Public key archival
 
+See Section 5.5.
+
 ### 6.3.2 Certificate operational periods and key pair usage periods
+
+The lifetimes of ISRG Root CA certificates are specified in Section 1.1. Corresponding key pairs have the same lifetimes.
+
+End-entity certificates issued by ISRG to Subscribers shall have a validity period less than 100 days. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
 
 ## 6.4 Activation data
 
 ### 6.4.1 Activation data generation and installation
 
+Activation data used to activate CA Private Keys is generated during a key ceremony. Activation data is transferred to the person who will use it, or place it will be stored, in a secure fashion.
+
 ### 6.4.2 Activation data protection
 
+Activation data is protected from unauthorized disclosure via a combination of physical and logical means.
+
 ### 6.4.3 Other aspects of activation data
+
+No stipulation.
 
 ## 6.5 Computer security controls
 
 ### 6.5.1 Specific computer security technical requirements
 
+ISRG CA infrastructure and systems are appropriately secured in order to protect CA software and data from unauthorized access or modification. Access to systems is secured via multi-factor authentication whenever possible. Security updates are applied in a timely fashion. Vulnerability scans are run regularly.
+
 ### 6.5.2 Computer security rating
+
+No stipulation.
 
 ## 6.6 Life cycle technical controls
 
 ### 6.6.1 System development controls
 
+ISRG has developed policies and procedures to effectively manage the acquisition and development of its CA systems.
+
+ISRG CA hardware and software is dedicated solely to performing CA functions.
+
+Vendor selection includes an evaluation of reputation in the market, ability to deliver a quality product, vulnerability history, and the likelihood of remaining viable in the future. Purchases are made in such a way that as little information about the future use of products as possible is disclosed. Physical product deliveries are received by Trusted Contributors and inspected for evidence of tampering. HSMs are shipped in tamper-evident packaging and tamper bag serial numbers are confirmed with the vendor upon reception.
+
+ISRG maintains a CA testing environment separate from the production environment. The testing environment matches the production environment as closely as reasonably possible but does not have access to CA Private Keys used in trusted certificates. The purpose of this testing platform is to allow extensive but safe testing of software and systems that are or will be deployed to the CA production environment.
+
+ISRG has developed and maintains appropriate change control policies and procedures to be followed any time CA systems are modified. Changes to ISRG CA systems require review by qualified Trusted Personnel who are different from the person requesting the change. Change requests are documented, as are any subsequent required reviews or approvals.
+
+When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Unit testing is strongly encouraged. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Administrators) may have the ability to commit code to core CA software. The reverse is also true.
+
 ### 6.6.2 Security management controls
+
+ISRG has mechanisms in place to control and monitor security-related configuration of CA systems. Equipment and software is installed and configured using a documented change control process. Software integrity is verified upon deployment using checksums.
 
 ### 6.6.3 Life cycle security controls
 
+No stipulation.
+
 ## 6.7 Network security controls
 
+ISRG implements reasonable network security safeguards and controls to prevent unauthorized access to CA systems and infrastructure. ISRG's network is multi-tiered and utilizes the principle of defense in depth.
+
+Firewalls and other critical CA systems are configured based on a necessary-traffic-only whitelisting policy whenever possible.
+
+ISRG root CA Private Keys are stored offline in a secure manner.
+
 ## 6.8 Time-stamping
+
+See Section 5.5.5.
 
 # 7. CERTIFICATE, CRL, AND OCSP PROFILES
 
