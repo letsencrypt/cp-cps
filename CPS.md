@@ -28,8 +28,6 @@ Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 This is the ISRG Certification Practices Statement. This document was approved for publication by the ISRG Policy Management Authority, and is made available at https://letsencrypt.org/repository/.
 
-This document may be referenced by the object identifier 1.3.6.1.4.1.44947.1.1.1.
-
 The following revisions have been made:
 
 | Date              | Changes                                            | Version |
@@ -1073,7 +1071,7 @@ Requirements domain-validated policy documented at
 https://cabforum.org/object-registry/.
 
 The policy list also contains the object identifier 1.3.6.1.4.1.44947.1.1.1,
-referencing this CPS.
+as defined in the ISRG Certificate Policy (CP).
 
 ### 7.1.7 Usage of Policy Constraints extension
 
