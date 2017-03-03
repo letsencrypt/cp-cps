@@ -1090,15 +1090,27 @@ Not applicable.
 
 ## 7.2 CRL profile
 
+ISRG CRLs follow RFC 5280.
+
 ### 7.2.1 Version number(s)
+
+No stipulation.
 
 ### 7.2.2 CRL and CRL entry extensions
 
+No stipulation.
+
 ## 7.3 OCSP profile
+
+ISRG OCSP responders implement the RFC 5019 profile of RFC 6960.
 
 ### 7.3.1 Version number(s)
 
+No stipulation.
+
 ### 7.3.2 OCSP extensions
+
+No stipulation.
 
 # 8. COMPLIANCE AUDIT AND OTHER ASSESSMENTS
 
