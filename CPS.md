@@ -28,8 +28,6 @@ Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 This is the ISRG Certification Practices Statement. This document was approved for publication by the ISRG Policy Management Authority, and is made available at https://letsencrypt.org/repository/.
 
-This document may be referenced by the object identifier 1.3.6.1.4.1.44947.1.1.1.
-
 The following revisions have been made:
 
 | Date              | Changes                                            | Version |
@@ -1047,18 +1045,15 @@ All certificates use X.509 version 3.
 
 ### 7.1.2 Certificate extensions
 
-See ISRG Certificate Profiles appendix.
+See ISRG Certificate Policy, available at https://letsencrypt.org/repository/.
 
 ### 7.1.3 Algorithm object identifiers
 
-See ISRG Certificate Profiles appendix.
+See ISRG Certificate Policy.
 
 ### 7.1.4 Name forms
 
-DV-SSL Certificates issued by ISRG contain only fully-qualified DNS names.
-All DNS names for a Certificate are included in its subjectAltName extension.
-One DNS name may also be included in the CommonName field of the Certificate
-Subject.
+See ISRG Certificate Policy.
 
 ### 7.1.5 Name constraints
 
@@ -1073,7 +1068,7 @@ Requirements domain-validated policy documented at
 https://cabforum.org/object-registry/.
 
 The policy list also contains the object identifier 1.3.6.1.4.1.44947.1.1.1,
-referencing this CPS.
+referencing the ISRG Certificate Policy.
 
 ### 7.1.7 Usage of Policy Constraints extension
 
@@ -1081,8 +1076,7 @@ Not applicable.
 
 ### 7.1.8 Policy qualifiers syntax and semantics
 
-DV-SSL Certificates issued by ISRG contain a CPS pointer qualifier containing
-the URL of this document.
+See ISRG Certificate Policy.
 
 ### 7.1.9 Processing semantics for the critical Certificate Policies extension
 
@@ -1398,5 +1392,3 @@ ISRG is not liable for any delay or failure to perform an obligation under this 
 ## 9.17 Other provisions
 
 No stipulation.
-
-# Appendix A: ISRG Certificate Profiles
