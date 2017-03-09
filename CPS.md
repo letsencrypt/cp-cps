@@ -95,12 +95,10 @@ This CPS document is maintained by the ISRG PMA.
 
 The ISRG PMA can be contacted at:
 
-```
-Policy Management Authority
-Internet Security Research Group
-1 Letterman Drive, Suite D4700
-San Francisco, CA 94129
-```
+Policy Management Authority<br/>
+Internet Security Research Group<br/>
+1 Letterman Drive, Suite D4700<br/>
+San Francisco, CA 94129<br/>
 
 ### 1.5.3 Person determining CPS suitability for the policy
 
@@ -226,7 +224,7 @@ ISRG certificates include an "Issuer" field which identifies the issuing entity.
 
 ### 3.1.3 Anonymity or pseudonymity of subscribers
 
-Subscribers are not identified in DV certificates, which have subject fields identifying only domains (not people or organizations). Relying parties should consider DV certificate subscribers to be anonymous.
+Subscribers are not identified in DV certificates, which have subject fields identifying only domain names (not people or organizations). Relying parties should consider DV certificate subscribers to be anonymous.
 
 ### 3.1.4 Rules for interpreting various name forms
 
@@ -389,7 +387,7 @@ Subscribers are obligated to generate Key Pairs using reasonably trustworthy sys
 
 Subscribers are obligated to take reasonable measures to protect their Private Keys from unauthorized use or disclosure (which constitutes compromise). Subscribers must discontinue use of any Private Keys that are known or suspected to have been compromised.
 
-Certificates must be used in accordance with their intended purpose, which is outline in this CPS and the associated CP. Subscribers must cease use of certificates being used outside of their intended purpose.
+Certificates must be used in accordance with their intended purpose, which is outlined in this CPS and the associated CP. Subscribers must cease use of certificates being used outside of their intended purpose.
 
 ### 4.5.2 Relying party public key and certificate usage
 
@@ -891,7 +889,7 @@ ISRG never generates or has access to Subscriber Private Keys.
 
 ### 6.1.3 Public key delivery to certificate issuer
 
-Subscriber Public Keys are communicated to ISRG electroncially via the ACME protocol.
+Subscriber Public Keys are communicated to ISRG electronically via the ACME protocol.
 
 ### 6.1.4 CA public key delivery to relying parties
 
@@ -913,7 +911,7 @@ Per Section 5.3.3, NIST SP 800‐89, the CA ensures that the public exponent of 
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
-See certificate profiles in this CPS for more information about Key Usage and Extended Key Usage fields in ISRG certificates.
+See Section 7, Certificate Profiles.
 
 ## 6.2 Private Key Protection and Cryptographic Module Engineering Controls
 
@@ -1079,7 +1077,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature, keyEncipherment                                   |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br/>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br/>CPS Qualifier: Pointer to this CPS<br/>User Notice Qualifer: As specified in ISRG CPS section 7.1.8 |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br/>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br/>CPS Qualifier: Pointer to this CPS<br/>User Notice Qualifier: As specified in ISRG CPS section 7.1.8 |
 | Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
 | Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
 | Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
