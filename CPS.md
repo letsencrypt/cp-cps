@@ -338,8 +338,6 @@ Certificates containing a new gTLD under consideration by ICANN will not be issu
 
 ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
 
-The ‘.mil’ TLD and its subdomains will always be considered high risk and under no circumstances will the CA issue certificates for them.
-
 ### 4.2.3 Time to process certificate applications
 
 No stipulation.
@@ -362,18 +360,13 @@ All end-entity certificates are logged to Certificate Transparency servers as so
 
 ### 4.4.1 Conduct constituting certificate acceptance
 
-The following conduct constitutes certificate acceptance:
-
-* Use of a certificate
-* Failure to object to the Certificate or its contents within 30 days
-
-By accepting a Certificate, the Applicant or Subscriber warrants that all of the information provided and included in the Certificate, and all representations made by the Applicant, are true and not misleading.
+See ISRG CP Section 4.4.1.
 
 ### 4.4.2 Publication of the certificate by the CA
 
 All root and intermediate certificates are made available publicly via the Certificate Repository.
 
-All end-entity certificates are made available to Subscribers and the general public via the ACME protocol.
+All end-entity certificates are made available to Subscribers via the ACME protocol.
 
 All end-entity certificates are logged to Certificate Transparency servers.
 
@@ -403,97 +396,13 @@ Relying Parties ignoring certificate expiration, revocation data provided via OC
 
 Certificate renewal requests are treated as applications for new certificates.
 
-### 4.6.1 Circumstance for certificate renewal
-
-No stipulation.
-
-### 4.6.2 Who may request renewal
-
-See Section 4.1.1.
-
-### 4.6.3 Processing certificate renewal requests
-
-See Section 4.2.
-
-### 4.6.4 Notification of new certificate issuance to subscriber
-
-See Section 4.3.2.
-
-### 4.6.5 Conduct constituting acceptance of a renewal certificate
-
-See Section 4.4.1.
-
-### 4.6.6 Publication of the renewal certificate by the CA
-
-See Section 4.4.2.
-
-### 4.6.7 Notification of certificate issuance by the CA to other entities
-
-See Section 4.4.3.
-
 ## 4.7 Certificate re-key
 
 Certificate re-key requests are treated as applications for new certificates.
 
-### 4.7.1 Circumstance for certificate re-key
-
-No stipulation.
-
-### 4.7.2 Who may request certification of a new public key
-
-See Section 4.1.1.
-
-### 4.7.3 Processing certificate re-keying requests
-
-See Section 4.2.
-
-### 4.7.4 Notification of new certificate issuance to subscriber
-
-See Section 4.3.2.
-
-### 4.7.5 Conduct constituting acceptance of a re-keyed certificate
-
-See Section 4.4.1.
-
-### 4.7.6 Publication of the re-keyed certificate by the CA
-
-See Section 4.4.2.
-
-### 4.7.7 Notification of certificate issuance by the CA to other entities
-
-See Section 4.4.3.
-
 ## 4.8 Certificate modification
 
 Certificate modification requests are treated as applications for new certificates.
-
-### 4.8.1 Circumstance for certificate modification
-
-No stipulation.
-
-### 4.8.2 Who may request certificate modification
-
-See Section 4.1.1.
-
-### 4.8.3 Processing certificate modification requests
-
-See Section 4.2.
-
-### 4.8.4 Notification of new certificate issuance to subscriber
-
-See Section 4.3.2.
-
-### 4.8.5 Conduct constituting acceptance of modified certificate
-
-See Section 4.4.1.
-
-### 4.8.6 Publication of the modified certificate by the CA
-
-See Section 4.4.2.
-
-### 4.8.7 Notification of certificate issuance by the CA to other entities
-
-See Section 4.4.3.
 
 ## 4.9 Certificate revocation and suspension
 
@@ -660,7 +569,7 @@ ISRG prohibits any media that contains or has contained sensitive data from leav
 
 ### 5.1.8 Off-site backup
 
-ISRG maintains multiple backups of private keys split between multiple Secure PKI Facilities. All backups are stored on devices meeting FIPS 140 Level 3 criteria.
+ISRG maintains multiple backups of private keys at multiple Secure PKI Facilities. All backups are stored on devices meeting FIPS 140 Level 3 criteria.
 
 ## 5.2 Procedural controls
 
