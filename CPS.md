@@ -946,7 +946,7 @@ See Section 5.5.5.
 
 ## 7.1 Certificate profile
 
-All fields not are as specified in RFC5280, including fields and extensions not specifically mentioned.
+All fields are as specified in RFC5280, including fields and extensions not specifically mentioned.
 Extensions are not marked critical unless specifically described here as critical.
 
 ### Root CA Certificate
