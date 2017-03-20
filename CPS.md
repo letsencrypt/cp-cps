@@ -135,7 +135,7 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 * Relying Party
   * An entity that relies upon information contained within certificates issued by ISRG PKI services.
 * Root CA
-  * The top level Certification Authority whose Root Certificate is distributed by Application Software Suppliers and that issues Subordinate CA Certificates.
+  * The top-level Certification Authority whose Root Certificate is distributed by Application Software Suppliers and that issues Subordinate CA Certificates.
 * Secure PKI Facilities
   * Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
 * Subscriber
@@ -260,7 +260,7 @@ Validation for DV certificates involves demonstrating proper control over a doma
 
 There are three methods used for demonstrating domain control:
 
-1. Agreed-Upon Change to Website: Confirming the Applicant’s control over the requested FQDN by confirming the the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects.
+1. Agreed-Upon Change to Website: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects.
 
 2. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '_acme-challenge'.
 
@@ -816,7 +816,7 @@ ISRG CA intermediate Private Keys are RSA keys at least 2048 bits in length.
 
 ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys.
 
-Per Section 5.3.3, NIST SP 800‐89, the CA ensures that the public exponent of the RSA Keys for a DV-SSL Certificates is in the range between 2 16+1 and 2256-1. The modulus are an odd number, not the power of a prime, and have no factors smaller than 752.
+Per Section 5.3.3, NIST SP 800‐89, the CA ensures that the public exponent of the RSA Keys for a DV-SSL Certificates is in the range between 2 16+1 and 2256-1. The moduli are an odd number, not the power of a prime, and have no factors smaller than 752.
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
@@ -1261,7 +1261,7 @@ Each Relying Party represents and warrants that, prior to relying on an ISRG cer
   * The economic value of the transaction or communication,
   * The potential loss or damage that would be caused by an erroneous identification or a loss of confidentiality or privacy of information in the application, transaction, or communication,
   * The Relying Party’s previous course of dealing with the Subscriber,
-  * The Relying Party’s understanding of trade, including experience with computer-based methods of trade, and 
+  * The Relying Party’s understanding of trade, including experience with computer-based methods of trade, and
   * Any other indicia of reliability or unreliability pertaining to the Subscriber and/or the application, communication, or transaction.
 
 Any unauthorized reliance on a certificate is at a party’s own risk.
