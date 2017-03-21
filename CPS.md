@@ -117,8 +117,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 * Applicant
   * An entity applying for a certificate.
 * Baseline Requirements
-  * A document published by the CA/B Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
-* CA/B Forum
+  * A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
+* CAB Forum
   * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (https://cabforum.org/)
 * Certificate Repository
   * A repository of information about ISRG certificates. It is located at: https://letsencrypt.org/certificates/
@@ -1221,7 +1221,7 @@ Except as expressly stated in this CPS or in a separate agreement with a Subscri
 
 1. ISRG complies, in all material aspects, with the CP and this CPS,
 2. ISRG publishes and updates CRLs and OCSP responses on a regular basis,
-3. All certificates issued under this CPS will be verified in accordance with this CPS and meet the minimum requirements found herein and in the CA/B Forum Baseline Requirements, and
+3. All certificates issued under this CPS will be verified in accordance with this CPS and meet the minimum requirements found herein and in the CAB Forum Baseline Requirements, and
 4. ISRG will maintain a repository of public information on its website.
 
 ### 9.6.2 RA representations and warranties
