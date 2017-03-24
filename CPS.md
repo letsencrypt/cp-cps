@@ -816,7 +816,7 @@ ISRG CA intermediate Private Keys are RSA keys at least 2048 bits in length.
 
 ISRG uses HSMs conforming to [FIPS 186-4](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf), capable of providing random number generation and on-board creation of at least 2048-bit RSA keys.
 
-Per Section 5.3.3, _(Explicit) Partial Public Key Validation for RSA_, of the [NIST SP 800‐89](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf), the [CA](https://github.com/letsencrypt/boulder) ensures, at a minimum, that
+Per Section 5.3.3, _(Explicit) Partial Public Key Validation for RSA_, of the [NIST SP 800‐89](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf), the CA ensures, at a minimum, that
 * The length of the modulus is one of the specified values in [FIPS 186-3](http://csrc.nist.gov/publications/drafts/fips186-3/change-notice_fips-186-3.pdf)
 * The value of the public exponent is in the valid range, as specified in [FIPS 186-3](http://csrc.nist.gov/publications/drafts/fips186-3/change-notice_fips-186-3.pdf)
 * The modulus and public exponent are odd numbers
