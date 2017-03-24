@@ -814,9 +814,15 @@ ISRG CA intermediate Private Keys are RSA keys at least 2048 bits in length.
 
 ### 6.1.6 Public key parameters generation and quality checking
 
-ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys.
+ISRG uses HSMs conforming to [FIPS 186-4](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf), capable of providing random number generation and on-board creation of at least 2048-bit RSA keys.
 
-Per Section 5.3.3, NIST SP 800‐89, the CA ensures that the public exponent of the RSA Keys for a DV-SSL Certificates is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1. The moduli are an odd number, not the power of a prime, and have no factors smaller than 752.
+Per Section 5.3.3, _(Explicit) Partial Public Key Validation for RSA_, of the [NIST SP 800‐89](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf), the [CA](https://github.com/letsencrypt/boulder) ensures, at a minimum, that
+* The length of the modulus is one of the specified values in [FIPS 186-3](http://csrc.nist.gov/publications/drafts/fips186-3/change-notice_fips-186-3.pdf)
+* The value of the public exponent is in the valid range, as specified in [FIPS 186-3](http://csrc.nist.gov/publications/drafts/fips186-3/change-notice_fips-186-3.pdf)
+* The public exponent of the RSA Keys for a DV-SSL Certificates are in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1.
+* The modulus and public exponent are odd numbers
+* The modulus is composite, but not a power of a prime
+* The modulus has no factors smaller than 752.
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
