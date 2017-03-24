@@ -819,10 +819,13 @@ ISRG uses HSMs conforming to [FIPS 186-4](http://nvlpubs.nist.gov/nistpubs/FIPS/
 Per Section 5.3.3, _(Explicit) Partial Public Key Validation for RSA_, of the [NIST SP 800‐89](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf), the [CA](https://github.com/letsencrypt/boulder) ensures, at a minimum, that
 * The length of the modulus is one of the specified values in [FIPS 186-3](http://csrc.nist.gov/publications/drafts/fips186-3/change-notice_fips-186-3.pdf)
 * The value of the public exponent is in the valid range, as specified in [FIPS 186-3](http://csrc.nist.gov/publications/drafts/fips186-3/change-notice_fips-186-3.pdf)
-* The public exponent of the RSA Keys for a DV-SSL Certificates are in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1.
 * The modulus and public exponent are odd numbers
 * The modulus is composite, but not a power of a prime
 * The modulus has no factors smaller than 752.
+
+Additionally,
+
+* The public exponent of the RSA Keys for a DV-SSL Certificates is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1.
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
