@@ -38,7 +38,7 @@ The following revisions have been made:
 | March 16, 2016 | Update root CRL issuance periods, disallow issuance to ‘.mil’ TLD, make NameConstraints extension optional for cross- certification profile, clarify optional NameConstraints contents, clarify that OSCP ResponderID is byname, clarify that OCSP nonce extension is not supported. | 1.3 |
 | May 5, 2016 | Reference CP v1.2 rather than CP v1.1. Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.4 |
 | October 18, 2016 | Do not require discontinuing use of a private key due to incorrect information in a certificate. Add information about issuance for Internationalized Domain Names. Add information about CA’s CAA identifying domain. Do not require discontinuing use of a private key due to expiration or revocation of a certificate. | 1.5 |
-| ??? | Complete rewrite of CPS. | 2.0 |
+| April 13, 2017 | Complete rewrite of CPS. | 2.0 |
 
 ## 1.3 PKI participants
 
