@@ -420,7 +420,7 @@ Anyone can revoke any certificate via the ACME API if they can demonstrate contr
 
 Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases. A number of ACME clients support this.
 
-Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law.
+Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at the discretion of ISRG management.
 
 ### 4.9.3 Procedure for revocation request
 
@@ -453,7 +453,7 @@ See Section 4.5.2.
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
-ISRG will issue updated CRLs for intermediate certificates with a frequency great than or equal to that required by the ISRG CP.
+ISRG will issue updated CRLs for intermediate certificates with a frequency greater than or equal to that required by the ISRG CP.
 
 ISRG does not issue CRLs for end-entity certificates.
 
