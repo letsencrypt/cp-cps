@@ -415,91 +415,268 @@ No stipulation.
 
 ### 4.1.1 Who can submit a certificate application
 
+In accordance with Section 5.5.2, the CA SHALL maintain an internal database of all previously revoked Certificates and previously rejected certificate requests due to suspected phishing or other fraudulent usage or concerns.  The CA SHALL use this information to identify subsequent suspicious certificate requests.
+
 ### 4.1.2 Enrollment process and responsibilities
+
+Prior to the issuance of a Certificate, the CA SHALL obtain the following documentation from the Applicant:
+
+1. A certificate request, which may be electronic; and
+
+2. An executed Subscriber Agreement or Terms of Use, which may be electronic.
+
+The CA SHOULD obtain any additional documentation the CA determines necessary to meet these Requirements.
+
+Prior to the issuance of a Certificate, the CA SHALL obtain from the Applicant a certificate request in a form prescribed by the CA and that complies with these Requirements.  One certificate request MAY suffice for multiple Certificates to be issued to the same Applicant, subject to the aging and updating requirement in Section 3.3.1, provided that each Certificate is supported by a valid, current certificate request signed by the appropriate Applicant Representative on behalf of the Applicant.  The certificate request MAY be made, submitted and/or signed electronically.
+
+The certificate request MUST contain a request from, or on behalf of, the Applicant for the issuance of a Certificate, and a certification by, or on behalf of, the Applicant that all of the information contained therein is correct.
 
 ## 4.2 Certificate application processing
 
 ### 4.2.1 Performing identification and authentication functions
 
+The certificate request MAY include all factual information about the Applicant to be included in the Certificate, and such additional information as is necessary for the CA to obtain from the Applicant in order to comply with these Requirements and the CA’s Certificate Policy and/or Certification Practice Statement.  In cases where the certificate request does not contain all the necessary information about the Applicant, the CA SHALL obtain the remaining information from the Applicant or, having obtained it from a reliable, independent, third-party data source, confirm it with the Applicant.  The CA SHALL establish and follow a documented procedure for verifying all data requested for inclusion in the Certificate by the Applicant.
+
+Applicant information MUST include, but not be limited to, at least one Fully-Qualified Domain Name or IP address to be included in the Certificate’s SubjectAltName extension.
+
+Section 6.3.2 limits the validity period of Subscriber Certificates.   The CA MAY use the documents and data provided in Section 3.2 to verify certificate information, provided that the CA obtained the data or document from a source specified under Section 3.2 no more than 825 days prior to issuing the Certificate.
+
+The CA SHALL develop, maintain, and implement documented procedures that identify and require additional verification activity for High Risk Certificate Requests prior to the Certificate’s approval, as reasonably necessary to ensure that such requests are properly verified under these Requirements.
+
+If a Delegated Third Party fulfills any of the CA’s obligations under this section , the CA SHALL verify that the process used by the Delegated Third Party to identify and further verify High Risk Certificate Requests provides at least the same level of assurance as the CA’s own processes.
+
 ### 4.2.2 Approval or rejection of certificate applications
 
+CAs SHOULD NOT issue Certificates containing a new gTLD under consideration by ICANN. Prior to issuing a Certificate containing an Internal Name with a gTLD that ICANN has announced as under consideration to make operational, the CA MUST provide a warning to the applicant that the gTLD may soon become resolvable and that, at that time, the CA will revoke the Certificate unless the applicant promptly registers the domain name. When a gTLD is delegated by inclusion in the IANA Root Zone Database, the Internal Name becomes a Domain Name, and at such time, a Certificate with such gTLD, which may have complied with these Requirements at the time it was issued, will be in a violation of these Requirements, unless the CA has verified the Subscriber’s rights in the Domain Name. The provisions below are intended to prevent such violation from happening.
+
+Within 30 days after ICANN has approved a new gTLD for operation, as evidenced by publication of a contract with the gTLD operator on [www.ICANN.org](www.ICANN.org) each CA MUST (1) compare the new gTLD against the CA’s records of valid certificates and (2) cease issuing Certificates containing a Domain Name that includes the new gTLD until after the CA has first verified the Subscriber's control over or exclusive right to use the Domain Name in accordance with Section 3.2.2.4.
+
+Within 120 days after the publication of a contract for a new gTLD is published on [www.icann.org](www.ICANN.org), CAs MUST revoke each Certificate containing a Domain Name that includes the new gTLD unless the Subscriber is either the Domain Name Registrant or can demonstrate control over the Domain Name.
+
 ### 4.2.3 Time to process certificate applications
+
+No stipulation.
 
 ## 4.3 Certificate issuance
 
 ### 4.3.1 CA actions during certificate issuance
 
+Certificate issuance by the Root CA SHALL require an individual authorized by the CA (i.e. the CA system operator, system officer, or PKI administrator) to deliberately issue a direct command in order for the Root CA to perform a certificate signing operation.
+
 ### 4.3.2 Notification to subscriber by the CA of issuance of certificate
+
+No stipulation.
 
 ## 4.4 Certificate acceptance
 
-### 4.4.1 Conduct constituting certificate acceptance
-
-### 4.4.2 Publication of the certificate by the CA
-
-### 4.4.3 Notification of certificate issuance by the CA to other entities
+No stipulation.
 
 ## 4.5 Key pair and certificate usage
 
 ### 4.5.1 Subscriber private key and certificate usage
 
+See Section 9.6.3, provisions 2 and 4.
+
 ### 4.5.2 Relying party public key and certificate usage
+
+No stipulation.
 
 ## 4.6 Certificate renewal
 
+No stipulation.
+
 ## 4.7 Certificate re-key
 
+No stipulation.
+
 ## 4.8 Certificate modification
+
+No stipulation.
 
 ## 4.9 Certificate revocation and suspension
 
 ### 4.9.1 Circumstances for revocation
 
+#### 4.9.1.1	Reasons for Revoking a Subscriber Certificate
+
+The CA SHALL revoke a Certificate within 24 hours if one or more of the following occurs:
+
+1. The Subscriber requests in writing that the CA revoke the Certificate;
+
+2. The Subscriber notifies the CA that the original certificate request was not authorized and does not retroactively grant authorization;
+
+3. The CA obtains evidence that the Subscriber’s Private Key corresponding to the Public Key in the Certificate suffered a Key Compromise  or no longer complies with the requirements of Sections 6.1.5 and 6.1.6;
+
+4. The CA obtains evidence that the Certificate was misused;
+
+5. The CA is made aware that a Subscriber has violated one or more of its material obligations under the Subscriber Agreement or Terms of Use;
+
+6. The CA is made aware of any circumstance indicating that use of a Fully-Qualified Domain Name or IP address in the Certificate is no longer legally permitted (e.g. a court or arbitrator has revoked a Domain Name Registrant’s right to use the Domain Name, a relevant licensing or services agreement between the Domain Name Registrant and the Applicant has terminated, or the Domain Name Registrant has failed to renew the Domain Name);
+
+7. The CA is made aware that a Wildcard Certificate has been used to authenticate a fraudulently misleading subordinate Fully-Qualified Domain Name;
+
+8. The CA is made aware of a material change in the information contained in the Certificate;
+
+9. The CA is made aware that the Certificate was not issued in accordance with these Requirements or the CA’s Certificate Policy or Certification Practice Statement;
+
+10. The CA determines that any of the information appearing in the Certificate is inaccurate or misleading;
+
+11. The CA ceases operations for any reason and has not made arrangements for another CA to provide revocation support for the Certificate;
+
+12. The CA’s right to issue Certificates under these Requirements expires or is revoked or terminated, unless the CA has made arrangements to continue maintaining the CRL/OCSP Repository;
+
+13. The CA is made aware of a possible compromise of the Private Key of the Subordinate CA used for issuing the Certificate;
+
+14. Revocation is required by the CA’s Certificate Policy and/or Certification Practice Statement; or
+
+15. The technical content or format of the Certificate presents an unacceptable risk to Application Software Suppliers or Relying Parties (e.g. the CA/Browser Forum might determine that a deprecated cryptographic/signature algorithm or key size presents an unacceptable risk and that such Certificates should be revoked and replaced by CAs within a given period of time).
+
+#### 4.9.1.2 Reasons for Revoking a Subordinate CA Certificate
+
+The Issuing CA SHALL revoke a Subordinate CA Certificate within seven (7) days if one or more of the following occurs:
+
+1. The Subordinate CA requests revocation in writing;
+
+2. The Subordinate CA notifies the Issuing CA that the original certificate request was not authorized and does not retroactively grant authorization;
+
+3. The Issuing CA obtains evidence that the Subordinate CA’s Private Key corresponding to the Public Key in the Certificate suffered a Key Compromise or no longer complies with the requirements of Sections 6.1.5 and 6.1.6,
+
+4. The Issuing CA obtains evidence that the Certificate was misused;
+
+5. The Issuing CA is made aware that the Certificate was not issued in accordance with or that Subordinate CA has not complied with this CP or the applicable Certificate Policy or Certification Practice Statement;
+
+6. The Issuing CA determines that any of the information appearing in the Certificate is inaccurate or misleading;
+
+7. The Issuing CA or Subordinate CA ceases operations for any reason and has not made arrangements for another CA to provide revocation support for the Certificate;
+
+8. The Issuing CA’s or Subordinate CA's right to issue Certificates under these Requirements expires or is revoked or terminated, unless the Issuing CA has made arrangements to continue maintaining the CRL/OCSP Repository;
+
+9. Revocation is required by the Issuing CA’s Certificate Policy and/or Certification Practice Statement; or
+
+10. The technical content or format of the Certificate presents an unacceptable risk to Application Software Suppliers or Relying Parties (e.g. the CA/Browser Forum might determine that a deprecated cryptographic/signature algorithm or key size presents an unacceptable risk and that such Certificates should be revoked and replaced by CAs within a given period of time).
+
 ### 4.9.2 Who can request revocation
+
+The Subscriber, RA, or Issuing CA can initiate revocation. Additionally, Subscribers, Relying Parties, Application Software Suppliers, and other third parties may submit Certificate Problem Reports informing the issuing CA of reasonable cause to revoke the certificate.
 
 ### 4.9.3 Procedure for revocation request
 
+The CA SHALL provide a process for Subscribers to request revocation of their own Certificates. The process MUST be described in the CA’s Certificate Policy or Certification Practice Statement. The CA SHALL maintain a continuous 24x7 ability to accept and respond to revocation requests and related inquiries.
+
+The CA SHALL provide Subscribers, Relying Parties, Application Software Suppliers, and other third parties with clear instructions for reporting suspected Private Key Compromise, Certificate misuse, or other types of fraud, compromise, misuse, inappropriate conduct, or any other matter related to Certificates. The CA SHALL publicly disclose the instructions through a readily accessible online means.
+
 ### 4.9.4 Revocation request grace period
+
+No stipulation.
 
 ### 4.9.5 Time within which CA must process the revocation request
 
+The CA SHALL begin investigation of a Certificate Problem Report within twenty-four hours of receipt, and decide whether revocation or other appropriate action is warranted based on at least the following criteria:
+
+1. The nature of the alleged problem;
+
+2. The number of Certificate Problem Reports received about a particular Certificate or Subscriber;
+
+3. The entity making the complaint (for example, a complaint from a law enforcement official that a Web site is engaged in illegal activities should carry more weight than a complaint from a consumer alleging that she didn’t receive the goods she ordered); and
+
+4. Relevant legislation.
+
 ### 4.9.6 Revocation checking requirement for relying parties
+
+No stipulation.
+
+(Note: Following certificate issuance, a certificate may be revoked for reasons stated in Section 4.9.1.  Therefore, relying parties should check the revocation status of all certificates that contain a CDP or OCSP pointer.)
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
+For the status of Subscriber Certificates:
+
+> If the CA publishes a CRL, then the CA SHALL update and reissue CRLs at least once every seven days, and the value of the nextUpdate field MUST NOT be more than ten days beyond the value of the thisUpdate field.
+
+For the status of Subordinate CA Certificates:
+
+> The CA SHALL update and reissue CRLs at least (i) once every twelve months and (ii) within 24 hours after revoking a Subordinate CA Certificate, and the value of the nextUpdate field MUST NOT be more than twelve months beyond the value of the thisUpdate field.
+
 ### 4.9.8 Maximum latency for CRLs (if applicable)
+
+No stipulation.
 
 ### 4.9.9 On-line revocation/status checking availability
 
+OCSP responses MUST conform to RFC6960 and/or RFC5019. OCSP responses MUST either:
+
+1. Be signed by the CA that issued the Certificates whose revocation status is being checked, or
+
+2. Be signed by an OCSP Responder whose Certificate is signed by the CA that issued the Certificate whose revocation status is being checked.
+
+In the latter case, the OCSP signing Certificate MUST contain an extension of type id-pkix-ocsp-nocheck, as
+defined by RFC6960.
+
 ### 4.9.10 On-line revocation checking requirements
+
+Effective 1 January 2013, the CA SHALL support an OCSP capability using the GET method for Certificates issued in accordance with these Requirements.
+
+For the status of Subscriber Certificates:
+
+> The CA SHALL update information provided via an Online Certificate Status Protocol at least every four days. OCSP responses from this service MUST have a maximum expiration time of ten days.
+
+For the status of Subordinate CA Certificates:
+
+> The CA SHALL update information provided via an Online Certificate Status Protocol at least (i) every twelve months and (ii) within 24 hours after revoking a Subordinate CA Certificate.
+
+If the OCSP responder receives a request for status of a certificate that has not been issued, then the responder SHOULD NOT respond with a "good" status. The CA SHOULD monitor the responder for such requests as part of its security response procedures.
+
+Effective 1 August 2013, OCSP responders for CAs which are not Technically Constrained in line with Section 7.1.5 MUST NOT respond with a "good" status for such certificates.
 
 ### 4.9.11 Other forms of revocation advertisements available
 
+If the Subscriber Certificate is for a high-traffic FQDN, the CA MAY rely on stapling, in accordance with [RFC4366], to distribute its OCSP responses. In this case, the CA SHALL ensure that the Subscriber “staples” the OCSP response for the Certificate in its TLS handshake. The CA SHALL enforce this requirement on the Subscriber either contractually, through the Subscriber Agreement or Terms of Use, or by technical review measures implemented by the CA.
+
 ### 4.9.12 Special requirements re key compromise
+
+See Section 4.9.1.
 
 ### 4.9.13 Circumstances for suspension
 
+The Repository MUST NOT include entries that indicate that a Certificate is suspended.
+
 ### 4.9.14 Who can request suspension
+
+Not applicable.
 
 ### 4.9.15 Procedure for suspension request
 
+Not applicable.
+
 ### 4.9.16 Limits on suspension period
+
+Not applicable.
 
 ## 4.10 Certificate status services
 
 ### 4.10.1 Operational characteristics
 
+Revocation entries on a CRL or OCSP Response MUST NOT be removed until after the Expiry Date of the revoked Certificate.
+
 ### 4.10.2 Service availability
+
+The CA SHALL operate and maintain its CRL and OCSP capability with resources sufficient to provide a response time of ten seconds or less under normal operating conditions.
+
+The CA SHALL maintain an online 24x7 Repository that application software can use to automatically check the current status of all unexpired Certificates issued by the CA.
+
+The CA SHALL maintain a continuous 24x7 ability to respond internally to a high-priority Certificate Problem Report, and where appropriate, forward such a complaint to law enforcement authorities, and/or revoke a Certificate that is the subject of such a complaint.
 
 ### 4.10.3 Optional features
 
+No stipulation.
+
 ## 4.11 End of subscription
+
+No stipulation.
 
 ## 4.12 Key escrow and recovery
 
-### 4.12.1 Key escrow and recovery policy and practices
-
-### 4.12.2 Session key encapsulation and recovery policy and practices
+No stipulation.
 
 # 5. FACILITY, MANAGEMENT, AND OPERATIONAL CONTROLS
 
