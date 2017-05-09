@@ -926,73 +926,202 @@ No stipulation.
 
 ### 6.1.1 Key pair generation
 
+#### 6.1.1.1 CA Key Pair Generation
+
+For Root CA Key Pairs created after the Effective Date that are either (i) used as Root CA Key Pairs or (ii) Key Pairs generated for a subordinate CA that is not the operator of the Root CA or an Affiliate of the Root CA, the CA SHALL:
+
+1. prepare and follow a Key Generation Script,
+2. have a Qualified Auditor witness the Root CA Key Pair generation process or record a video of the entire Root CA Key Pair generation process, and
+3. have a Qualified Auditor issue a report opining that the CA followed its key ceremony during its Key and Certificate generation process and the controls used to ensure the integrity and confidentiality of the Key Pair.
+
+For other CA Key Pairs created after the Effective Date that are for the operator of the Root CA or an Affiliate of the Root CA, the CA SHOULD:
+
+1. prepare and follow a Key Generation Script and
+2. have a Qualified Auditor witness the Root CA Key Pair generation process or record a video of the entire Root CA Key Pair generation process.
+
+In all cases, the CA SHALL:
+
+1. generate the keys in a physically secured environment as described in the CA’s Certificate Policy and/or Certification Practice Statement;
+2. generate the CA keys using personnel in trusted roles under the principles of multiple person control and split knowledge;
+3. generate the CA keys within cryptographic modules meeting the applicable technical and business requirements as disclosed in the CA’s Certificate Policy and/or Certification Practice Statement;
+4. log its CA key generation activities; and
+5. maintain effective controls to provide reasonable assurance that the Private Key was generated and protected in conformance with the procedures described in its Certificate Policy and/or Certification Practice Statement and (if applicable) its Key Generation Script.
+
+#### 6.1.1.2 RA Key Pair Generation
+
+No stipulation.
+
+#### 6.1.1.3 Subscriber Key Pair Generation
+
+The CA SHALL reject a certificate request if the requested Public Key does not meet the requirements set forth in Sections 6.1.5 and 6.1.6 or if it has a known weak Private Key (such as a Debian weak key, see [http://wiki.debian.org/SSLkeys](http://wiki.debian.org/SSLkeys)).
+
 ### 6.1.2 Private key delivery to subscriber
+
+Parties other than the Subscriber SHALL NOT archive the Subscriber Private Key without authorization by the Subscriber.
+
+If the CA or any of its designated RAs generated the Private Key on behalf of the Subscriber, then the CA SHALL encrypt the Private Key for transport to the Subscriber.
+
+If the CA or any of its designated RAs become aware that a Subscriber’s Private Key has been communicated to an unauthorized person or an organization not affiliated with the Subscriber, then the CA SHALL revoke all certificates that include the Public Key corresponding to the communicated Private Key.
 
 ### 6.1.3 Public key delivery to certificate issuer
 
+No stipulation.
+
 ### 6.1.4 CA public key delivery to relying parties
+
+No stipulation.
 
 ### 6.1.5 Key sizes
 
+Certificates MUST meet the following requirements for algorithm type and key size.
+
+(1)	Root CA Certificates
+
+* Digest algorithm
+  * SHA-1\*, SHA-256, SHA-384 or SHA-512
+* Minimum RSA modulus size (bits)
+  * 2048
+* ECC curve
+  * NIST P-256, P-384, or P-521
+* Minimum DSA modulus and divisor size (bits) \*\*\*
+  * L= 2048, N= 224 or L= 2048, N= 256
+
+(2)	Subordinate CA Certificates
+
+* Digest algorithm
+  * SHA-1\*, SHA-256, SHA-384 or SHA-512
+* Minimum RSA modulus size (bits)
+  * 2048
+* ECC curve
+  * NIST P-256, P-384, or P-521
+* Minimum DSA modulus and divisor size (bits)\*\*\*
+  * L= 2048, N= 224 Or L= 2048, N= 256
+
+
+(3)	Subscriber Certificates
+
+* Digest algorithm
+  * SHA1\*, SHA-256, SHA-384 or SHA-512
+* Minimum RSA modulus size (bits)
+  * 2048
+* ECC curve
+  * NIST P-256, P-384, or P-521
+* Minimum DSA modulus and divisor size (bits)\*\*\*
+  * L= 2048, N= 224 Or L= 2048, N= 256
+
+\* SHA-1 MAY be used with RSA keys in accordance with the criteria defined in Section 7.1.3.
+
+\*\*\* L and N (the bit lengths of modulus p and divisor q, respectively) are described in the Digital Signature Standard, FIPS 186-4 ([http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf)).
+
 ### 6.1.6 Public key parameters generation and quality checking
+
+RSA: The CA SHALL confirm that the value of the public exponent is an odd number equal to 3 or more. Additionally, the public exponent SHOULD be in the range between 216+1 and 2256-1. The modulus SHOULD also have the following characteristics: an odd number, not the power of a prime, and have no factors smaller than 752. [Source: Section 5.3.3, NIST SP 800-89].
+
+DSA: Although FIPS 800-57 says that domain parameters may be made available at some accessible site, compliant DSA certificates MUST include all domain parameters. This is to insure maximum interoperability among relying party software. The CA MUST confirm that the value of the public key has the unique correct representation and range in the field, and that the key has the correct order in the subgroup. [Source: Section 5.3.1, NIST SP 800-89].
+
+ECC: The CA SHOULD confirm the validity of all keys using either the ECC Full Public Key Validation Routine or the ECC Partial Public Key Validation Routine. [Source: Sections 5.6.2.3.2 and 5.6.2.3.3, respectively, of NIST SP 56A: Revision 2].
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
+Root CA Private Keys MUST NOT be used to sign Certificates except in the following cases:
+1. Self-signed Certificates to represent the Root CA itself;
+2. Certificates for Subordinate CAs and Cross Certificates;
+3. Certificates for infrastructure purposes (e.g. administrative role certificates, internal CA operational device certificates, and OCSP Response verification Certificates);
+4. Certificates issued solely for the purpose of testing products with Certificates issued by a Root CA; and
+5. Subscriber Certificates, provided that:
+  * The Root CA uses a 1024-bit RSA signing key that was created prior to the Effective Date;
+  * The Applicant’s application was deployed prior to the Effective Date;
+  * The Applicant’s application is in active use by the Applicant or the CA uses a documented process to establish that the Certificate’s use is required by a substantial number of Relying Parties;
+  * The CA follows a documented process to determine that the Applicant’s application poses no known security risks to Relying Parties;
+  * The CA documents that the Applicant’s application cannot be patched or replaced without substantial economic outlay.
+  * The CA signs the Subscriber Certificate on or before June 30, 2016; and
+  * The notBefore field in the Subscriber Certificate has a date on or before June 30, 2016.
+
 ## 6.2 Private Key Protection and Cryptographic Module Engineering Controls
+
+The CA SHALL implement physical and logical safeguards to prevent unauthorized certificate issuance. Protection of the CA Private Key outside the validated system or device specified above MUST consist of physical security, encryption, or a combination of both, implemented in a manner that prevents disclosure of the CA Private Key.  The CA SHALL encrypt its Private Key with an algorithm and key-length that, according to the state of the art, are capable of withstanding cryptanalytic attacks for the residual life of the encrypted key or key part.
 
 ### 6.2.1 Cryptographic module standards and controls
 
+No stipulation.
+
 ### 6.2.2 Private key (n out of m) multi-person control
+
+No stipulation.
 
 ### 6.2.3 Private key escrow
 
+No stipulation.
+
 ### 6.2.4 Private key backup
+
+See Section 5.2.2.
 
 ### 6.2.5 Private key archival
 
+Parties other than the Subordinate CA SHALL NOT archive the Subordinate CA Private Keys without authorization by the Subordinate CA.
+
 ### 6.2.6 Private key transfer into or from a cryptographic module
+
+If the Issuing CA generated the Private Key on behalf of the Subordinate CA, then the Issuing CA SHALL encrypt the Private Key for transport to the Subordinate CA. If the Issuing CA becomes aware that a Subordinate CA’s Private Key has been communicated to an unauthorized person or an organization not affiliated with the Subordinate CA, then the Issuing CA SHALL revoke all certificates that include the Public Key corresponding to the communicated Private Key.
 
 ### 6.2.7 Private key storage on cryptographic module
 
+The CA SHALL protect its Private Key in a system or device that has been validated as meeting at least FIPS 140 level 3 or an appropriate Common Criteria Protection Profile or Security Target, EAL 4 (or higher), which includes requirements to protect the Private Key and other assets against known threats.
+
 ### 6.2.8 Method of activating private key
+
+No stipulation.
 
 ### 6.2.9 Method of deactivating private key
 
+No stipulation.
+
 ### 6.2.10 Method of destroying private key
 
+No stipulation.
+
 ### 6.2.11 Cryptographic Module Rating
+
+No stipulation.
 
 ## 6.3 Other aspects of key pair management
 
 ### 6.3.1 Public key archival
 
+No stipulation.
+
 ### 6.3.2 Certificate operational periods and key pair usage periods
+
+Subscriber Certificates issued after 1 March 2018 MUST have a Validity Period no greater than 825 days.
+
+Subscriber Certificates issued after 1 July 2016 but prior to 1 March 2018 MUST have a Validity Period no greater than 39 months.
 
 ## 6.4 Activation data
 
-### 6.4.1 Activation data generation and installation
-
-### 6.4.2 Activation data protection
-
-### 6.4.3 Other aspects of activation data
+No stipulation.
 
 ## 6.5 Computer security controls
 
 ### 6.5.1 Specific computer security technical requirements
 
+The CA SHALL enforce multi-factor authentication for all accounts capable of directly causing certificate issuance.
+
 ### 6.5.2 Computer security rating
+
+No stipulation.
 
 ## 6.6 Life cycle technical controls
 
-### 6.6.1 System development controls
-
-### 6.6.2 Security management controls
-
-### 6.6.3 Life cycle security controls
+No stipulation.
 
 ## 6.7 Network security controls
 
+No stipulation.
+
 ## 6.8 Time-stamping
+
+No stipulation.
 
 # 7. CERTIFICATE, CRL, AND OCSP PROFILES
 
