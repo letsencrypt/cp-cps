@@ -36,7 +36,7 @@ The following revisions have been made:
 | September 9, 2015 | Added DV SSL OID, added/corrected a number of policy URIs, clarifications to Procedure for Revocation Request, substantial changes to all of Section 9 regarding legal matters, other minor fixes/improvements | 1.1 |
 | May 5, 2016 | Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.2 |
 | April 13, 2017 | Simplify Section 1.2, "Document Name and Identification. Simplify Section 3.2.2.2, "Performance of Electronic Identification." Validation methods in use are detailed in CPS. Update CPS section numbers for CRL and OCSP profiles. Remove Section 10, “Certificate Profiles.” Profiles are now in our CPS. | 1.3 |
-| ? ?, 2017 | Complete rewrite. | 2.0 |
+| May 19, 2017 | Complete rewrite. | 2.0 |
 
 ## 1.3 PKI participants
 
