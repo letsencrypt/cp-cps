@@ -288,15 +288,7 @@ https://letsencrypt.org/certificates/
 
 ## 3.3 Identification and authentication for re-key requests
 
-ISRG does not support re-key requests. Subscribers must request new certificates.
-
-### 3.3.1 Identification and authentication for routine re-key
-
-See Section 3.3 text.
-
-### 3.3.2 Identification and authentication for re-key after revocation
-
-See Section 3.3 text.
+See Section 4.7 text.
 
 ## 3.4 Identification and authentication for revocation request
 
