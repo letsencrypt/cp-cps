@@ -977,21 +977,15 @@ DSA: Although FIPS 800-57 says that domain parameters may be made available at s
 
 ECC: The CA SHOULD confirm the validity of all keys using either the ECC Full Public Key Validation Routine or the ECC Partial Public Key Validation Routine. [Source: Sections 5.6.2.3.2 and 5.6.2.3.3, respectively, of NIST SP 56A: Revision 2].
 
-### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
+### 6.1.7 Key usage purposes
 
-Root CA Private Keys MUST NOT be used to sign Certificates except in the following cases:
+Private Keys corresponding to Root Certificates MUST NOT be used to sign Certificates except in the following cases:
+
 1. Self-signed Certificates to represent the Root CA itself;
 2. Certificates for Subordinate CAs and Cross Certificates;
-3. Certificates for infrastructure purposes (e.g. administrative role certificates, internal CA operational device certificates, and OCSP Response verification Certificates);
-4. Certificates issued solely for the purpose of testing products with Certificates issued by a Root CA; and
-5. Subscriber Certificates, provided that:
-  * The Root CA uses a 1024-bit RSA signing key that was created prior to the Effective Date;
-  * The Applicant’s application was deployed prior to the Effective Date;
-  * The Applicant’s application is in active use by the Applicant or the CA uses a documented process to establish that the Certificate’s use is required by a substantial number of Relying Parties;
-  * The CA follows a documented process to determine that the Applicant’s application poses no known security risks to Relying Parties;
-  * The CA documents that the Applicant’s application cannot be patched or replaced without substantial economic outlay.
-  * The CA signs the Subscriber Certificate on or before June 30, 2016; and
-  * The notBefore field in the Subscriber Certificate has a date on or before June 30, 2016.
+3. Certificates for infrastructure purposes (administrative role certificates, internal CA operational device
+certificates); and
+4. Certificates for OCSP Response verification.
 
 ## 6.2 Private Key Protection and Cryptographic Module Engineering Controls
 
