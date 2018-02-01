@@ -37,6 +37,7 @@ The following revisions have been made:
 | May 5, 2016 | Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.2 |
 | April 13, 2017 | Simplify Section 1.2, "Document Name and Identification. Simplify Section 3.2.2.2, "Performance of Electronic Identification." Validation methods in use are detailed in CPS. Update CPS section numbers for CRL and OCSP profiles. Remove Section 10, “Certificate Profiles.” Profiles are now in our CPS. | 1.3 |
 | May 22, 2017 | Complete rewrite. | 2.0 |
+| February 6, 2018 | Update text of Section 6.1.7 to match Baseline Requirements v1.5.1. | 2.1 |
 
 ## 1.3 PKI participants
 
