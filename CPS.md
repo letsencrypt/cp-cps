@@ -40,6 +40,7 @@ The following revisions have been made:
 | October 18, 2016 | Do not require discontinuing use of a private key due to incorrect information in a certificate. Add information about issuance for Internationalized Domain Names. Add information about CA’s CAA identifying domain. Do not require discontinuing use of a private key due to expiration or revocation of a certificate. | 1.5 |
 | April 13, 2017 | Complete rewrite of CPS. | 2.0 |
 | February 6, 2018 | Remove restriction on issuing to '.mil' TLD. | 2.1 |
+| March 10, 2018 | Remove text stating that wildcard certificates are not supported. Clarify that wildcard validation must use DNS Change method. | 2.2 |
 
 ## 1.3 PKI participants
 
@@ -255,7 +256,7 @@ Applicants are required to prove possession of the Private Key corresponding to 
 
 ### 3.2.2 Authentication of organization and domain identity
 
-ISRG only issues Domain Validation (DV) certificates. Wildcard certificates are not supported. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
+ISRG only issues Domain Validation (DV) certificates. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
 
 Validation for DV certificates involves demonstrating proper control over a domain. ISRG validates domain control primarily in an automated fashion via the ACME protocol. In exceptional cases control may be validated using methods similar to those employed by ACME, but performed manually.
 
@@ -266,6 +267,8 @@ There are three methods used for demonstrating domain control:
 2. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '_acme-challenge'. (BR Section 3.2.2.4.7)
 
 3. TLS Using a Random Number: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443. (BR Section 3.2.2.4.10)
+
+Validation for wildcard domain requests must be completed using the DNS Change method.
 
 ### 3.2.3 Authentication of individual identity
 
