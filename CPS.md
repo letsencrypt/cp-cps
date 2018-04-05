@@ -995,6 +995,8 @@ Extensions are not marked critical unless specifically described here as critica
 | Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
 | Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
 | TLS Feature                    | Contains status_request if requested by the subscriber in the CSR                  |
+| Precertificate poison          | Per RFC 6962. In Precertificates only.                                             |
+| Signed Certificate Timestamp List | Per RFC 6962. In final certificates only.                                       |
 
 ### Root OCSP Signing Certificate
 
