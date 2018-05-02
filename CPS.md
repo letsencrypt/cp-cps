@@ -268,6 +268,8 @@ There are three methods used for demonstrating domain control:
 
 Validation for wildcard domain requests must be completed using the DNS Change method.
 
+All validations are performed in compliance with the current CAB Forum Baseline Requirements at the time of validation.
+
 ### 3.2.3 Authentication of individual identity
 
 ISRG does not issue certificates to individuals, and thus does not authenticate individual identities.
