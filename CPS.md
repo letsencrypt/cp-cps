@@ -151,8 +151,6 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 * ACME
   * Automated Certificate Management Environment
-* BRs
-  * Baseline Requirements
 * CA
   * Certificate Authority
 * CAA
