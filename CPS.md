@@ -41,6 +41,7 @@ The following revisions have been made:
 | April 13, 2017 | Complete rewrite of CPS. | 2.0 |
 | February 6, 2018 | Remove restriction on issuing to '.mil' TLD. | 2.1 |
 | March 10, 2018 | Remove text stating that wildcard certificates are not supported. Clarify that wildcard validation must use DNS Change method. | 2.2 |
+| May 4, 2018 | Add CT fields to certificate profiles. Specify current Baseline Requirements compliance for all validations. Update certificate expiration notice text. Remove reference loops. Minor cleanup. | 2.3 |
 
 ## 1.3 PKI participants
 
