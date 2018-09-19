@@ -42,6 +42,7 @@ The following revisions have been made:
 | February 6, 2018 | Remove restriction on issuing to '.mil' TLD. | 2.1 |
 | March 10, 2018 | Remove text stating that wildcard certificates are not supported. Clarify that wildcard validation must use DNS Change method. | 2.2 |
 | May 4, 2018 | Add CT fields to certificate profiles. Specify current Baseline Requirements compliance for all validations. Update certificate expiration notice text. Remove reference loops. Minor cleanup. | 2.3 |
+| X Y, Z | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
 
 ## 1.3 PKI participants
 
@@ -103,6 +104,10 @@ Internet Security Research Group<br/>
 1 Letterman Drive, Suite D4700<br/>
 San Francisco, CA 94129<br/>
 
+Certificate Problem Reports can be submitted via email to:
+
+[cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org)
+
 ### 1.5.3 Person determining CPS suitability for the policy
 
 The ISRG PMA is responsible for determining the suitability of this CPS. The ISRG PMA is informed by results and recommendations received from an independent auditor.
@@ -123,6 +128,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
 * CAB Forum
   * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (https://cabforum.org/)
+* Certificate Problem Report
+  * Complaint of suspected Key Compromise, Certificate misuse, or other types of fraud, compromise, misuse, or inappropriate conduct related to Certificates.
 * Certificate Repository
   * A repository of information about ISRG certificates. It is located at: https://letsencrypt.org/certificates/
 * Cross Certificate

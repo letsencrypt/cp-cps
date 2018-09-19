@@ -38,7 +38,7 @@ The following revisions have been made:
 | April 13, 2017 | Simplify Section 1.2, "Document Name and Identification. Simplify Section 3.2.2.2, "Performance of Electronic Identification." Validation methods in use are detailed in CPS. Update CPS section numbers for CRL and OCSP profiles. Remove Section 10, “Certificate Profiles.” Profiles are now in our CPS. | 1.3 |
 | May 22, 2017 | Complete rewrite. | 2.0 |
 | February 6, 2018 | Update text of Section 6.1.7 to match Baseline Requirements v1.5.1. | 2.1 |
-| X Y, Z | Update section 3.2.2.4 "Validation of Domain Authorization or Control" to match latest BRs. | 2.2 |
+| X Y, Z | Define Certificate Problem Report in Section 1.6.1. Update Section 3.2.2.4 "Validation of Domain Authorization or Control" to match latest BRs but omit methods we do not use. Add additional revocation reason to Section 4.9.1.1 for compliance with upcoming BR revision. Minor updates to Sections 4.9.3 and 4.9.5. | 2.2 |
 
 ## 1.3 PKI participants
 
@@ -117,6 +117,8 @@ The ISRG PMA approves any revisions to this CP document after formal review.
   * A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
 * CAB Forum
   * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (https://cabforum.org/)
+* Certificate Problem Report
+  * Complaint of suspected Key Compromise, Certificate misuse, or other types of fraud, compromise, misuse, or inappropriate conduct related to Certificates.
 * Certificate Repository
   * A repository of information about ISRG certificates. It is located at: https://letsencrypt.org/certificates/
 * Cross Certificate
@@ -518,6 +520,7 @@ The CA SHALL revoke a Certificate within 24 hours if one or more of the followin
 13. The CA is made aware of a possible compromise of the Private Key of the Subordinate CA used for issuing the Certificate;
 14. Revocation is required by the CA’s Certificate Policy and/or Certification Practice Statement; or
 15. The technical content or format of the Certificate presents an unacceptable risk to Application Software Suppliers or Relying Parties (e.g. the CA/Browser Forum might determine that a deprecated cryptographic/signature algorithm or key size presents an unacceptable risk and that such Certificates should be revoked and replaced by CAs within a given period of time).
+16. The CA obtains evidence that the validation of domain authorization or control for any Fully-Qualified Domain Name or IP address in the Certificate should not be relied upon.
 
 #### 4.9.1.2 Reasons for Revoking a Subordinate CA Certificate
 
@@ -540,9 +543,9 @@ The Subscriber, RA, or Issuing CA can initiate revocation. Additionally, Subscri
 
 ### 4.9.3 Procedure for revocation request
 
-The CA SHALL provide a process for Subscribers to request revocation of their own Certificates. The process MUST be described in the CA’s Certificate Policy or Certification Practice Statement. The CA SHALL maintain a continuous 24x7 ability to accept and respond to revocation requests and related inquiries.
+The CA SHALL provide a process for Subscribers to request revocation of their own Certificates. The process MUST be described in the CA's Certificate Policy or Certification Practice Statement. The CA SHALL maintain a continuous 24x7 ability to accept and respond to revocation requests and Certificate Problem Reports.
 
-The CA SHALL provide Subscribers, Relying Parties, Application Software Suppliers, and other third parties with clear instructions for reporting suspected Private Key Compromise, Certificate misuse, or other types of fraud, compromise, misuse, inappropriate conduct, or any other matter related to Certificates. The CA SHALL publicly disclose the instructions through a readily accessible online means.
+The CA SHALL provide Subscribers, Relying Parties, Application Software Suppliers, and other third parties with clear instructions for reporting suspected Private Key Compromise, Certificate misuse, or other types of fraud, compromise, misuse, inappropriate conduct, or any other matter related to Certificates. The CA SHALL publicly disclose the instructions through a readily accessible online means and in section 1.5.2 of their CPS.
 
 ### 4.9.4 Revocation request grace period
 
@@ -550,12 +553,15 @@ No stipulation.
 
 ### 4.9.5 Time within which CA must process the revocation request
 
-The CA SHALL begin investigation of a Certificate Problem Report within twenty-four hours of receipt, and decide whether revocation or other appropriate action is warranted based on at least the following criteria:
+Within 24 hours after receiving a Certificate Problem Report, the CA SHALL investigate the facts and circumstances related to a Certificate Problem Report and provide a preliminary report on its findings to both the Subscriber and the entity who filed the Certificate Problem Report.
 
-1. The nature of the alleged problem;
-2. The number of Certificate Problem Reports received about a particular Certificate or Subscriber;
-3. The entity making the complaint (for example, a complaint from a law enforcement official that a Web site is engaged in illegal activities should carry more weight than a complaint from a consumer alleging that she didn’t receive the goods she ordered); and
-4. Relevant legislation.
+After reviewing the facts and circumstances, the CA SHALL work with the Subscriber and any entity reporting the Certificate Problem Report or other revocation-related notice to establish whether or not the certificate will be revoked, and if so, a date which the CA will revoke the certificate. The period from receipt of the Certificate Problem Report or revocation-related notice to published revocation MUST NOT exceed the time frame set forth in Section 4.9.1.1. The date selected by the CA SHOULD consider the following criteria:
+
+1. The nature of the alleged problem (scope, context, severity, magnitude, risk of harm);
+2. The consequences of revocation (direct and collateral impacts to Subscribers and Relying Parties);
+3. The number of Certificate Problem Reports received about a particular Certificate or Subscriber;
+4. The entity making the complaint (for example, a complaint from a law enforcement official that a Web site is engaged in illegal activities should carry more weight than a complaint from a consumer alleging that she didn't receive the goods she ordered); and
+5. Relevant legislation.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
