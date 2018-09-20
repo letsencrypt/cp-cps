@@ -42,7 +42,7 @@ The following revisions have been made:
 | February 6, 2018 | Remove restriction on issuing to '.mil' TLD. | 2.1 |
 | March 10, 2018 | Remove text stating that wildcard certificates are not supported. Clarify that wildcard validation must use DNS Change method. | 2.2 |
 | May 4, 2018 | Add CT fields to certificate profiles. Specify current Baseline Requirements compliance for all validations. Update certificate expiration notice text. Remove reference loops. Minor cleanup. | 2.3 |
-| X Y, Z | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
+| September 20, 2018 | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
 
 ## 1.3 PKI participants
 
