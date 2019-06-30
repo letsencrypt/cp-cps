@@ -44,6 +44,7 @@ The following revisions have been made:
 | May 4, 2018 | Add CT fields to certificate profiles. Specify current Baseline Requirements compliance for all validations. Update certificate expiration notice text. Remove reference loops. Minor cleanup. | 2.3 |
 | September 20, 2018 | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
 | November 14, 2018 | Remove user notice text from end-entity certificate profile in Section 7.1. | 2.5 |
+| July 3, 2019 | Minor grammatical and capitalization changes. | 2.6 |
 
 ## 1.3 PKI participants
 
@@ -253,15 +254,15 @@ ISRG reserves the right to make all decisions regarding Subscriber names in cert
 
 While ISRG will comply with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement responsibility for domain names should lie primarily with domain registrars and the legal system.
 
-## 3.2 Initial identity validation
+## 3.2 Initial Identity Validation
 
 ISRG may elect not to issue any certificate at its sole discretion.
 
-### 3.2.1 Method to prove possession of private key
+### 3.2.1 Method to Prove Possession of Private Key
 
 Applicants are required to prove possession of the Private Key corresponding to the Public Key in a Certificate request, which can be done by signing the request with the Private Key.
 
-### 3.2.2 Authentication of organization and domain identity
+### 3.2.2 Authentication of Organization and Domain Identity
 
 ISRG only issues Domain Validation (DV) certificates. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
 
@@ -271,7 +272,7 @@ There are three methods used for demonstrating domain control:
 
 1. Agreed-Upon Change to Website: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.6)
 
-2. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '_acme-challenge'. (BR Section 3.2.2.4.7)
+2. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '\_acme-challenge'. (BR Section 3.2.2.4.7)
 
 3. TLS Using a Random Number: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443. (BR Section 3.2.2.4.10)
 
@@ -307,7 +308,7 @@ See Section 4.7.
 
 Identification and authentication for revocation requests is performed by ISRG in compliance with Section 4.9 of this document.
 
-Identification and authentication is not required when revocation is being requested by ISRG.
+Identification and authentication are not required when revocation is being requested by ISRG.
 
 # 4. CERTIFICATE LIFE-CYCLE OPERATIONAL REQUIREMENTS
 
