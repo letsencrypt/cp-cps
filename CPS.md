@@ -694,7 +694,7 @@ Audit logs are monitored by Trusted Contributors, including operations and engin
 
 Automated internal and external vulnerability scans occur at least every two weeks, though more typically every week.
 
-Extensive vulnerability assessments for ISRG infrastructure and primary CA application code are conducted at least annually by qualified third parties.
+Extensive vulnerability assessments for ISRG infrastructure are conducted at least annually by qualified third parties.
 
 ISRG Security Officers perform a risk assessment at least annually. This risk assessment:
 
