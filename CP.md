@@ -228,6 +228,28 @@ The CA shall make its Repository public available in a read-only manner.
 
 ## 3.1 Naming
 
+### 3.1.1 Types of names
+
+No stipulation.
+
+### 3.1.2 Need for names to be meaningful
+
+No stipulation.
+
+### 3.1.3 Anonymity or pseudonymity of subscribers
+
+No stipulation.
+
+### 3.1.4 Rules for interpreting various name forms
+
+No stipulation.
+
+### 3.1.5 Uniqueness of names
+
+No stipulation.
+
+### 3.1.6 Recognition, authentication, and role of trademarks
+
 No stipulation.
 
 ## 3.2 Initial Identity Validation
@@ -236,7 +258,7 @@ No stipulation.
 
 No stipulation.
 
-### 3.2.2 Authentication of Organization and Domain Identity
+### 3.2.2 Authentication of organization identity
 
 If the Applicant requests a Certificate that will contain Subject Identity Information comprised only of the countryName field, then the CA SHALL verify the country associated with the Subject using a verification process meeting the requirements of Section 3.2.2.3 and that is described in the CA’s Certificate Policy and/or Certification Practice Statement. If the Applicant requests a Certificate that will contain the countryName field and other Subject Identity Information, then the CA SHALL verify the identity of the Applicant, and the authenticity of the Applicant Representative’s certificate request using a verification process meeting the requirements of this Section 3.2.2.1 and that is described in the CA’s Certificate Policy and/or Certification Practice Statement. The CA SHALL inspect any document relied upon under this Section for alteration or falsification.
 
@@ -285,13 +307,23 @@ Note: FQDNs may be listed in Subscriber Certificates using dNSNames in the subje
 
 ##### 3.2.2.4.1 [Reserved]
 
+No stipulation.
+
 ##### 3.2.2.4.2 [Reserved]
+
+No stipulation.
 
 ##### 3.2.2.4.3 [Reserved]
 
+No stipulation.
+
 ##### 3.2.2.4.4 [Reserved]
 
+No stipulation.
+
 ##### 3.2.2.4.5 [Reserved]
+
+No stipulation.
 
 ##### 3.2.2.4.6 Agreed-Upon Change to Website
 
@@ -316,7 +348,11 @@ Note: Once the FQDN has been validated using this method, the CA MAY also issue 
 
 ##### 3.2.2.4.8 [Reserved]
 
+No stipulation.
+
 ##### 3.2.2.4.9 [Reserved]
+
+No stipulation.
 
 ##### 3.2.2.4.10 TLS Using a Random Number
 
@@ -324,7 +360,43 @@ Confirming the Applicant's control over the FQDN by confirming the presence of a
 
 #### 3.2.2.5 Authentication for an IP Address
 
-Not applicable.
+This section defines the permitted processes and procedures for validating the Applicant’s ownership or control of an IP Address listed in a Certificate.
+
+The CA SHALL confirm that prior to issuance, the CA has validated each IP Address listed in the Certificate using at least one of the methods specified in this section.
+
+Completed validations of Applicant authority may be valid for the issuance of multiple Certificates over time. In all cases, the validation must have been initiated within the time period specified in the relevant requirement (such as Section 4.2.1 of this document) prior to Certificate issuance. For purposes of IP Address validation, the term Applicant includes the Applicant's Parent Company, Subsidiary Company, or Affiliate.
+
+After July 31, 2019, CAs SHALL maintain a record of which IP validation method, including the relevant BR version number, was used to validate every IP Address.
+
+Note: IP Addresses verified in accordance with this section 3.2.5 may be listed in Subscriber Certificates as defined in section 7.1.4.2 or in Subordinate CA Certificates via iPAddress in permittedSubtrees within the Name Constraints extension. CAs are not required to verify IP Addresses listed in Subordinate CA Certificates via iPAddress in excludedSubtrees in the Name Constraints extension prior to inclusion in the Subordinate CA Certificate.
+
+3.2.2.5.1. [Reserved]
+
+No stipulation.
+
+3.2.2.5.2. [Reserved]
+
+No stipulation.
+
+3.2.2.5.3. [Reserved]
+
+No stipulation.
+
+3.2.2.5.4. [Reserved]
+
+No stipulation.
+
+3.2.2.5.5. [Reserved]
+
+No stipulation.
+
+3.2.2.5.6 ACME “http-01” method for IP Addresses
+
+Confirming the Applicant's control over the IP Address by performing the procedure documented for an “http-01” challenge in draft 04 of “ACME IP Identifier Validation Extension,” available at https://tools.ietf.org/html/draft-ietf-acme-ip-04#section-4.
+
+3.2.2.5.7 ACME “tls-alpn-01” method for IP Addresses
+
+Confirming the Applicant's control over the IP Address by performing the procedure documented for a “tls-alpn-01” challenge in draft 04 of “ACME IP Identifier Validation Extension,” available at https://tools.ietf.org/html/draft-ietf-acme-ip-04#section-4.
 
 #### 3.2.2.6 Wildcard Domain Validation
 
