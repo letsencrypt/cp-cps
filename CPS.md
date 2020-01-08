@@ -358,8 +358,6 @@ The source of a certificate request is confirmed before issuance. CA processes a
 
 End-entity certificates are made available to Subscribers via the ACME protocol as soon after issuance as reasonably possible. Typically this happens within a few seconds.
 
-All end-entity certificates are logged to Certificate Transparency servers as soon as reasonably possible. Typically this happens within a few seconds.
-
 ## 4.4 Certificate acceptance
 
 ### 4.4.1 Conduct constituting certificate acceptance
@@ -372,7 +370,7 @@ All root and intermediate certificates are made available publicly via the Certi
 
 All end-entity certificates are made available to Subscribers via the ACME protocol.
 
-All end-entity certificates are logged to Certificate Transparency servers.
+End-entity certificates received by Subscribers are also logged to Certificate Transparency servers in precertificate form. The final (non-precertificate) form of those certificates is logged to Certificate Transparency servers on a best-effort basis.
 
 ### 4.4.3 Notification of certificate issuance by the CA to other entities
 
