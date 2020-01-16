@@ -6,7 +6,7 @@ Our CP is a copy of the Baseline Requirements (BRs) with the following changes:
 
 1. Change anything that is obviously necessary, including much of the content in Sections 1.1 and 1.2.
 
-2. Stucture should follow the structure suggested in RFC 3647 Section 6. Where there is a difference between the BR structure and RFC 3647 suggested structures, use RFC 3647.
+2. Stucture should follow the structure suggested in RFC 3647 Section 6. Casing of section labels should match RFC 3647 casing. Where there is a difference between the BR structure and RFC 3647 suggested structures, use RFC 3647.
 
 Note that any RFC 3647 section is allowed to contain sub-sections that are not defined in RFC 3647, so additional sub-sections in the BRs should be copied.
 

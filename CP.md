@@ -40,6 +40,7 @@ The following revisions have been made:
 | February 6, 2018 | Update text of Section 6.1.7 to match Baseline Requirements v1.5.1. | 2.1 |
 | September 20, 2018 | Define Certificate Problem Report in Section 1.6.1. Update Section 3.2.2.4 "Validation of Domain Authorization or Control" to match latest BRs but omit methods we do not use. Add additional revocation reason to Section 4.9.1.1 for compliance with upcoming BR revision. Minor updates to Sections 4.9.3 and 4.9.5. | 2.2 |
 | July 3, 2019 | Remove IP address validation information which is not applicable. Update sections 4.9.1.1, 4.9.1.2, and 4.9.5 to match current BRs. Other minor updates (e.g. capitalization). | 2.3 |
+| X Y, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Add policy information for IP address validation. | 2.4 |
 
 ## 1.3 PKI participants
 
@@ -252,9 +253,9 @@ No stipulation.
 
 No stipulation.
 
-## 3.2 Initial Identity Validation
+## 3.2 Initial identity validation
 
-### 3.2.1 Method to Prove Possession of Private Key
+### 3.2.1 Method to prove possession of private key
 
 No stipulation.
 
@@ -289,11 +290,11 @@ If the Subject Identity Information is to include a DBA or tradename, the CA SHA
 
 5. A utility bill, bank statement, credit card statement, government-issued tax document, or other form of identification that the CA determines to be reliable.
 
-#### 3.2.2.3 Verification of Country
+#### 3.2.2.3 Verification of country
 
 If the subject:countryName field is present, then the CA SHALL verify the country associated with the Subject using one of the following: (a) the IP Address range assignment by country for either (i) the web site’s IP address, as indicated by the DNS record for the web site or (ii) the Applicant’s IP address; (b) the ccTLD of the requested Domain Name; (c) information provided by the Domain Name Registrar; or (d) a method identified in Section 3.2.2.1. The CA SHOULD implement a process to screen proxy servers in order to prevent reliance upon IP addresses assigned in countries other than where the Applicant is actually located.
 
-#### 3.2.2.4 Validation of Domain Authorization or Control
+#### 3.2.2.4 Validation of domain authorization or control
 
 This section defines the permitted processes and procedures for validating the Applicant's ownership or control of the domain.
 
@@ -325,7 +326,7 @@ No stipulation.
 
 No stipulation.
 
-##### 3.2.2.4.6 Agreed-Upon Change to Website
+##### 3.2.2.4.6 Agreed-upon change to website
 
 Confirming the Applicant's control over the FQDN by confirming one of the following under the "/.well-known/pki-validation" directory, or another path registered with IANA for the purpose of Domain Validation, on the Authorization Domain Name that is accessible by the CA via HTTP/HTTPS over an Authorized Port:
 
@@ -338,7 +339,7 @@ Note: Examples of Request Tokens include, but are not limited to: (i) a hash of 
 
 Note: Once the FQDN has been validated using this method, the CA MAY also issue Certificates for other FQDNs that end with all the labels of the validated FQDN. This method is suitable for validating Wildcard Domain Names.
 
-##### 3.2.2.4.7 DNS Change
+##### 3.2.2.4.7 DNS change
 
 Confirming the Applicant's control over the FQDN by confirming the presence of a Random Value or Request Token for either in a DNS CNAME, TXT or CAA record for either 1) an Authorization Domain Name; or 2) an Authorization Domain Name that is prefixed with a label that begins with an underscore character.
 
@@ -354,11 +355,11 @@ No stipulation.
 
 No stipulation.
 
-##### 3.2.2.4.10 TLS Using a Random Number
+##### 3.2.2.4.10 TLS using a random number
 
 Confirming the Applicant's control over the FQDN by confirming the presence of a Random Value within a Certificate on the Authorization Domain Name which is accessible by the CA via TLS over an Authorized Port.
 
-#### 3.2.2.5 Authentication for an IP Address
+#### 3.2.2.5 Authentication for an IP address
 
 This section defines the permitted processes and procedures for validating the Applicant’s ownership or control of an IP Address listed in a Certificate.
 
@@ -370,35 +371,35 @@ After July 31, 2019, CAs SHALL maintain a record of which IP validation method, 
 
 Note: IP Addresses verified in accordance with this section 3.2.5 may be listed in Subscriber Certificates as defined in section 7.1.4.2 or in Subordinate CA Certificates via iPAddress in permittedSubtrees within the Name Constraints extension. CAs are not required to verify IP Addresses listed in Subordinate CA Certificates via iPAddress in excludedSubtrees in the Name Constraints extension prior to inclusion in the Subordinate CA Certificate.
 
-3.2.2.5.1. [Reserved]
+##### 3.2.2.5.1. [Reserved]
 
 No stipulation.
 
-3.2.2.5.2. [Reserved]
+##### 3.2.2.5.2. [Reserved]
 
 No stipulation.
 
-3.2.2.5.3. [Reserved]
+##### 3.2.2.5.3. [Reserved]
 
 No stipulation.
 
-3.2.2.5.4. [Reserved]
+##### 3.2.2.5.4. [Reserved]
 
 No stipulation.
 
-3.2.2.5.5. [Reserved]
+##### 3.2.2.5.5. [Reserved]
 
 No stipulation.
 
-3.2.2.5.6 ACME “http-01” method for IP Addresses
+##### 3.2.2.5.6 ACME “http-01” method for IP addresses
 
 Confirming the Applicant's control over the IP Address by performing the procedure documented for an “http-01” challenge in draft 04 of “ACME IP Identifier Validation Extension,” available at https://tools.ietf.org/html/draft-ietf-acme-ip-04#section-4.
 
-3.2.2.5.7 ACME “tls-alpn-01” method for IP Addresses
+##### 3.2.2.5.7 ACME “tls-alpn-01” method for IP addresses
 
 Confirming the Applicant's control over the IP Address by performing the procedure documented for a “tls-alpn-01” challenge in draft 04 of “ACME IP Identifier Validation Extension,” available at https://tools.ietf.org/html/draft-ietf-acme-ip-04#section-4.
 
-#### 3.2.2.6 Wildcard Domain Validation
+#### 3.2.2.6 Wildcard domain validation
 
 Before issuing a certificate with a wildcard character (\*) in a CN or subjectAltName of type DNS-ID, the CA MUST establish and follow a documented procedure† that determines if the wildcard character occurs in the first label position to the left of a “registry-controlled” label or “public suffix” (e.g. “\*.com”, “\*.co.uk”, see RFC 6454 Section 8.2 for further explanation).
 
@@ -407,7 +408,7 @@ Prior to September 1, 2013, each CA MUST revoke any valid certificate that does 
 
 †Determination of what is “registry-controlled” versus the registerable portion of a Country Code Top-Level Domain Namespace is not standardized at the time of writing and is not a property of the DNS itself. Current best practice is to consult a “public suffix list” such as http://publicsuffix.org/ (PSL), and to retrieve a fresh copy regularly. If using the PSL, a CA SHOULD consult the "ICANN DOMAINS" section only, not the "PRIVATE DOMAINS" section. The PSL is updated regularly to contain new gTLDs delegated by ICANN, which are listed in the "ICANN DOMAINS" section. A CA is not prohibited from issuing a Wildcard Certificate to the Registrant of an entire gTLD, provided that control of the entire namespace is demonstrated in an appropriate way.
 
-#### 3.2.2.7 Data Source Accuracy
+#### 3.2.2.7 Data source accuracy
 
 Prior to using any data source as a Reliable Data Source, the CA SHALL evaluate the source for its reliability, accuracy, and resistance to alteration or falsification. The CA SHOULD consider the following during its evaluation:
 
@@ -419,7 +420,7 @@ Prior to using any data source as a Reliable Data Source, the CA SHALL evaluate 
 
 Databases maintained by the CA, its owner, or its affiliated companies do not qualify as a Reliable Data Source if the primary purpose of the database is to collect information for the purpose of fulfilling the validation requirements under this Section 3.2.
 
-#### 3.2.2.8 CAA Records
+#### 3.2.2.8 CAA records
 
 This section is effective as of 8 September 2017.
 
@@ -469,6 +470,12 @@ The CA SHALL disclose all Cross Certificates that identify the CA as the Subject
 
 ## 3.3 Identification and authentication for re-key requests
 
+### 3.3.1  Identification and authentication for routine re-key
+
+No stipulation.
+
+### 3.3.2  Identification and authentication for re-key after revocation
+
 No stipulation.
 
 ## 3.4 Identification and authentication for revocation request
@@ -477,7 +484,7 @@ No stipulation.
 
 # 4. CERTIFICATE LIFE-CYCLE OPERATIONAL REQUIREMENTS
 
-## 4.1 Certificate Application
+## 4.1 Certificate application
 
 ### 4.1.1 Who can submit a certificate application
 
@@ -535,6 +542,16 @@ No stipulation.
 
 ## 4.4 Certificate acceptance
 
+### 4.4.1  Conduct constituting certificate acceptance
+
+No stipulation.
+
+### 4.4.2  Publication of the certificate by the CA
+
+No stipulation.
+
+### 4.4.3  Notification of certificate issuance by the CA to other entities
+
 No stipulation.
 
 ## 4.5 Key pair and certificate usage
@@ -549,13 +566,91 @@ No stipulation.
 
 ## 4.6 Certificate renewal
 
+### 4.6.1  Circumstance for certificate renewal
+
+No stipulation.
+
+### 4.6.2  Who may request renewal
+
+No stipulation.
+
+### 4.6.3  Processing certificate renewal requests
+
+No stipulation.
+
+### 4.6.4  Notification of new certificate issuance to subscriber
+
+No stipulation.
+
+### 4.6.5  Conduct constituting acceptance of a renewal certificate
+
+No stipulation.
+
+### 4.6.6  Publication of the renewal certificate by the CA
+
+No stipulation.
+
+### 4.6.7  Notification of certificate issuance by the CA to other entities
+
 No stipulation.
 
 ## 4.7 Certificate re-key
 
+### 4.7.1  Circumstance for certificate re-key
+
+No stipulation.
+
+### 4.7.2  Who may request certification of a new public key
+
+No stipulation.
+
+### 4.7.3  Processing certificate re-keying requests
+
+No stipulation.
+
+### 4.7.4  Notification of new certificate issuance to subscriber
+
+No stipulation.
+
+### 4.7.5  Conduct constituting acceptance of a re-keyed certificate
+
+No stipulation.
+
+### 4.7.6  Publication of the re-keyed certificate by the CA
+
+No stipulation.
+
+### 4.7.7  Notification of certificate issuance by the CA to other entities
+
 No stipulation.
 
 ## 4.8 Certificate modification
+
+### 4.8.1  Circumstance for certificate modification
+
+No stipulation.
+
+### 4.8.2  Who may request certificate modification
+
+No stipulation.
+
+### 4.8.3  Processing certificate modification requests
+
+No stipulation.
+
+### 4.8.4  Notification of new certificate issuance to subscriber
+
+No stipulation.
+
+### 4.8.5  Conduct constituting acceptance of modified certificate
+
+No stipulation.
+
+### 4.8.6  Publication of the modified certificate by the CA
+
+No stipulation.
+
+### 4.8.7  Notification of certificate issuance by the CA to other entities
 
 No stipulation.
 
@@ -563,7 +658,7 @@ No stipulation.
 
 ### 4.9.1 Circumstances for revocation
 
-#### 4.9.1.1	Reasons for Revoking a Subscriber Certificate
+#### 4.9.1.1	Reasons for revoking a subscriber certificate
 
 The CA SHALL revoke a Certificate within 24 hours if one or more of the following occurs:
 
@@ -586,7 +681,7 @@ The CA SHOULD revoke a certificate within 24 hours and MUST revoke a Certificate
 10. Revocation is required by the CA's Certificate Policy and/or Certification Practice Statement; or
 11. The CA is made aware of a demonstrated or proven method that exposes the Subscriber's Private Key to compromise, methods have been developed that can easily calculate it based on the Public Key (such as a Debian weak key, see http://wiki.debian.org/SSLkeys), or if there is clear evidence that the specific method used to generate the Private Key was flawed.
 
-#### 4.9.1.2 Reasons for Revoking a Subordinate CA Certificate
+#### 4.9.1.2 Reasons for revoking a subordinate CA certificate
 
 The Issuing CA SHALL revoke a Subordinate CA Certificate within seven (7) days if one or more of the following occurs:
 
@@ -720,6 +815,12 @@ No stipulation.
 No stipulation.
 
 ## 4.12 Key escrow and recovery
+
+### 4.12.1 Key escrow and recovery policy and practices
+
+No stipulation.
+
+### 4.12.2 Session key encapsulation and recovery policy and practices
 
 No stipulation.
 
