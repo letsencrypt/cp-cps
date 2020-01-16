@@ -854,6 +854,36 @@ Based on the Risk Assessment, the CA SHALL develop, implement, and maintain a se
 
 ## 5.1 Physical controls
 
+### 5.1.1  Site location and construction
+
+No stipulation.
+
+### 5.1.2  Physical access
+
+No stipulation.
+
+### 5.1.3  Power and air conditioning
+
+No stipulation.
+
+### 5.1.4  Water exposures
+
+No stipulation.
+
+### 5.1.5  Fire prevention and protection
+
+No stipulation.
+
+### 5.1.6  Media storage
+
+No stipulation.
+
+### 5.1.7  Waste disposal
+
+No stipulation.
+
+### 5.1.8  Off-site backup
+
 No stipulation.
 
 ## 5.2 Procedural controls
@@ -1062,7 +1092,7 @@ No stipulation.
 
 ### 6.1.1 Key pair generation
 
-#### 6.1.1.1 CA Key Pair Generation
+#### 6.1.1.1 CA key pair generation
 
 For Root CA Key Pairs created after the Effective Date that are either (i) used as Root CA Key Pairs or (ii) Key Pairs generated for a subordinate CA that is not the operator of the Root CA or an Affiliate of the Root CA, the CA SHALL:
 
@@ -1083,11 +1113,11 @@ In all cases, the CA SHALL:
 4. log its CA key generation activities; and
 5. maintain effective controls to provide reasonable assurance that the Private Key was generated and protected in conformance with the procedures described in its Certificate Policy and/or Certification Practice Statement and (if applicable) its Key Generation Script.
 
-#### 6.1.1.2 RA Key Pair Generation
+#### 6.1.1.2 RA key pair generation
 
 No stipulation.
 
-#### 6.1.1.3 Subscriber Key Pair Generation
+#### 6.1.1.3 Subscriber key pair generation
 
 The CA SHALL reject a certificate request if the requested Public Key does not meet the requirements set forth in Sections 6.1.5 and 6.1.6 or if it has a known weak Private Key (such as a Debian weak key, see [http://wiki.debian.org/SSLkeys](http://wiki.debian.org/SSLkeys)).
 
@@ -1157,7 +1187,7 @@ DSA: Although FIPS 800-57 says that domain parameters may be made available at s
 
 ECC: The CA SHOULD confirm the validity of all keys using either the ECC Full Public Key Validation Routine or the ECC Partial Public Key Validation Routine. [Source: Sections 5.6.2.3.2 and 5.6.2.3.3, respectively, of NIST SP 56A: Revision 2].
 
-### 6.1.7 Key usage purposes
+### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
 Private Keys corresponding to Root Certificates MUST NOT be used to sign Certificates except in the following cases:
 
@@ -1229,6 +1259,16 @@ Subscriber Certificates issued after 1 July 2016 but prior to 1 March 2018 MUST 
 
 ## 6.4 Activation data
 
+### 6.4.1  Activation data generation and installation
+
+No stipulation.
+
+### 6.4.2  Activation data protection
+
+No stipulation.
+
+### 6.4.3  Other aspects of activation data
+
 No stipulation.
 
 ## 6.5 Computer security controls
@@ -1242,6 +1282,16 @@ The CA SHALL enforce multi-factor authentication for all accounts capable of dir
 No stipulation.
 
 ## 6.6 Life cycle technical controls
+
+### 6.6.1  System development controls
+
+No stipulation.
+
+### 6.6.2  Security management controls
+
+No stipulation.
+
+### 6.6.3  Life cycle security controls
 
 No stipulation.
 

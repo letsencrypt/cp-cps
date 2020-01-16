@@ -45,7 +45,7 @@ The following revisions have been made:
 | September 20, 2018 | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
 | November 14, 2018 | Remove user notice text from end-entity certificate profile in Section 7.1. | 2.5 |
 | July 3, 2019 | Minor grammatical and capitalization changes. | 2.6 |
-| X Y, 2020 | Remove restrictions on issuance for IP addresses. | 2.7 |
+| X Y, 2020 | Remove restriction on issuance for IP addresses in Section 7.1.5. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
 
 ## 1.3 PKI participants
 
