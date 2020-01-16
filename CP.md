@@ -470,11 +470,11 @@ The CA SHALL disclose all Cross Certificates that identify the CA as the Subject
 
 ## 3.3 Identification and authentication for re-key requests
 
-### 3.3.1  Identification and authentication for routine re-key
+### 3.3.1 Identification and authentication for routine re-key
 
 No stipulation.
 
-### 3.3.2  Identification and authentication for re-key after revocation
+### 3.3.2 Identification and authentication for re-key after revocation
 
 No stipulation.
 
@@ -542,15 +542,15 @@ No stipulation.
 
 ## 4.4 Certificate acceptance
 
-### 4.4.1  Conduct constituting certificate acceptance
+### 4.4.1 Conduct constituting certificate acceptance
 
 No stipulation.
 
-### 4.4.2  Publication of the certificate by the CA
+### 4.4.2 Publication of the certificate by the CA
 
 No stipulation.
 
-### 4.4.3  Notification of certificate issuance by the CA to other entities
+### 4.4.3 Notification of certificate issuance by the CA to other entities
 
 No stipulation.
 
@@ -566,91 +566,91 @@ No stipulation.
 
 ## 4.6 Certificate renewal
 
-### 4.6.1  Circumstance for certificate renewal
+### 4.6.1 Circumstance for certificate renewal
 
 No stipulation.
 
-### 4.6.2  Who may request renewal
+### 4.6.2 Who may request renewal
 
 No stipulation.
 
-### 4.6.3  Processing certificate renewal requests
+### 4.6.3 Processing certificate renewal requests
 
 No stipulation.
 
-### 4.6.4  Notification of new certificate issuance to subscriber
+### 4.6.4 Notification of new certificate issuance to subscriber
 
 No stipulation.
 
-### 4.6.5  Conduct constituting acceptance of a renewal certificate
+### 4.6.5 Conduct constituting acceptance of a renewal certificate
 
 No stipulation.
 
-### 4.6.6  Publication of the renewal certificate by the CA
+### 4.6.6 Publication of the renewal certificate by the CA
 
 No stipulation.
 
-### 4.6.7  Notification of certificate issuance by the CA to other entities
+### 4.6.7 Notification of certificate issuance by the CA to other entities
 
 No stipulation.
 
 ## 4.7 Certificate re-key
 
-### 4.7.1  Circumstance for certificate re-key
+### 4.7.1 Circumstance for certificate re-key
 
 No stipulation.
 
-### 4.7.2  Who may request certification of a new public key
+### 4.7.2 Who may request certification of a new public key
 
 No stipulation.
 
-### 4.7.3  Processing certificate re-keying requests
+### 4.7.3 Processing certificate re-keying requests
 
 No stipulation.
 
-### 4.7.4  Notification of new certificate issuance to subscriber
+### 4.7.4 Notification of new certificate issuance to subscriber
 
 No stipulation.
 
-### 4.7.5  Conduct constituting acceptance of a re-keyed certificate
+### 4.7.5 Conduct constituting acceptance of a re-keyed certificate
 
 No stipulation.
 
-### 4.7.6  Publication of the re-keyed certificate by the CA
+### 4.7.6 Publication of the re-keyed certificate by the CA
 
 No stipulation.
 
-### 4.7.7  Notification of certificate issuance by the CA to other entities
+### 4.7.7 Notification of certificate issuance by the CA to other entities
 
 No stipulation.
 
 ## 4.8 Certificate modification
 
-### 4.8.1  Circumstance for certificate modification
+### 4.8.1 Circumstance for certificate modification
 
 No stipulation.
 
-### 4.8.2  Who may request certificate modification
+### 4.8.2 Who may request certificate modification
 
 No stipulation.
 
-### 4.8.3  Processing certificate modification requests
+### 4.8.3 Processing certificate modification requests
 
 No stipulation.
 
-### 4.8.4  Notification of new certificate issuance to subscriber
+### 4.8.4 Notification of new certificate issuance to subscriber
 
 No stipulation.
 
-### 4.8.5  Conduct constituting acceptance of modified certificate
+### 4.8.5 Conduct constituting acceptance of modified certificate
 
 No stipulation.
 
-### 4.8.6  Publication of the modified certificate by the CA
+### 4.8.6 Publication of the modified certificate by the CA
 
 No stipulation.
 
-### 4.8.7  Notification of certificate issuance by the CA to other entities
+### 4.8.7 Notification of certificate issuance by the CA to other entities
 
 No stipulation.
 
@@ -854,35 +854,35 @@ Based on the Risk Assessment, the CA SHALL develop, implement, and maintain a se
 
 ## 5.1 Physical controls
 
-### 5.1.1  Site location and construction
+### 5.1.1 Site location and construction
 
 No stipulation.
 
-### 5.1.2  Physical access
+### 5.1.2 Physical access
 
 No stipulation.
 
-### 5.1.3  Power and air conditioning
+### 5.1.3 Power and air conditioning
 
 No stipulation.
 
-### 5.1.4  Water exposures
+### 5.1.4 Water exposures
 
 No stipulation.
 
-### 5.1.5  Fire prevention and protection
+### 5.1.5 Fire prevention and protection
 
 No stipulation.
 
-### 5.1.6  Media storage
+### 5.1.6 Media storage
 
 No stipulation.
 
-### 5.1.7  Waste disposal
+### 5.1.7 Waste disposal
 
 No stipulation.
 
-### 5.1.8  Off-site backup
+### 5.1.8 Off-site backup
 
 No stipulation.
 
@@ -1259,15 +1259,15 @@ Subscriber Certificates issued after 1 July 2016 but prior to 1 March 2018 MUST 
 
 ## 6.4 Activation data
 
-### 6.4.1  Activation data generation and installation
+### 6.4.1 Activation data generation and installation
 
 No stipulation.
 
-### 6.4.2  Activation data protection
+### 6.4.2 Activation data protection
 
 No stipulation.
 
-### 6.4.3  Other aspects of activation data
+### 6.4.3 Other aspects of activation data
 
 No stipulation.
 
@@ -1283,15 +1283,15 @@ No stipulation.
 
 ## 6.6 Life cycle technical controls
 
-### 6.6.1  System development controls
+### 6.6.1 System development controls
 
 No stipulation.
 
-### 6.6.2  Security management controls
+### 6.6.2 Security management controls
 
 No stipulation.
 
-### 6.6.3  Life cycle security controls
+### 6.6.3 Life cycle security controls
 
 No stipulation.
 
@@ -1319,7 +1319,7 @@ Certificates MUST be of type X.509 v3.
 
 This section specifies the additional requirements for Certificate content and extensions for Certificates generated after the Effective Date.
 
-#### 7.1.2.1 Root CA Certificate
+#### 7.1.2.1 Root CA certificate
 
 a. basicConstraints
 
@@ -1345,7 +1345,7 @@ The Certificate Subject MUST contain the following:
 country in which the CA’s place of business is located.
 - organizationName (OID 2.5.4.10): This field MUST be present and the contents MUST contain either the Subject CA’s name or DBA as verified under Section 3.2.2.2. The CA may include information in this field that differs slightly from the verified name, such as common variations or abbreviations, provided that the CA documents the difference and any abbreviations used are locally accepted abbreviations; e.g., if the official record shows “Company Name Incorporated”, the CA MAY use “Company Name Inc.” or “Company Name”.
 
-#### 7.1.2.2 Subordinate CA Certificate
+#### 7.1.2.2 Subordinate CA certificate
 
 a. certificatePolicies
 
@@ -1405,7 +1405,7 @@ The Certificate Subject MUST contain the following:
 country in which the CA’s place of business is located.
 - organizationName (OID 2.5.4.10): This field MUST be present and the contents MUST contain either the Subject CA’s name or DBA as verified under Section 3.2.2.2. The CA may include information in this field that differs slightly from the verified name, such as common variations or abbreviations, provided that the CA documents the difference and any abbreviations used are locally accepted abbreviations; e.g., if the official record shows “Company Name Incorporated”, the CA MAY use “Company Name Inc.” or “Company Name”.
 
-#### 7.1.2.3 Subscriber Certificate
+#### 7.1.2.3 Subscriber certificate
 
 a. certificatePolicies
 
@@ -1447,7 +1447,7 @@ f. extKeyUsage (required)
 
 Either the value id-kp-serverAuth [RFC5280] or id-kp-clientAuth [RFC5280] or both values MUST be present. id-kp-emailProtection [RFC5280] MAY be present. Other values SHOULD NOT be present.
 
-#### 7.1.2.4 All Certificates
+#### 7.1.2.4 All certificates
 
 All other fields and extensions MUST be set in accordance with RFC 5280. The CA SHALL NOT issue a Certificate that contains a keyUsage flag, extendedKeyUsage value, Certificate extension, or other data not specified in section 7.1.2.1, 7.1.2.2, or 7.1.2.3 unless the CA is aware of a reason for including the data in the Certificate.
 
@@ -1475,11 +1475,11 @@ Effective 16 January 2015, CAs SHOULD NOT issue Subscriber Certificates utilizin
 
 The content of the Certificate Issuer Distinguished Name field MUST match the Subject DN of the Issuing CA to support Name chaining as specified in RFC 5280, section 4.1.2.4.
 
-#### 7.1.4.2 Subject Information
+#### 7.1.4.2 Subject information
 
 By issuing the Certificate, the CA represents that it followed the procedure set forth in its Certificate Policy and/or Certification Practice Statement to verify that, as of the Certificate’s issuance date, all of the Subject Information was accurate. CAs SHALL NOT include a Domain Name or IP Address in a Subject attribute except as specified in Sections 3.2.2.4 or 3.2.2.5.
 
-##### 7.1.4.2.1 Subject Alternative Name Extension
+##### 7.1.4.2.1 Subject alternative name extension
 
 | Certificate Field         | Req\Opt  | Contents                       |
 |---------------------------|----------|--------------------------------|
@@ -1487,7 +1487,7 @@ By issuing the Certificate, the CA represents that it followed the procedure set
 
 As of the Effective Date of these Requirements, prior to the issuance of a Certificate with a subjectAlternativeName extension or Subject commonName field containing a Reserved IP Address or Internal Name, the CA SHALL notify the Applicant that the use of such Certificates has been deprecated by the CA / Browser Forum and that the practice will be eliminated by October 2016. Also as of the Effective Date, the CA SHALL NOT issue a certificate with an Expiry Date later than 1 November 2015 with a subjectAlternativeName extension or Subject commonName field containing a Reserved IP Address or Internal Name. Effective 1 October 2016, CAs SHALL revoke all unexpired Certificates whose subjectAlternativeName extension or Subject commonName field contains a Reserved IP Address or Internal Name. Effective May 1, 2015, each CA SHALL revoke all unexpired Certificates with an Internal Name using onion as the right-most label in an entry in the subjectAltName Extension or commonName field unless such Certificate was issued in accordance with Appendix F of the EV Guidelines.
 
-##### 7.1.4.2.2 Subject Distinguished Name Fields
+##### 7.1.4.2.2 Subject distinguished name fields
 
 | Certificate Field         | Req\Opt  | Contents                       |
 |---------------------------|----------|--------------------------------|
@@ -1503,7 +1503,7 @@ As of the Effective Date of these Requirements, prior to the issuance of a Certi
 
 All other optional attributes, when present within the subject field, MUST contain information that has been verified by the CA. Optional attributes MUST NOT contain metadata such as ‘.’, ‘-‘, and ‘ ‘ (i.e. space) characters, and/or any other indication that the value is absent, incomplete, or not applicable.
 
-#### 7.1.4.3 Subject Information – Subordinate CA Certificates
+#### 7.1.4.3 Subject information – subordinate CA certificates
 
 By issuing a Subordinate CA Certificate, the CA represents that it followed the procedure set forth in its Certificate Policy and/or Certification Practice Statement to verify that, as of the Certificate’s issuance date, all of the Subject Information was accurate.
 
@@ -1533,7 +1533,7 @@ If the Subordinate CA is not allowed to issue certificates with dNSNames, then t
 
 ### 7.1.6 Certificate policy object identifier
 
-#### 7.1.6.1 Reserved Certificate Policy Identifiers
+#### 7.1.6.1 Reserved certificate policy identifiers
 
 This section describes the content requirements for the Root CA, Subordinate CA, and Subscriber Certificates, as they relate to the identification of Certificate Policy.
 
@@ -1549,11 +1549,11 @@ If the Certificate asserts the policy identifier of 2.23.140.1.2.1, then it MUST
 
 If the Certificate asserts the policy identifier of 2.23.140.1.2.2, then it MUST also include organizationName, localityName (to the extent such field is required under Section 7.1.4.2.2), stateOrProvinceName (to the extent such field is required under Section 7.1.4.2.2), and countryName in the Subject field. If the Certificate asserts the policy identifier of 2.23.140.1.2.3, then it MUST also include (i) either organizationName or givenName and surname, (ii) localityName (to the extent such field is required under Section 7.1.4.2.2), (iii) stateOrProvinceName (to the extent required under Section 7.1.4.2.2), and (iv) countryName in the Subject field.
 
-#### 7.1.6.2 Root CA Certificates
+#### 7.1.6.2 Root CA certificates
 
 A Root CA Certificate SHOULD NOT contain the certificatePolicies extension.
 
-#### 7.1.6.3 Subordinate CA Certificates
+#### 7.1.6.3 Subordinate CA certificates
 
 A Certificate issued after the Effective Date to a Subordinate CA that is not an Affiliate of the Issuing CA:
 
@@ -1567,7 +1567,7 @@ A Certificate issued after the Effective Date to a Subordinate CA that is an aff
 
 A Subordinate CA SHALL represent, in its Certificate Policy and/or Certification Practice Statement, that all Certificates containing a policy identifier indicating compliance with these Requirements are issued and managed in accordance with these Requirements.
 
-#### 7.1.6.4 Subscriber Certificates
+#### 7.1.6.4 Subscriber certificates
 
 A Certificate issued to a Subscriber MUST contain one or more policy identifier(s), defined by the Issuing CA, in the Certificate’s certificatePolicies extension that indicates adherence to and compliance with these Requirements. CAs complying with these Requirements MAY also assert one of the reserved policy OIDs in such Certificates.
 
@@ -1587,9 +1587,21 @@ No stipulation.
 
 ## 7.2 CRL profile
 
+### 7.2.1 Version number(s)
+
+No stipulation.
+
+### 7.2.2 CRL and CRL entry extensions
+
 No stipulation.
 
 ## 7.3 OCSP profile
+
+### 7.3.1 Version number(s)
+
+No stipulation.
+
+### 7.3.2 OCSP extensions
 
 No stipulation.
 
@@ -1670,17 +1682,81 @@ During the period in which a Technically Constrained Subordinate CA issues Certi
 
 ## 9.1 Fees
 
+### 9.1.1 Certificate issuance or renewal fees
+
+No stipulation.
+
+### 9.1.2 Certificate access fees
+
+No stipulation.
+
+### 9.1.3 Revocation or status information access fees
+
+No stipulation.
+
+### 9.1.4 Fees for other services
+
+No stipulation.
+
+### 9.1.5 Refund policy
+
 No stipulation.
 
 ## 9.2 Financial responsibility
+
+### 9.2.1 Insurance coverage
+
+No stipulation.
+
+### 9.2.2 Other assets
+
+No stipulation.
+
+### 9.2.3 Insurance or warranty coverage for end-entities
 
 No stipulation.
 
 ## 9.3 Confidentiality of business information
 
+### 9.3.1 Scope of confidential information
+
+No stipulation.
+
+### 9.3.2 Information not within the scope of confidential information
+
+No stipulation.
+
+### 9.3.3 Responsibility to protect confidential information
+
 No stipulation.
 
 ## 9.4 Privacy of personal information
+
+### 9.4.1 Privacy plan
+
+No stipulation.
+
+### 9.4.2 Information treated as private
+
+No stipulation.
+
+### 9.4.3 Information not deemed private
+
+No stipulation.
+
+### 9.4.4 Responsibility to protect private information
+
+No stipulation.
+
+### 9.4.5 Notice and consent to use private information
+
+No stipulation.
+
+### 9.4.6 Disclosure pursuant to judicial or administrative process
+
+No stipulation.
+
+### 9.4.7 Other information disclosure circumstances
 
 No stipulation.
 
@@ -1786,15 +1862,17 @@ If the CA has issued and managed the Certificate in compliance with these Requir
 
 Notwithstanding any limitations on its liability to Subscribers and Relying Parties, the CA understands and acknowledges that the Application Software Suppliers who have a Root Certificate distribution agreement in place with the Root CA do not assume any obligation or potential liability of the CA under these Requirements or that otherwise might exist because of the issuance or maintenance of Certificates or reliance thereon by Relying Parties or others. Thus, except in the case where the CA is a government entity, the CA SHALL defend, indemnify, and hold harmless each Application Software Supplier for any and all claims, damages, and losses suffered by such Application Software Supplier related to a Certificate issued by the CA, regardless of the cause of action or legal theory involved. This does not apply, however, to any claim, damages, or loss suffered by such Application Software Supplier related to a Certificate issued by the CA where such claim, damage, or loss was directly caused by such Application Software Supplier’s software displaying as not trustworthy a Certificate that is still valid, or displaying as trustworthy (1) a Certificate that has expired, or (2) a Certificate that has been revoked (but only in cases where the revocation status is currently available from the CA online, and the application software either failed to check such status or ignored an indication of revoked status).
 
-### 9.9.2 Indemnification by Subscribers
-
-No stipulation.
-
-### 9.9.3 Indemnification by Relying Parties
-
-No stipulation.
-
 ## 9.10 Term and termination
+
+### 9.10.1 Term
+
+No stipulation.
+
+### 9.10.2 Termination
+
+No stipulation.
+
+### 9.10.3 Effect of termination and survival
 
 No stipulation.
 
@@ -1803,6 +1881,16 @@ No stipulation.
 No stipulation.
 
 ## 9.12 Amendments
+
+### 9.12.1 Procedure for amendment
+
+No stipulation.
+
+### 9.12.2 Notification mechanism and period
+
+No stipulation.
+
+### 9.12.3 Circumstances under which OID must be changed
 
 No stipulation.
 
