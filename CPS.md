@@ -45,7 +45,7 @@ The following revisions have been made:
 | September 20, 2018 | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
 | November 14, 2018 | Remove user notice text from end-entity certificate profile in Section 7.1. | 2.5 |
 | July 3, 2019 | Minor grammatical and capitalization changes. | 2.6 |
-| X Y, 2020 | Remove restriction on issuance for IP addresses in Section 7.1.5. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
+| X Y, 2020 | Remove restriction on issuance for IP addresses in Section 7.1.5. Update lists of appropriate and prohibited certificate uses in Sections 1.4.1 and 1.4.2. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
 
 ## 1.3 PKI participants
 
@@ -79,18 +79,16 @@ ISRG PKI vendors and service providers with access to confidential information o
 
 ### 1.4.1 Appropriate certificate uses
 
-Certificates issued by ISRG PKI can be used only to establish secure online communication between hosts (as identified by the FQDN provided in the Certificate) and clients using the TLS protocol.
+No stipulation.
 
 ### 1.4.2 Prohibited certificate uses
 
 Certificates may not be used:
 
-* For any purpose not explicitly defined in Section 1.4.1 of this document
 * For any application requiring fail-safe performance such as a) the operation of nuclear power facilities b) air traffic control systems c) aircraft navigation systems d) weapons control systems e) any other system in which failure could lead to injury, death, or environmental damage.
 * For software or hardware architectures that provide facilities for interference with encrypted communications, including but not limited to a) active eavesdropping (e.g., Man-in-the-middle attacks) b) traffic management of domain names or internet protocol (IP) addresses that the organization does not own or control. Note that these restrictions shall apply regardless of whether a relying party communicating through the software or hardware architecture has knowledge of its providing facilities for interference with encrypted communications.
-* When prohibited by law.
 
-Also, note that Certificates do not guarantee anything regarding reputation, honesty, or the current state of endpoint security. A Certificate only represents that the information contained in it was verified as reasonably correct when the Certificate was issued.
+Note that Certificates do not guarantee anything regarding reputation, honesty, or the current state of endpoint security. A Certificate only represents that the information contained in it was verified as reasonably correct when the Certificate was issued.
 
 ## 1.5 Policy administration
 
