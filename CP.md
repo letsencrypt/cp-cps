@@ -185,7 +185,7 @@ The ISRG PMA approves any revisions to this CP document after formal review.
 
 ### 1.6.3 References
 
-No stipulation.
+No references defined at this time.
 
 ### 1.6.4 Conventions
 
