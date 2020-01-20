@@ -16,6 +16,10 @@ An example of a conflict between RFC 3647 and the BR structure is the title of S
 
 4. No sections can be left blank. If there is a blank section in the BRs say "No stipulation." to indicate that our CP will not impose additional requirements.
 
+5. Section 9, legal, is designed and reviewed by ISRG attorneys.
+
 ## CPS
 
 The CPS should have the same structure at the CP, but contain more detailed information.
+
+Section 9, legal, is designed and reviewed by ISRG attorneys.
