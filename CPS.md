@@ -45,7 +45,7 @@ The following revisions have been made:
 | September 20, 2018 | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
 | November 14, 2018 | Remove user notice text from end-entity certificate profile in Section 7.1. | 2.5 |
 | July 3, 2019 | Minor grammatical and capitalization changes. | 2.6 |
-| X Y, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Remove restriction on issuance for IP addresses in Section 7.1.5. Update lists of appropriate and prohibited certificate uses in Sections 1.4.1 and 1.4.2. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
+| January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Remove restriction on issuance for IP addresses in Section 7.1.5. Update lists of appropriate and prohibited certificate uses in Sections 1.4.1 and 1.4.2. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
 
 ## 1.3 PKI participants
 
