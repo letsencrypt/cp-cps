@@ -46,6 +46,7 @@ The following revisions have been made:
 | November 14, 2018 | Remove user notice text from end-entity certificate profile in Section 7.1. | 2.5 |
 | July 3, 2019 | Minor grammatical and capitalization changes. | 2.6 |
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Remove restriction on issuance for IP addresses in Section 7.1.5. Update lists of appropriate and prohibited certificate uses in Sections 1.4.1 and 1.4.2. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
+| X Y, Z | Specify in Section 4.9.3 that revocations for key compromise will result in blocking of the public key for future issuance and revocation of other outstanding certificates with the key. | 2.8 |
 
 ## 1.3 PKI participants
 
@@ -104,6 +105,8 @@ Policy Management Authority<br/>
 Internet Security Research Group<br/>
 1 Letterman Drive, Suite D4700<br/>
 San Francisco, CA 94129<br/>
+
+Certificate revocation requests can be made via the ACME API. Please see Section 4.9.3 for more information.
 
 Certificate Problem Reports can be submitted via email to:
 
@@ -529,7 +532,7 @@ Certificates may be administratively revoked by ISRG if it is determined that th
 
 ### 4.9.3 Procedure for revocation request
 
-Revocation requests may be made at any time via the ACME API.
+Revocation requests may be made at any time via the ACME API. Revocations with a reason code of `keyCompromise` will result in the affected key being blocked for future issuance and all currently valid certificates with that key will be revoked.
 
 All other requests for revocation must be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
