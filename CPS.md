@@ -532,7 +532,7 @@ Certificates may be administratively revoked by ISRG if it is determined that th
 
 ### 4.9.3 Procedure for revocation request
 
-Revocation requests may be made at any time via the ACME API. Revocations with a reason code of `keyCompromise` will result in the affected key being blocked for future issuance and all currently valid certificates with that key will be revoked.
+Revocation requests may be made at any time via the ACME API. Successful revocation requests with a reason code of `keyCompromise` will result in the affected key being blocked for future issuance and all currently valid certificates with that key will be revoked.
 
 All other requests for revocation must be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
