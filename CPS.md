@@ -142,6 +142,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * A repository of policy and legal documents related to the ISRG PKI. It is located at: https://letsencrypt.org/repository/
 * Key Pair
   * A Private Key and its associated Public Key.
+* Precertificate
+  * A certificate containing a critical poison extension as defined by RFC 6962 Section 3.1.
 * Private Key
   * The key in a Key Pair that must be kept secret. Used to create digital signatures that can be verified by the corresponding Public Key or to decrypt messages encrypted by the corresponding Public Key.
 * Public Key
