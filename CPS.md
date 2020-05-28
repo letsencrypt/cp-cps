@@ -45,6 +45,8 @@ The following revisions have been made:
 | September 20, 2018 | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
 | November 14, 2018 | Remove user notice text from end-entity certificate profile in Section 7.1. | 2.5 |
 | July 3, 2019 | Minor grammatical and capitalization changes. | 2.6 |
+| January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Remove restriction on issuance for IP addresses in Section 7.1.5. Update lists of appropriate and prohibited certificate uses in Sections 1.4.1 and 1.4.2. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
+| X Y, Z | Specify in Section 4.9.3 that revocations for key compromise will result in blocking of the public key for future issuance and revocation of other outstanding certificates with the key. | 2.8 |
 
 ## 1.3 PKI participants
 
@@ -78,18 +80,16 @@ ISRG PKI vendors and service providers with access to confidential information o
 
 ### 1.4.1 Appropriate certificate uses
 
-Certificates issued by ISRG PKI can be used only to establish secure online communication between hosts (as identified by the FQDN provided in the Certificate) and clients using the TLS protocol.
+No stipulation.
 
 ### 1.4.2 Prohibited certificate uses
 
 Certificates may not be used:
 
-* For any purpose not explicitly defined in Section 1.4.1 of this document
 * For any application requiring fail-safe performance such as a) the operation of nuclear power facilities b) air traffic control systems c) aircraft navigation systems d) weapons control systems e) any other system in which failure could lead to injury, death, or environmental damage.
 * For software or hardware architectures that provide facilities for interference with encrypted communications, including but not limited to a) active eavesdropping (e.g., Man-in-the-middle attacks) b) traffic management of domain names or internet protocol (IP) addresses that the organization does not own or control. Note that these restrictions shall apply regardless of whether a relying party communicating through the software or hardware architecture has knowledge of its providing facilities for interference with encrypted communications.
-* When prohibited by law.
 
-Also, note that Certificates do not guarantee anything regarding reputation, honesty, or the current state of endpoint security. A Certificate only represents that the information contained in it was verified as reasonably correct when the Certificate was issued.
+Note that Certificates do not guarantee anything regarding reputation, honesty, or the current state of endpoint security. A Certificate only represents that the information contained in it was verified as reasonably correct when the Certificate was issued.
 
 ## 1.5 Policy administration
 
@@ -105,6 +105,8 @@ Policy Management Authority<br/>
 Internet Security Research Group<br/>
 1 Letterman Drive, Suite D4700<br/>
 San Francisco, CA 94129<br/>
+
+Certificate revocation requests can be made via the ACME API. Please see Section 4.9.3 for more information.
 
 Certificate Problem Reports can be submitted via email to:
 
@@ -192,6 +194,16 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 * TLD
   * Top Level Domain
 
+### 1.6.3 References
+
+No references defined at this time.
+
+### 1.6.4 Conventions
+
+Terms not otherwise defined in this CPS shall be as defined in applicable agreements, user manuals, Certificate Policies and Certification Practice Statements, of the CA.
+
+The key words “MUST”, “MUST NOT”, "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in these Requirements shall be interpreted in accordance with RFC 2119.
+
 # 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
 
 ## 2.1 Repositories
@@ -254,15 +266,15 @@ ISRG reserves the right to make all decisions regarding Subscriber names in cert
 
 While ISRG will comply with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement responsibility for domain names should lie primarily with domain registrars and the legal system.
 
-## 3.2 Initial Identity Validation
+## 3.2 Initial identity validation
 
 ISRG may elect not to issue any certificate at its sole discretion.
 
-### 3.2.1 Method to Prove Possession of Private Key
+### 3.2.1 Method to prove possession of private key
 
 Applicants are required to prove possession of the Private Key corresponding to the Public Key in a Certificate request, which can be done by signing the request with the Private Key.
 
-### 3.2.2 Authentication of Organization and Domain Identity
+### 3.2.2 Authentication of organization and domain identity
 
 ISRG only issues Domain Validation (DV) certificates. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
 
@@ -302,6 +314,12 @@ https://letsencrypt.org/certificates/
 
 ## 3.3 Identification and authentication for re-key requests
 
+### 3.3.1 Identification and authentication for routine re-key
+
+See Section 4.7.
+
+### 3.3.2 Identification and authentication for re-key after revocation
+
 See Section 4.7.
 
 ## 3.4 Identification and authentication for revocation request
@@ -312,7 +330,7 @@ Identification and authentication are not required when revocation is being requ
 
 # 4. CERTIFICATE LIFE-CYCLE OPERATIONAL REQUIREMENTS
 
-## 4.1 Certificate Application
+## 4.1 Certificate application
 
 ### 4.1.1 Who can submit a certificate application
 
@@ -398,13 +416,97 @@ Relying Parties ignoring certificate expiration, revocation data provided via OC
 
 Certificate renewal requests are treated as applications for new certificates.
 
+### 4.6.1 Circumstance for certificate renewal
+
+No stipulation.
+
+### 4.6.2 Who may request renewal
+
+No stipulation.
+
+### 4.6.3 Processing certificate renewal requests
+
+No stipulation.
+
+### 4.6.4 Notification of new certificate issuance to subscriber
+
+No stipulation.
+
+### 4.6.5 Conduct constituting acceptance of a renewal certificate
+
+No stipulation.
+
+### 4.6.6 Publication of the renewal certificate by the CA
+
+No stipulation.
+
+### 4.6.7 Notification of certificate issuance by the CA to other entities
+
+No stipulation.
+
 ## 4.7 Certificate re-key
 
 Certificate re-key requests are treated as applications for new certificates.
 
+### 4.7.1 Circumstance for certificate re-key
+
+No stipulation.
+
+### 4.7.2 Who may request certification of a new public key
+
+No stipulation.
+
+### 4.7.3 Processing certificate re-keying requests
+
+No stipulation.
+
+### 4.7.4 Notification of new certificate issuance to subscriber
+
+No stipulation.
+
+### 4.7.5 Conduct constituting acceptance of a re-keyed certificate
+
+No stipulation.
+
+### 4.7.6 Publication of the re-keyed certificate by the CA
+
+No stipulation.
+
+### 4.7.7 Notification of certificate issuance by the CA to other entities
+
+No stipulation.
+
 ## 4.8 Certificate modification
 
 Certificate modification requests are treated as applications for new certificates.
+
+### 4.8.1 Circumstance for certificate modification
+
+No stipulation.
+
+### 4.8.2 Who may request certificate modification
+
+No stipulation.
+
+### 4.8.3 Processing certificate modification requests
+
+No stipulation.
+
+### 4.8.4 Notification of new certificate issuance to subscriber
+
+No stipulation.
+
+### 4.8.5 Conduct constituting acceptance of modified certificate
+
+No stipulation.
+
+### 4.8.6 Publication of the modified certificate by the CA
+
+No stipulation.
+
+### 4.8.7 Notification of certificate issuance by the CA to other entities
+
+No stipulation.
 
 ## 4.9 Certificate revocation and suspension
 
@@ -428,7 +530,7 @@ Certificates may be administratively revoked by ISRG if it is determined that th
 
 ### 4.9.3 Procedure for revocation request
 
-Revocation requests may be made at any time via the ACME API.
+Revocation requests may be made at any time via the ACME API. Successful revocation requests with a reason code of `keyCompromise` will result in the affected key being blocked for future issuance and all currently valid certificates with that key will be revoked.
 
 All other requests for revocation must be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
@@ -1033,9 +1135,7 @@ See ISRG Certificate Policy.
 
 ### 7.1.5 Name constraints
 
-ISRG will not issue Certificates for IP addresses.
-
-These restrictions are not enforced by a NameConstraints extension.
+No stipulation.
 
 ### 7.1.6 Certificate policy object identifier
 
