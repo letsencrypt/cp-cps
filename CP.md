@@ -137,8 +137,6 @@ The ISRG PMA approves any revisions to this CP document after formal review.
   * An entity that relies upon information contained within certificates issued by ISRG PKI services.
 * Root CA
   * The top-level Certification Authority whose Root Certificate is distributed by Application Software Suppliers and that issues Subordinate CA Certificates.
-* Secure PKI Facilities
-  * Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
 * Subscriber
   * An entity that has agreed to a Subscriber Agreement and is using ISRG PKI services.
 * Trusted Contributor
