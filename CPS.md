@@ -48,6 +48,7 @@ The following revisions have been made:
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Remove restriction on issuance for IP addresses in Section 7.1.5. Update lists of appropriate and prohibited certificate uses in Sections 1.4.1 and 1.4.2. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
 | May 28, 2020 | Specify in Section 4.9.3 that revocations for key compromise will result in blocking of the public key for future issuance and revocation of other outstanding certificates with the key. Update description of Certificate Transparency submissions. | 2.8 |
 | July 14, 2020 | Clarify revocation request instructions in Section 4.9.3. | 2.9 |
+| X Y, Z | Update Section 3.2.2 to clarify that ISRG never performs domain validation manually. Update Section 9 to eliminate references to third party RAs, as ISRG does not use or allow them. | 3.0 |
 
 ## 1.3 PKI participants
 
@@ -1343,14 +1344,7 @@ Except as expressly stated in this CPS or in a separate agreement with a Subscri
 
 ### 9.6.2 RA representations and warranties
 
-Each RA represents and warrants that:
-
-1. The RA’s certificate issuance and management services conform to the ISRG CP and this CPS,
-2. Information provided by the RA does not contain any false or misleading information,
-3. Translations performed by the RA are an accurate translation of the original information, and
-4. All certificates requested by the RA meet the requirements of this CPS.
-
-ISRG’s agreement with the RA may contain additional representations and warranties.
+ISRG does not use RA services from third parties.
 
 ### 9.6.3 Subscriber representations and warranties
 
@@ -1459,7 +1453,7 @@ This CPS is subject to all applicable laws and regulations, including United Sta
 
 ### 9.16.1 Entire agreement
 
-ISRG contractually obligates each RA to comply with this CPS and applicable industry guidelines. ISRG also requires each party using its products and services to enter into an agreement that delineates the terms associated with the product or service. If an agreement has provisions that differ from this CPS, then the agreement with that party controls, but solely with respect to that party. Third parties may not rely on or bring action to enforce such agreement.
+ISRG requires each party using its products and services to enter into an agreement that delineates the terms associated with the product or service. If an agreement has provisions that differ from this CPS, then the agreement with that party controls, but solely with respect to that party. Third parties may not rely on or bring action to enforce such agreement.
 
 ### 9.16.2 Assignment
 
