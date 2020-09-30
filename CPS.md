@@ -281,7 +281,7 @@ Applicants are required to prove possession of the Private Key corresponding to 
 
 ISRG only issues Domain Validation (DV) certificates. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
 
-Validation for DV certificates involves demonstrating proper control over a domain. ISRG validates domain control primarily in an automated fashion via the ACME protocol. In exceptional cases control may be validated using methods similar to those employed by ACME, but performed manually.
+Validation for DV certificates involves demonstrating proper control over a domain. ISRG validates domain control in an automated fashion via the ACME protocol.
 
 There are three methods used for demonstrating domain control:
 
