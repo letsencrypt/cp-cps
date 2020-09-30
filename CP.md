@@ -16,9 +16,10 @@ Per IETF PKIX RFC 3647, this CP is divided into nine components that cover secur
 
 The following Certification Authorities are covered under this CP:
 
-| CA Type | Distinguished Name | Key Pair Type and Parameters | SHA-256 Key Fingerprint | Validity Period |
-|---------|--------------------|------------------------------|-------------------------|-----------------|
+| CA Type | Distinguished Name | Key Pair Type and Parameters | Cert SHA-256 Fingerprint | Validity Period |
+|---------|--------------------|------------------------------|--------------------------|-----------------|
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X1 | RSA, n has 4096 bits, e=65537 | 96:BC:EC:06:26:49:76:F3:<br>74:60:77:9A:CF:28:C5:A7:<br>CF:E8:A3:C0:AA:E1:1A:8F:<br>FC:EE:05:C0:BD:DF:08:C6 | Not Before: Jun  4 11:04:38 2015 GMT,<br>Not After: Jun  4 11:04:38 2035 GMT |
+| Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9b:8e:15:a8:6e:fc:<br>17:7a:57:af:b7:17:1d:fc:<br>64:ad:d2:8c:2f:ca:8c:f1:<br>50:7e:34:45:3c:cb:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. To
 view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
@@ -41,7 +42,7 @@ The following revisions have been made:
 | September 20, 2018 | Define Certificate Problem Report in Section 1.6.1. Update Section 3.2.2.4 "Validation of Domain Authorization or Control" to match latest BRs but omit methods we do not use. Add additional revocation reason to Section 4.9.1.1 for compliance with upcoming BR revision. Minor updates to Sections 4.9.3 and 4.9.5. | 2.2 |
 | July 3, 2019 | Remove IP address validation information which is not applicable. Update sections 4.9.1.1, 4.9.1.2, and 4.9.5 to match current BRs. Other minor updates (e.g. capitalization). | 2.3 |
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Add policy information for IP address validation. | 2.4 |
-| X Y, Z | Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements v1.7.2. | 2.5 |
+| X Y, Z | List Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements v1.7.2. | 2.5 |
 
 ## 1.3 PKI participants
 
