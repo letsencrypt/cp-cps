@@ -1084,7 +1084,7 @@ Extensions are not marked critical unless specifically described here as critica
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
-| Subject Distinguished Name     | C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X&lt;n&gt;<br/> where n is an integer representing the instance of the Subordinate CA Certificate |
+| Subject Distinguished Name     | C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X&lt;n&gt;; or<br/> C=US, O=Let's Encrypt, CN=[ER]&lt;n&gt;<br/> where n is an integer representing the instance of the Subordinate CA Certificate.|
 | Validity Period                | Up to 8 years                                                                      |
 | Basic Constraints              | Critical.<br/> cA=True, pathLength constraint 0                                    |
 | Key Usage                      | Critical.<br/> keyCertSign, cRLSign, digitalSignature                              |
@@ -1119,8 +1119,8 @@ Signed by a Root CA Certificate, these Certificates sign OCSP responses for Inte
 | Field or extension             | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X&lt;n&gt;                  |
-| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X&lt;n&gt;             |
+| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X1                          |
+| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X1                     |
 | Validity Period                | 5 years                                                                            |
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature                                                    |
