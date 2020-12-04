@@ -1090,7 +1090,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Key Usage                      | Critical.<br/> keyCertSign, cRLSign, digitalSignature                              |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br/>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br/>Policy Qualifier Id=CPS<br/>Qualifier: Pointer to this CPS |
-| Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
+| Authority Information Access   | Contains CA Issuers URL (and optionally an OCSP URL). URLs vary based on Issuer.   |
 | CRL Distribution Points        | Contains a CRL URL. URL varies based on Issuer.                                    |
 
 ### DV-SSL End Entity Certificate
