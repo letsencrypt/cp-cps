@@ -1052,7 +1052,7 @@ No stipulation.
 
 ISRG implements reasonable network security safeguards and controls to prevent unauthorized access to CA systems and infrastructure. ISRG's network is multi-tiered and utilizes the principle of defense in depth.
 
-Firewalls and other critical CA systems are configured based on a necessary-traffic-only whitelisting policy whenever possible.
+Firewalls and other critical CA systems are configured based on a necessary-traffic-only allowlisting policy whenever possible.
 
 ISRG root CA Private Keys are stored offline in a secure manner.
 
