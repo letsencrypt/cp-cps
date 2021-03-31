@@ -926,13 +926,17 @@ ISRG Public Keys are also available on ISRG websites such as [letsencrypt.org](h
 
 ### 6.1.5 Key sizes
 
-ISRG CA root Private Keys are RSA keys at least 4096 bits in length.
+ISRG CA root RSA Private Keys are at least 4096 bits in length.
 
-ISRG CA intermediate Private Keys are RSA keys at least 2048 bits in length.
+ISRG CA root ECDSA Private Keys are at least 384 bits in length.
+
+ISRG CA intermediate RSA Private Keys are at least 2048 bits in length.
+
+ISRG CA intermediate ECDSA Private Keys are at least 384 bits in length.
 
 ### 6.1.6 Public key parameters generation and quality checking
 
-ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys.
+ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
 
 Per Section 5.3.3, NIST SP 800‐89, the CA ensures that the public exponent of the RSA Keys for a DV-SSL Certificates is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1. The moduli are an odd number, not the power of a prime, and have no factors smaller than 752.
 
@@ -1137,9 +1141,16 @@ See section 7.1.
 
 ### 7.1.3 Algorithm object identifiers
 
+#### 7.1.3.1 SubjectPublicKeyInfo
+
+No stipulation.
+
+#### 7.1.3.2 Signature AlgorithmIdentifier
+
 | Name                    | Object identifier                    |
 | ----------------------- | ------------------------------------ |
 | sha256WithRSAEncryption | 1.2.840.113549.1.1.11                |
+| ecdsa-with-SHA384       | 1.2.840.10045.4.3.3                  |
 
 ### 7.1.4 Name forms
 
@@ -1170,7 +1181,7 @@ Not applicable.
 | Field or Extension        | Value                                                                          |
 | ------------------------- | ------------------------------------------------------------------------------ |
 | Version                   | V2                                                                             |
-| Signature Algorithm       | sha256WithRSAEncryption                                                        |
+| Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
 | ThisUpdate                | The date and time when the Certificate revocation list was issued.             |
 | NextUpdate                | ThisUpdate + 30 days                                                           |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
