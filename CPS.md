@@ -927,13 +927,17 @@ ISRG Public Keys are also available on ISRG websites such as [letsencrypt.org](h
 
 ### 6.1.5 Key sizes
 
-ISRG CA root Private Keys are RSA keys at least 4096 bits in length.
+ISRG CA root RSA Private Keys are at least 4096 bits in length.
 
-ISRG CA intermediate Private Keys are RSA keys at least 2048 bits in length.
+ISRG CA root ECDSA Private Keys are at least 384 bits in length.
+
+ISRG CA intermediate RSA Private Keys are at least 2048 bits in length.
+
+ISRG CA intermediate ECDSA Private Keys are at least 384 bits in length.
 
 ### 6.1.6 Public key parameters generation and quality checking
 
-ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys.
+ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
 
 Per Section 5.3.3, NIST SP 800‐89, the CA ensures that the public exponent of the RSA Keys for a DV-SSL Certificates is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1. The moduli are an odd number, not the power of a prime, and have no factors smaller than 752.
 
@@ -1085,13 +1089,13 @@ Extensions are not marked critical unless specifically described here as critica
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
-| Subject Distinguished Name     | C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X&lt;n&gt;<br/> where n is an integer representing the instance of the Subordinate CA Certificate |
+| Subject Distinguished Name     | C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X&lt;n&gt;; or<br/> C=US, O=Let's Encrypt, CN=[ER]&lt;n&gt;<br/> where n is an integer representing the instance of the Subordinate CA Certificate.|
 | Validity Period                | Up to 8 years                                                                      |
 | Basic Constraints              | Critical.<br/> cA=True, pathLength constraint 0                                    |
 | Key Usage                      | Critical.<br/> keyCertSign, cRLSign, digitalSignature                              |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br/>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br/>Policy Qualifier Id=CPS<br/>Qualifier: Pointer to this CPS |
-| Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
+| Authority Information Access   | Contains CA Issuers URL (and optionally an OCSP URL). URLs vary based on Issuer.   |
 | CRL Distribution Points        | Contains a CRL URL. URL varies based on Issuer.                                    |
 
 ### DV-SSL End Entity Certificate
@@ -1120,8 +1124,8 @@ Signed by a Root CA Certificate, these Certificates sign OCSP responses for Inte
 | Field or extension             | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X&lt;n&gt;                  |
-| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X&lt;n&gt;             |
+| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X1                          |
+| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X1                     |
 | Validity Period                | 5 years                                                                            |
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature                                                    |
@@ -1138,9 +1142,16 @@ See section 7.1.
 
 ### 7.1.3 Algorithm object identifiers
 
+#### 7.1.3.1 SubjectPublicKeyInfo
+
+No stipulation.
+
+#### 7.1.3.2 Signature AlgorithmIdentifier
+
 | Name                    | Object identifier                    |
 | ----------------------- | ------------------------------------ |
 | sha256WithRSAEncryption | 1.2.840.113549.1.1.11                |
+| ecdsa-with-SHA384       | 1.2.840.10045.4.3.3                  |
 
 ### 7.1.4 Name forms
 
@@ -1171,7 +1182,7 @@ Not applicable.
 | Field or Extension        | Value                                                                          |
 | ------------------------- | ------------------------------------------------------------------------------ |
 | Version                   | V2                                                                             |
-| Signature Algorithm       | sha256WithRSAEncryption                                                        |
+| Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
 | ThisUpdate                | The date and time when the Certificate revocation list was issued.             |
 | NextUpdate                | ThisUpdate + 30 days                                                           |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
