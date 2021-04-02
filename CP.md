@@ -43,6 +43,7 @@ The following revisions have been made:
 | July 3, 2019 | Remove IP address validation information which is not applicable. Update sections 4.9.1.1, 4.9.1.2, and 4.9.5 to match current BRs. Other minor updates (e.g. capitalization). | 2.3 |
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Add policy information for IP address validation. | 2.4 |
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 3.2.2.8, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements. | 2.5 |
+| April 2, 2021 | Update ISRG physical address. | 2.6 |
 
 ## 1.3 PKI participants
 

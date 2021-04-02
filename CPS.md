@@ -50,6 +50,7 @@ The following revisions have been made:
 | May 28, 2020 | Specify in Section 4.9.3 that revocations for key compromise will result in blocking of the public key for future issuance and revocation of other outstanding certificates with the key. Update description of Certificate Transparency submissions. | 2.8 |
 | July 14, 2020 | Clarify revocation request instructions in Section 4.9.3. | 2.9 |
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update Section 3.2.2 to clarify that ISRG never performs domain validation manually. Update Section 9 to eliminate references to third party RAs, as ISRG does not use or allow them. | 3.0 |
+| April 2, 2021 | Update CPS for ECDSA hierarchy. Update ISRG physical address. Inclusivity language improvement.  | 3.1 |
 
 ## 1.3 PKI participants
 
