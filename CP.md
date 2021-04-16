@@ -22,7 +22,7 @@ The following Certification Authorities are covered under this CP:
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9b:8e:15:a8:6e:fc:<br>17:7a:57:af:b7:17:1d:fc:<br>64:ad:d2:8c:2f:ca:8c:f1:<br>50:7e:34:45:3c:cb:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. To
-view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
 Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ## 1.2 Document name and identification
@@ -213,7 +213,7 @@ The CA SHALL publicly give effect to these Requirements and represent that it wi
 
 > [Name of CA] conforms to the current version of the Baseline
 > Requirements for the Issuance and Management of Publicly-Trusted
-> Certificates published at http://www.cabforum.org. In the event of any
+> Certificates published at https://www.cabforum.org. In the event of any
 > inconsistency between this document and those Requirements, those
 > Requirements take precedence over this document.
 
@@ -368,7 +368,7 @@ Before issuing a certificate with a wildcard character (\*) in a CN or subjectAl
 
 If a wildcard would fall within the label immediately to the left of a registry-controlled /1 or public suffix, CAs MUST refuse issuance unless the applicant proves its rightful control of the entire Domain Namespace. (e.g. CAs MUST NOT issue "\*.co.uk" or "\*.local", but MAY issue "\*.example.com" to Example Co.).
 
-Determination of what is "registry-controlled" versus the registerable portion of a Country Code Top-Level Domain Namespace is not standardized at the time of writing and is not a property of the DNS itself. Current best practice is to consult a "public suffix list" such as the [Public Suffix List (PSL)](<http://publicsuffix.org/>), and to retrieve a fresh copy regularly.
+Determination of what is "registry-controlled" versus the registerable portion of a Country Code Top-Level Domain Namespace is not standardized at the time of writing and is not a property of the DNS itself. Current best practice is to consult a "public suffix list" such as the [Public Suffix List (PSL)](<https://publicsuffix.org/>), and to retrieve a fresh copy regularly.
 
 If using the PSL, a CA SHOULD consult the "ICANN DOMAINS" section only, not the "PRIVATE DOMAINS" section. The PSL is updated regularly to contain new gTLDs delegated by ICANN, which are listed in the "ICANN DOMAINS" section. A CA is not prohibited from issuing a Wildcard Certificate to the Registrant of an entire gTLD, provided that control of the entire namespace is demonstrated in an appropriate way.
 
@@ -645,7 +645,7 @@ The CA SHOULD revoke a certificate within 24 hours and MUST revoke a Certificate
 8. The CA determines or is made aware that any of the information appearing in the Certificate is inaccurate;
 9. The CA's right to issue Certificates under these Requirements expires or is revoked or terminated, unless the CA has made arrangements to continue maintaining the CRL/OCSP Repository;
 10. Revocation is required by the CA's Certificate Policy and/or Certification Practice Statement; or
-11. The CA is made aware of a demonstrated or proven method that exposes the Subscriber's Private Key to compromise, methods have been developed that can easily calculate it based on the Public Key (such as a Debian weak key, see http://wiki.debian.org/SSLkeys), or if there is clear evidence that the specific method used to generate the Private Key was flawed.
+11. The CA is made aware of a demonstrated or proven method that exposes the Subscriber's Private Key to compromise, methods have been developed that can easily calculate it based on the Public Key (such as a Debian weak key, see https://wiki.debian.org/SSLkeys), or if there is clear evidence that the specific method used to generate the Private Key was flawed.
 
 #### 4.9.1.2 Reasons for revoking a subordinate CA certificate
 
@@ -1104,7 +1104,7 @@ No stipulation.
 
 #### 6.1.1.3 Subscriber key pair generation
 
-The CA SHALL reject a certificate request if the requested Public Key does not meet the requirements set forth in Sections 6.1.5 and 6.1.6 or if it has a known weak Private Key (such as a Debian weak key, see [http://wiki.debian.org/SSLkeys](http://wiki.debian.org/SSLkeys)).
+The CA SHALL reject a certificate request if the requested Public Key does not meet the requirements set forth in Sections 6.1.5 and 6.1.6 or if it has a known weak Private Key (such as a Debian weak key, see [https://wiki.debian.org/SSLkeys](https://wiki.debian.org/SSLkeys)).
 
 ### 6.1.2 Private key delivery to subscriber
 
@@ -1162,7 +1162,7 @@ Certificates MUST meet the following requirements for algorithm type and key siz
 
 \* SHA-1 MAY be used with RSA keys in accordance with the criteria defined in Section 7.1.3.
 
-\*\*\* L and N (the bit lengths of modulus p and divisor q, respectively) are described in the Digital Signature Standard, FIPS 186-4 ([http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf)).
+\*\*\* L and N (the bit lengths of modulus p and divisor q, respectively) are described in the Digital Signature Standard, FIPS 186-4 ([https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf)).
 
 ### 6.1.6 Public key parameters generation and quality checking
 
