@@ -583,7 +583,7 @@ When a CRL is requested by a Relying Party the time to receive a response will b
 
 ### 4.9.9 On-line revocation/status checking availability
 
-Revocation information for all certificates is made available via OCSP. OCSP responses are available at all times (24x7x365) if possible.
+Revocation information will be made available for all end-entity certificates via OCSP. Revocation information may be made available for intermediate certificates via OCSP.
 
 ### 4.9.10 On-line revocation checking requirements
 
