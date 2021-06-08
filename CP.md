@@ -44,7 +44,7 @@ The following revisions have been made:
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Add policy information for IP address validation. | 2.4 |
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 3.2.2.8, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements. | 2.5 |
 | April 2, 2021 | Update ISRG physical address. | 2.6 |
-| X Y, Z | Update to match BR Section 7.1.4.2.1. Update Sections 4.2.1, 4.2.2, and 6.3.2 to match BRs v1.7.6. Add a Section 4.2.4 to reference CAA record processing. | 2.7 |
+| X Y, Z | Update to match BR Section 7.1.4.2.1. Update Sections 4.2.1, 4.2.2, and 6.3.2 to match BRs v1.7.6. Add a Section 4.2.4 to reference CAA record processing. Get rid of unnecessary language in Section 7.1.4.2.1. | 2.7 |
 
 ## 1.3 PKI participants
 
@@ -1583,9 +1583,7 @@ By issuing the Certificate, the CA represents that it followed the procedure set
 
 | Certificate Field         | Req\Opt  | Contents                       |
 |---------------------------|----------|--------------------------------|
-| extensions:subjectAltName | Required | This extension MUST contain at least one entry. Each entry MUST be either a dNSName containing the Fully-Qualified Domain Name or an iPAddress containing the IP address of a server. The CA MUST confirm that the Applicant controls the Fully-Qualified Domain Name or IP address or has been granted the right to use it by the Domain Name Registrant or IP address assignee, as appropriate. Wildcard FQDNs are permitted. CAs SHALL NOT issue certificates with a subjectAltName extension or subject:commonName field containing a Reserved IP Address or Internal Name. Entries in the dNSName MUST be in the "preferred name syntax", as specified in RFC5280, and thus MUST NOT contain underscore characters ("_").|
-
-As of the Effective Date of these Requirements, prior to the issuance of a Certificate with a subjectAlternativeName extension or Subject commonName field containing a Reserved IP Address or Internal Name, the CA SHALL notify the Applicant that the use of such Certificates has been deprecated by the CA / Browser Forum and that the practice will be eliminated by October 2016. Also as of the Effective Date, the CA SHALL NOT issue a certificate with an Expiry Date later than 1 November 2015 with a subjectAlternativeName extension or Subject commonName field containing a Reserved IP Address or Internal Name. Effective 1 October 2016, CAs SHALL revoke all unexpired Certificates whose subjectAlternativeName extension or Subject commonName field contains a Reserved IP Address or Internal Name. Effective May 1, 2015, each CA SHALL revoke all unexpired Certificates with an Internal Name using onion as the right-most label in an entry in the subjectAltName Extension or commonName field unless such Certificate was issued in accordance with Appendix F of the EV Guidelines.
+| extensions:subjectAltName | Required | This extension MUST contain at least one entry. Each entry MUST be either a `dNSName` containing the Fully-Qualified Domain Name or an `iPAddress` containing the IP address of a server. The CA MUST confirm that the Applicant controls the Fully-Qualified Domain Name or IP address or has been granted the right to use it by the Domain Name Registrant or IP address assignee, as appropriate. Wildcard FQDNs are permitted. CAs SHALL NOT issue certificates with a `subjectAltName` extension or `subject:commonName` field containing a Reserved IP Address or Internal Name. Entries in the `dNSName` MUST be in the "preferred name syntax", as specified in RFC 5280, and thus MUST NOT contain underscore characters ("_").
 
 ##### 7.1.4.2.2 Subject distinguished name fields
 
