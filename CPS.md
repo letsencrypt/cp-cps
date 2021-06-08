@@ -52,7 +52,7 @@ The following revisions have been made:
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update Section 3.2.2 to clarify that ISRG never performs domain validation manually. Update Section 9 to eliminate references to third party RAs, as ISRG does not use or allow them. | 3.0 |
 | April 2, 2021 | Update CPS for ECDSA hierarchy. Update ISRG physical address. Inclusivity language improvement.  | 3.1 |
 | April 20, 2021 | Clarifications regarding revocation process for Section 4.9.3. Clarify OCSP availability for intermediate certificates in Section 4.9.9. | 3.2 |
-| X Y, Z | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2 | 3.3 |
+| X Y, Z | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. | 3.3 |
 
 ## 1.3 PKI participants
 
@@ -291,11 +291,11 @@ Validation for DV certificates involves demonstrating proper control over a doma
 
 There are three methods used for demonstrating domain control:
 
-1. Agreed-Upon Change to Website: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.6)
+1. Agreed-Upon Change to Website: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.19)
 
 2. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '\_acme-challenge'. (BR Section 3.2.2.4.7)
 
-3. TLS Using a Random Number: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443. (BR Section 3.2.2.4.10)
+3. TLS Using a Random Number: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443. (BR Section 3.2.2.4.20)
 
 Validation for wildcard domain requests must be completed using the DNS Change method.
 
