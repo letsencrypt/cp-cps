@@ -52,6 +52,7 @@ The following revisions have been made:
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update Section 3.2.2 to clarify that ISRG never performs domain validation manually. Update Section 9 to eliminate references to third party RAs, as ISRG does not use or allow them. | 3.0 |
 | April 2, 2021 | Update CPS for ECDSA hierarchy. Update ISRG physical address. Inclusivity language improvement.  | 3.1 |
 | April 20, 2021 | Clarifications regarding revocation process for Section 4.9.3. Clarify OCSP availability for intermediate certificates in Section 4.9.9. | 3.2 |
+| X Y, Z | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2 | 3.3 |
 
 ## 1.3 PKI participants
 
@@ -1107,7 +1108,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
 | Subject Distinguished Name     | CN=one of the values from the Subject Alternative Name extension                   |
-| Validity Period                | 90 days                                                                            |
+| Validity Period                | Less than 100 days                                                                         |
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature, keyEncipherment                                   |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
