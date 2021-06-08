@@ -44,6 +44,7 @@ The following revisions have been made:
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Add policy information for IP address validation. | 2.4 |
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 3.2.2.8, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements. | 2.5 |
 | April 2, 2021 | Update ISRG physical address. | 2.6 |
+| X Y, Z | Update to match BR Section 7.1.4.2.1. | 2.7 |
 
 ## 1.3 PKI participants
 
@@ -319,7 +320,7 @@ If a Random Value is used, the CA SHALL provide a Random Value unique to the Cer
 
 Note: Once the FQDN has been validated using this method, the CA MAY also issue Certificates for other FQDNs that end with all the labels of the validated FQDN. This method is suitable for validating Wildcard Domain Names.
 
-#### 3.2.2.4.19 Agreed-Upon Change to Website - ACME
+##### 3.2.2.4.19 Agreed-Upon Change to Website - ACME
 
 Confirming the Applicant's control over a FQDN by validating domain control of the FQDN using the ACME HTTP Challenge method defined in section 8.3 of RFC 8555. The following are additive requirements to RFC 8555.
 
