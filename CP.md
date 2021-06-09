@@ -44,7 +44,7 @@ The following revisions have been made:
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Add policy information for IP address validation. | 2.4 |
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 3.2.2.8, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements. | 2.5 |
 | April 2, 2021 | Update ISRG physical address. | 2.6 |
-| X Y, Z | Update to match BR Section 7.1.4.2.1. Update Sections 4.2.1, 4.2.2, and 6.3.2 to match BRs v1.7.6. Add a Section 4.2.4 to reference CAA record processing. Get rid of unnecessary language in Section 7.1.4.2.1. Define Internal Name in Section 1.6.1. | 2.7 |
+| X Y, Z | Update to match BR Section 7.1.4.2.1. Update Sections 4.2.1, 4.2.2, 4.9.1.1, and 6.3.2 to match BRs v1.7.6. Add a Section 4.2.4 to reference CAA record processing. Get rid of unnecessary language in Section 7.1.4.2.1. Define Internal Name in Section 1.6.1. | 2.7 |
 
 ## 1.3 PKI participants
 
@@ -635,12 +635,13 @@ The CA SHALL revoke a Certificate within 24 hours if one or more of the followin
 
 1. The Subscriber requests in writing that the CA revoke the Certificate;
 2. The Subscriber notifies the CA that the original certificate request was not authorized and does not retroactively grant authorization;
-3. The CA obtains evidence that the Subscriber's Private Key corresponding to the Public Key in the Certificate suffered a Key Compromise; or
-4. The CA obtains evidence that the validation of domain authorization or control for any Fully-Qualified Domain Name or IP address in the Certificate should not be relied upon.
+3. The CA obtains evidence that the Subscriber's Private Key corresponding to the Public Key in the Certificate suffered a Key Compromise;
+4. The CA is made aware of a demonstrated or proven method that can easily compute the Subscriber's Private Key based on the Public Key in the Certificate (such as a Debian weak key, see <https://wiki.debian.org/SSLkeys>);
+5. The CA obtains evidence that the validation of domain authorization or control for any Fully-Qualified Domain Name or IP address in the Certificate should not be relied upon.
 
 The CA SHOULD revoke a certificate within 24 hours and MUST revoke a Certificate within 5 days if one or more of the following occurs:
 
-1. The Certificate no longer complies with the requirements of Sections 6.1.5 and 6.1.6;
+1. The Certificate no longer complies with the requirements of Section 6.1.5 and Section 6.1.6;
 2. The CA obtains evidence that the Certificate was misused;
 3. The CA is made aware that a Subscriber has violated one or more of its material obligations under the Subscriber Agreement or Terms of Use;
 4. The CA is made aware of any circumstance indicating that use of a Fully-Qualified Domain Name or IP address in the Certificate is no longer legally permitted (e.g. a court or arbitrator has revoked a Domain Name Registrant's right to use the Domain Name, a relevant licensing or services agreement between the Domain Name Registrant and the Applicant has terminated, or the Domain Name Registrant has failed to renew the Domain Name);
@@ -650,7 +651,7 @@ The CA SHOULD revoke a certificate within 24 hours and MUST revoke a Certificate
 8. The CA determines or is made aware that any of the information appearing in the Certificate is inaccurate;
 9. The CA's right to issue Certificates under these Requirements expires or is revoked or terminated, unless the CA has made arrangements to continue maintaining the CRL/OCSP Repository;
 10. Revocation is required by the CA's Certificate Policy and/or Certification Practice Statement; or
-11. The CA is made aware of a demonstrated or proven method that exposes the Subscriber's Private Key to compromise, methods have been developed that can easily calculate it based on the Public Key (such as a Debian weak key, see https://wiki.debian.org/SSLkeys), or if there is clear evidence that the specific method used to generate the Private Key was flawed.
+11. The CA is made aware of a demonstrated or proven method that exposes the Subscriber's Private Key to compromise or if there is clear evidence that the specific method used to generate the Private Key was flawed.
 
 #### 4.9.1.2 Reasons for revoking a subordinate CA certificate
 
