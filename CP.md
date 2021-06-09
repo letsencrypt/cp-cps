@@ -44,7 +44,7 @@ The following revisions have been made:
 | January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Add policy information for IP address validation. | 2.4 |
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 3.2.2.8, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements. | 2.5 |
 | April 2, 2021 | Update ISRG physical address. | 2.6 |
-| X Y, Z | Update Sections 4.2.1, 4.2.2, 4.9.1.1, 6.3.2, and 7.1.4.2.1 to match BRs v1.7.6. Add a Section 4.2.4 to reference CAA record processing. Define Internal Name in Section 1.6.1. | 2.7 |
+| X Y, Z | Update Sections 4.2.1, 4.2.2, 4.9.1.1, 6.3.2, and 7.1.4.2.1 to match BRs v1.7.6. Define Internal Name in Section 1.6.1. | 2.7 |
 
 ## 1.3 PKI participants
 
@@ -496,10 +496,6 @@ CAs SHALL NOT issue certificates containing Internal Names (see Section 7.1.4.2.
 ### 4.2.3 Time to process certificate applications
 
 No stipulation.
-
-### 4.2.4 CAA Record Processing
-
-See Section 3.2.2.8.
 
 ## 4.3 Certificate issuance
 

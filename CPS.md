@@ -52,7 +52,7 @@ The following revisions have been made:
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update Section 3.2.2 to clarify that ISRG never performs domain validation manually. Update Section 9 to eliminate references to third party RAs, as ISRG does not use or allow them. | 3.0 |
 | April 2, 2021 | Update CPS for ECDSA hierarchy. Update ISRG physical address. Inclusivity language improvement.  | 3.1 |
 | April 20, 2021 | Clarifications regarding revocation process for Section 4.9.3. Clarify OCSP availability for intermediate certificates in Section 4.9.9. | 3.2 |
-| X Y, Z | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. State in Section 6.7 that the CA complies with the CA/Browser Forum’s Network and Certificate System Security Requirements. | 3.3 |
+| X Y, Z | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. Add Section 4.2.4 regarding CAA checking. State in Section 6.7 that the CA complies with the CA/Browser Forum’s Network and Certificate System Security Requirements. | 3.3 |
 
 ## 1.3 PKI participants
 
@@ -372,6 +372,12 @@ ISRG maintains a list of high-risk domains and blocks issuance of certificates f
 ### 4.2.3 Time to process certificate applications
 
 No stipulation.
+
+### 4.2.4 CAA Record Checking
+
+As part of the issuance process, ISRG will check for CAA records and follow the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater.
+
+See Section 3.2.2.8 of the ISRG CP for more information about CAA checking policy.
 
 ## 4.3 Certificate issuance
 
