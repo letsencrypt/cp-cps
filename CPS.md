@@ -52,7 +52,7 @@ The following revisions have been made:
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update Section 3.2.2 to clarify that ISRG never performs domain validation manually. Update Section 9 to eliminate references to third party RAs, as ISRG does not use or allow them. | 3.0 |
 | April 2, 2021 | Update CPS for ECDSA hierarchy. Update ISRG physical address. Inclusivity language improvement.  | 3.1 |
 | April 20, 2021 | Clarifications regarding revocation process for Section 4.9.3. Clarify OCSP availability for intermediate certificates in Section 4.9.9. | 3.2 |
-| X Y, Z | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. | 3.3 |
+| X Y, Z | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. State in Section 6.7 that the CA complies with the CA/Browser Forum’s Network and Certificate System Security Requirements. | 3.3 |
 
 ## 1.3 PKI participants
 
@@ -1058,7 +1058,9 @@ No stipulation.
 
 ## 6.7 Network security controls
 
-ISRG implements reasonable network security safeguards and controls to prevent unauthorized access to CA systems and infrastructure. ISRG's network is multi-tiered and utilizes the principle of defense in depth.
+ISRG implements reasonable network security safeguards and controls to prevent unauthorized access to CA systems and infrastructure. ISRG complies with the CA/Browser Forum’s Network and Certificate System Security Requirements.
+
+ISRG's network is multi-tiered and utilizes the principle of defense in depth.
 
 Firewalls and other critical CA systems are configured based on a necessary-traffic-only allowlisting policy whenever possible.
 
