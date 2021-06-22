@@ -918,7 +918,7 @@ Subscriber Public Keys are communicated to ISRG electronically via the ACME prot
 
 ISRG Public Keys are provided to Relying Parties as part of browser, operating system, or other software trusted root certificate lists.
 
-ISRG Public Keys are also available on ISRG websites such as [letsencrypt.org](https://letsencrypt.org/).
+ISRG Public Keys are also available in the Certificate Repository: https://letsencrypt.org/certificates/.
 
 ### 6.1.5 Key sizes
 
