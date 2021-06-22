@@ -311,9 +311,7 @@ Non-verified Applicant information is not included in ISRG certificates.
 
 ### 3.2.5 Validation of authority
 
-ISRG does not issue certificates to organizations, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
-
-Organizations have the option to specify CA issuance authority via CAA records, which ISRG respects.
+ISRG does not issue end-entity certification containing Subject Identity Information, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
 
 ### 3.2.6 Criteria for interoperation
 
@@ -359,7 +357,7 @@ The enrollment process involves the following steps, in no particular order:
 
 ISRG performs all identification and authentication functions in accordance with the ISRG CP. This includes validation per CPS Section 3.2.2.
 
-ISRG checks for relevant CAA records prior to issuing certificates. The CA acts in accordance with CAA records if present. The CA’s CAA identifying domain is ‘letsencrypt.org’.
+As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the CP. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA’s CAA identifying domain is ‘letsencrypt.org’.
 
 ### 4.2.2 Approval or rejection of certificate applications
 
@@ -372,12 +370,6 @@ ISRG maintains a list of high-risk domains and blocks issuance of certificates f
 ### 4.2.3 Time to process certificate applications
 
 No stipulation.
-
-### 4.2.4 CAA Record Checking
-
-As part of the issuance process, ISRG will check for CAA records and follow the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater.
-
-See Section 3.2.2.8 of the ISRG CP for more information about CAA checking policy.
 
 ## 4.3 Certificate issuance
 
