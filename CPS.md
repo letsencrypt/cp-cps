@@ -522,8 +522,6 @@ No stipulation.
 
 ## 4.9 Certificate revocation and suspension
 
-Certificate revocation permanently ends the certificate's operational period prior to its stated validity period.
-
 ### 4.9.1 Circumstances for revocation
 
 ISRG will follow the ISRG CP and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the ISRG CP.
