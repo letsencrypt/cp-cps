@@ -359,13 +359,13 @@ ISRG performs all identification and authentication functions in accordance with
 
 As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the CP. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA’s CAA identifying domain is ‘letsencrypt.org’.
 
+ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
+
 ### 4.2.2 Approval or rejection of certificate applications
 
 Approval requires successful completion of validation per Section 3.2.2 as well as compliance with all CA policies.
 
 Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section. The Public Suffix List is updated when new gTLDs are added, and never includes new gTLDs before they are resolvable.
-
-ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
 
 ### 4.2.3 Time to process certificate applications
 
