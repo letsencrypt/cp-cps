@@ -1166,7 +1166,7 @@ No stipulation.
 
 ### 7.1.4 Name forms
 
-See ISRG Certificate Policy.
+ISRG does not issue end-entity certificates containing the subject:organizationName, subject:givenName, subject:surname, subject:streetAddress, subject:localityName, subject:stateOrProvinceName, subject:postalCode, subject:countryName, or subject:organizationalUnitName fields. The subject:organizationName and subject:countryName fields may be present in our root, intermediate, and other operational certificates.
 
 ### 7.1.5 Name constraints
 
