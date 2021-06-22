@@ -399,7 +399,7 @@ See ISRG CP Section 4.4.1.
 
 ### 4.4.2 Publication of the certificate by the CA
 
-All root and intermediate certificates are made available publicly via the Certificate Repository.
+For root and intermediate certificates, see Section 2.2 of this document.
 
 All end-entity certificates are made available to Subscribers via the ACME protocol.
 
