@@ -1267,6 +1267,8 @@ ISRG is not required to publicly disclose any audit finding that does not impact
 ISRG performs a quarterly internal audit of at least 3% of issuance since the last WebTrust audit period.
 The sample is randomly selected. Results are saved and provided to auditors upon request.
 
+In addition, ISRG conducts pre-issuance linting using zlint for all issuance.
+
 # 9. OTHER BUSINESS AND LEGAL MATTERS
 
 ## 9.1 Fees
