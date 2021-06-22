@@ -1116,7 +1116,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
 | Subject Distinguished Name     | CN=one of the values from the Subject Alternative Name extension                   |
-| Validity Period                | Less than 100 days                                                                 |
+| Validity Period                | Up to 100 days                                                                     |
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature, keyEncipherment                                   |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
@@ -1137,7 +1137,7 @@ Signed by a Root CA Certificate, these Certificates sign OCSP responses for Inte
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X1                          |
 | Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X1                     |
-| Validity Period                | 5 years                                                                            |
+| Validity Period                | Up to 8 years                                                                      |
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature                                                    |
 | Extended Key Usage             | Critical.<br/> OCSPSigning                                                         |
@@ -1195,7 +1195,7 @@ Not applicable.
 | Version                   | V2                                                                             |
 | Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
 | ThisUpdate                | The date and time when the Certificate revocation list was issued.             |
-| NextUpdate                | ThisUpdate + 30 days                                                           |
+| NextUpdate                | Up to ThisUpdate + 1 year                                                      |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
 | CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs. |
 
