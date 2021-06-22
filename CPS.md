@@ -613,7 +613,7 @@ Not applicable.
 
 CRL entries for intermediate certificates will remain in place until the certificates expire. ISRG does not provide CRLs for end-entity certificates.
 
-OCSP responses will be made available for all unexpired certificates.
+OCSP responses will be made available for all unexpired end-entity certificates.
 
 ### 4.10.2 Service availability
 
