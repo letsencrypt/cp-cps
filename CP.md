@@ -330,11 +330,13 @@ The CA MUST receive a successful HTTP response from the request (meaning a 2xx H
 
 The token (as defined in RFC 8555, section 8.3) MUST NOT be used for more than 30 days from its creation. The CPS MAY specify a shorter validity period for Random Values, in which case the CA MUST follow its CPS.
 
-If the CA follows redirects:
-1.	Redirects MUST be initiated at the HTTP protocol layer (e.g. using a 3xx status code).
-2.	Redirects MUST be the result of an HTTP status code result within the 3xx Redirection class of status codes, as defined in RFC 7231, Section 6.4.
-3.	Redirects MUST be to resource URLs with either via the "http" or "https" scheme.
-4.	Redirects MUST be to resource URLs accessed via Authorized Ports.
+If the CA follows redirects, the following apply:
+
+1. Redirects MUST be initiated at the HTTP protocol layer.
+   a. For validations performed on or after July 1, 2021, redirects MUST be the result of a 301, 302, or 307 HTTP status code response, as defined in [RFC 7231, Section 6.4](https://tools.ietf.org/html/rfc7231#section-6.4), or a 308 HTTP status code response, as defined in [RFC 7538, Section 3](https://tools.ietf.org/html/rfc7538#section-3). Redirects MUST be to the final value of the Location HTTP response header, as defined in [RFC 7231, Section 7.1.2](https://tools.ietf.org/html/rfc7231#section-7.1.2).
+   b. For validations performed prior to July 1, 2021, redirects MUST be the result of an HTTP status code result within the 3xx Redirection class of status codes, as defined in [RFC 7231, Section 6.4](https://tools.ietf.org/html/rfc7231#section-6.4). CAs SHOULD limit the accepted status codes and resource URLs to those defined within 1.a.
+2. Redirects MUST be to resource URLs with either the "http" or "https" scheme.
+3. Redirects MUST be to resource URLs accessed via Authorized Ports.
 
 **Note:** Once the FQDN has been validated using this method, the CA MAY also issue Certificates for other FQDNs that end with all the labels of the validated FQDN. This method is suitable for validating Wildcard Domain Names.
 
