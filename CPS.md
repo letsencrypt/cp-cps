@@ -64,7 +64,7 @@ ISRG PKI services are most commonly, but not necessarily exclusively, provided u
 
 ### 1.3.2 Registration authorities
 
-ISRG serves as its own RA. RA services are not performed by third parties.
+ISRG does not delegate any of the Section 3.2 requirements to a Delegated Third Party. ISRG serves as its own RA.
 
 ### 1.3.3 Subscribers
 
