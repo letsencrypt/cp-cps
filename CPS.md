@@ -999,9 +999,9 @@ See Section 5.5.
 
 ### 6.3.2 Certificate operational periods and key pair usage periods
 
-The lifetimes of ISRG Root CA certificates are specified in Section 1.1. Corresponding key pairs have the same lifetimes.
+The validity periods of ISRG Root, Intermediate, and Subscriber Certificates are profiled in Section 7 of this document.
 
-End-entity certificates issued by ISRG to Subscribers shall have a validity period less than 100 days. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
+ISRG Root and Intermediate key pairs have lifetimes corresponding to their certificates. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
 
 ## 6.4 Activation data
 
