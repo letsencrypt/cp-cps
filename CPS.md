@@ -1119,14 +1119,14 @@ Extensions are not marked critical unless specifically described here as critica
 
 ### Root OCSP Signing Certificate
 
-Signed by a Root CA Certificate, these Certificates sign OCSP responses for Intermediate CA Certificates.
+Signed by a Root CA Certificate, these Certificates may sign OCSP responses for Intermediate CA Certificates.
 
 | Field or extension             | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X1                          |
-| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X1                     |
-| Validity Period                | 5 years                                                                            |
+| Issuer Distinguished Name      | Derived from Issuer                                                                |
+| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X&lt;n&gt;<br/> where n is an integer depending on the Issuer |
+| Validity Period                | Up to 8 years                                                                      |
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature                                                    |
 | Extended Key Usage             | Critical.<br/> OCSPSigning                                                         |
