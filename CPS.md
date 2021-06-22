@@ -291,9 +291,9 @@ Validation for DV certificates involves demonstrating proper control over a doma
 
 There are three methods used for demonstrating domain control:
 
-1. Agreed-Upon Change to Website - ACME: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.19)
+1. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '\_acme-challenge'. (BR Section 3.2.2.4.7)
 
-2. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '\_acme-challenge'. (BR Section 3.2.2.4.7)
+2. Agreed-Upon Change to Website - ACME: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.19)
 
 3. TLS Using ALPN: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443. (BR Section 3.2.2.4.20)
 
