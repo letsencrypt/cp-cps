@@ -559,9 +559,7 @@ There is no grace period for a revocation request. A revocation request must be 
 
 ### 4.9.5 Time within which CA must process the revocation request
 
-Investigation into a revocation request will begin within 24 hours of receiving the request.
-
-Once a decision has been made to revoke a certificate, revocation will be carried out within 24 hours.
+Investigation into a revocation request will begin within 24 hours of receiving the request. Revocation, if necessary, will be carried out within the timeframes set by CP Sections 4.9.1.1 and 4.9.1.2.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
