@@ -975,7 +975,7 @@ ISRG CA Private Keys are stored on HSMs meeting the requirements stated in Secti
 
 ### 6.2.8 Method of activating private key
 
-ISRG CA Private Keys are always stored on HSMs and activated using the mechanisms provided by the HSM manufacturer. Activation data and devices are protected.
+ISRG CA Private Keys are always stored on HSMs and activated using the mechanisms provided by the HSM manufacturer.
 
 ### 6.2.9 Method of deactivating private key
 
@@ -1007,7 +1007,7 @@ ISRG Root and Intermediate key pairs have lifetimes corresponding to their certi
 
 ### 6.4.1 Activation data generation and installation
 
-Activation data used to activate CA Private Keys is generated during a key ceremony. Activation data is transferred to the person who will use it, or place it will be stored, in a secure fashion.
+Activation data used to activate CA Private Keys is generated during a key ceremony. Activation data is then transferred to the person who will use it or place it will be stored.
 
 ### 6.4.2 Activation data protection
 
