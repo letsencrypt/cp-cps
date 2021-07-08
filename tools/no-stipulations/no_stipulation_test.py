@@ -4,7 +4,19 @@ import unittest
 from no_stipulation import make_no_stipulations
 
 document_input = io.StringIO(
-"""# 1. LOREM
+"""---
+title: Testament of Tester Testington
+subtitle: Version 1.0
+author:
+  - Tester Testington
+date: 3 June, 2021  
+copyright: |
+  Copyright 2021 Tester Testington of Test Town
+
+  This work is licensed under the Conspicuous Attribution 4.0 NT for Workgroups Testing license.
+---
+
+# 1. LOREM
 
 ## 1.1 Ipsum
 
@@ -27,9 +39,7 @@ Some content.
 ### 1.2.1 Do
 
 Some multi-line
-
 Content just to be
-
 Safe
 
 ### 1.2.2 Eiusmod
@@ -42,12 +52,31 @@ Some more content, finally!
 
 ### 2.1.1 Ut
 
+Some multi-paragraph
+
+Content just to be
+
+Safe
+
 ## 2.2 Labore
 
-"""
-).readlines()
+Something else.
 
-document_output = """# 1. LOREM
+""").readlines()
+
+document_output = """---
+title: Testament of Tester Testington
+subtitle: Version 1.0
+author:
+  - Tester Testington
+date: 3 June, 2021  
+copyright: |
+  Copyright 2021 Tester Testington of Test Town
+
+  This work is licensed under the Conspicuous Attribution 4.0 NT for Workgroups Testing license.
+---
+
+# 1. LOREM
 
 ## 1.1 Ipsum
 
@@ -80,9 +109,7 @@ No stipulation.
 ### 1.2.1 Do
 
 Some multi-line
-
 Content just to be
-
 Safe
 
 ### 1.2.2 Eiusmod
@@ -95,17 +122,21 @@ Some more content, finally!
 
 ### 2.1.1 Ut
 
-No stipulation.
+Some multi-paragraph
+
+Content just to be
+
+Safe
 
 ## 2.2 Labore
 
-No stipulation.
+Something else.
 
 """
 
 class TestMakeNoStipulations(unittest.TestCase):
     def test_make_no_stipulations_empty(self):
-        self.assertEqual(make_no_stipulations(""), "\n\n")
+        self.assertEqual(make_no_stipulations(""), "")
 
     def test_make_no_stipulations_happy_path(self):
         self.maxDiff = None
