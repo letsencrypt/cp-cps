@@ -13,22 +13,22 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
 @@ -1,11 +1,12 @@
  ---
 -title: Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates
--subtitle: Version 1.7.6
+-subtitle: Version 1.7.8
 +title: Internet Security Research Group (ISRG) Certificate Policy
 +subtitle: Version 2.8
  author:
 -  - CA/Browser Forum
--date: 3 June, 2021  
+-date: 13 July, 2021  
 -copyright: |
 +  - Internet Security Research Group
-+date: 6 July, 2021
++date: DD Month, YYYY
 +copyright:
    Copyright 2021 CA/Browser Forum
 +  Copyright 2021 Internet Security Research Group
  
    This work is licensed under the Creative Commons Attribution 4.0 International license.
  ---
-@@ -14,113 +15,52 @@ copyright: |
+@@ -14,115 +15,52 @@ copyright: |
  
  ## 1.1 Overview
  
@@ -154,6 +154,8 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
 -| 1.7.4 | SC41 | Reformat the BRs, EVGs, and NCSSRs | 24-Feb-2021 | 5-Apr-2021 |
 -| 1.7.5 | SC42 | 398-day Re-use Period | 22-Apr-2021 | 2-Jun-2021 |
 -| 1.7.6 | SC44 | Clarify Acceptable Status Codes | 30-Apr-2021 | 3-Jun-2021 |
+-| 1.7.7 | SC46 | Sunset the CAA Exception for DNS Operator | 2-Jun-2021 | 12-Jul-2021 |
+-| 1.7.8 | SC45 | Wildcard Domain Validation | 2-Jun-2021 | 13-Jul-2021 |
 -
 -\* Effective Date and Additionally Relevant Compliance Date(s)
 +| Date              | Changes                                            | Version |
@@ -170,11 +172,11 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
 +| October 27, 2020 | List ISRG Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 3.2.2.8, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements. | 2.5 |
 +| April 2, 2021 | Update ISRG physical address. | 2.6 |
 +| June 8, 2021 | Update Sections 4.2.1, 4.2.2, 4.9.1.1, 6.3.2, and 7.1.4.2.1 to match BRs v1.7.6. Define Internal Name in Section 1.6.1. | 2.7 |
-+| July 6, 2021 | Sync against Baseline Requirements v1.7.6. | 2.8 |
++| DD Month, YYYY | Sync against Baseline Requirements v1.7.8. | 2.8 |
  
  ### 1.2.2 Relevant Dates
  
-@@ -168,7 +108,7 @@ The CA/Browser Forum is a voluntary organization of Certification Authorities an
+@@ -172,7 +110,7 @@ The CA/Browser Forum is a voluntary organization of Certification Authorities an
  
  ### 1.3.1 Certification Authorities
  
@@ -183,7 +185,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  
  ### 1.3.2 Registration Authorities
  
-@@ -198,13 +138,10 @@ As defined in [Section 1.6.1](#161-definitions).
+@@ -202,13 +140,10 @@ As defined in [Section 1.6.1](#161-definitions).
  
  ### 1.3.4 Relying Parties
  
@@ -198,7 +200,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  ## 1.4 Certificate Usage
  
  ### 1.4.1 Appropriate Certificate Uses
-@@ -217,23 +154,31 @@ No stipulation.
+@@ -221,23 +156,31 @@ No stipulation.
  
  ## 1.5 Policy administration
  
@@ -236,7 +238,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  
  ## 1.6 Definitions and Acronyms
  
-@@ -410,7 +355,7 @@ The script outputs:
+@@ -414,7 +357,7 @@ The script outputs:
  
  **Required Website Content**: Either a Random Value or a Request Token, together with additional information that uniquely identifies the Subscriber, as specified by the CA.
  
@@ -245,7 +247,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  
  **Reserved IP Address**: An IPv4 or IPv6 address that the IANA has marked as reserved:
  
-@@ -440,8 +385,6 @@ The script outputs:
+@@ -444,8 +387,6 @@ The script outputs:
  
  **Terms of Use**: Provisions regarding the safekeeping and acceptable uses of a Certificate issued in accordance with these Requirements when the Applicant/Subscriber is an Affiliate of the CA or is the CA.
  
@@ -254,7 +256,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  **Trustworthy System**: Computer hardware, software, and procedures that are: reasonably secure from intrusion and misuse; provide a reasonable level of availability, reliability, and correct operation; are reasonably suited to performing their intended functions; and enforce the applicable security policy.
  
  **Unregistered Domain Name**: A Domain Name that is not a Registered Domain Name.
-@@ -959,7 +902,7 @@ This stipulation does not prevent the CA from checking CAA records at any other
+@@ -967,7 +908,7 @@ This stipulation does not prevent the CA from checking CAA records at any other
  
  When processing CAA records, CAs MUST process the issue, issuewild, and iodef property tags as specified in RFC 8659, although they are not required to act on the contents of the iodef property tag. Additional property tags MAY be supported, but MUST NOT conflict with or supersede the mandatory property tags set out in this document. CAs MUST respect the critical flag and not issue a certificate if they encounter an unrecognized property tag with this flag set.
  
@@ -263,7 +265,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  
  * CAA checking is optional for certificates for which a Certificate Transparency pre-certificate was created and logged in at least two public logs, and for which CAA was checked.
  * CAA checking is optional for certificates issued by a Technically Constrained Subordinate CA Certificate as set out in [Section 7.1.5](#715-name-constraints), where the lack of CAA checking is an explicit contractual provision in the contract with the Applicant.
-@@ -1894,7 +1837,7 @@ b. semantics that, if included, will mislead a Relying Party about the certifica
+@@ -1902,7 +1843,7 @@ b. semantics that, if included, will mislead a Relying Party about the certifica
  
  #### 7.1.2.5 Application of RFC 5280
  
@@ -272,7 +274,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  
  ### 7.1.3 Algorithm object identifiers
  
-@@ -2266,7 +2209,7 @@ The CA SHALL at all times:
+@@ -2274,7 +2215,7 @@ The CA SHALL at all times:
  3. Comply with the audit requirements set forth in this section; and
  4. Be licensed as a CA in each jurisdiction where it operates, if licensing is required by the law of such jurisdiction for the issuance of Certificates.
  
@@ -281,7 +283,7 @@ https://github.com/letsencrypt/cp-cps/blob/master/tools/no-stipulations/no_stipu
  
  ## 8.1 Frequency or circumstances of assessment
  
-@@ -2460,7 +2403,7 @@ The Subscriber Agreement or Terms of Use MUST contain provisions imposing on the
+@@ -2468,7 +2409,7 @@ The Subscriber Agreement or Terms of Use MUST contain provisions imposing on the
  
  6. **Termination of Use of Certificate**: An obligation and warranty to promptly cease all use of the Private Key corresponding to the Public Key included in the Certificate upon revocation of that Certificate for reasons of Key Compromise.
  7. **Responsiveness**: An obligation to respond to the CA's instructions concerning Key Compromise or Certificate misuse within a specified time period.
