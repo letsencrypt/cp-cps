@@ -74,8 +74,6 @@ See definition of "Subscriber" in Section 1.6.1 Definitions.
 
 See definition of "Relying Party" in Section 1.6.1 Definitions.
 
-Relying Parties must verify the validity of certificates via CRL or OCSP prior to relying on certificates. CRL and OCSP location information is provided within certificates.
-
 ### 1.3.5 Other participants
 
 Other participants include CAs that cross-sign or issue subordinates to the ISRG PKI.
@@ -420,8 +418,6 @@ Relying Parties must fully evaluate the context in which they are relying on cer
 
 ISRG does not warrant that any software used by Relying Parties to evaluate or otherwise handle certificates does so properly.
 
-Relying Parties ignoring certificate expiration, revocation data provided via OCSP or CRL, or other pertinent information do so at their own risk.
-
 ## 4.6 Certificate renewal
 
 Certificate renewal requests are treated as applications for new certificates.
@@ -559,7 +555,7 @@ Investigation into a revocation request will begin within 24 hours of receiving 
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
-Relying Parties who cannot or choose not to check revocation status, but decide to rely on a certificate anyway, do so at their own risk.
+Relying parties must verify the validity of certificates via CRL or OCSP prior to relying on certificates. Relying Parties who cannot or choose not to check certificate expiration or revocation status, but decide to rely on a certificate anyway, do so at their own risk.
 
 See Section 4.5.2.
 
