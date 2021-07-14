@@ -4,7 +4,7 @@
 
 This Certification Practice Statement ("CPS") document outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
 
-ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing Certificates in accordance with the requirements of the ISRG Certificate Policy (CP). It is recommended that readers familiarize themselves with the ISRG CP prior to reading this document.
+ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in accordance with the requirements of the ISRG Certificate Policy (CP) and in a manner consistent with this CPS. These services are provided to the general public with exceptions as deemed appropriate by ISRG management or in accordance with relevant law. It is recommended that readers familiarize themselves with the ISRG CP prior to reading this document.
 
 ISRG PKI services are most commonly, but not necessarily exclusively, provided under the brand/trademark "Let's Encrypt".
 
