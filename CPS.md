@@ -259,7 +259,7 @@ Subscribers are not identified in DV certificates, which have subject fields ide
 
 ### 3.1.4 Rules for interpreting various name forms
 
-Distinguished names in certificates are to be interpreted using X.500 standards and ASN.1 syntax. RFC 2253 and RFC 2616 provide more information.
+Distinguished names in certificates are to be interpreted using X.500 standards and ASN.1 syntax.
 
 Certificates do not assert any specific relationship between subscribers and registrants of domain names contained in certificates.
 
