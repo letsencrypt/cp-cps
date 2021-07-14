@@ -58,9 +58,7 @@ The following revisions have been made:
 
 ### 1.3.1 Certification authorities
 
-ISRG is a CA that provides services including, but not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates. These services are performed in accordance with the requirements of the ISRG Certificate Policy (CP) and this CPS. These services are provided to the general public with exceptions as deemed appropriate by ISRG management or in accordance with relevant law.
-
-ISRG PKI services are most commonly, but not necessarily exclusively, provided under the brand/trademark "Let's Encrypt".
+ISRG is the CA subject to this CPS.
 
 ### 1.3.2 Registration authorities
 
