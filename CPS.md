@@ -948,7 +948,10 @@ ISRG CA intermediate ECDSA Private Keys are at least 384 bits in length.
 
 ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
 
-Per Section 5.3.3, NIST SP 800‐89, the CA ensures that the public exponent of the RSA Keys for a DV-SSL Certificates is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1. The moduli are an odd number, not the power of a prime, and have no factors smaller than 752.
+Per [NIST SP 800‐89](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf), section 5.3.3, the CA ensures that:
+
+  - the public exponent of any RSA key used in a DV-SSL Certificate is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1, and
+  - the modulus of such a certificate is an odd number, not the power of a prime, and has no factors smaller than 752.
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
