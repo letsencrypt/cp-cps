@@ -579,7 +579,7 @@ Revocation information will be made available for all end-entity certificates vi
 
 ### 4.9.10 On-line revocation checking requirements
 
-See Section 4.9.6.
+ISRG provides OCSP responses in compliance with CP Section 4.9.10.
 
 ### 4.9.11 Other forms of revocation advertisements available
 
