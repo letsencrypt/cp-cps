@@ -710,7 +710,7 @@ Anyone performing work in a Trusted Role must identify and authenticate themselv
 
 ### 5.2.4 Roles requiring separation of duties
 
-Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Administrators) may have the ability to commit code to core CA software. The reverse is also true.
+See Section 6.6.1.
 
 ## 5.3 Personnel controls
 
@@ -1033,13 +1033,13 @@ ISRG has developed policies and procedures to effectively manage the acquisition
 
 ISRG CA hardware and software is dedicated solely to performing CA functions.
 
-Vendor selection includes an evaluation of reputation in the market, ability to deliver a quality product, vulnerability history, and the likelihood of remaining viable in the future. Purchases are made in such a way that as little information about the future use of products as possible is disclosed. Physical product deliveries are received by Trusted Contributors and inspected for evidence of tampering. HSMs are shipped in tamper-evident packaging and tamper bag serial numbers are confirmed with the vendor upon reception.
+Vendor selection includes an evaluation of reputation in the market, ability to deliver a quality product, vulnerability history, and the likelihood of remaining viable in the future. Physical product deliveries are received by Trusted Contributors and inspected for evidence of tampering. HSMs are shipped in tamper-evident packaging and tamper bag serial numbers are confirmed with the vendor upon reception.
 
-ISRG maintains a CA testing environment separate from the production environment. The testing environment matches the production environment as closely as reasonably possible but does not have access to CA Private Keys used in trusted certificates. The purpose of this testing platform is to allow extensive but safe testing of software and systems that are or will be deployed to the CA production environment.
+ISRG maintains a CA testing environment separate from the production environment. The testing environment reasonably emulates the production environment but does not have access to CA Private Keys used in trusted certificates. The purpose of this testing environment is to allow extensive but safe testing of software and systems that are or will be deployed to the CA production environment.
 
 ISRG has developed and maintains appropriate change control policies and procedures to be followed any time CA systems are modified. Changes to ISRG CA systems require review by qualified Trusted Personnel who are different from the person requesting the change. Change requests are documented, as are any subsequent required reviews or approvals.
 
-When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Unit testing is strongly encouraged. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Administrators) may have the ability to commit code to core CA software. The reverse is also true.
+When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Administrators) may have the ability to unilaterally commit code to core CA software. The reverse is also true.
 
 ### 6.6.2 Security management controls
 
