@@ -1035,7 +1035,7 @@ ISRG CA hardware and software is dedicated solely to performing CA functions.
 
 Vendor selection includes an evaluation of reputation in the market, ability to deliver a quality product, vulnerability history, and the likelihood of remaining viable in the future. Physical product deliveries are received by Trusted Contributors and inspected for evidence of tampering. HSMs are shipped in tamper-evident packaging and tamper bag serial numbers are confirmed with the vendor upon reception.
 
-ISRG maintains a CA testing environment separate from the production environment. The testing environment reasonably emulates the production environment but does not have access to CA Private Keys used in trusted certificates. The purpose of this testing platform is to allow extensive but safe testing of software and systems that are or will be deployed to the CA production environment.
+ISRG maintains a CA testing environment separate from the production environment. The testing environment reasonably emulates the production environment but does not have access to CA Private Keys used in trusted certificates. The purpose of this testing environment is to allow extensive but safe testing of software and systems that are or will be deployed to the CA production environment.
 
 ISRG has developed and maintains appropriate change control policies and procedures to be followed any time CA systems are modified. Changes to ISRG CA systems require review by qualified Trusted Personnel who are different from the person requesting the change. Change requests are documented, as are any subsequent required reviews or approvals.
 
