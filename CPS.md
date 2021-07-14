@@ -64,7 +64,7 @@ ISRG PKI services are most commonly, but not necessarily exclusively, provided u
 
 ### 1.3.2 Registration authorities
 
-ISRG serves as its own RA. RA services are not performed by third parties.
+ISRG does not delegate any of the Section 3.2 requirements to a Delegated Third Party. ISRG serves as its own RA.
 
 ### 1.3.3 Subscribers
 
@@ -231,7 +231,7 @@ ISRG certificates contain URLs to locations where certificate-related informatio
 
 ## 2.3 Time or frequency of publication
 
-New or updated ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval.
+New or updated ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA will approve and publish updated CP and CPS documents at least annually.
 
 New or updated ISRG root and intermediate certificates are made publicly available as soon as possible. This typically means within seven days of creation.
 
@@ -281,7 +281,7 @@ ISRG may elect not to issue any certificate at its sole discretion.
 
 ### 3.2.1 Method to prove possession of private key
 
-Applicants are required to prove possession of the Private Key corresponding to the Public Key in a Certificate request, which can be done by signing the request with the Private Key.
+Applicants are required to prove possession of the Private Key corresponding to the Public Key in a Certificate request by signing the CSR provided to the Finalize method of the ACME Protocol defined in RFC 8555, Section 7.4.
 
 ### 3.2.2 Authentication of organization and domain identity
 
@@ -291,9 +291,9 @@ Validation for DV certificates involves demonstrating proper control over a doma
 
 There are three methods used for demonstrating domain control:
 
-1. Agreed-Upon Change to Website - ACME: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.19)
+1. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '\_acme-challenge'. (BR Section 3.2.2.4.7)
 
-2. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '\_acme-challenge'. (BR Section 3.2.2.4.7)
+2. Agreed-Upon Change to Website - ACME: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.19)
 
 3. TLS Using ALPN: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443. (BR Section 3.2.2.4.20)
 
@@ -311,15 +311,11 @@ Non-verified Applicant information is not included in ISRG certificates.
 
 ### 3.2.5 Validation of authority
 
-ISRG does not issue certificates to organizations, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
-
-Organizations have the option to specify CA issuance authority via CAA records, which ISRG respects.
+ISRG does not issue end-entity certification containing Subject Identity Information, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
 
 ### 3.2.6 Criteria for interoperation
 
-ISRG discloses Cross Certificates in its Certificate Repository:
-
-https://letsencrypt.org/certificates/
+ISRG discloses Cross Certificates in its Certificate Repository.
 
 ## 3.3 Identification and authentication for re-key requests
 
@@ -359,7 +355,11 @@ The enrollment process involves the following steps, in no particular order:
 
 ISRG performs all identification and authentication functions in accordance with the ISRG CP. This includes validation per CPS Section 3.2.2.
 
-ISRG checks for relevant CAA records prior to issuing certificates. The CA acts in accordance with CAA records if present. The CA’s CAA identifying domain is ‘letsencrypt.org’.
+Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
+
+As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the CP. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA’s CAA identifying domain is ‘letsencrypt.org’.
+
+ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
 
 ### 4.2.2 Approval or rejection of certificate applications
 
@@ -367,17 +367,9 @@ Approval requires successful completion of validation per Section 3.2.2 as well 
 
 Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section. The Public Suffix List is updated when new gTLDs are added, and never includes new gTLDs before they are resolvable.
 
-ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
-
 ### 4.2.3 Time to process certificate applications
 
 No stipulation.
-
-### 4.2.4 CAA Record Checking
-
-As part of the issuance process, ISRG will check for CAA records and follow the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater.
-
-See Section 3.2.2.8 of the ISRG CP for more information about CAA checking policy.
 
 ## 4.3 Certificate issuance
 
@@ -399,7 +391,7 @@ See ISRG CP Section 4.4.1.
 
 ### 4.4.2 Publication of the certificate by the CA
 
-All root and intermediate certificates are made available publicly via the Certificate Repository.
+See Section 2.2 of this document for Root and Intermediate CA certificate publication information.
 
 All end-entity certificates are made available to Subscribers via the ACME protocol.
 
@@ -420,11 +412,7 @@ See Section 4.4.2.
 
 ### 4.5.1 Subscriber private key and certificate usage
 
-Subscribers are obligated to generate Key Pairs using reasonably trustworthy systems.
-
-Subscribers are obligated to take reasonable measures to protect their Private Keys from unauthorized use or disclosure (which constitutes compromise). Subscribers must discontinue use of any Private Keys that are known or suspected to have been compromised.
-
-Certificates must be used in accordance with their intended purpose, which is outlined in this CPS and the associated CP. Subscribers must cease use of certificates being used outside of their intended purpose.
+Subscriber usage of Private Keys and Certificates is governed by the Let's Encrypt Subscriber Agreement.
 
 ### 4.5.2 Relying party public key and certificate usage
 
@@ -532,8 +520,6 @@ No stipulation.
 
 ## 4.9 Certificate revocation and suspension
 
-Certificate revocation permanently ends the certificate's operational period prior to its stated validity period.
-
 ### 4.9.1 Circumstances for revocation
 
 ISRG will follow the ISRG CP and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the ISRG CP.
@@ -569,9 +555,7 @@ There is no grace period for a revocation request. A revocation request must be 
 
 ### 4.9.5 Time within which CA must process the revocation request
 
-Investigation into a revocation request will begin within 24 hours of receiving the request.
-
-Once a decision has been made to revoke a certificate, revocation will be carried out within 24 hours.
+Investigation into a revocation request will begin within 24 hours of receiving the request. Revocation, if necessary, will be carried out within the timeframes set by CP Sections 4.9.1.1 and 4.9.1.2.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
@@ -627,7 +611,7 @@ Not applicable.
 
 CRL entries for intermediate certificates will remain in place until the certificates expire. ISRG does not provide CRLs for end-entity certificates.
 
-OCSP responses will be made available for all unexpired certificates.
+OCSP responses will be made available for all unexpired Subscriber certificates.
 
 ### 4.10.2 Service availability
 
@@ -918,7 +902,7 @@ If a suitable successor entity does not exist, the following steps will be taken
 
 CA private keys are generated by HSMs meeting the requirements of Section 6.2.1. This occurs during a ceremony meeting the requirements of this CPS and the accompanying CP.
 
-Subscriber key pairs are generated and managed by Subscribers. Generation and management of Subscriber key pairs must be done in compliance with the terms of the CA Subscriber Agreement and ISRG CPS Section 9.6.3.
+See the Let's Encrypt Subscriber Agreement for information regarding Subscriber key pair generation.
 
 ### 6.1.2 Private key delivery to subscriber
 
@@ -932,7 +916,7 @@ Subscriber Public Keys are communicated to ISRG electronically via the ACME prot
 
 ISRG Public Keys are provided to Relying Parties as part of browser, operating system, or other software trusted root certificate lists.
 
-ISRG Public Keys are also available on ISRG websites such as [letsencrypt.org](https://letsencrypt.org/).
+ISRG Public Keys are also available in the Certificate Repository.
 
 ### 6.1.5 Key sizes
 
@@ -989,7 +973,7 @@ ISRG CA Private Keys are stored on HSMs meeting the requirements stated in Secti
 
 ### 6.2.8 Method of activating private key
 
-ISRG CA Private Keys are always stored on HSMs and activated using the mechanisms provided by the HSM manufacturer. Activation data and devices are protected.
+ISRG CA Private Keys are always stored on HSMs and activated using the mechanisms provided by the HSM manufacturer.
 
 ### 6.2.9 Method of deactivating private key
 
@@ -999,7 +983,7 @@ ISRG CA Private Keys are always stored on HSMs and deactivated using the mechani
 
 ISRG CA Private Keys are destroyed by Trusted Contributors using a FIPS 140-2 (or higher) validated zeroize method provided by the HSMs storing the keys. Physical destruction of the HSM is not required.
 
-Subscribers are obligated to securely destroy private keys when they should no longer be used, in most cases by securely deleting all copies of private key files from storage media.
+See the Let's Encrypt Subscriber Agreement for information regarding Subscriber private key destruction.
 
 ### 6.2.11 Cryptographic Module Rating
 
@@ -1013,15 +997,15 @@ See Section 5.5.
 
 ### 6.3.2 Certificate operational periods and key pair usage periods
 
-The lifetimes of ISRG Root CA certificates are specified in Section 1.1. Corresponding key pairs have the same lifetimes.
+The validity periods of ISRG Root, Intermediate, and Subscriber Certificates are profiled in Section 7 of this document.
 
-End-entity certificates issued by ISRG to Subscribers shall have a validity period less than 100 days. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
+ISRG Root and Intermediate key pairs have lifetimes corresponding to their certificates. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
 
 ## 6.4 Activation data
 
 ### 6.4.1 Activation data generation and installation
 
-Activation data used to activate CA Private Keys is generated during a key ceremony. Activation data is transferred to the person who will use it, or place it will be stored, in a secure fashion.
+Activation data used to activate CA Private Keys is generated during a key ceremony. Activation data is then transferred to the person who will use it or place it will be stored.
 
 ### 6.4.2 Activation data protection
 
@@ -1133,14 +1117,14 @@ Extensions are not marked critical unless specifically described here as critica
 
 ### Root OCSP Signing Certificate
 
-Signed by a Root CA Certificate, these Certificates sign OCSP responses for Intermediate CA Certificates.
+Signed by a Root CA Certificate, these Certificates may sign OCSP responses for Intermediate CA Certificates.
 
 | Field or extension             | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X1                          |
-| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X1                     |
-| Validity Period                | 5 years                                                                            |
+| Issuer Distinguished Name      | Derived from Issuer                                                                |
+| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X&lt;n&gt;<br/> where n is an integer depending on the Issuer |
+| Validity Period                | Up to 8 years                                                                      |
 | Basic Constraints              | Critical.<br/> cA=False                                                            |
 | Key Usage                      | Critical.<br/> digitalSignature                                                    |
 | Extended Key Usage             | Critical.<br/> OCSPSigning                                                         |
@@ -1237,7 +1221,7 @@ See Section 8.7 for information about the frequency of self-audits.
 ISRG's WebTrust compliance audits are performed by a qualified auditor. A qualified auditor means a natural person, legal entity, or group of natural persons or legal entities that collectively possess the following qualifications and skills:
 
 1. Independence from the subject of the audit (which is ISRG);
-2. The ability to conduct an audit that addresses the relevant criteria
+2. The ability to conduct an audit that addresses the relevant criteria specified in an Eligible Audit Scheme (see Section 8.4);
 3. Employs individuals who have proficiency in examining Public Key Infrastructure technology, information security tools and techniques, information technology and security auditing, and the third-party attestation function;
 4. (For audits conducted in accordance with any one of the ETSI standards) accredited in accordance with ISO 17065 applying the requirements specified in ETSI EN 319 403;
 5. (For audits conducted in accordance with the WebTrust standard) licensed by WebTrust;
