@@ -60,7 +60,7 @@ The following revisions have been made:
 
 ### 1.3.1 Certification authorities
 
-ISRG is the CA subject to this CPS.
+This CPS applies to the ISRG CA.
 
 ### 1.3.2 Registration authorities
 
