@@ -405,7 +405,7 @@ All end-entity certificates are made available to Subscribers via the ACME proto
 
 For each end-entity certificate issuance, ISRG signs a Precertificate and
 submits it to a selection of Certificate Transparency logs. Upon successful
-submission, ISRG will attempt to issue a certificate that matches the
+submission, ISRG attempts to issue a certificate that matches the
 Precertificate (per RFC 6962 Section 3.1) and embeds at least two of the resulting
 Signed Certificate Timestamps (SCTs). ISRG submits the resulting final certificate
 to a selection of Certificate Transparency logs on a best-effort basis.
