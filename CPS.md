@@ -231,7 +231,7 @@ ISRG certificates contain URLs to locations where certificate-related informatio
 
 ## 2.3 Time or frequency of publication
 
-New or updated ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA will approve and publish updated documents at least annually.
+New or updated ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA will approve and publish updated CP and CPS documents at least annually.
 
 New or updated ISRG root and intermediate certificates are made publicly available as soon as possible. This typically means within seven days of creation.
 
