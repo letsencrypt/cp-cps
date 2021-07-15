@@ -414,7 +414,7 @@ Subscriber usage of Private Keys and Certificates is governed by the Let's Encry
 
 ### 4.5.2 Relying party public key and certificate usage
 
-Relying Parties must fully evaluate the context in which they are relying on certificates and the information contained in them, and decide to what extent the risk of reliance is acceptable. If the risk of relying on a certificate is determined to be unacceptable, then Relying Parties should not use the certificate or should obtain additional assurances before using the certificate.
+Relying Parties should fully evaluate the context in which they are relying on certificates and the information contained in them, and decide to what extent the risk of reliance is acceptable. If the risk of relying on a certificate is determined to be unacceptable, then Relying Parties should not use the certificate or should obtain additional assurances before using the certificate.
 
 ISRG does not warrant that any software used by Relying Parties to evaluate or otherwise handle certificates does so properly.
 
@@ -555,7 +555,7 @@ Investigation into a revocation request will begin within 24 hours of receiving 
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
-Relying parties must verify the validity of certificates via CRL or OCSP prior to relying on certificates. Relying Parties who cannot or choose not to check certificate expiration or revocation status, but decide to rely on a certificate anyway, do so at their own risk.
+Relying parties should verify the validity of certificates via CRL or OCSP prior to relying on certificates. Relying Parties who cannot or choose not to check certificate expiration or revocation status, but decide to rely on a certificate anyway, do so at their own risk.
 
 See Section 4.5.2.
 
