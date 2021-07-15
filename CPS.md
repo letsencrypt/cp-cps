@@ -524,7 +524,7 @@ No stipulation.
 
 ISRG will follow the ISRG CP and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the ISRG CP.
 
-ISRG maintains a continuous (24x7x365) ability to accept and respond to revocation requests and related inquiries.
+ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and related inquiries.
 
 ### 4.9.2 Who can request revocation
 
@@ -615,7 +615,7 @@ OCSP responses will be made available for all unexpired Subscriber certificates.
 
 ### 4.10.2 Service availability
 
-All certificate status services are made available at all times (24x7x365) if possible.
+All certificate status services are made available at all times (24x7) if possible.
 
 ### 4.10.3 Optional features
 
@@ -649,7 +649,7 @@ ISRG maintains at least two Secure PKI Facilities at all times for the sake of r
 
 Secure PKI Facilities are constructed so as to prevent unauthorized entry or interference.
 
-Secure PKI Facilities are monitored at all times (24x7x365) so as to prevent unauthorized entry or interference.
+Secure PKI Facilities are monitored at all times (24x7) so as to prevent unauthorized entry or interference.
 
 ### 5.1.2 Physical access
 
