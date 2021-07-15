@@ -1179,12 +1179,14 @@ Not applicable.
 
 ## 7.2 CRL profile
 
+For the status of Subordinate CA Certificates:
+
 | Field or Extension        | Value                                                                          |
 | ------------------------- | ------------------------------------------------------------------------------ |
 | Version                   | V2                                                                             |
 | Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
-| ThisUpdate                | The date and time when the Certificate revocation list was issued.             |
-| NextUpdate                | ThisUpdate + 30 days                                                           |
+| ThisUpdate                | The date and time when the Certificate revocation list validity begins             |
+| NextUpdate                | ThisUpdate + No greater than 12 months                                                             |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
 | CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs. |
 
