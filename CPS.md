@@ -289,7 +289,7 @@ Applicants are required to prove possession of the Private Key corresponding to 
 
 ### 3.2.2 Authentication of organization and domain identity
 
-ISRG only issues Domain Validation (DV) certificates. All FQDNs which will be listed in the certificate are fully validated prior to issuance.
+ISRG only issues Domain Validation (DV) certificates. All FQDNs which will be listed in the Common Name and list of SANs in the certificate are fully validated prior to issuance.
 
 ISRG uses three methods for validating domain control:
 
