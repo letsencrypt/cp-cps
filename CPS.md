@@ -518,8 +518,6 @@ No stipulation.
 
 ISRG will follow the ISRG CP and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the ISRG CP.
 
-ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and related inquiries.
-
 ### 4.9.2 Who can request revocation
 
 Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases. A number of ACME clients support this functionality.
@@ -534,7 +532,7 @@ Certificates may be administratively revoked by ISRG if it is determined that th
 
 Revocation requests may be made by anyone, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. Successful revocation requests with a reason code of `keyCompromise` will result in the affected key being blocked for future issuance and all currently valid certificates with that key will be revoked, regardless of whether compromise was demonstrated per the requirements in Section 4.9.12 of this document.
 
-Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
+Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
 An investigation into whether revocation or other appropriate action is warranted will be based on at least the following criteria:
 
