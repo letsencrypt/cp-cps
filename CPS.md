@@ -166,6 +166,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 * Trusted Role
   * A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
 
+See ISRG CP 1.6.1 for additional definitions.
+
 ### 1.6.2 Acronyms
 
 * ACME
@@ -200,6 +202,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * Subject Alternative Name
 * TLD
   * Top Level Domain
+
+See ISRG CP 1.6.2 for additional acronyms.
 
 ### 1.6.3 References
 
@@ -283,19 +287,15 @@ Applicants are required to prove possession of the Private Key corresponding to 
 
 ### 3.2.2 Authentication of organization and domain identity
 
-ISRG only issues Domain Validation (DV) certificates. When a certificate request includes a list of FQDNs in a SAN list, all domains in the list are fully validated prior to issuance.
+ISRG only issues Domain Validation (DV) certificates. All FQDNs which will be listed in the Common Name and list of SANs in the certificate are fully validated prior to issuance.
 
-Validation for DV certificates involves demonstrating proper control over a domain. ISRG validates domain control in an automated fashion via the ACME protocol.
+ISRG uses three methods for validating domain control:
 
-There are three methods used for demonstrating domain control:
+1. DNS Change (BR and ISRG CP Section 3.2.2.4.7)
+2. Agreed-Upon Change to Website - ACME (BR and ISRG CP Section 3.2.2.4.19)
+3. TLS Using ALPN (BR and ISRG CP Section 3.2.2.4.20)
 
-1. DNS Change: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) in a DNS TXT or CAA record for the requested FQDN prefixed with the label '\_acme-challenge'. (BR Section 3.2.2.4.7)
-
-2. Agreed-Upon Change to Website - ACME: Confirming the Applicant’s control over the requested FQDN by confirming the presence of agreed-upon content contained in a file or on a web page under the “/.well-known/acme-challenge/” directory on the requested FQDN that is accessible to the CA via HTTP over port 80, following redirects. (BR Section 3.2.2.4.19)
-
-3. TLS Using ALPN: Confirming the Applicant’s control over the requested FQDN by confirming the presence of a random value (with at least 128 bits entropy) within a Certificate on the requested FQDN which is accessible to the CA via TLS over port 443. (BR Section 3.2.2.4.20)
-
-Validation for wildcard domain requests must be completed using the DNS Change method.
+Validation for Wildcard Domain Names must be completed using the DNS Change method.
 
 All validations are performed in compliance with the current CAB Forum Baseline Requirements at the time of validation.
 
