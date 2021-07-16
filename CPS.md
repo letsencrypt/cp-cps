@@ -58,11 +58,11 @@ The following revisions have been made:
 
 ## 1.3 PKI participants
 
-### 1.3.1 Certification authorities
+### 1.3.1 Certification Authorities
 
 This CPS applies to the ISRG CA.
 
-### 1.3.2 Registration authorities
+### 1.3.2 Registration Authorities
 
 ISRG does not delegate any of the Section 3.2 requirements to a Delegated Third Party. ISRG serves as its own RA.
 
@@ -70,11 +70,9 @@ ISRG does not delegate any of the Section 3.2 requirements to a Delegated Third 
 
 See definition of "Subscriber" in Section 1.6.1 Definitions.
 
-### 1.3.4 Relying parties
+### 1.3.4 Relying Parties
 
 See definition of "Relying Party" in Section 1.6.1 Definitions.
-
-Relying Parties must verify the validity of certificates via CRL or OCSP prior to relying on certificates. CRL and OCSP location information is provided within certificates.
 
 ### 1.3.5 Other participants
 
@@ -255,7 +253,7 @@ ISRG certificates include an "Issuer" field which identifies the issuing entity.
 
 ### 3.1.3 Anonymity or pseudonymity of subscribers
 
-Subscribers are not identified in DV certificates, which have subject fields identifying only domain names (not people or organizations). Relying parties should consider DV certificate subscribers to be anonymous.
+Subscribers are not identified in DV certificates, which have subject fields identifying only domain names (not people or organizations). Relying Parties should consider DV certificate subscribers to be anonymous.
 
 ### 3.1.4 Rules for interpreting various name forms
 
@@ -416,11 +414,9 @@ Subscriber usage of Private Keys and Certificates is governed by the Let's Encry
 
 ### 4.5.2 Relying party public key and certificate usage
 
-Relying Parties must fully evaluate the context in which they are relying on certificates and the information contained in them, and decide to what extent the risk of reliance is acceptable. If the risk of relying on a certificate is determined to be unacceptable, then Relying Parties should not use the certificate or should obtain additional assurances before using the certificate.
+Relying Parties should fully evaluate the context in which they are relying on certificates and the information contained in them, and decide to what extent the risk of reliance is acceptable. If the risk of relying on a certificate is determined to be unacceptable, then Relying Parties should not use the certificate or should obtain additional assurances before using the certificate.
 
 ISRG does not warrant that any software used by Relying Parties to evaluate or otherwise handle certificates does so properly.
-
-Relying Parties ignoring certificate expiration, revocation data provided via OCSP or CRL, or other pertinent information do so at their own risk.
 
 ## 4.6 Certificate renewal
 
@@ -559,7 +555,7 @@ Investigation into a revocation request will begin within 24 hours of receiving 
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
-Relying Parties who cannot or choose not to check revocation status, but decide to rely on a certificate anyway, do so at their own risk.
+Relying Parties should verify the validity of certificates via CRL or OCSP prior to relying on certificates. Relying Parties who cannot or choose not to check certificate expiration or revocation status, but decide to rely on a certificate anyway, do so at their own risk.
 
 See Section 4.5.2.
 
