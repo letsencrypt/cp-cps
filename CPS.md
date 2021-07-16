@@ -373,9 +373,7 @@ No stipulation.
 
 ### 4.3.1 CA actions during certificate issuance
 
-Certificates issued by the Root CA require an individual authorized by ISRG to deliberately issue a direct command in order for the Root CA to perform a certificate signing operation.
-
-The source of a certificate request is confirmed before issuance. CA processes are protected from unauthorized modification during certificate issuance. Issued certificates are stored in a database and then made available to the Subscriber.
+At a high level, the following steps are taken during issuance of a Subscriber Certificate. ISRG's automated processes confirm that all names which will appear in the Common Name and/or list of SANs of the certificate have been properly validated to be controlled by the Subscriber requesting the certificate. The certificate is signed by a Subordinate CA in an HSM. After issuance is complete, the certificate is stored in a database and made available to the Subscriber.
 
 ### 4.3.2 Notification to subscriber by the CA of issuance of certificate
 
@@ -385,7 +383,7 @@ End-entity certificates are made available to Subscribers via the ACME protocol 
 
 ### 4.4.1 Conduct constituting certificate acceptance
 
-See ISRG CP Section 4.4.1.
+No stipulation.
 
 ### 4.4.2 Publication of the certificate by the CA
 
