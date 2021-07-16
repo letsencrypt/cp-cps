@@ -375,9 +375,7 @@ No stipulation.
 
 ### 4.3.1 CA actions during certificate issuance
 
-Certificates issued by a Root CA require an individual authorized by ISRG to deliberately issue a direct command in order for the Root CA to perform a certificate signing operation.
-
-Certificates issued by an Intermediate CA are confirmed to originate with the same Subscriber who has demonstrated control over the names in the Certificate. CA processes are protected from unauthorized modification during certificate issuance. Issued certificates are stored in a database.
+At a high level, the following steps are taken during issuance of a Subscriber Certificate. ISRG's automated processes confirm that all names which will appear in the Common Name and/or list of SANs of the certificate have been properly validated to be controlled by the Subscriber requesting the certificate. The certificate is signed by a Subordinate CA in an HSM. After issuance is complete, the certificate is stored in a database and made available to the Subscriber.
 
 ### 4.3.2 Notification to subscriber by the CA of issuance of certificate
 
