@@ -309,7 +309,7 @@ Non-verified Applicant information is not included in ISRG certificates.
 
 ### 3.2.5 Validation of authority
 
-ISRG does not issue end-entity certification containing Subject Identity Information, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
+ISRG does not issue Subscriber Certificates containing Subject Identity Information, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
 
 ### 3.2.6 Criteria for interoperation
 
@@ -377,7 +377,7 @@ At a high level, the following steps are taken during issuance of a Subscriber C
 
 ### 4.3.2 Notification to subscriber by the CA of issuance of certificate
 
-End-entity certificates are made available to Subscribers via the ACME protocol as soon after issuance as reasonably possible. Typically this happens within a few seconds.
+Subscriber Certificates are made available to Subscribers via the ACME protocol as soon after issuance as reasonably possible. Typically this happens within a few seconds.
 
 ## 4.4 Certificate acceptance
 
@@ -389,9 +389,9 @@ No stipulation.
 
 See Section 2.2 of this document for Root and Subordinate CA certificate publication information.
 
-All end-entity certificates are made available to Subscribers via the ACME protocol.
+All Subscriber Certificates are made available to Subscribers via the ACME protocol.
 
-For each end-entity certificate issuance, ISRG signs a Precertificate and
+For each Subscriber Certificate issuance, ISRG signs a Precertificate and
 submits it to a selection of Certificate Transparency logs. Upon successful
 submission, ISRG attempts to issue a certificate that matches the
 Precertificate (per RFC 6962 Section 3.1) and embeds at least two of the resulting
@@ -561,7 +561,7 @@ See Section 4.5.2.
 
 ISRG will issue updated CRLs for Subordinate CA certificates with a frequency greater than or equal to that required by the ISRG CP.
 
-ISRG does not issue CRLs for end-entity certificates.
+ISRG does not issue CRLs for Subscriber Certificates.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
@@ -569,7 +569,7 @@ When a CRL is requested by a Relying Party the time to receive a response will b
 
 ### 4.9.9 On-line revocation/status checking availability
 
-Revocation information will be made available for all end-entity certificates via OCSP. Revocation information may be made available for Subordinate CA certificates via OCSP.
+Revocation information will be made available for all Subscriber Certificates via OCSP. Revocation information may be made available for Subordinate CA certificates via OCSP.
 
 ### 4.9.10 On-line revocation checking requirements
 
@@ -603,7 +603,7 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
-CRL entries for Subordinate CA certificates will remain in place until the certificates expire. ISRG does not provide CRLs for end-entity certificates.
+CRL entries for Subordinate CA certificates will remain in place until the certificates expire. ISRG does not provide CRLs for Subscriber Certificates.
 
 OCSP responses will be made available for all unexpired Subscriber certificates.
 
@@ -1090,7 +1090,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Authority Information Access   | Contains CA Issuers URL (and optionally an OCSP URL). URLs vary based on Issuer.   |
 | CRL Distribution Points        | Contains a CRL URL. URL varies based on Issuer.                                    |
 
-### DV-SSL End Entity Certificate
+### DV-SSL Subscriber Certificate
 
 | Field or extension             | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
@@ -1147,7 +1147,7 @@ No stipulation.
 
 ### 7.1.4 Name forms
 
-ISRG does not issue end-entity certificates containing the subject:organizationName, subject:givenName, subject:surname, subject:streetAddress, subject:localityName, subject:stateOrProvinceName, subject:postalCode, subject:countryName, or subject:organizationalUnitName fields. The subject:organizationName and subject:countryName fields may be present in our Root CA, Subordinate CA, and other operational certificates.
+ISRG does not issue Subscriber Certificates containing the subject:organizationName, subject:givenName, subject:surname, subject:streetAddress, subject:localityName, subject:stateOrProvinceName, subject:postalCode, subject:countryName, or subject:organizationalUnitName fields. The subject:organizationName and subject:countryName fields may be present in our Root CA, Subordinate CA, and other operational certificates.
 
 ### 7.1.5 Name constraints
 
