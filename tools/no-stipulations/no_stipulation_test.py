@@ -141,3 +141,4 @@ class TestMakeNoStipulations(unittest.TestCase):
     def test_make_no_stipulations_happy_path(self):
         self.maxDiff = None
         self.assertEqual(make_no_stipulations(document_input), document_output)
+        
