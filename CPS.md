@@ -221,7 +221,7 @@ https://letsencrypt.org/repository/
 
 ## 2.2 Publication of certification information
 
-Records of all ISRG root and intermediate certificates, including those that have been revoked, are available in the Certificate Repository:
+Records of all ISRG Root and Subordinate CA certificates, including those that have been revoked, are available in the Certificate Repository:
 
 https://letsencrypt.org/certificates/
 
@@ -231,7 +231,7 @@ ISRG certificates contain URLs to locations where certificate-related informatio
 
 New or updated ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA will approve and publish updated CP and CPS documents at least annually.
 
-New or updated ISRG root and intermediate certificates are made publicly available as soon as possible. This typically means within seven days of creation.
+New or updated ISRG Root and Subordinate CA certificates are made publicly available as soon as possible. This typically means within seven days of creation.
 
 ## 2.4 Access controls on repositories
 
@@ -387,7 +387,7 @@ No stipulation.
 
 ### 4.4.2 Publication of the certificate by the CA
 
-See Section 2.2 of this document for Root and Intermediate CA certificate publication information.
+See Section 2.2 of this document for Root and Subordinate CA certificate publication information.
 
 All end-entity certificates are made available to Subscribers via the ACME protocol.
 
@@ -559,7 +559,7 @@ See Section 4.5.2.
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
-ISRG will issue updated CRLs for intermediate certificates with a frequency greater than or equal to that required by the ISRG CP.
+ISRG will issue updated CRLs for Subordinate CA certificates with a frequency greater than or equal to that required by the ISRG CP.
 
 ISRG does not issue CRLs for end-entity certificates.
 
@@ -569,7 +569,7 @@ When a CRL is requested by a Relying Party the time to receive a response will b
 
 ### 4.9.9 On-line revocation/status checking availability
 
-Revocation information will be made available for all end-entity certificates via OCSP. Revocation information may be made available for intermediate certificates via OCSP.
+Revocation information will be made available for all end-entity certificates via OCSP. Revocation information may be made available for Subordinate CA certificates via OCSP.
 
 ### 4.9.10 On-line revocation checking requirements
 
@@ -603,7 +603,7 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
-CRL entries for intermediate certificates will remain in place until the certificates expire. ISRG does not provide CRLs for end-entity certificates.
+CRL entries for Subordinate CA certificates will remain in place until the certificates expire. ISRG does not provide CRLs for end-entity certificates.
 
 OCSP responses will be made available for all unexpired Subscriber certificates.
 
@@ -918,9 +918,9 @@ ISRG Root CA RSA Private Keys are at least 4096 bits in length.
 
 ISRG Root CA ECDSA Private Keys are at least 384 bits in length.
 
-ISRG Intermediate CA RSA Private Keys are at least 2048 bits in length.
+ISRG Subordinate CA RSA Private Keys are at least 2048 bits in length.
 
-ISRG Intermediate CA ECDSA Private Keys are at least 384 bits in length.
+ISRG Subordinate CA ECDSA Private Keys are at least 384 bits in length.
 
 ### 6.1.6 Public key parameters generation and quality checking
 
@@ -991,9 +991,9 @@ See Section 5.5.
 
 ### 6.3.2 Certificate operational periods and key pair usage periods
 
-The validity periods of ISRG Root, Intermediate, and Subscriber Certificates are profiled in Section 7 of this document.
+The validity periods of ISRG Root CA, Subordinate CA, and Subscriber Certificates are profiled in Section 7 of this document.
 
-ISRG Root and Intermediate key pairs have lifetimes corresponding to their certificates. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
+ISRG Root and Subordinate CA key pairs have lifetimes corresponding to their certificates. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
 
 ## 6.4 Activation data
 
@@ -1075,7 +1075,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Basic Constraints              | Critical.<br/> cA=True, pathLength constraint absent                               |
 | Key Usage                      | Critical.<br/> keyCertSign, cRLSign                                                |
 
-### Intermediate CA Certificate
+### Subordinate CA Certificate
 
 | Field or extension             | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
@@ -1111,7 +1111,7 @@ Extensions are not marked critical unless specifically described here as critica
 
 ### Root OCSP Signing Certificate
 
-Signed by a Root CA Certificate, these Certificates may sign OCSP responses for Intermediate CA Certificates.
+Signed by a Root CA Certificate, these Certificates may sign OCSP responses for Subordinate CA Certificates.
 
 | Field or extension             | Value                                                                              |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
@@ -1147,7 +1147,7 @@ No stipulation.
 
 ### 7.1.4 Name forms
 
-ISRG does not issue end-entity certificates containing the subject:organizationName, subject:givenName, subject:surname, subject:streetAddress, subject:localityName, subject:stateOrProvinceName, subject:postalCode, subject:countryName, or subject:organizationalUnitName fields. The subject:organizationName and subject:countryName fields may be present in our root, intermediate, and other operational certificates.
+ISRG does not issue end-entity certificates containing the subject:organizationName, subject:givenName, subject:surname, subject:streetAddress, subject:localityName, subject:stateOrProvinceName, subject:postalCode, subject:countryName, or subject:organizationalUnitName fields. The subject:organizationName and subject:countryName fields may be present in our Root CA, Subordinate CA, and other operational certificates.
 
 ### 7.1.5 Name constraints
 
