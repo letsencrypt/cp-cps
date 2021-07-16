@@ -168,6 +168,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 * Trusted Role
   * A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
 
+See ISRG CP 1.6.1 for additional definitions.
+
 ### 1.6.2 Acronyms
 
 * ACME
@@ -202,6 +204,8 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
   * Subject Alternative Name
 * TLD
   * Top Level Domain
+
+See ISRG CP 1.6.2 for additional acronyms.
 
 ### 1.6.3 References
 
