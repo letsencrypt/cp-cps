@@ -45,7 +45,7 @@ This is the ISRG Certificate Policy. This document was approved for publication 
 | October 27, 2020 | List ISRG Root X2 in section 1.1. Update sections 3.2.2.4, 3.2.2.5, 3.2.2.6, 3.2.2.8, 4.2.1, 4.9.10, 7.1.2, and 7.1.3 regarding validation methods, OCSP, certificate profiles, and cryptographic algorithms, to match Baseline Requirements. | 2.5 |
 | April 2, 2021 | Update ISRG physical address. | 2.6 |
 | June 8, 2021 | Update Sections 4.2.1, 4.2.2, 4.9.1.1, 6.3.2, and 7.1.4.2.1 to match BRs v1.7.6. Define Internal Name in Section 1.6.1. | 2.7 |
-| DD Month, YYYY | Sync against Baseline Requirements v1.7.8. | 2.8 |
+| DD Month, YYYY | Sync against Baseline Requirements v1.7.8, extensive changes. | 3.0 |
 
 ### 1.2.2 Relevant Dates
 
