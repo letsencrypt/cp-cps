@@ -10,7 +10,7 @@ These services are provided to the general public with exceptions as deemed appr
 
 ISRG PKI services are most commonly, but not necessarily exclusively, provided under the brand/trademark "Let's Encrypt".
 
-The ISRG PKI conforms to the current version of the guidelines adopted by the Certification Authority/Browser Forum (“CAB Forum”) when issuing publicly trusted certificates, including the Baseline Requirements for the Issuance and Management of Publicly Trusted Certificates (“Baseline Requirements”). CAB Forum documents can be found at https://www.cabforum.org. If there is any conflict between this CPS and a relevant CAB Forum requirement or guideline, then the CAB Forum requirement or guideline shall take precedence.
+The ISRG PKI conforms to the current version of the Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <http://www.cabforum.org>. In the event of any inconsistency between this document and those Requirements, those Requirements take precedence over this document.
 
 Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at https://letsencrypt.org/repository/.
 
@@ -521,11 +521,11 @@ ISRG will follow the ISRG CP and revoke a certificate in accordance with Section
 
 ### 4.9.2 Who can request revocation
 
-Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases. A number of ACME clients support this functionality.
+Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases.
 
-Anyone can revoke any certificate via the ACME API if they can demonstrate control over all domains covered by the certificate. No other information is required in such cases. A number of ACME clients support this functionality.
+Anyone can revoke any certificate via the ACME API if they can demonstrate control over all domains covered by the certificate. No other information is required in such cases.
 
-Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases. A number of ACME clients support this.
+Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases.
 
 Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at the discretion of ISRG management.
 
@@ -580,7 +580,7 @@ ISRG allows for OCSP stapling.
 
 ### 4.9.12 Special requirements re key compromise
 
-Key compromise must be demonstrated via the Certificate Revocation method of the ACME Protocol defined in RFC 8555, Section 7.6 by signing the request using the private key corresponding to the public key in the certificate (not the private key corresponding to the account which originally requested the certificate). Several ACME clients provide this functionality.
+Key compromise must be demonstrated via the Certificate Revocation method of the ACME Protocol defined in RFC 8555, Section 7.6 by signing the request using the private key corresponding to the public key in the certificate (not the private key corresponding to the account which originally requested the certificate).
 
 ### 4.9.13 Circumstances for suspension
 
@@ -777,7 +777,7 @@ Audit logs, whether in production or archived, are protected using both physical
 
 ### 5.4.5 Audit log backup procedures
 
-ISRG makes regular backup copies of audit logs. Audit log backup copies are sent for secure offsite storage at least once per month.
+ISRG makes regular backup copies of audit logs. Audit log backup copies are sent for secure offsite storage at least quarterly.
 
 ### 5.4.6 Audit collection system (internal vs. external)
 
