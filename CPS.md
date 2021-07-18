@@ -727,7 +727,7 @@ Training programs are developed for each role by ISRG management and Security Of
 
 ### 5.3.4 Retraining frequency and requirements
 
-Training is repeated for each Trusted Contributor on an annual basis and re-covers all topics relevant to their trusted role.
+Training is repeated for each Trusted Contributor on an annual basis and covers topics necessary to maintain skill level requirements.
 
 Training is also offered whenever changes in the industry or operations require it in order for contributors to competently perform in their trusted roles.
 
@@ -777,7 +777,7 @@ Audit logs, whether in production or archived, are protected using both physical
 
 ### 5.4.5 Audit log backup procedures
 
-ISRG makes regular backup copies of audit logs. Audit log backup copies are sent for secure offsite storage at least quarterly.
+ISRG makes regular backup copies of audit logs.
 
 ### 5.4.6 Audit collection system (internal vs. external)
 
@@ -791,7 +791,7 @@ No stipulation.
 
 Audit logs are monitored by Trusted Contributors, including operations and engineering staff. Anomalies indicating attempted breaches of CA security are reported and investigated.
 
-Automated internal and external vulnerability scans occur at least every two weeks, though more typically every week.
+Internal and external vulnerability scans occur at least every three months.
 
 Extensive vulnerability assessments for ISRG infrastructure are conducted at least annually by qualified third parties.
 
@@ -815,11 +815,11 @@ ISRG retains all documentation relating to certificate requests and the verifica
 
 ### 5.5.3 Protection of archive
 
-Archives are protected from unauthorized modification or destruction by strong security and environmental controls at primary and offsite storage facilities.
+Archives are protected from unauthorized modification or destruction by strong security and environmental controls.
 
 ### 5.5.4 Archive backup procedures
 
-Archives are backed up at primary CA facilities as well as at secure off-site facilities.
+Archives are backed up regularly.
 
 ### 5.5.5 Requirements for time-stamping of records
 
