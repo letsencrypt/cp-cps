@@ -108,8 +108,8 @@ The ISRG PMA can be contacted at:
 
 Policy Management Authority<br/>
 Internet Security Research Group<br/>
-548 Market St., PMB 57274<br/>
-San Francisco, CA 94104-5401<br/>
+P.O. Box 18666<br/>
+Minneapolis, MN 55418-0666</br>
 USA<br/>
 
 Certificate revocation requests can be made via the ACME API. Please see Section 4.9.3 for more information.
