@@ -151,11 +151,11 @@ This CP document is maintained by the ISRG Policy Management Authority.
 
 The ISRG PMA can be contacted at:
 
-Policy Management Authority<br/>
-Internet Security Research Group<br/>
-P.O. Box 18666<br/>
-Minneapolis, MN 55418-0666</br>
-USA<br/>
+Policy Management Authority<br>
+Internet Security Research Group<br>
+P.O. Box 18666<br>
+Minneapolis, MN 55418-0666<br>
+USA<br>
 
 Issues can be filed via the GitHub repository where this document is maintained:
 
