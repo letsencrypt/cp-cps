@@ -92,7 +92,7 @@ No stipulation.
 Certificates may not be used:
 
 * For any application requiring fail-safe performance such as a) the operation of nuclear power facilities b) air traffic control systems c) aircraft navigation systems d) weapons control systems e) any other system in which failure could lead to injury, death, or environmental damage.
-* For software or hardware architectures that provide facilities for interference with encrypted communications, including but not limited to a) active eavesdropping (e.g., monster-in-the-middle attacks) b) traffic management of domain names or internet protocol (IP) addresses that the organization does not own or control. Note that these restrictions shall apply regardless of whether a relying party communicating through the software or hardware architecture has knowledge of its providing facilities for interference with encrypted communications.
+* For software or hardware architectures that provide facilities for interference with encrypted communications, including but not limited to a) active eavesdropping (e.g., monster-in-the-middle attacks) b) traffic management of domain names or internet protocol addresses that the organization does not own or control. Note that these restrictions shall apply regardless of whether a relying party communicating through the software or hardware architecture has knowledge of its providing facilities for interference with encrypted communications.
 
 Note that Certificates do not guarantee anything regarding reputation, honesty, or the current state of endpoint security. A Certificate only represents that the information contained in it was verified as reasonably correct when the Certificate was issued.
 
@@ -132,36 +132,18 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 * ACME Protocol
   * A protocol used for validation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
-* Applicant
-  * An entity applying for a certificate.
 * Baseline Requirements
   * A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
 * CAB Forum
   * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (https://cabforum.org/)
-* Certificate Problem Report
-  * Complaint of suspected Key Compromise, Certificate misuse, or other types of fraud, compromise, misuse, or inappropriate conduct related to Certificates.
 * Certificate Repository
   * A repository of information about ISRG certificates. It is located at: https://letsencrypt.org/certificates/
-* Cross Certificate
-  * A certificate that is used to establish a trust relationship between two Root CAs.
 * Policy and Legal Repository
   * A repository of policy and legal documents related to the ISRG PKI. It is located at: https://letsencrypt.org/repository/
-* Key Pair
-  * A Private Key and its associated Public Key.
 * Precertificate
   * A certificate containing a critical poison extension as defined by RFC 6962 Section 3.1.
-* Private Key
-  * The key in a Key Pair that must be kept secret. Used to create digital signatures that can be verified by the corresponding Public Key or to decrypt messages encrypted by the corresponding Public Key.
-* Public Key
-  * The only key in a Key Pair that can safely be publicly disclosed. Used by Relying Parties to verify digital signatures from the corresponding private key or to encrypt messages that can only be decrypted by the corresponding private key.
-* Relying Party
-  * An entity that relies upon information contained within certificates issued by ISRG PKI services.
-* Root CA
-  * The top-level Certification Authority whose Root Certificate is distributed by Application Software Suppliers and that issues Subordinate CA Certificates.
 * Secure PKI Facilities
   * Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
-* Subscriber
-  * An entity that has agreed to a Subscriber Agreement and is using ISRG PKI services.
 * Trusted Contributor
   * A contributor who performs in a Trusted Role. Trusted Contributors may be employees, contractors, or community members. Trusted Contributors must be properly trained and qualified, and have the proper legal obligations in place before performing in a Trusted Role.
 * Trusted Role
@@ -173,32 +155,16 @@ See ISRG CP 1.6.1 for additional definitions.
 
 * ACME
   * Automated Certificate Management Environment
-* CA
-  * Certificate Authority
-* CAA
-  * Certificate Authority Authorization
-* CP
-  * Certificate Policy
-* CPS
-  * Certification Practice Statement
 * DV
   * Domain Validation
-* FQDN
-  * Fully Qualified Domain Name
 * HSM
   * Hardware Security Module
-* IDN
-  * Internationalized Domain Name
 * IP
   * Internet Protocol
 * ISRG
   * Internet Security Research Group
-* PKI
-  * Public Key Infrastructure
 * PMA
   * Policy Management Authority
-* RA
-  * Registration Authority
 * SAN
   * Subject Alternative Name
 * TLD
