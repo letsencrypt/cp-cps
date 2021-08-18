@@ -36,7 +36,7 @@ The following revisions have been made:
 | Date              | Changes                                            | Version |
 |-------------------|----------------------------------------------------|---------|
 | May 5, 2015 | Original. | 1.0 |
-| September 9, 2015 | Added/corrected a number of policy URIs, removed LDAP as mechanism for publishing certificate information, removed administrative contact requirement for DV-SSL subscribers, removed mention of web-based revocation option, removed description of customer service center, substantial changes to all of Section 9 regarding legal matters, other minor fixes/improvements. | 1.1 |
+| September 9, 2015 | Added/corrected a number of policy URIs, removed LDAP as mechanism for publishing certificate information, removed administrative contact requirement for DV-SSL Subscribers, removed mention of web-based revocation option, removed description of customer service center, substantial changes to all of Section 9 regarding legal matters, other minor fixes/improvements. | 1.1 |
 | September 22, 2015 | Updated serial number description in Section 10.3.1, DV-SSL Certificate Profiles. | 1.2 |
 | March 16, 2016 | Update root CRL issuance periods, disallow issuance to ‘.mil’ TLD, make NameConstraints extension optional for cross- certification profile, clarify optional NameConstraints contents, clarify that OSCP ResponderID is byname, clarify that OCSP nonce extension is not supported. | 1.3 |
 | May 5, 2016 | Reference CP v1.2 rather than CP v1.1. Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.4 |
@@ -256,15 +256,15 @@ ISRG certificates include a "Subject" field which identifies the subject entity 
 
 ISRG certificates include an "Issuer" field which identifies the issuing entity. The issuing entity is identified using a distinguished name.
 
-### 3.1.3 Anonymity or pseudonymity of subscribers
+### 3.1.3 Anonymity or pseudonymity of Subscribers
 
-Subscribers are not identified in DV certificates, which have subject fields identifying only domain names (not people or organizations). Relying Parties should consider DV certificate subscribers to be anonymous.
+Subscribers are not identified in DV certificates, which have subject fields identifying only domain names (not people or organizations). Relying Parties should consider DV certificate Subscribers to be anonymous.
 
 ### 3.1.4 Rules for interpreting various name forms
 
 Distinguished names in certificates are to be interpreted using X.500 standards and ASN.1 syntax.
 
-Certificates do not assert any specific relationship between subscribers and registrants of domain names contained in certificates.
+Certificates do not assert any specific relationship between Subscribers and registrants of domain names contained in certificates.
 
 Regarding Internationalized Domain Names, ISRG will have no objection so long as the domain is resolvable via DNS. It is the CA’s position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
 
@@ -304,7 +304,7 @@ All validations are performed in compliance with the current CAB Forum Baseline 
 
 ISRG does not issue certificates to individuals, and thus does not authenticate individual identities.
 
-### 3.2.4 Non-verified subscriber information
+### 3.2.4 Non-verified Subscriber information
 
 Non-verified Applicant information is not included in ISRG certificates.
 
@@ -376,7 +376,7 @@ No stipulation.
 
 At a high level, the following steps are taken during issuance of a Subscriber Certificate. ISRG's automated processes confirm that all names which will appear in the Common Name and/or list of SANs of the certificate have been properly validated to be controlled by the Subscriber requesting the certificate. The certificate is signed by a Subordinate CA in an HSM. After issuance is complete, the certificate is stored in a database and made available to the Subscriber.
 
-### 4.3.2 Notification to subscriber by the CA of issuance of certificate
+### 4.3.2 Notification to Subscriber by the CA of issuance of certificate
 
 Subscriber Certificates are made available to Subscribers via the ACME protocol as soon after issuance as reasonably possible. Typically this happens within a few seconds.
 
@@ -433,7 +433,7 @@ No stipulation.
 
 No stipulation.
 
-### 4.6.4 Notification of new certificate issuance to subscriber
+### 4.6.4 Notification of new certificate issuance to Subscriber
 
 No stipulation.
 
@@ -465,7 +465,7 @@ No stipulation.
 
 No stipulation.
 
-### 4.7.4 Notification of new certificate issuance to subscriber
+### 4.7.4 Notification of new certificate issuance to Subscriber
 
 No stipulation.
 
@@ -497,7 +497,7 @@ No stipulation.
 
 No stipulation.
 
-### 4.8.4 Notification of new certificate issuance to subscriber
+### 4.8.4 Notification of new certificate issuance to Subscriber
 
 No stipulation.
 
@@ -737,7 +737,7 @@ No stipulation.
 
 ### 5.3.6 Sanctions for unauthorized actions
 
-Action will be taken to safeguard ISRG and its subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CPS.
+Action will be taken to safeguard ISRG and its Subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CPS.
 
 Actions taken in response to non-compliance may include termination, removal from trusted roles, or reporting to legal authorities.
 
@@ -897,7 +897,7 @@ ISRG CA Private Keys are generated by HSMs meeting the requirements of Section 6
 
 See the Let's Encrypt Subscriber Agreement for information regarding Subscriber key pair generation.
 
-### 6.1.2 Private key delivery to subscriber
+### 6.1.2 Private key delivery to Subscriber
 
 ISRG never generates or has access to Subscriber Private Keys.
 
@@ -1104,7 +1104,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
 | Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
 | Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
-| TLS Feature                    | Contains status_request if requested by the subscriber in the CSR                  |
+| TLS Feature                    | Contains status_request if requested by the Subscriber in the CSR                  |
 | Precertificate poison          | Per RFC 6962. In Precertificates only.                                             |
 | Signed Certificate Timestamp List | Per RFC 6962. In final certificates only.                                       |
 
@@ -1397,7 +1397,7 @@ ISRG certificates and services are provided “as-is.” ISRG disclaims any and 
 
 ISRG does not accept any liability for any loss, harm, claim, or attorney’s fees in connection with any certificates. ISRG will not be liable for any damages, attorney’s fees, or recovery, regardless of whether such damages are direct, consequential, indirect, incidental, special, exemplary, punitive, or compensatory, even if ISRG has been advised of the possibility of such damages. This limitation on liability applies irrespective of the theory of liability, i.e., whether the theory of liability is based upon contract, warranty, indemnification, contribution, tort, equity, statute or regulation, common law, or any other source of law, standard of care, category of claim, notion of fault or responsibility, or theory of recovery. This disclaimer is intended to be construed to the fullest extent allowed by applicable law.
 
-Without waiving or limiting the foregoing in any way, ISRG does not make, and ISRG expressly disclaims, any warranty regarding its right to use any technology, invention, technical design, process, or business method used in either issuing certificates or providing any of ISRG’s services. Each subscriber affirmatively and expressly waives the right to hold ISRG responsible in any way, or seek indemnification against ISRG, for any infringement of intellectual property rights, including patent, trademark, trade secret, or copyright.
+Without waiving or limiting the foregoing in any way, ISRG does not make, and ISRG expressly disclaims, any warranty regarding its right to use any technology, invention, technical design, process, or business method used in either issuing certificates or providing any of ISRG’s services. Each Subscriber affirmatively and expressly waives the right to hold ISRG responsible in any way, or seek indemnification against ISRG, for any infringement of intellectual property rights, including patent, trademark, trade secret, or copyright.
 
 ## 9.9 Indemnities
 
