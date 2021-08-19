@@ -218,13 +218,13 @@ Certificate distinguished names and subject alternative names are compliant with
 
 ### 3.1.2 Need for names to be meaningful
 
-ISRG certificates include a "Subject" field which identifies the subject entity (i.e. organization or domain). The subject entity is identified using a distinguished name.
+ISRG certificates include a "Subject" field which identifies the subject entity (i.e. organization or FQDN). The subject entity is identified using a distinguished name.
 
 ISRG certificates include an "Issuer" field which identifies the issuing entity. The issuing entity is identified using a distinguished name.
 
 ### 3.1.3 Anonymity or pseudonymity of Subscribers
 
-Subscribers are not identified in DV certificates, which have subject fields identifying only domain names (not people or organizations). Relying Parties should consider DV certificate Subscribers to be anonymous.
+Subscribers are not identified in DV certificates, which have subject fields identifying only FQDNs (not people or organizations). Relying Parties should consider DV certificate Subscribers to be anonymous.
 
 ### 3.1.4 Rules for interpreting various name forms
 
@@ -240,7 +240,7 @@ No stipulation.
 
 ### 3.1.6 Recognition, authentication, and role of trademarks
 
-ISRG reserves the right to make all decisions regarding Subscriber names in certificates. Entities requesting certificates will be required to demonstrate their right to use names (e.g. demonstrate control of a domain name), but trademark rights are not verified.
+ISRG reserves the right to make all decisions regarding Subscriber names in certificates. Entities requesting certificates will be required to demonstrate their right to use names (e.g. demonstrate control of an FQDN), but trademark rights are not verified.
 
 While ISRG will comply with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement responsibility for domain names should lie primarily with domain registrars and the legal system.
 
@@ -489,7 +489,7 @@ ISRG will follow the ISRG CP and revoke a certificate in accordance with Section
 
 Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases.
 
-Anyone can revoke any certificate via the ACME API if they can demonstrate control over all domains covered by the certificate. No other information is required in such cases.
+Anyone can revoke any certificate via the ACME API if they can demonstrate control over all FQDNs covered by the certificate. No other information is required in such cases.
 
 Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases.
 
