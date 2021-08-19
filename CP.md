@@ -159,7 +159,7 @@ USA<br>
 
 Issues can be filed via the GitHub repository where this document is maintained:
 
-https://github.com/letsencrypt/cp-cps
+[https://github.com/letsencrypt/cp-cps](https://github.com/letsencrypt/cp-cps)
 
 ### 1.5.3 Person Determining CPS suitability for the policy
 

@@ -209,7 +209,7 @@ index 5823995..280f22d 100644
 +
 +Issues can be filed via the GitHub repository where this document is maintained:
 +
-+https://github.com/letsencrypt/cp-cps
++[https://github.com/letsencrypt/cp-cps](https://github.com/letsencrypt/cp-cps)
  
  ### 1.5.3 Person Determining CPS suitability for the policy
  
