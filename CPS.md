@@ -57,7 +57,7 @@ The following revisions have been made:
 | June  8, 2021 | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. Add Section 4.2.4 regarding CAA checking. State in Section 6.7 that the CA complies with the CA/Browser Forum's Network and Certificate System Security Requirements. | 3.3 |
 | July 19, 2021 | Extensive changes. | 4.0 |
 
-## 1.3 PKI participants
+## 1.3 PKI Participants
 
 ### 1.3.1 Certification Authorities
 
@@ -75,19 +75,19 @@ See definition of "Subscriber" in Section 1.6.1 Definitions.
 
 See definition of "Relying Party" in Section 1.6.1 Definitions.
 
-### 1.3.5 Other participants
+### 1.3.5 Other Participants
 
 Other participants include CAs that cross-sign or issue subordinates to the ISRG PKI.
 
 ISRG PKI vendors and service providers with access to confidential information or privileged systems are required to operate in compliance with the ISRG CP.
 
-## 1.4 Certificate usage
+## 1.4 Certificate Usage
 
-### 1.4.1 Appropriate certificate uses
+### 1.4.1 Appropriate Certificate Uses
 
 No stipulation.
 
-### 1.4.2 Prohibited certificate uses
+### 1.4.2 Prohibited Certificate Uses
 
 Certificates may not be used:
 
@@ -98,11 +98,11 @@ Note that Certificates do not guarantee anything regarding reputation, honesty, 
 
 ## 1.5 Policy administration
 
-### 1.5.1 Organization administering the document
+### 1.5.1 Organization Administering the Document
 
 This CPS document is maintained by the ISRG PMA.
 
-### 1.5.2 Contact person
+### 1.5.2 Contact Person
 
 The ISRG PMA can be contacted at:
 
@@ -118,7 +118,7 @@ Certificate Problem Reports can be submitted via email to:
 
 [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org)
 
-### 1.5.3 Person determining CPS suitability for the policy
+### 1.5.3 Person Determining CPS suitability for the policy
 
 The ISRG PMA is responsible for determining the suitability of this CPS. The ISRG PMA is informed by results and recommendations received from an independent auditor.
 
@@ -126,7 +126,7 @@ The ISRG PMA is responsible for determining the suitability of this CPS. The ISR
 
 The ISRG PMA approves any revisions to this CPS document after formal review.
 
-## 1.6 Definitions and acronyms
+## 1.6 Definitions and Acronyms
 
 ### 1.6.1 Definitions
 
@@ -190,7 +190,7 @@ ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents
 
 <https://letsencrypt.org/repository/>
 
-## 2.2 Publication of certification information
+## 2.2 Publication of information
 
 Records of all ISRG Root and Subordinate CA certificates, including those that have been revoked, are available in the Certificate Repository:
 
@@ -222,7 +222,7 @@ ISRG certificates include a "Subject" field which identifies the subject entity 
 
 ISRG certificates include an "Issuer" field which identifies the issuing entity. The issuing entity is identified using a distinguished name.
 
-### 3.1.3 Anonymity or pseudonymity of Subscribers
+### 3.1.3 Anonymity or pseudonymity of subscribers
 
 Subscribers are not identified in DV certificates, which have subject fields identifying only FQDNs (not people or organizations). Relying Parties should consider DV certificate Subscribers to be anonymous.
 
@@ -252,7 +252,7 @@ ISRG may elect not to issue any certificate at its sole discretion.
 
 Applicants are required to prove possession of the Private Key corresponding to the Public Key in a Certificate request by signing the CSR provided to the Finalize method of the ACME Protocol defined in RFC 8555, Section 7.4.
 
-### 3.2.2 Authentication of organization and domain identity
+### 3.2.2 Authentication of Organization and Domain Identity
 
 ISRG only issues Domain Validation (DV) certificates. All FQDNs which will be listed in the Common Name and list of SANs in the certificate are fully validated prior to issuance.
 
@@ -270,7 +270,7 @@ All validations are performed in compliance with the current CAB Forum Baseline 
 
 ISRG does not issue certificates to individuals, and thus does not authenticate individual identities.
 
-### 3.2.4 Non-verified Subscriber information
+### 3.2.4 Non-verified subscriber information
 
 Non-verified Applicant information is not included in ISRG certificates.
 
@@ -278,7 +278,7 @@ Non-verified Applicant information is not included in ISRG certificates.
 
 ISRG does not issue Subscriber Certificates containing Subject Identity Information, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
 
-### 3.2.6 Criteria for interoperation
+### 3.2.6 Criteria for Interoperation or Certification
 
 ISRG discloses Cross Certificates in its Certificate Repository.
 
@@ -300,7 +300,7 @@ Identification and authentication are not required when revocation is being requ
 
 # 4. CERTIFICATE LIFE-CYCLE OPERATIONAL REQUIREMENTS
 
-## 4.1 Certificate application
+## 4.1 Certificate Application
 
 ### 4.1.1 Who can submit a certificate application
 
@@ -342,7 +342,7 @@ No stipulation.
 
 At a high level, the following steps are taken during issuance of a Subscriber Certificate. ISRG's automated processes confirm that all names which will appear in the Common Name and/or list of SANs of the certificate have been properly validated to be controlled by the Subscriber requesting the certificate. The certificate is signed by a Subordinate CA in an HSM. After issuance is complete, the certificate is stored in a database and made available to the Subscriber.
 
-### 4.3.2 Notification to Subscriber by the CA of issuance of certificate
+### 4.3.2 Notification to subscriber by the CA of issuance of certificate
 
 Subscriber Certificates are made available to Subscribers via the ACME protocol as soon after issuance as reasonably possible. Typically this happens within a few seconds.
 
@@ -394,7 +394,7 @@ No stipulation.
 
 No stipulation.
 
-### 4.6.4 Notification of new certificate issuance to Subscriber
+### 4.6.4 Notification of new certificate issuance to subscriber
 
 No stipulation.
 
@@ -426,7 +426,7 @@ No stipulation.
 
 No stipulation.
 
-### 4.7.4 Notification of new certificate issuance to Subscriber
+### 4.7.4 Notification of new certificate issuance to subscriber
 
 No stipulation.
 
@@ -458,7 +458,7 @@ No stipulation.
 
 No stipulation.
 
-### 4.8.4 Notification of new certificate issuance to Subscriber
+### 4.8.4 Notification of new certificate issuance to subscriber
 
 No stipulation.
 
@@ -591,9 +591,9 @@ Not applicable.
 
 Not applicable.
 
-# 5. FACILITY, MANAGEMENT, AND OPERATIONAL CONTROLS
+# 5. MANAGEMENT, OPERATIONAL, AND PHYSICAL CONTROLS
 
-## 5.1 Physical controls
+## 5.1 PHYSICAL SECURITY CONTROLS
 
 ### 5.1.1 Site location and construction
 
@@ -654,7 +654,7 @@ Trusted Roles include, but are not limited to:
 
 Each Trusted Role requires an appropriate level of training and legal obligation.
 
-### 5.2.2 Number of persons required per task
+### 5.2.2 Number of Individuals Required per Task
 
 A number of tasks, such as key generation and entering areas physically containing operating ISRG PKI systems, require at least two people in Trusted Roles to be present.
 
@@ -680,7 +680,7 @@ Trusted Contributors must undergo a background check prior to performing in a tr
 
 Background checks include, but are not limited to, criminal background and employment history.
 
-### 5.3.3 Training requirements
+### 5.3.3 Training Requirements and Procedures
 
 Trusted Contributors must be trained on topics relevant to the role in which they will perform.
 
@@ -704,7 +704,7 @@ Actions taken in response to non-compliance may include termination, removal fro
 
 Once management becomes aware of non-compliance the Trusted Contributor(s) in question will be removed from trusted roles until a review of their actions is complete.
 
-### 5.3.7 Independent contractor requirements
+### 5.3.7 Independent Contractor Controls
 
 Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CPS and the ISRG CP. This includes those described in Section 5.3. Potential sanctions for unauthorized activities by independent contractors are described in Section 5.3.6.
 
@@ -724,23 +724,23 @@ At a minimum, each audit record includes:
 * Identity of the person (or machine) making the entry; and
 * Description of the entry.
 
-### 5.4.2 Frequency of processing log
+### 5.4.2 Frequency for Processing and Archiving Audit Logs
 
 No stipulation.
 
-### 5.4.3 Retention period for audit log
+### 5.4.3 Retention Period for Audit Logs
 
 Audit logs are retained for at least seven years and will be made available to compliance auditors upon request.
 
-### 5.4.4 Protection of audit log
+### 5.4.4 Protection of Audit Log
 
 Audit logs, whether in production or archived, are protected using both physical and logical access controls.
 
-### 5.4.5 Audit log backup procedures
+### 5.4.5 Audit Log Backup Procedures
 
 ISRG makes regular backup copies of audit logs.
 
-### 5.4.6 Audit collection system (internal vs. external)
+### 5.4.6 Audit Log Accumulation System (internal vs. external)
 
 Audit data is automatically generated and reported/recorded by operating systems, CA software applications, and network devices. Systems are in place to ensure proper reporting and recording of audit data, and the failure of such systems may lead to suspension of CA services until proper audit log reporting is restored.
 
@@ -814,11 +814,11 @@ When a CA certificate is nearing expiration, a key changeover procedure is used 
 
 ISRG has created and maintains incident response procedures for a range of potential compromise and disaster situations. Such situations include, but are not limited to, natural disasters, security incidents, and equipment failure. Incident response plans are reviewed, potentially updated, and tested on at least an annual basis.
 
-### 5.7.2 Computing resources, software, and/or data are corrupted
+### 5.7.2 Recovery Procedures if Computing resources, software, and/or data are corrupted
 
 In the event that computing resources, software, and/or data are corrupted or otherwise damaged, ISRG will assess the situation, including its impact on CA integrity and security, and take appropriate action. CA operations may be suspended until mitigation is complete. Subscribers may be notified if corruption or damage has a material impact on the service provided to them.
 
-### 5.7.3 Entity private key compromise procedures
+### 5.7.3 Recovery Procedures after Key Compromise
 
 In the event that an ISRG CA Private Key is compromised, or suspected to be compromised, ISRG will immediately launch a thorough investigation. Forensic evidence will be collected and secured as quickly as possible. If it cannot be determined with a high degree of certainty that the private key in question was not compromised, then the following steps may be taken in whatever order is deemed most appropriate by ISRG Security Officers:
 
@@ -858,7 +858,7 @@ ISRG CA Private Keys are generated by HSMs meeting the requirements of Section 6
 
 See the Let's Encrypt Subscriber Agreement for information regarding Subscriber key pair generation.
 
-### 6.1.2 Private key delivery to Subscriber
+### 6.1.2 Private key delivery to subscriber
 
 ISRG never generates or has access to Subscriber Private Keys.
 
@@ -925,21 +925,21 @@ ISRG CA Private Keys are generated inside HSMs and are only transferred between 
 
 ISRG CA Private Keys are stored on HSMs meeting the requirements stated in Section 6.2.1.
 
-### 6.2.8 Method of activating private key
+### 6.2.8 Activating Private Keys
 
 ISRG CA Private Keys are always stored on HSMs and activated using the mechanisms provided by the HSM manufacturer.
 
-### 6.2.9 Method of deactivating private key
+### 6.2.9 Deactivating Private Keys
 
 ISRG CA Private Keys are always stored on HSMs and deactivated using the mechanisms provided by the HSM manufacturer.
 
-### 6.2.10 Method of destroying private key
+### 6.2.10 Destroying Private Keys
 
 ISRG CA Private Keys are destroyed by Trusted Contributors using a FIPS 140-2 (or higher) validated zeroize method provided by the HSMs storing the keys. Physical destruction of the HSM is not required.
 
 See the Let's Encrypt Subscriber Agreement for information regarding Subscriber private key destruction.
 
-### 6.2.11 Cryptographic Module Rating
+### 6.2.11 Cryptographic Module Capabilities
 
 See Section 6.2.1.
 
@@ -1088,7 +1088,7 @@ Signed by a Root CA Certificate, these Certificates may sign OCSP responses for 
 
 All certificates use X.509 version 3.
 
-### 7.1.2 Certificate extensions
+### 7.1.2 Certificate Content and Extensions; Application of RFC 5280
 
 See section 7.1.
 
