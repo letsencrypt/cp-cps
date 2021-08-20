@@ -12,7 +12,7 @@ ISRG PKI services are most commonly, but not necessarily exclusively, provided u
 
 The ISRG PKI conforms to the current version of the Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <http://www.cabforum.org>. In the event of any inconsistency between this document and those Requirements, those Requirements take precedence over this document.
 
-Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at https://letsencrypt.org/repository/.
+Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at <https://letsencrypt.org/repository/>.
 
 Per IETF PKIX RFC 3647, this CPS is divided into nine components that cover security controls, practices, and procedures for certification services provided by the ISRG PKI.
 
@@ -24,12 +24,12 @@ The following Certification Authorities are covered under this CPS:
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9b:8e:15:a8:6e:fc:<br>17:7a:57:af:b7:17:1d:fc:<br>64:ad:d2:8c:2f:ca:8c:f1:<br>50:7e:34:45:3c:cb:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. To
-view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative
+view a copy of this license, visit <http://creativecommons.org/licenses/by/4.0/> or send a letter to Creative
 Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ## 1.2 Document name and identification
 
-This is the ISRG Certification Practices Statement. This document was approved for publication by the ISRG Policy Management Authority, and is made available at https://letsencrypt.org/repository/.
+This is the ISRG Certification Practices Statement. This document was approved for publication by the ISRG Policy Management Authority, and is made available at <https://letsencrypt.org/repository/>.
 
 The following revisions have been made:
 
@@ -135,11 +135,11 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 * Baseline Requirements
   * A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
 * CAB Forum
-  * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (https://cabforum.org/)
+  * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
 * Certificate Repository
-  * A repository of information about ISRG certificates. It is located at: https://letsencrypt.org/certificates/
+  * A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
 * Policy and Legal Repository
-  * A repository of policy and legal documents related to the ISRG PKI. It is located at: https://letsencrypt.org/repository/
+  * A repository of policy and legal documents related to the ISRG PKI. It is located at: <https://letsencrypt.org/repository/>
 * Precertificate
   * A certificate containing a critical poison extension as defined by RFC 6962 Section 3.1.
 * Secure PKI Facilities
@@ -188,13 +188,13 @@ The key words “MUST”, “MUST NOT”, "REQUIRED", "SHALL", "SHALL NOT", "SHO
 
 ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in the Policy and Legal Repository, which can be found at:
 
-https://letsencrypt.org/repository/
+<https://letsencrypt.org/repository/>
 
 ## 2.2 Publication of certification information
 
 Records of all ISRG Root and Subordinate CA certificates, including those that have been revoked, are available in the Certificate Repository:
 
-https://letsencrypt.org/certificates/
+<https://letsencrypt.org/certificates/>
 
 ISRG certificates contain URLs to locations where certificate-related information is published, including revocation information via OCSP and/or CRLs.
 
@@ -1273,23 +1273,23 @@ ISRG employees, agents, and contractors are responsible for protecting confident
 
 ### 9.4.1 Privacy plan
 
-ISRG follows the privacy policy posted on its website (https://letsencrypt.org/repository/) when handling personal information.
+ISRG follows the privacy policy posted on its website (<https://letsencrypt.org/repository/>) when handling personal information.
 
 ### 9.4.2 Information treated as private
 
-The privacy policy posted on ISRG’s website (https://letsencrypt.org/repository/) identifies information that ISRG treats as private.
+The privacy policy posted on ISRG’s website (<https://letsencrypt.org/repository/>) identifies information that ISRG treats as private.
 
 ### 9.4.3 Information not deemed private
 
-The privacy policy posted on ISRG’s website (https://letsencrypt.org/repository/) identifies information that ISRG does not treat as private.
+The privacy policy posted on ISRG’s website (<https://letsencrypt.org/repository/>) identifies information that ISRG does not treat as private.
 
 ### 9.4.4 Responsibility to protect private information
 
-ISRG employees and contractors are subject to policies or contractual obligations requiring them to comply with ISRG’s privacy policy (https://letsencrypt.org/repository/) or contractual obligations at least as protective of private information as ISRG’s privacy policy.
+ISRG employees and contractors are subject to policies or contractual obligations requiring them to comply with ISRG’s privacy policy (<https://letsencrypt.org/repository/>) or contractual obligations at least as protective of private information as ISRG’s privacy policy.
 
 ### 9.4.5 Notice and consent to use private information
 
-ISRG follows the privacy policy posted on its website (https://letsencrypt.org/repository/) when using personal information.
+ISRG follows the privacy policy posted on its website (<https://letsencrypt.org/repository/>) when using personal information.
 
 ### 9.4.6 Disclosure pursuant to judicial or administrative process
 
@@ -1297,7 +1297,7 @@ ISRG may disclose personal information if compelled to do so by court order or o
 
 ### 9.4.7 Other information disclosure circumstances
 
-ISRG may disclose personal information under other circumstances that are described in the privacy policy posted on its website (https://letsencrypt.org/repository/).
+ISRG may disclose personal information under other circumstances that are described in the privacy policy posted on its website (<https://letsencrypt.org/repository/>).
 
 ## 9.5 Intellectual property rights
 

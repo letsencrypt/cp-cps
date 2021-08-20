@@ -12,7 +12,7 @@ ISRG PKI services are most commonly, but not necessarily exclusively, provided u
 
 The ISRG PKI conforms to the current version of the Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <http://www.cabforum.org>. In the event of any inconsistency between this document and those Requirements, those Requirements take precedence over this document.
 
-Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at https://letsencrypt.org/repository/.
+Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at <https://letsencrypt.org/repository/>.
 
 Per IETF PKIX RFC 3647, this CP is divided into nine components that cover security controls, practices, and procedures for certification services provided by the ISRG PKI.
 
@@ -23,11 +23,11 @@ The following Certification Authorities are covered under this CP:
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X1 | RSA, n has 4096 bits, e=65537 | 96:BC:EC:06:26:49:76:F3:<br>74:60:77:9A:CF:28:C5:A7:<br>CF:E8:A3:C0:AA:E1:1A:8F:<br>FC:EE:05:C0:BD:DF:08:C6 | Not Before: Jun  4 11:04:38 2015 GMT,<br>Not After: Jun  4 11:04:38 2035 GMT |
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9b:8e:15:a8:6e:fc:<br>17:7a:57:af:b7:17:1d:fc:<br>64:ad:d2:8c:2f:ca:8c:f1:<br>50:7e:34:45:3c:cb:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
 
-This work is licensed under the Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This work is derivative of "Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates" by the CA/Browser Forum, used under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+This work is licensed under the Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This work is derivative of "Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates" by the CA/Browser Forum, used under CC BY 4.0. To view a copy of this license, visit <https://creativecommons.org/licenses/by/4.0/> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ## 1.2 Document name and identification
 
-This is the ISRG Certificate Policy. This document was approved for publication by the ISRG Policy Management Authority, and is made available at https://letsencrypt.org/repository/.
+This is the ISRG Certificate Policy. This document was approved for publication by the ISRG Policy Management Authority, and is made available at <https://letsencrypt.org/repository/>.
 
 ### 1.2.1 Revisions
 
@@ -159,7 +159,7 @@ USA<br>
 
 Issues can be filed via the GitHub repository where this document is maintained:
 
-https://github.com/letsencrypt/cp-cps
+<https://github.com/letsencrypt/cp-cps>
 
 ### 1.5.3 Person Determining CPS suitability for the policy
 
