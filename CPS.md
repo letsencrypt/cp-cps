@@ -399,7 +399,7 @@ No stipulation.
 
 No stipulation.
 
-### 4.6.4 Notification of new certificate issuance to Subscriber
+### 4.6.4 Notification of new certificate issuance to subscriber
 
 No stipulation.
 
