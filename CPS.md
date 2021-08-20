@@ -39,7 +39,7 @@ The following revisions have been made:
 | September 9, 2015 | Added/corrected a number of policy URIs, removed LDAP as mechanism for publishing certificate information, removed administrative contact requirement for DV-SSL Subscribers, removed mention of web-based revocation option, removed description of customer service center, substantial changes to all of Section 9 regarding legal matters, other minor fixes/improvements. | 1.1 |
 | September 22, 2015 | Updated serial number description in Section 10.3.1, DV-SSL Certificate Profiles. | 1.2 |
 | March 16, 2016 | Update root CRL issuance periods, disallow issuance to ‘.mil’ TLD, make NameConstraints extension optional for cross- certification profile, clarify optional NameConstraints contents, clarify that OSCP ResponderID is byname, clarify that OCSP nonce extension is not supported. | 1.3 |
-| May 5, 2016 | Reference CP v1.2 rather than CP v1.1. Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.4 |
+| May 5, 2016 | Reference ISRG CP v1.2 rather than ISRG CP v1.1. Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.4 |
 | October 18, 2016 | Do not require discontinuing use of a private key due to incorrect information in a certificate. Add information about issuance for Internationalized Domain Names. Add information about CA’s CAA identifying domain. Do not require discontinuing use of a private key due to expiration or revocation of a certificate. | 1.5 |
 | April 13, 2017 | Complete rewrite of CPS. | 2.0 |
 | February 6, 2018 | Remove restriction on issuing to '.mil' TLD. | 2.1 |
@@ -214,7 +214,7 @@ Read only access to the Policy and Legal Repository and certificate information 
 
 ### 3.1.1 Types of names
 
-Certificate distinguished names and subject alternative names are compliant with the CP.
+Certificate distinguished names and subject alternative names are compliant with the ISRG CP.
 
 ### 3.1.2 Need for names to be meaningful
 
@@ -322,7 +322,7 @@ ISRG performs all identification and authentication functions in accordance with
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
-As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the CP. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA’s CAA identifying domain is ‘letsencrypt.org’.
+As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the ISRG CP. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA’s CAA identifying domain is ‘letsencrypt.org’.
 
 ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
 
@@ -493,7 +493,7 @@ Anyone can revoke any certificate via the ACME API if they can demonstrate contr
 
 Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases.
 
-Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at the discretion of ISRG management.
+Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the ISRG CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at the discretion of ISRG management.
 
 ### 4.9.3 Procedure for revocation request
 
@@ -514,7 +514,7 @@ There is no grace period for a revocation request. A revocation request must be 
 
 ### 4.9.5 Time within which CA must process the revocation request
 
-Investigation into a revocation request will begin within 24 hours of receiving the request. Revocation, if necessary, will be carried out within the timeframes set by CP Sections 4.9.1.1 and 4.9.1.2.
+Investigation into a revocation request will begin within 24 hours of receiving the request. Revocation, if necessary, will be carried out within the timeframes set by ISRG CP Sections 4.9.1.1 and 4.9.1.2.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
@@ -538,7 +538,7 @@ Revocation information will be made available for all Subscriber Certificates vi
 
 ### 4.9.10 On-line revocation checking requirements
 
-ISRG provides OCSP responses in compliance with CP Section 4.9.10.
+ISRG provides OCSP responses in compliance with ISRG CP Section 4.9.10.
 
 ### 4.9.11 Other forms of revocation advertisements available
 
@@ -711,7 +711,7 @@ Once management becomes aware of non-compliance the Trusted Contributor(s) in qu
 
 ### 5.3.7 Independent contractor requirements
 
-Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CPS and the accompanying CP. This includes those described in Section 5.3. Potential sanctions for unauthorized activities by independent contractors are described in Section 5.3.6.
+Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CPS and the ISRG CP. This includes those described in Section 5.3. Potential sanctions for unauthorized activities by independent contractors are described in Section 5.3.6.
 
 ### 5.3.8 Documentation supplied to personnel
 
@@ -859,7 +859,7 @@ If a suitable successor entity does not exist, the following steps will be taken
 
 ### 6.1.1 Key pair generation
 
-ISRG CA Private Keys are generated by HSMs meeting the requirements of Section 6.2.1. This occurs during a ceremony meeting the requirements of this CPS and the accompanying CP.
+ISRG CA Private Keys are generated by HSMs meeting the requirements of Section 6.2.1. This occurs during a ceremony meeting the requirements of this CPS and the ISRG CP.
 
 See the Let's Encrypt Subscriber Agreement for information regarding Subscriber key pair generation.
 
@@ -1311,7 +1311,7 @@ Notwithstanding the foregoing, third party software (including open source softw
 
 Except as expressly stated in this CPS or in a separate agreement with a Subscriber, ISRG does not make any representations or warranties regarding its products or services. ISRG represents and warrants, to the extent specified in this CPS, that:
 
-1. ISRG complies, in all material aspects, with the CP and this CPS,
+1. ISRG complies, in all material aspects, with the ISRG CP and this CPS,
 2. ISRG publishes and updates CRLs and OCSP responses on a regular basis,
 3. All certificates issued under this CPS will be verified in accordance with this CPS and meet the minimum requirements found herein and in the CAB Forum Baseline Requirements, and
 4. ISRG will maintain a repository of public information on its website.
