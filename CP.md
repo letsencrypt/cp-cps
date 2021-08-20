@@ -46,6 +46,7 @@ This is the ISRG Certificate Policy. This document was approved for publication 
 | April 2, 2021 | Update ISRG physical address. | 2.6 |
 | June 8, 2021 | Update Sections 4.2.1, 4.2.2, 4.9.1.1, 6.3.2, and 7.1.4.2.1 to match BRs v1.7.6. Define Internal Name in Section 1.6.1. | 2.7 |
 | July 19, 2021 | Sync against Baseline Requirements v1.7.8. | 3.0 |
+| X Y, Z | Update mailing address. Minor formatting changes. | 3.1 |
 
 ### 1.2.2 Relevant Dates
 
