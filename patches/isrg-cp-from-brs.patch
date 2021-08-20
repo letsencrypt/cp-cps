@@ -148,7 +148,7 @@ index 5823995..280f22d 100644
 +| May 5, 2015 | Original | 1.0 |
 +| September 9, 2015 | Added DV SSL OID, added/corrected a number of policy URIs, clarifications to Procedure for Revocation Request, substantial changes to all of Section 9 regarding legal matters, other minor fixes/improvements | 1.1 |
 +| May 5, 2016 | Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.2 |
-+| April 13, 2017 | Simplify Section 1.2, "Document Name and Identification. Simplify Section 3.2.2.2, "Performance of Electronic Identification." Validation methods in use are detailed in CPS. Update CPS section numbers for CRL and OCSP profiles. Remove Section 10, “Certificate Profiles.” Profiles are now in our CPS. | 1.3 |
++| April 13, 2017 | Simplify Section 1.2, "Document Name and Identification. Simplify Section 3.2.2.2, "Performance of Electronic Identification." Validation methods in use are detailed in CPS. Update CPS section numbers for CRL and OCSP profiles. Remove Section 10, "Certificate Profiles." Profiles are now in our CPS. | 1.3 |
 +| May 22, 2017 | Complete rewrite. | 2.0 |
 +| February 6, 2018 | Update text of Section 6.1.7 to match Baseline Requirements v1.5.1. | 2.1 |
 +| September 20, 2018 | Define Certificate Problem Report in Section 1.6.1. Update Section 3.2.2.4 "Validation of Domain Authorization or Control" to match latest BRs but omit methods we do not use. Add additional revocation reason to Section 4.9.1.1 for compliance with upcoming BR revision. Minor updates to Sections 4.9.3 and 4.9.5. | 2.2 |
