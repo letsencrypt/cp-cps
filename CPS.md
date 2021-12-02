@@ -731,7 +731,7 @@ No stipulation.
 
 ### 5.4.3 Retention Period for Audit Logs
 
-Audit logs are retained for at least seven years and will be made available to compliance auditors upon request.
+Audit logs are retained for at least 2562 days (seven years) and will be made available to compliance auditors upon request.
 
 ### 5.4.4 Protection of Audit Log
 
@@ -753,7 +753,7 @@ No stipulation.
 
 Audit logs are monitored by Trusted Contributors, including operations and engineering staff. Anomalies indicating attempted breaches of CA security are reported and investigated.
 
-Internal and external vulnerability scans occur at least every three months.
+Internal and external vulnerability scans occur at least every 93 days (three months).
 
 Extensive vulnerability assessments for ISRG infrastructure are conducted at least annually by qualified third parties.
 
@@ -1169,7 +1169,7 @@ WebTrust compliance audits are intended to ensure a CA's compliance with its CP 
 
 ## 8.1 Frequency or circumstances of assessment
 
-WebTrust compliance audit periods cover no more than one year and are scheduled by ISRG annually, every year with no gaps.
+WebTrust compliance audit periods cover no more than 366 days (one year) and are scheduled by ISRG annually, every year with no gaps.
 
 See Section 8.7 for information about the frequency of self-audits.
 
