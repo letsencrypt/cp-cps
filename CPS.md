@@ -1032,9 +1032,9 @@ Extensions are not marked critical unless specifically described here as critica
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X&lt;n&gt;<br> where n is an integer representing the instance of the Root<br> CA Certificate. For example, ISRG Root X1, ISRG Root X2, etc. |
 | Subject Distinguished Name     | Same as Issuer DN                                                                  |
-| Validity Period                | Up to 25 years                                                                     |
-| Basic Constraints              | Critical.<br> cA=True, pathLength constraint absent                               |
-| Key Usage                      | Critical.<br> keyCertSign, cRLSign                                                |
+| Validity Period                | Up to 9150 days (approx. 25 years)                                                 |
+| Basic Constraints              | Critical.<br> cA=True, pathLength constraint absent                                |
+| Key Usage                      | Critical.<br> keyCertSign, cRLSign                                                 |
 
 ### Subordinate CA Certificate
 
@@ -1043,9 +1043,9 @@ Extensions are not marked critical unless specifically described here as critica
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
 | Subject Distinguished Name     | C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X&lt;n&gt;; or<br> C=US, O=Let's Encrypt, CN=[ER]&lt;n&gt;<br> where n is an integer representing the instance of the Subordinate CA Certificate.|
-| Validity Period                | Up to 8 years                                                                      |
-| Basic Constraints              | Critical.<br> cA=True, pathLength constraint 0                                    |
-| Key Usage                      | Critical.<br> keyCertSign, cRLSign, digitalSignature                              |
+| Validity Period                | Up to 2928 days (approx. 8 years)                                                  |
+| Basic Constraints              | Critical.<br> cA=True, pathLength constraint 0                                     |
+| Key Usage                      | Critical.<br> keyCertSign, cRLSign, digitalSignature                               |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br>Policy Qualifier Id=CPS<br>Qualifier: Pointer to this CPS |
 | Authority Information Access   | Contains CA Issuers URL (and optionally an OCSP URL). URLs vary based on Issuer.   |
@@ -1059,8 +1059,8 @@ Extensions are not marked critical unless specifically described here as critica
 | Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
 | Subject Distinguished Name     | CN=one of the values from the Subject Alternative Name extension                   |
 | Validity Period                | Up to 100 days                                                                     |
-| Basic Constraints              | Critical.<br> cA=False                                                            |
-| Key Usage                      | Critical.<br> digitalSignature, keyEncipherment                                   |
+| Basic Constraints              | Critical.<br> cA=False                                                             |
+| Key Usage                      | Critical.<br> digitalSignature, keyEncipherment                                    |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br>CPS Qualifier: Pointer to this CPS |
 | Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
@@ -1079,10 +1079,10 @@ Signed by a Root CA Certificate, these Certificates may sign OCSP responses for 
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | Derived from Issuer                                                                |
 | Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X&lt;n&gt;<br> where n is an integer depending on the Issuer |
-| Validity Period                | Up to 8 years                                                                      |
-| Basic Constraints              | Critical.<br> cA=False                                                            |
-| Key Usage                      | Critical.<br> digitalSignature                                                    |
-| Extended Key Usage             | Critical.<br> OCSPSigning                                                         |
+| Validity Period                | Up to 2928 days (approx. 8 years)                                                  |
+| Basic Constraints              | Critical.<br> cA=False                                                             |
+| Key Usage                      | Critical.<br> digitalSignature                                                     |
+| Extended Key Usage             | Critical.<br> OCSPSigning                                                          |
 | No Check                       | Present
 
 ### 7.1.1 Version number(s)
@@ -1139,7 +1139,7 @@ For the status of Subordinate CA Certificates:
 | Version                   | V2                                                                             |
 | Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
 | ThisUpdate                | The date and time when the Certificate revocation list validity begins         |
-| NextUpdate                | Up to ThisUpdate + 1 year                                                      |
+| NextUpdate                | Up to ThisUpdate + 366 days                                                    |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
 | CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs. |
 
