@@ -731,7 +731,7 @@ No stipulation.
 
 ### 5.4.3 Retention Period for Audit Logs
 
-Audit logs are retained for at least seven years and will be made available to compliance auditors upon request.
+Audit logs are retained for at least two years and will be made available to compliance auditors upon request.
 
 ### 5.4.4 Protection of Audit Log
 
