@@ -634,7 +634,7 @@ ISRG prohibits any media that contains or has contained sensitive data from leav
 
 ### 5.1.8 Off-site backup
 
-ISRG maintains multiple backups of ISRG CA Private Keys at multiple Secure PKI Facilities. All backups are stored on devices meeting FIPS 140 Level 3 criteria.
+ISRG maintains multiple backups of ISRG CA Private Keys at multiple Secure PKI Facilities. All backups are stored on devices meeting FIPS 140-2 Level 3 criteria.
 
 ## 5.2 Procedural controls
 
