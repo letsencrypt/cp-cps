@@ -21,7 +21,7 @@ The following Certification Authorities are covered under this CP:
 | CA Type | Distinguished Name | Key Pair Type and Parameters | Cert SHA-256 Fingerprint | Validity Period |
 |---------|--------------------|------------------------------|--------------------------|-----------------|
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X1 | RSA, n has 4096 bits, e=65537 | 96:BC:EC:06:26:49:76:F3:<br>74:60:77:9A:CF:28:C5:A7:<br>CF:E8:A3:C0:AA:E1:1A:8F:<br>FC:EE:05:C0:BD:DF:08:C6 | Not Before: Jun  4 11:04:38 2015 GMT,<br>Not After: Jun  4 11:04:38 2035 GMT |
-| Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9b:8e:15:a8:6e:fc:<br>17:7a:57:af:b7:17:1d:fc:<br>64:ad:d2:8c:2f:ca:8c:f1:<br>50:7e:34:45:3c:cb:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
+| Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9B:8E:15:A8:6E:FC:<br>17:7A:57:AF:B7:17:1D:FC:<br>64:AD:D2:8C:2F:CA:8C:F1:<br>50:7E:34:45:3C:CB:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
 
 This work is licensed under the Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This work is derivative of "Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates" by the CA/Browser Forum, used under CC BY 4.0. To view a copy of this license, visit <https://creativecommons.org/licenses/by/4.0/> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
@@ -47,7 +47,7 @@ This is the ISRG Certificate Policy. This document was approved for publication 
 | June 8, 2021 | Update Sections 4.2.1, 4.2.2, 4.9.1.1, 6.3.2, and 7.1.4.2.1 to match BRs v1.7.6. Define Internal Name in Section 1.6.1. | 2.7 |
 | July 19, 2021 | Sync against Baseline Requirements v1.7.8. | 3.0 |
 | August 20, 2021 | Update mailing address. Minor formatting changes. | 3.1 |
-| ?? ??, 2021 | Sync against Baseline Requirements v1.8.0. | 3.2 |
+| ??? ??, 2021 | Sync against Baseline Requirements v1.8.0. Minor updates. | 3.2 |
 
 ### 1.2.2 Relevant Dates
 
@@ -149,7 +149,7 @@ No stipulation.
 
 ### 1.5.1 Organization Administering the Document
 
-This CP document is maintained by the ISRG Policy Management Authority.
+This CP document is maintained by the ISRG Policy Management Authority (PMA).
 
 ### 1.5.2 Contact Person
 
@@ -171,7 +171,7 @@ The ISRG Policy Management Authority is responsible for determining the suitabil
 
 ### 1.5.4 CPS approval procedures
 
-The ISRG Policy Management Authority approves any revisions to this CP document after formal review.
+The ISRG Policy Management Authority approves any revisions to the ISRG CPS after formal review.
 
 ## 1.6 Definitions and Acronyms
 
