@@ -1387,7 +1387,7 @@ This CPS and any amendments remain in effect until replaced with a newer version
 
 ### 9.10.3 Effect of termination and survival
 
-ISRG will communicate the conditions and effect of this CPS's termination via the ISRG Repository. The communication will specify which provisions survive termination. At a minimum, all responsibilities related to protecting confidential information will survive termination. All Subscriber Agreements remain effective until the certificate is revoked or expired, even if this CPS terminates.
+ISRG will communicate the conditions and effect of this CPS's termination via the ISRG Repository. The communication will specify which provisions survive termination. At a minimum, all responsibilities related to protecting confidential information will survive termination. All Subscriber Agreements remain effective at least until the certificate is revoked or expired, even if this CPS terminates.
 
 ## 9.11 Individual notices and communications with participants
 
