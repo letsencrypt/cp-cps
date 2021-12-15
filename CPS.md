@@ -136,7 +136,7 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 * Baseline Requirements
   * A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
 * CAB Forum
-  * Certificate Authority / Browser Forum, a group a CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
+  * Certificate Authority / Browser Forum, a group of CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
 * Certificate Repository
   * A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
 * Policy and Legal Repository
@@ -269,7 +269,7 @@ All validations are performed in compliance with the current CAB Forum Baseline 
 
 ### 3.2.3 Authentication of individual identity
 
-ISRG does not issue certificates to individuals, and thus does not authenticate individual identities.
+ISRG does not issue Subscriber Certificates containing Subject Identity Information, and thus does not validate any natural person's identity.
 
 ### 3.2.4 Non-verified subscriber information
 
@@ -331,7 +331,7 @@ ISRG maintains a list of high-risk domains and blocks issuance of certificates f
 
 Approval requires successful completion of validation per Section 3.2.2 as well as compliance with all CA policies.
 
-Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section. The Public Suffix List is updated when new gTLDs are added, and never includes new gTLDs before they are resolvable.
+Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. The CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section.
 
 ### 4.2.3 Time to process certificate applications
 
