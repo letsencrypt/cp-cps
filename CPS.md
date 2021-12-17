@@ -645,13 +645,21 @@ All persons, employees or otherwise, with the ability to materially impact the o
 Trusted Roles include, but are not limited to:
 
 * PKI Administrators
-  * Have direct access to production environments on a need-to-access basis. Do have decision-making authority over CA operations.
+  * Confidential Information: Direct access on a need-to-know basis
+  * Environment Access: Test yes, production yes
+  * CA Decision-making Authority: Yes
 * PKI Staff
-  * May view confidential information including access to test environments but do not have access to production environments and may not directly impact CA operations. Do have decision-making authority over CA operations.
+  * Confidential Information: View on a need-to-know basis
+  * Environment Access: Test yes, production no
+  * CA Decision-making Authority: Yes
 * PKI Partners
-  * May view confidential information including access to test environments but do not have access to subscriber information or production environments and may not directly impact CA operations. Do not have decision-making authority over CA operations.
+  * Confidential Information: View on a need-to-know basis
+  * Environment Access: Test yes, production no
+  * CA Decision-making Authority: No
 * Non-PKI Staff
-  * May view confidential information but may not directly impact CA operations. Do not have decision-making authority over CA operations.
+  * Confidential Information: View on a need-to-know basis
+  * Environment Access: Test no, production no
+  * CA Decision-making Authority: No
 
 Each Trusted Role requires an appropriate level of training and legal obligation.
 
