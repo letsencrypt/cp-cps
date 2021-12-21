@@ -1297,7 +1297,7 @@ ISRG follows the privacy policy posted on its website (<https://letsencrypt.org/
 
 ### 9.4.6 Disclosure pursuant to judicial or administrative process
 
-ISRG may disclose personal information if compelled to do so by court order or other compulsory legal process, provided that ISRG will oppose such disclosure with all legal and technical tools reasonably available to ISRG.
+ISRG may disclose personal information if compelled to do so by court order or other compulsory legal process, provided that if ISRG determines that such court order or legal process is invalid or unconstitutional, ISRG will make reasonable legal efforts to oppose disclosure.
 
 ### 9.4.7 Other information disclosure circumstances
 
