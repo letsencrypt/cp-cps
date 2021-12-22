@@ -57,6 +57,7 @@ The following revisions have been made:
 | June  8, 2021 | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. Add Section 4.2.4 regarding CAA checking. State in Section 6.7 that the CA complies with the CA/Browser Forum's Network and Certificate System Security Requirements. | 3.3 |
 | July 19, 2021 | Extensive changes. | 4.0 |
 | August 20, 2021 | Update mailing address. De-duplicate terms defined in ISRG CP. Make section titles consistent with BRs and ISRG CP. Replace use of "domain" with FQDN. Other minor formatting changes. | 4.1 |
+| December 22, 2021 | Update list of trusted roles in Section 5.2.1. Minor changes to Section 9. Minor typo and consistency improvements. | 4.2 |
 
 ## 1.3 PKI Participants
 
