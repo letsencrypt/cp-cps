@@ -58,6 +58,7 @@ The following revisions have been made:
 | July 19, 2021 | Extensive changes. | 4.0 |
 | August 20, 2021 | Update mailing address. De-duplicate terms defined in ISRG CP. Make section titles consistent with BRs and ISRG CP. Replace use of "domain" with FQDN. Other minor formatting changes. | 4.1 |
 | December 22, 2021 | Update list of trusted roles in Section 5.2.1. Minor changes to Section 9. Minor typo and consistency improvements. | 4.2 |
+| May 6, 2022 | Update audit log and records archival retention periods. | 4.3 |
 
 ## 1.3 PKI Participants
 
@@ -740,7 +741,7 @@ No stipulation.
 
 ### 5.4.3 Retention Period for Audit Logs
 
-Audit logs are retained for at least seven years and will be made available to compliance auditors upon request.
+Audit logs are retained for at least two years after the logged event occurred, the associated certificate expires, or (for audit logs regarding CA certificates and keys) the descruction of the private key, whichever is later.
 
 ### 5.4.4 Protection of Audit Log
 
@@ -778,11 +779,11 @@ ISRG Security Officers perform a risk assessment at least annually. This risk as
 
 ### 5.5.1 Types of records archived
 
-ISRG archives all audit logs, the contents of which are described in Section 5.4.1. ISRG may also archive any other information deemed critical to understanding the historical performance of the CA's duties.
+ISRG archives all audit logs, the contents of which are described in Section 5.4.1. ISRG also archives other documents and information critical to understanding the historical security and performance of the CA's duties.
 
 ### 5.5.2 Retention period for archive
 
-ISRG retains all documentation relating to certificate requests and the verification thereof, and all Certificates and revocation thereof, for at least seven years after any Certificate based on that documentation ceases to be valid.
+Archived records are retained for at least two years after the record was created, or (for records regarding specific certificates) after the associated certificate has expired.
 
 ### 5.5.3 Protection of archive
 
