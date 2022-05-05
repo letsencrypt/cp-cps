@@ -741,7 +741,7 @@ No stipulation.
 
 ### 5.4.3 Retention Period for Audit Logs
 
-Audit logs are retained for at least two years after the logged event occurred, the associated certificate expires, or (for audit logs regarding CA certificates and keys) the descruction of the private key, whichever is later.
+Audit logs are retained for at least the period required by Section 5.4.3 of the ISRG CP.
 
 ### 5.4.4 Protection of Audit Log
 
@@ -783,7 +783,7 @@ ISRG archives all audit logs, the contents of which are described in Section 5.4
 
 ### 5.5.2 Retention period for archive
 
-Archived records are retained for at least two years after the record was created, or (for records regarding specific certificates) after the associated certificate has expired.
+Archived records are retained for at least the period required by Section 5.5.2 of the ISRG CP.
 
 ### 5.5.3 Protection of archive
 
