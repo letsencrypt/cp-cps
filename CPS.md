@@ -523,7 +523,7 @@ See Section 4.5.2.
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
-ISRG will issue updated CRLs with a frequency greater than or equal to that required by the ISRG CP.
+ISRG will issue updated CRLs with the frequency required by the ISRG CP.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
