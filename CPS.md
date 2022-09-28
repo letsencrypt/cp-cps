@@ -59,6 +59,7 @@ The following revisions have been made:
 | August 20, 2021 | Update mailing address. De-duplicate terms defined in ISRG CP. Make section titles consistent with BRs and ISRG CP. Replace use of "domain" with FQDN. Other minor formatting changes. | 4.1 |
 | December 22, 2021 | Update list of trusted roles in Section 5.2.1. Minor changes to Section 9. Minor typo and consistency improvements. | 4.2 |
 | May 6, 2022 | Update audit log and records archival retention periods. | 4.3 |
+| September 28, 2022 | Update Sections 4.9.7 & 4.10.1 to cover CRLs for Subscriber Certificates. Clarify language about background checks in Section 5.3.2. | 4.4 |
 
 ## 1.3 PKI Participants
 
@@ -522,9 +523,7 @@ See Section 4.5.2.
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
-ISRG will issue updated CRLs for Subordinate CA certificates with a frequency greater than or equal to that required by the ISRG CP.
-
-ISRG does not issue CRLs for Subscriber Certificates.
+ISRG will issue updated CRLs with a frequency greater than or equal to that required by the ISRG CP.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
@@ -566,9 +565,7 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
-CRL entries for Subordinate CA certificates will remain in place until the certificates expire. ISRG does not provide CRLs for Subscriber Certificates.
-
-OCSP responses will be made available for all unexpired Subscriber certificates.
+ISRG will retain revocation entries on a CRL or OCSP Response as required by the ISRG CP.
 
 ### 4.10.2 Service availability
 
@@ -689,7 +686,7 @@ ISRG management ensures this with appropriate interviewing practices, training, 
 
 Trusted Contributors must undergo a background check prior to performing in a trusted role. ISRG management will review the results of background checks for problematic issues prior to approving performance of a trusted role.
 
-Background checks include, but are not limited to, criminal background and employment history.
+Background checks include, without limitation, criminal background and employment history.
 
 ### 5.3.3 Training Requirements and Procedures
 
