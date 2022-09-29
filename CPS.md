@@ -6,11 +6,11 @@ This Certification Practice Statement ("CPS") document outlines the certificatio
 
 ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in accordance with the requirements of the ISRG Certificate Policy (CP) and in a manner consistent with this CPS. It is recommended that readers familiarize themselves with the ISRG CP prior to reading this document.
 
-These services are provided to the general public with exceptions as deemed appropriate by ISRG management or in accordance with relevant law.
+These services are provided to the general public with exceptions as ISRG management deems appropriate or in accordance with relevant law.
 
 ISRG PKI services are most commonly, but not necessarily exclusively, provided under the brand/trademark "Let's Encrypt".
 
-The ISRG PKI conforms to the current version of the Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <http://www.cabforum.org>. In the event of any inconsistency between this document and those Requirements, those Requirements take precedence over this document.
+The ISRG PKI conforms to the current version of the Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <https://www.cabforum.org>. In the event of any inconsistency between this document and those Requirements, those Requirements take precedence over this document.
 
 Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at <https://letsencrypt.org/repository/>.
 
@@ -24,12 +24,12 @@ The following Certification Authorities are covered under this CPS:
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9B:8E:15:A8:6E:FC:<br>17:7A:57:AF:B7:17:1D:FC:<br>64:AD:D2:8C:2F:CA:8C:F1:<br>50:7E:34:45:3C:CB:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. To
-view a copy of this license, visit <http://creativecommons.org/licenses/by/4.0/> or send a letter to Creative
+view a copy of this license, visit <https://creativecommons.org/licenses/by/4.0/> or send a letter to Creative
 Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ## 1.2 Document name and identification
 
-This is the ISRG Certification Practices Statement. This document was approved for publication by the ISRG Policy Management Authority, and is made available at <https://letsencrypt.org/repository/>.
+This is the ISRG Certification Practice Statement. This document was approved for publication by the ISRG Policy Management Authority, and is made available at <https://letsencrypt.org/repository/>.
 
 The following revisions have been made:
 
@@ -60,6 +60,7 @@ The following revisions have been made:
 | December 22, 2021 | Update list of trusted roles in Section 5.2.1. Minor changes to Section 9. Minor typo and consistency improvements. | 4.2 |
 | May 6, 2022 | Update audit log and records archival retention periods. | 4.3 |
 | September 28, 2022 | Update Sections 4.9.7 & 4.10.1 to cover CRLs for Subscriber Certificates. Clarify language about background checks in Section 5.3.2. | 4.4 |
+| TBD | Minor grammatical, punctuation, and formatting changes. | 4.5 |
 
 ## 1.3 PKI Participants
 
@@ -95,8 +96,8 @@ No stipulation.
 
 Certificates may not be used:
 
-* For any application requiring fail-safe performance such as a) the operation of nuclear power facilities b) air traffic control systems c) aircraft navigation systems d) weapons control systems e) any other system in which failure could lead to injury, death, or environmental damage.
-* For software or hardware architectures that provide facilities for interference with encrypted communications, including but not limited to a) active eavesdropping (e.g., monster-in-the-middle attacks) b) traffic management of domain names or internet protocol addresses that the organization does not own or control. Note that these restrictions shall apply regardless of whether a relying party communicating through the software or hardware architecture has knowledge of its providing facilities for interference with encrypted communications.
+* For any application requiring fail-safe performance, such as: a) the operation of nuclear power facilities; b) air traffic control systems; c) aircraft navigation systems; d) weapons control systems; or e) any other system in which failure could lead to injury, death, or environmental damage.
+* For software or hardware architectures that provide facilities for interference with encrypted communications, including but not limited to: a) active eavesdropping (e.g., monster-in-the-middle attacks); or b) traffic management of domain names or internet protocol addresses that the organization does not own or control. Note that these restrictions shall apply regardless of whether a relying party communicating through the software or hardware architecture has knowledge of its providing facilities for interference with encrypted communications.
 
 Note that Certificates do not guarantee anything regarding reputation, honesty, or the current state of endpoint security. A Certificate only represents that the information contained in it was verified as reasonably correct when the Certificate was issued.
 
@@ -104,7 +105,7 @@ Note that Certificates do not guarantee anything regarding reputation, honesty, 
 
 ### 1.5.1 Organization Administering the Document
 
-This CPS document is maintained by the ISRG PMA.
+The ISRG PMA maintains this CPS document.
 
 ### 1.5.2 Contact Person
 
@@ -134,45 +135,38 @@ The ISRG PMA approves any revisions to this CPS document after formal review.
 
 ### 1.6.1 Definitions
 
-* ACME Protocol
-  * A protocol used for validation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
-* Baseline Requirements
-  * A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
-* CAB Forum
-  * Certificate Authority / Browser Forum, a group of CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
-* Certificate Repository
-  * A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
-* Policy and Legal Repository
-  * A repository of policy and legal documents related to the ISRG PKI. It is located at: <https://letsencrypt.org/repository/>
-* Precertificate
-  * A certificate containing a critical poison extension as defined by RFC 6962 Section 3.1.
-* Secure PKI Facilities
-  * Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
-* Trusted Contributor
-  * A contributor who performs in a Trusted Role. Trusted Contributors may be employees, contractors, or community members. Trusted Contributors must be properly trained and qualified, and have the proper legal obligations in place before performing in a Trusted Role.
-* Trusted Role
-  * A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
+**ACME Protocol**: A protocol used for validation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
+
+**Baseline Requirements**: A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
+
+**CAB Forum**: Certificate Authority / Browser Forum, a group of CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
+
+**Certificate Repository**: A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
+
+**Policy and Legal Repository**: A repository of policy and legal documents related to the ISRG PKI. It is located at: <https://letsencrypt.org/repository/>
+
+**Precertificate**: A certificate containing a critical poison extension as defined by RFC 6962 Section 3.1.
+
+**Secure PKI Facilities**: Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
+
+**Trusted Contributor**: A contributor who performs in a Trusted Role. Trusted Contributors may be employees, contractors, or community members. Trusted Contributors must be properly trained and qualified, and have the proper legal obligations in place before performing in a Trusted Role.
+
+**Trusted Role**: A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
 
 See ISRG CP 1.6.1 for additional definitions.
 
 ### 1.6.2 Acronyms
 
-* ACME
-  * Automated Certificate Management Environment
-* DV
-  * Domain Validation
-* HSM
-  * Hardware Security Module
-* IP
-  * Internet Protocol
-* ISRG
-  * Internet Security Research Group
-* PMA
-  * Policy Management Authority
-* SAN
-  * Subject Alternative Name
-* TLD
-  * Top Level Domain
+| **Acronym** | **Meaning** |
+| --- | --- |
+| ACME | Automated Certificate Management Environment |
+| DV | Domain Validation |
+| HSM | Hardware Security Module |
+| IP | Internet Protocol |
+| ISRG | Internet Security Research Group |
+| PMA | Policy Management Authority |
+| SAN | Subject Alternative Name |
+| TLD | Top Level Domain |
 
 See ISRG CP 1.6.2 for additional acronyms.
 
@@ -182,9 +176,9 @@ No references defined at this time.
 
 ### 1.6.4 Conventions
 
-Terms not otherwise defined in this CPS shall be as defined in applicable agreements, user manuals, Certificate Policies and Certification Practice Statements, of the CA.
+Terms not otherwise defined in this CPS shall be as defined in applicable agreements, user manuals, Certificate Policies, and Certification Practice Statements of the CA.
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in these Requirements shall be interpreted in accordance with RFC 2119.
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this CPS shall be interpreted in accordance with RFC 2119.
 
 # 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
 
@@ -300,7 +294,7 @@ See Section 4.7.
 
 Identification and authentication for revocation requests is performed by ISRG in compliance with Section 4.9 of this document.
 
-Identification and authentication are not required when revocation is being requested by ISRG.
+Identification and authentication are not required when ISRG is requesting revocation.
 
 # 4. CERTIFICATE LIFE-CYCLE OPERATIONAL REQUIREMENTS
 
@@ -328,7 +322,7 @@ Certificate information is verified using data and documents obtained no more th
 
 As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the ISRG CP. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
-ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as deemed necessary by ISRG management.
+ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as ISRG management deems necessary.
 
 ### 4.2.2 Approval or rejection of certificate applications
 
@@ -492,11 +486,11 @@ Anyone can revoke any certificate via the ACME API if they can demonstrate contr
 
 Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases.
 
-Certificates may be administratively revoked by ISRG if it is determined that the Subscriber has failed to meet obligations under the ISRG CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at the discretion of ISRG management.
+ISRG may administratively revoke certificates if it determines that the Subscriber has failed to meet obligations under the ISRG CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at ISRG management's discretion.
 
 ### 4.9.3 Procedure for revocation request
 
-Revocation requests may be made by anyone, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. Successful revocation requests with a reason code of `keyCompromise` will result in the affected key being blocked for future issuance and all currently valid certificates with that key will be revoked, regardless of whether compromise was demonstrated per the requirements in Section 4.9.12 of this document.
+Anyone may make revocation requests, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. Successful revocation requests with a reason code of `keyCompromise` will result in the affected key being blocked for future issuance and all currently valid certificates with that key will be revoked, regardless of whether compromise was demonstrated per the requirements in Section 4.9.12 of this document.
 
 Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
@@ -527,7 +521,7 @@ ISRG will issue updated CRLs with the frequency required by the ISRG CP.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
-When a CRL is requested by a Relying Party the time to receive a response will be less than ten seconds under normal operating conditions.
+When a Relying Party requests a CRL, the time to receive a response will be less than ten seconds under normal operating conditions.
 
 ### 4.9.9 On-line revocation/status checking availability
 
@@ -696,7 +690,7 @@ Training programs are developed for each role by ISRG management and Security Of
 
 ### 5.3.4 Retraining frequency and requirements
 
-Training is repeated for each Trusted Contributor on an annual basis and covers topics necessary to maintain skill level requirements.
+Training is repeated annually for each Trusted Contributor, and covers topics necessary to maintain skill level requirements.
 
 Training is also offered whenever changes in the industry or operations require it in order for contributors to competently perform in their trusted roles.
 
@@ -828,7 +822,7 @@ In the event that computing resources, software, and/or data are corrupted or ot
 
 ### 5.7.3 Recovery Procedures after Key Compromise
 
-In the event that an ISRG CA Private Key is compromised, or suspected to be compromised, ISRG will immediately launch a thorough investigation. Forensic evidence will be collected and secured as quickly as possible. If it cannot be determined with a high degree of certainty that the private key in question was not compromised, then the following steps may be taken in whatever order is deemed most appropriate by ISRG Security Officers:
+In the event that an ISRG CA Private Key is compromised, or suspected to be compromised, ISRG will immediately launch a thorough investigation. Forensic evidence will be collected and secured as quickly as possible. If it cannot be determined with a high degree of certainty that the private key in question was not compromised, then the following steps may be taken in whatever order ISRG Security Officers deem most appropriate:
 
 * Certificates relying on the private key in question will be revoked.
 * ISRG will notify root programs relying on the integrity of the key in question.
@@ -843,7 +837,7 @@ ISRG maintains multiple geographically diverse facilities, each of which is capa
 In the event that ISRG CA services are to be terminated:
 
 * All affected parties, including root programs and Subscribers, will be provided with notice as far in advance as reasonably possible.
-* A termination plan will be created and review by the ISRG PMA.
+* The ISRG PMA will create and review a termination plan.
 
 If a suitable successor entity exists, the following steps will be taken:
 
@@ -894,7 +888,7 @@ ISRG Subordinate CA ECDSA Private Keys are at least 384 bits in length.
 
 ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
 
-Per [NIST SP 800‐89](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf), section 5.3.3, the CA ensures that:
+Per NIST SP 800‐89 (<https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf>), section 5.3.3, the CA ensures that:
 
   - the public exponent of any RSA key used in a DV-SSL Certificate is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1, and
   - the modulus of such a certificate is an odd number, not the power of a prime, and has no factors smaller than 752.
@@ -967,11 +961,11 @@ ISRG Root and Subordinate CA key pairs have lifetimes corresponding to their cer
 
 ### 6.4.1 Activation data generation and installation
 
-Activation data used to activate ISRG CA Private Keys is generated during a key ceremony. Activation data is then transferred to the person who will use it or place it will be stored.
+Activation data used to activate ISRG CA Private Keys is generated during a key ceremony. Activation data is then transferred to the person who will use it or the place it will be stored.
 
 ### 6.4.2 Activation data protection
 
-Activation data is protected from unauthorized disclosure via a combination of physical and logical means.
+Activation data is protected from unauthorized disclosure via both physical and logical means.
 
 ### 6.4.3 Other aspects of activation data
 
@@ -995,7 +989,7 @@ ISRG has developed policies and procedures to effectively manage the acquisition
 
 ISRG CA hardware and software is dedicated solely to performing CA functions.
 
-Vendor selection includes an evaluation of reputation in the market, ability to deliver a quality product, vulnerability history, and the likelihood of remaining viable in the future. Physical product deliveries are received by Trusted Contributors and inspected for evidence of tampering. HSMs are shipped in tamper-evident packaging and tamper bag serial numbers are confirmed with the vendor upon reception.
+Vendor selection includes an evaluation of reputation in the market, ability to deliver a quality product, vulnerability history, and the likelihood of remaining viable in the future. Physical product deliveries are received by Trusted Contributors and inspected for evidence of tampering. HSMs are shipped in tamper-evident packaging and tamper bag serial numbers are confirmed with the vendor upon receipt.
 
 ISRG maintains a CA testing environment separate from the production environment. The testing environment reasonably emulates the production environment but does not have access to ISRG CA Private Keys used in trusted certificates. The purpose of this testing environment is to allow extensive but safe testing of software and systems that are or will be deployed to the CA production environment.
 
