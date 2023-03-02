@@ -1064,7 +1064,7 @@ Extensions are not marked critical unless specifically described here as critica
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
 | Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
-| Subject Distinguished Name     | CN=one of the values from the Subject Alternative Name extension                   |
+| Subject Distinguished Name     | CN=none, or one of the values from the Subject Alternative Name extension                   |
 | Validity Period                | Up to 100 days                                                                     |
 | Basic Constraints              | Critical.<br> cA=False                                                            |
 | Key Usage                      | Critical.<br> digitalSignature, keyEncipherment                                   |
