@@ -1001,7 +1001,7 @@ ISRG maintains a CA testing environment separate from the production environment
 
 ISRG has developed and maintains appropriate change control policies and procedures to be followed any time CA systems are modified. Changes to ISRG CA systems require review by qualified Trusted Personnel who are different from the person requesting the change. Change requests are documented, as are any subsequent required reviews or approvals.
 
-When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems (e.g. Systems Administrators) may have the ability to unilaterally commit code to core CA software. The reverse is also true.
+When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems (e.g. PKI Administrators) may have the ability to unilaterally commit code to core CA software. The reverse is also true.
 
 ### 6.6.2 Security management controls
 
