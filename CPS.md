@@ -1148,7 +1148,19 @@ For the status of Subordinate CA Certificates:
 | ThisUpdate                | The date and time when the Certificate revocation list validity begins         |
 | NextUpdate                | Up to ThisUpdate + 1 year                                                      |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
-| CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs. |
+| CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs  |
+
+For the status of Subscriber Certificates:
+
+| Field or Extension        | Value                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------ |
+| Version                   | V2                                                                             |
+| Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
+| ThisUpdate                | The date and time when the Certificate revocation list validity begins         |
+| NextUpdate                | Up to ThisUpdate + 10 days                                                     |
+| RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
+| CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs  |
+| IssuingDistributionPoint  | Contains a distributionPoint pointing to the CRL's unique URL                  |
 
 ### 7.2.1 Version number(s)
 
