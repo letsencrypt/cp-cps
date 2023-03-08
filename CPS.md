@@ -1392,7 +1392,7 @@ Each Subscriber will indemnify and hold harmless ISRG and its directors, officer
 
 ### 9.9.3 Indemnification by Relying Parties
 
-To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, related to the Relying Party's (i) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CPS, or applicable law; (ii) unreasonable reliance on a certificate; or (iii) failure to check the certificate's status prior to use.
+To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, entities that have cross-signed or issued sub-CAs for ISRG, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, related to the Relying Party's (i) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CPS, or applicable law; (ii) unreasonable reliance on a certificate; or (iii) failure to check the certificate's status prior to use.
 
 ## 9.10 Term and termination
 
