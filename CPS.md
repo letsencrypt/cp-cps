@@ -60,7 +60,7 @@ The following revisions have been made:
 | December 22, 2021 | Update list of trusted roles in Section 5.2.1. Minor changes to Section 9. Minor typo and consistency improvements. | 4.2 |
 | May 6, 2022 | Update audit log and records archival retention periods. | 4.3 |
 | September 28, 2022 | Update Sections 4.9.7 & 4.10.1 to cover CRLs for Subscriber Certificates. Clarify language about background checks in Section 5.3.2. | 4.4 |
-| TBD | Minor grammatical, punctuation, and formatting changes. | 4.5 |
+| March 10, 2023 | Make CN optional in subscriber cert profile. Add subscriber CRL profile. Update indemnity language in Section 9.9.3. Minor grammatical, punctuation, and formatting changes. | 4.5 |
 
 ## 1.3 PKI Participants
 
