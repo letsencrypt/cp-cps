@@ -49,7 +49,7 @@ This is the ISRG Certificate Policy. This document was approved for publication 
 | August 20, 2021 | Update mailing address. Minor formatting changes. | 3.1 |
 | December 22, 2021 | Sync against Baseline Requirements v1.8.0. Minor updates. | 3.2 |
 | May 06, 2022 | Sync against Baseline Requirements v1.8.4. | 3.3 |
-| March 03, 2023 | Sync against Baseline Requirements v1.8.6. | 3.4 |
+| March 10, 2023 | Sync against Baseline Requirements v1.8.6. | 3.4 |
 
 ### 1.2.2 Relevant Dates
 
