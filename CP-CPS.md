@@ -2,9 +2,9 @@
 
 ## 1.1 Overview
 
-This Certification Practice Statement ("CPS") document outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
+This combined Certificate Policy ("CP") and Certification Practice Statement ("CPS") document outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
 
-ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in accordance with the requirements of the ISRG Certificate Policy (CP) and in a manner consistent with this CPS. It is recommended that readers familiarize themselves with the ISRG CP prior to reading this document.
+ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in accordance with the requirements of the ISRG Certificate Policy (CP) and in a manner consistent with this CP/CPS.
 
 These services are provided to the general public with exceptions as ISRG management deems appropriate or in accordance with relevant law.
 
@@ -14,9 +14,9 @@ The ISRG PKI conforms to the current version of the Baseline Requirements for th
 
 Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found at <https://letsencrypt.org/repository/>.
 
-Per IETF PKIX RFC 3647, this CPS is divided into nine components that cover security controls, practices, and procedures for certification services provided by the ISRG PKI.
+Per IETF PKIX RFC 3647, this CP/CPS is divided into nine components that cover security controls, practices, and procedures for certification services provided by the ISRG PKI.
 
-The following Certification Authorities are covered under this CPS:
+The following Certification Authorities are covered under this document:
 
 | CA Type | Distinguished Name | Key Pair Type and Parameters | Cert SHA-256 Fingerprint | Validity Period |
 |---------|--------------------|------------------------------|--------------------------|-----------------|
@@ -35,38 +35,13 @@ The following revisions have been made:
 
 | Date              | Changes                                            | Version |
 |-------------------|----------------------------------------------------|---------|
-| May 5, 2015 | Original. | 1.0 |
-| September 9, 2015 | Added/corrected a number of policy URIs, removed LDAP as mechanism for publishing certificate information, removed administrative contact requirement for DV-SSL Subscribers, removed mention of web-based revocation option, removed description of customer service center, substantial changes to all of Section 9 regarding legal matters, other minor fixes/improvements. | 1.1 |
-| September 22, 2015 | Updated serial number description in Section 10.3.1, DV-SSL Certificate Profiles. | 1.2 |
-| March 16, 2016 | Update root CRL issuance periods, disallow issuance to `.mil` TLD, make NameConstraints extension optional for cross- certification profile, clarify optional NameConstraints contents, clarify that OSCP ResponderID is byname, clarify that OCSP nonce extension is not supported. | 1.3 |
-| May 5, 2016 | Reference ISRG CP v1.2 rather than ISRG CP v1.1. Add info about tlsFeature extension, serialNumber in Subject Distinguished Name field. | 1.4 |
-| October 18, 2016 | Do not require discontinuing use of a private key due to incorrect information in a certificate. Add information about issuance for Internationalized Domain Names. Add information about CA's CAA identifying domain. Do not require discontinuing use of a private key due to expiration or revocation of a certificate. | 1.5 |
-| April 13, 2017 | Complete rewrite of CPS. | 2.0 |
-| February 6, 2018 | Remove restriction on issuing to '.mil' TLD. | 2.1 |
-| March 10, 2018 | Remove text stating that wildcard certificates are not supported. Clarify that wildcard validation must use DNS Change method. | 2.2 |
-| May 4, 2018 | Add CT fields to certificate profiles. Specify current Baseline Requirements compliance for all validations. Update certificate expiration notice text. Remove reference loops. Minor cleanup. | 2.3 |
-| September 20, 2018 | Define Certificate Problem Reports in Section 1.6.1. Add information about submitting Certificate Problem Reports to Section 1.5.2. | 2.4 |
-| November 14, 2018 | Remove user notice text from end-entity certificate profile in Section 7.1. | 2.5 |
-| July 3, 2019 | Minor grammatical and capitalization changes. | 2.6 |
-| January 21, 2020 | Make structure more exactly match RFC 3647 recommendation. Audit use of phrase No Stipulation and eliminate blank sections. Remove restriction on issuance for IP addresses in Section 7.1.5. Update lists of appropriate and prohibited certificate uses in Sections 1.4.1 and 1.4.2. Clarify annual vulnerability assessment requirements in Section 5.4.8. | 2.7 |
-| May 28, 2020 | Specify in Section 4.9.3 that revocations for key compromise will result in blocking of the public key for future issuance and revocation of other outstanding certificates with the key. Update description of Certificate Transparency submissions. | 2.8 |
-| July 14, 2020 | Clarify revocation request instructions in Section 4.9.3. | 2.9 |
-| October 27, 2020 | List ISRG Root X2 in section 1.1. Update Section 3.2.2 to clarify that ISRG never performs domain validation manually. Update Section 9 to eliminate references to third party RAs, as ISRG does not use or allow them. | 3.0 |
-| April 2, 2021 | Update CPS for ECDSA hierarchy. Update ISRG physical address. Inclusivity language improvement.  | 3.1 |
-| April 20, 2021 | Clarifications regarding revocation process for Section 4.9.3. Clarify OCSP availability for intermediate certificates in Section 4.9.9. | 3.2 |
-| June  8, 2021 | Section 7.1 end entity certificate lifetime specification updated to match Section 6.3.2. Update BR references in Section 3.2.2. Add Section 4.2.4 regarding CAA checking. State in Section 6.7 that the CA complies with the CA/Browser Forum's Network and Certificate System Security Requirements. | 3.3 |
-| July 19, 2021 | Extensive changes. | 4.0 |
-| August 20, 2021 | Update mailing address. De-duplicate terms defined in ISRG CP. Make section titles consistent with BRs and ISRG CP. Replace use of "domain" with FQDN. Other minor formatting changes. | 4.1 |
-| December 22, 2021 | Update list of trusted roles in Section 5.2.1. Minor changes to Section 9. Minor typo and consistency improvements. | 4.2 |
-| May 6, 2022 | Update audit log and records archival retention periods. | 4.3 |
-| September 28, 2022 | Update Sections 4.9.7 & 4.10.1 to cover CRLs for Subscriber Certificates. Clarify language about background checks in Section 5.3.2. | 4.4 |
-| March 10, 2023 | Make CN optional in subscriber cert profile. Add subscriber CRL profile. Update indemnity language in Section 9.9.3. Minor grammatical, punctuation, and formatting changes. | 4.5 |
+| X Y, 2023 | CP and CPS documents are combined. See past documents for prior version history. | 5.0 |
 
 ## 1.3 PKI Participants
 
 ### 1.3.1 Certification Authorities
 
-This CPS applies to the ISRG CA.
+This CP/CPS applies to the ISRG CA.
 
 ### 1.3.2 Registration Authorities
 
@@ -105,7 +80,7 @@ Note that Certificates do not guarantee anything regarding reputation, honesty, 
 
 ### 1.5.1 Organization Administering the Document
 
-The ISRG PMA maintains this CPS document.
+The ISRG PMA maintains this document.
 
 ### 1.5.2 Contact Person
 
@@ -123,13 +98,17 @@ Certificate Problem Reports can be submitted via email to:
 
 [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org)
 
-### 1.5.3 Person Determining CPS suitability for the policy
+Issues can be filed via the GitHub repository where this document is maintained:
 
-The ISRG PMA is responsible for determining the suitability of this CPS. The ISRG PMA is informed by results and recommendations received from an independent auditor.
+<https://github.com/letsencrypt/cp-cps>
 
-### 1.5.4 CPS approval procedures
+### 1.5.3 Person Determining CP/CPS suitability for the policy
 
-The ISRG PMA approves any revisions to this CPS document after formal review.
+The ISRG PMA is responsible for determining the suitability of this CP/CPS. ISRG policy is informed by results and recommendations received from an independent auditor.
+
+### 1.5.4 CP/CPS approval procedures
+
+The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 ## 1.6 Definitions and Acronyms
 
@@ -176,15 +155,15 @@ No references defined at this time.
 
 ### 1.6.4 Conventions
 
-Terms not otherwise defined in this CPS shall be as defined in applicable agreements, user manuals, Certificate Policies, and Certification Practice Statements of the CA.
+Terms not otherwise defined in this CP/CPS shall be as defined in applicable agreements, user manuals, Certificate Policies, and Certification Practice Statements of the CA.
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this CPS shall be interpreted in accordance with RFC 2119.
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this CP/CPS shall be interpreted in accordance with RFC 2119.
 
 # 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
 
 ## 2.1 Repositories
 
-ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in the Policy and Legal Repository, which can be found at:
+ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in the Policy and Legal Repository, which can be found at:
 
 <https://letsencrypt.org/repository/>
 
@@ -198,7 +177,7 @@ ISRG certificates contain URLs to locations where certificate-related informatio
 
 ## 2.3 Time or frequency of publication
 
-New or updated ISRG CP, CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA will approve and publish updated CP and CPS documents at least annually.
+New or updated ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA will approve and publish updated CP/CPS documents at least annually.
 
 New or updated ISRG Root and Subordinate CA certificates are made publicly available as soon as possible. This typically means within seven days of creation.
 
@@ -316,7 +295,7 @@ The enrollment process involves the following steps, in no particular order:
 
 ### 4.2.1 Performing identification and authentication functions
 
-ISRG performs all identification and authentication functions in accordance with the ISRG CP. This includes validation per CPS Section 3.2.2.
+ISRG performs all identification and authentication functions in accordance with this CP/CPS. This includes validation per Section 3.2.2.
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
@@ -486,7 +465,7 @@ Anyone can revoke any certificate via the ACME API if they can demonstrate contr
 
 Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases.
 
-ISRG may administratively revoke certificates if it determines that the Subscriber has failed to meet obligations under the ISRG CP, this CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at ISRG management's discretion.
+ISRG may administratively revoke certificates if it determines that the Subscriber has failed to meet obligations under this CP/CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at ISRG management's discretion.
 
 ### 4.9.3 Procedure for revocation request
 
@@ -700,7 +679,7 @@ No stipulation.
 
 ### 5.3.6 Sanctions for unauthorized actions
 
-Action will be taken to safeguard ISRG and its Subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CPS.
+Action will be taken to safeguard ISRG and its Subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CP/CPS.
 
 Actions taken in response to non-compliance may include termination, removal from trusted roles, or reporting to legal authorities.
 
@@ -708,11 +687,11 @@ Once management becomes aware of non-compliance the Trusted Contributor(s) in qu
 
 ### 5.3.7 Independent Contractor Controls
 
-Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CPS and the ISRG CP. This includes those described in Section 5.3. Potential sanctions for unauthorized activities by independent contractors are described in Section 5.3.6.
+Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CP/CPS. This includes those described in Section 5.3. Potential sanctions for unauthorized activities by independent contractors are described in Section 5.3.6.
 
 ### 5.3.8 Documentation supplied to personnel
 
-Trusted Contributors are provided with all documentation necessary to perform their duties. This always includes, at a minimum, a copy of the ISRG CP, CPS, and Information Security Policy.
+Trusted Contributors are provided with all documentation necessary to perform their duties. This always includes, at a minimum, a copy of the ISRG CP/CPS and Information Security Policy.
 
 ## 5.4 Audit logging procedures
 
@@ -856,7 +835,7 @@ If a suitable successor entity does not exist, the following steps will be taken
 
 ### 6.1.1 Key pair generation
 
-ISRG CA Private Keys are generated by HSMs meeting the requirements of Section 6.2.1. This occurs during a ceremony meeting the requirements of this CPS and the ISRG CP.
+ISRG CA Private Keys are generated by HSMs meeting the requirements of Section 6.2.1. This occurs during a ceremony meeting the requirements of this CP/CPS.
 
 See the Let's Encrypt Subscriber Agreement for information regarding Subscriber key pair generation.
 
@@ -1048,7 +1027,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Basic Constraints              | Critical.<br> cA=True, pathLength constraint 0                                    |
 | Key Usage                      | Critical.<br> keyCertSign, cRLSign, digitalSignature                              |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br>Policy Qualifier Id=CPS<br>Qualifier: Pointer to this CPS |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br>Policy Qualifier Id=CPS<br>Qualifier: Pointer to this CP/CPS |
 | Authority Information Access   | Contains CA Issuers URL (and optionally an OCSP URL). URLs vary based on Issuer.   |
 | CRL Distribution Points        | Contains a CRL URL. URL varies based on Issuer.                                    |
 
@@ -1063,7 +1042,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Basic Constraints              | Critical.<br> cA=False                                                            |
 | Key Usage                      | Critical.<br> digitalSignature, keyEncipherment                                   |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br>CPS Qualifier: Pointer to this CPS |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br>CPS Qualifier: Pointer to this CP/CPS |
 | Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
 | Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
 | Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
@@ -1204,7 +1183,7 @@ ISRG's WebTrust auditors shall have no financial interest in, or other type of r
 
 ## 8.4 Topics covered by assessment
 
-Compliance audits cover ISRG's compliance with the ISRG CP and this CPS, as well as the following WebTrust principles and criteria:
+Compliance audits cover ISRG's compliance with the ISRG CP/CPS, as well as the following WebTrust principles and criteria:
 
 * Principles and Criteria for Certification Authorities
 * WebTrust Principles and Criteria for Certification Authorities – SSL Baseline with Network Security
@@ -1310,7 +1289,7 @@ ISRG may disclose personal information under other circumstances that are descri
 
 ## 9.5 Intellectual property rights
 
-ISRG and/or its business partners own the intellectual property rights in ISRG's services, including the certificates, trademarks used in providing the services, and this CPS. Certificate and revocation information are the property of ISRG. ISRG grants permission to reproduce and distribute certificates on a non-exclusive and royalty-free basis, provided that they are reproduced and distributed in full. Private Keys and Public Keys remain the property of the Subscribers who rightfully hold them.
+ISRG and/or its business partners own the intellectual property rights in ISRG's services, including the certificates, trademarks used in providing the services, and this CP/CPS. Certificate and revocation information are the property of ISRG. ISRG grants permission to reproduce and distribute certificates on a non-exclusive and royalty-free basis, provided that they are reproduced and distributed in full. Private Keys and Public Keys remain the property of the Subscribers who rightfully hold them.
 
 Notwithstanding the foregoing, third party software (including open source software) used by ISRG to provide its services is licensed, not owned, by ISRG.
 
@@ -1318,11 +1297,11 @@ Notwithstanding the foregoing, third party software (including open source softw
 
 ### 9.6.1 CA representations and warranties
 
-Except as expressly stated in this CPS or in a separate agreement with a Subscriber, ISRG does not make any representations or warranties regarding its products or services. ISRG represents and warrants, to the extent specified in this CPS, that:
+Except as expressly stated in this CP/CPS or in a separate agreement with a Subscriber, ISRG does not make any representations or warranties regarding its products or services. ISRG represents and warrants, to the extent specified in this CP/CPS, that:
 
-1. ISRG complies, in all material aspects, with the ISRG CP and this CPS,
+1. ISRG complies, in all material aspects, with the ISRG CP/CPS,
 2. ISRG publishes and updates CRLs and OCSP responses on a regular basis,
-3. All certificates issued under this CPS will be verified in accordance with this CPS and meet the minimum requirements found herein and in the CAB Forum Baseline Requirements, and
+3. All certificates issued under this CP/CPS will be verified in accordance with this CP/CPS and meet the minimum requirements found herein and in the CAB Forum Baseline Requirements, and
 4. ISRG will maintain a repository of public information on its website.
 
 ### 9.6.2 RA representations and warranties
@@ -1350,7 +1329,7 @@ Each Relying Party represents and warrants that, prior to relying on an ISRG cer
 5. Will not use an ISRG certificate if the certificate has expired or been revoked, and
 6. Will take all reasonable steps to minimize the risk associated with relying on a digital signature, including only relying on an ISRG certificate after considering:
   * Applicable law and the legal requirements for identification of a party, protection of the confidentiality or privacy of information, and enforceability of the transaction;
-  * The intended use of the certificate as listed in the certificate or this CPS,
+  * The intended use of the certificate as listed in the certificate or this CP/CPS,
   * The data listed in the certificate,
   * The economic value of the transaction or communication,
   * The potential loss or damage that would be caused by an erroneous identification or a loss of confidentiality or privacy of information in the application, transaction, or communication,
@@ -1386,73 +1365,73 @@ Each Subscriber will indemnify and hold harmless ISRG and its directors, officer
 
 ### 9.9.3 Indemnification by Relying Parties
 
-To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, entities that have cross-signed or issued sub-CAs for ISRG, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, related to the Relying Party's (i) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CPS, or applicable law; (ii) unreasonable reliance on a certificate; or (iii) failure to check the certificate's status prior to use.
+To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, entities that have cross-signed or issued sub-CAs for ISRG, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, related to the Relying Party's (i) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CP/CPS, or applicable law; (ii) unreasonable reliance on a certificate; or (iii) failure to check the certificate's status prior to use.
 
 ## 9.10 Term and termination
 
 ### 9.10.1 Term
 
-This CPS and any amendments to this CPS are effective when published to the ISRG online repository and remain in effect until replaced with a newer version.
+This CP/CPS and any amendments to this CP/CPS are effective when published to the ISRG online repository and remain in effect until replaced with a newer version.
 
 ### 9.10.2 Termination
 
-This CPS and any amendments remain in effect until replaced with a newer version.
+This CP/CPS and any amendments remain in effect until replaced with a newer version.
 
 ### 9.10.3 Effect of termination and survival
 
-ISRG will communicate the conditions and effect of this CPS's termination via the ISRG Repository. The communication will specify which provisions survive termination. At a minimum, all responsibilities related to protecting confidential information will survive termination. All Subscriber Agreements remain effective at least until the certificate is revoked or expired, even if this CPS terminates.
+ISRG will communicate the conditions and effect of this CP/CPS's termination via the ISRG Repository. The communication will specify which provisions survive termination. At a minimum, all responsibilities related to protecting confidential information will survive termination. All Subscriber Agreements remain effective at least until the certificate is revoked or expired, even if this CP/CPS terminates.
 
 ## 9.11 Individual notices and communications with participants
 
-ISRG accepts notices related to this CPS at the locations specified in Section 1.5.2 of this CPS. Notices are deemed effective after the sender receives a valid and digitally signed acknowledgment of receipt from ISRG. If an acknowledgement of receipt is not received within five days, the sender must resend the notice in paper form to the street address specified in Section 1.5.2 of this CPS using either a courier service that confirms delivery or via certified or registered mail with postage prepaid and return receipt requested. ISRG may allow other forms of notice in its Subscriber Agreements.
+ISRG accepts notices related to this CP/CPS at the locations specified in Section 1.5.2 of this CP/CPS. Notices are deemed effective after the sender receives a valid and digitally signed acknowledgment of receipt from ISRG. If an acknowledgement of receipt is not received within five days, the sender must resend the notice in paper form to the street address specified in Section 1.5.2 of this CP/CPS using either a courier service that confirms delivery or via certified or registered mail with postage prepaid and return receipt requested. ISRG may allow other forms of notice in its Subscriber Agreements.
 
 ## 9.12 Amendments
 
 ### 9.12.1 Procedure for amendment
 
-This CPS is reviewed at least annually and may be reviewed more frequently. Amendments are made by posting an updated version of the CPS to the online repository. Controls are in place that are designed to reasonably ensure that this CPS is not amended and published without the prior authorization of the ISRG PMA.
+This CP/CPS is reviewed at least annually and may be reviewed more frequently. Amendments are made by posting an updated version of the CP/CPS to the online repository. Controls are in place that are designed to reasonably ensure that this CP/CPS is not amended and published without the prior authorization of the ISRG PMA.
 
 ### 9.12.2 Notification mechanism and period
 
-ISRG posts CPS revisions to its Repository. ISRG does not guarantee or set a notice-and-comment period and may make changes to this CPS without notice.
+ISRG posts CP/CPS revisions to its Repository. ISRG does not guarantee or set a notice-and-comment period and may make changes to this CP/CPS without notice.
 
 ### 9.12.3 Circumstances under which OID must be changed
 
-The ISRG PMA is solely responsible for determining whether an amendment to the CPS requires an OID change.
+The ISRG PMA is solely responsible for determining whether an amendment to the CP/CPS requires an OID change.
 
 ## 9.13 Dispute resolution provisions
 
-Any claim, suit or proceeding arising out of this CPS or any ISRG product or service must be brought in a state or federal court located in San Jose, California. ISRG may seek injunctive or other relief in any state, federal, or national court of competent jurisdiction for any actual or alleged infringement of its, its affiliates, or any third party's intellectual property or other proprietary rights.
+Any claim, suit or proceeding arising out of this CP/CPS or any ISRG product or service must be brought in a state or federal court located in San Jose, California. ISRG may seek injunctive or other relief in any state, federal, or national court of competent jurisdiction for any actual or alleged infringement of its, its affiliates, or any third party's intellectual property or other proprietary rights.
 
 ## 9.14 Governing law
 
-The laws of the state of California, United States of America, govern the interpretation, construction, and enforcement of this CPS and all proceedings related to ISRG products and services, including tort claims, without regard to any conflicts of law principles. The United Nations Convention for the International Sale of Goods does not apply to this CPS.
+The laws of the state of California, United States of America, govern the interpretation, construction, and enforcement of this CP/CPS and all proceedings related to ISRG products and services, including tort claims, without regard to any conflicts of law principles. The United Nations Convention for the International Sale of Goods does not apply to this CP/CPS.
 
 ## 9.15 Compliance with applicable law
 
-This CPS is subject to all applicable laws and regulations, including United States restrictions on the export of software and cryptography products.
+This CP/CPS is subject to all applicable laws and regulations, including United States restrictions on the export of software and cryptography products.
 
 ## 9.16 Miscellaneous provisions
 
 ### 9.16.1 Entire agreement
 
-ISRG requires each party using its products and services to enter into an agreement that delineates the terms associated with the product or service. If an agreement has provisions that differ from this CPS, then the agreement with that party controls, but solely with respect to that party. Third parties may not rely on or bring action to enforce such agreement.
+ISRG requires each party using its products and services to enter into an agreement that delineates the terms associated with the product or service. If an agreement has provisions that differ from this CP/CPS, then the agreement with that party controls, but solely with respect to that party. Third parties may not rely on or bring action to enforce such agreement.
 
 ### 9.16.2 Assignment
 
-Any entities operating under this CPS may not assign their rights or obligations without the prior written consent of ISRG. Unless specified otherwise in a contract with a party, ISRG does not provide notice of assignment.
+Any entities operating under this CP/CPS may not assign their rights or obligations without the prior written consent of ISRG. Unless specified otherwise in a contract with a party, ISRG does not provide notice of assignment.
 
 ### 9.16.3 Severability
 
-If any provision of this CPS is held invalid or unenforceable by a competent court or tribunal, the remainder of the CPS will remain valid and enforceable. Each provision of this CPS that provides for a limitation of liability, disclaimer of a warranty, or an exclusion of damages is severable and independent of any other provision.
+If any provision of this CP/CPS is held invalid or unenforceable by a competent court or tribunal, the remainder of the CP/CPS will remain valid and enforceable. Each provision of this CP/CPS that provides for a limitation of liability, disclaimer of a warranty, or an exclusion of damages is severable and independent of any other provision.
 
 ### 9.16.4 Enforcement (attorneys' fees and waiver of rights)
 
-ISRG may seek indemnification and attorneys' fees from a party for damages, losses, and expenses related to that party's conduct. ISRG's failure to enforce a provision of this CPS does not waive ISRG's right to enforce the same provision later or right to enforce any other provision of this CPS. To be effective, waivers must be in writing and signed by ISRG.
+ISRG may seek indemnification and attorneys' fees from a party for damages, losses, and expenses related to that party's conduct. ISRG's failure to enforce a provision of this CP/CPS does not waive ISRG's right to enforce the same provision later or right to enforce any other provision of this CP/CPS. To be effective, waivers must be in writing and signed by ISRG.
 
 ### 9.16.5 Force Majeure
 
-ISRG is not liable for any delay or failure to perform an obligation under this CPS to the extent that the delay or failure is caused by an occurrence beyond ISRG's reasonable control. The operation of the Internet is beyond ISRG's reasonable control.
+ISRG is not liable for any delay or failure to perform an obligation under this CP/CPS to the extent that the delay or failure is caused by an occurrence beyond ISRG's reasonable control. The operation of the Internet is beyond ISRG's reasonable control.
 
 ## 9.17 Other provisions
 
