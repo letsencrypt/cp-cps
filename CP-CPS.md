@@ -59,7 +59,7 @@ See definition of "Relying Party" in Section 1.6.1 Definitions.
 
 Other participants include CAs that cross-sign or issue subordinates to the ISRG PKI.
 
-ISRG PKI vendors and service providers with access to confidential information or privileged systems are required to operate in compliance with the ISRG CP.
+ISRG PKI vendors and service providers with access to confidential information or privileged systems are required to operate in compliance with the this ISRG CP/CPS.
 
 ## 1.4 Certificate Usage
 
@@ -132,7 +132,7 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 **Trusted Role**: A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
 
-See ISRG CP 1.6.1 for additional definitions.
+See the Baseline Requirements for additional definitions.
 
 ### 1.6.2 Acronyms
 
@@ -147,7 +147,7 @@ See ISRG CP 1.6.1 for additional definitions.
 | SAN | Subject Alternative Name |
 | TLD | Top Level Domain |
 
-See ISRG CP 1.6.2 for additional acronyms.
+See the Baseline Requirements for additional acronyms.
 
 ### 1.6.3 References
 
@@ -191,7 +191,7 @@ Read only access to the Policy and Legal Repository and certificate information 
 
 ### 3.1.1 Types of names
 
-Certificate distinguished names and subject alternative names are compliant with the ISRG CP.
+Certificate distinguished names and subject alternative names are compliant with the Baseline Requirements.
 
 ### 3.1.2 Need for names to be meaningful
 
@@ -235,9 +235,9 @@ ISRG only issues Domain Validation (DV) certificates. All FQDNs which will be li
 
 ISRG uses three methods for validating domain control:
 
-1. DNS Change (BR and ISRG CP Section 3.2.2.4.7)
-2. Agreed-Upon Change to Website - ACME (BR and ISRG CP Section 3.2.2.4.19)
-3. TLS Using ALPN (BR and ISRG CP Section 3.2.2.4.20)
+1. DNS Change (Baseline Requirements Section 3.2.2.4.7)
+2. Agreed-Upon Change to Website - ACME (Baseline Requirements Section 3.2.2.4.19)
+3. TLS Using ALPN (Baseline Requirements Section 3.2.2.4.20)
 
 Validation for Wildcard Domain Names must be completed using the DNS Change method.
 
@@ -299,7 +299,7 @@ ISRG performs all identification and authentication functions in accordance with
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
-As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the ISRG CP. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
+As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
 ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as ISRG management deems necessary.
 
@@ -455,7 +455,7 @@ No stipulation.
 
 ### 4.9.1 Circumstances for revocation
 
-ISRG will follow the ISRG CP and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the ISRG CP.
+ISRG will follow the Baseline Requirements and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the Baseline Requirements.
 
 ### 4.9.2 Who can request revocation
 
@@ -486,7 +486,7 @@ There is no grace period for a revocation request. A revocation request must be 
 
 ### 4.9.5 Time within which CA must process the revocation request
 
-Investigation into a revocation request will begin within 24 hours of receiving the request. Revocation, if necessary, will be carried out within the timeframes set by ISRG CP Sections 4.9.1.1 and 4.9.1.2.
+Investigation into a revocation request will begin within 24 hours of receiving the request. Revocation, if necessary, will be carried out within the timeframes set by Baseline Requirements Sections 4.9.1.1 and 4.9.1.2.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
@@ -496,7 +496,7 @@ See Section 4.5.2.
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
-ISRG will issue updated CRLs with the frequency required by the ISRG CP.
+ISRG will issue updated CRLs with the frequency required by the Baseline Requirements.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
@@ -508,7 +508,7 @@ Revocation information will be made available for all Subscriber Certificates vi
 
 ### 4.9.10 On-line revocation checking requirements
 
-ISRG provides OCSP responses in compliance with ISRG CP Section 4.9.10.
+ISRG provides OCSP responses in compliance with Baseline Requirements Section 4.9.10.
 
 ### 4.9.11 Other forms of revocation advertisements available
 
@@ -538,7 +538,7 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
-ISRG will retain revocation entries on a CRL or OCSP Response as required by the ISRG CP.
+ISRG will retain revocation entries on a CRL or OCSP Response as required by the Baseline Requirements.
 
 ### 4.10.2 Service availability
 
@@ -711,7 +711,7 @@ No stipulation.
 
 ### 5.4.3 Retention Period for Audit Logs
 
-Audit logs are retained for at least the period required by Section 5.4.3 of the ISRG CP.
+Audit logs are retained for at least the period required by Section 5.4.3 of the Baseline Requirements.
 
 ### 5.4.4 Protection of Audit Log
 
@@ -753,7 +753,7 @@ ISRG archives all audit logs, the contents of which are described in Section 5.4
 
 ### 5.5.2 Retention period for archive
 
-Archived records are retained for at least the period required by Section 5.5.2 of the ISRG CP.
+Archived records are retained for at least the period required by Section 5.5.2 of the Baseline Requirements.
 
 ### 5.5.3 Protection of archive
 
