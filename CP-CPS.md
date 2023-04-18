@@ -151,7 +151,9 @@ See the Baseline Requirements for additional acronyms.
 
 ### 1.6.3 References
 
-No references defined at this time.
+[CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/)
+
+[CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/)
 
 ### 1.6.4 Conventions
 
