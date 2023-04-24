@@ -4,7 +4,7 @@
 
 This combined Certificate Policy ("CP") and Certification Practice Statement ("CPS") document outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
 
-ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in accordance with the requirements of the ISRG Certificate Policy (CP) and in a manner consistent with this CP/CPS.
+ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in a manner consistent with this CP/CPS.
 
 These services are provided to the general public with exceptions as ISRG management deems appropriate or in accordance with relevant law.
 
@@ -59,7 +59,7 @@ See definition of "Relying Party" in Section 1.6.1 Definitions.
 
 Other participants include CAs that cross-sign or issue subordinates to the ISRG PKI.
 
-ISRG PKI vendors and service providers with access to confidential information or privileged systems are required to operate in compliance with the this ISRG CP/CPS.
+ISRG PKI vendors and service providers with access to confidential information or privileged systems are required to operate in compliance with this ISRG CP/CPS.
 
 ## 1.4 Certificate Usage
 
@@ -1326,7 +1326,7 @@ Each Relying Party represents and warrants that, prior to relying on an ISRG cer
 
 1. Obtained sufficient knowledge on the use of digital certificates and PKI,
 2. Studied the applicable limitations on the usage of certificates and agrees to ISRG's limitations on its liability related to the use of certificates,
-3. Has read, understands, and agrees to this CPS,
+3. Has read, understands, and agrees to this CP/CPS,
 4. Verified both the ISRG certificate and the certificates in the certificate chain using the relevant CRL or OCSP,
 5. Will not use an ISRG certificate if the certificate has expired or been revoked, and
 6. Will take all reasonable steps to minimize the risk associated with relying on a digital signature, including only relying on an ISRG certificate after considering:
@@ -1391,7 +1391,7 @@ ISRG accepts notices related to this CP/CPS at the locations specified in Sectio
 
 ### 9.12.1 Procedure for amendment
 
-This CP/CPS is reviewed at least annually and may be reviewed more frequently. Amendments are made by posting an updated version of the CP/CPS to the online repository. Controls are in place that are designed to reasonably ensure that this CP/CPS is not amended and published without the prior authorization of the ISRG PMA.
+This CP/CPS is reviewed at least annually and may be reviewed more frequently. Amendments are made by posting an updated version of this CP/CPS to the online repository. Controls are in place that are designed to reasonably ensure that this CP/CPS is not amended and published without the prior authorization of the ISRG PMA.
 
 ### 9.12.2 Notification mechanism and period
 
@@ -1399,7 +1399,7 @@ ISRG posts CP/CPS revisions to its Repository. ISRG does not guarantee or set a 
 
 ### 9.12.3 Circumstances under which OID must be changed
 
-The ISRG PMA is solely responsible for determining whether an amendment to the CP/CPS requires an OID change.
+The ISRG PMA is solely responsible for determining whether an amendment to this CP/CPS requires an OID change.
 
 ## 9.13 Dispute resolution provisions
 
@@ -1425,7 +1425,7 @@ Any entities operating under this CP/CPS may not assign their rights or obligati
 
 ### 9.16.3 Severability
 
-If any provision of this CP/CPS is held invalid or unenforceable by a competent court or tribunal, the remainder of the CP/CPS will remain valid and enforceable. Each provision of this CP/CPS that provides for a limitation of liability, disclaimer of a warranty, or an exclusion of damages is severable and independent of any other provision.
+If any provision of this CP/CPS is held invalid or unenforceable by a competent court or tribunal, the remainder of this CP/CPS will remain valid and enforceable. Each provision of this CP/CPS that provides for a limitation of liability, disclaimer of a warranty, or an exclusion of damages is severable and independent of any other provision.
 
 ### 9.16.4 Enforcement (attorneys' fees and waiver of rights)
 
