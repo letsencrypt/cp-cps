@@ -1359,7 +1359,7 @@ Without waiving or limiting the foregoing in any way, ISRG does not make, and IS
 
 ### 9.9.1 Indemnification by ISRG
 
-The CA does not provide any indemnification except as described in Section 9.9.1 of the Certificate Policy.
+ISRG does not provide any indemnification.
 
 ### 9.9.2 Indemnification by Subscribers
 
