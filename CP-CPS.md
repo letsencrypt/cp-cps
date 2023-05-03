@@ -2,7 +2,7 @@
 
 ## 1.1 Overview
 
-This combined Certificate Policy ("CP") and Certification Practice Statement ("CPS") document outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
+This combined Certificate Policy ("CP") and Certification Practice Statement ("CPS") document ("CP/CPS") outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
 
 ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in a manner consistent with this CP/CPS.
 
@@ -29,7 +29,7 @@ Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ## 1.2 Document name and identification
 
-This is the ISRG Certification Practice Statement. This document was approved for publication by the ISRG Policy Management Authority, and is made available at <https://letsencrypt.org/repository/>.
+This is the ISRG CP/CPS. This document was approved for publication by the ISRG Policy Management Authority, and is made available at <https://letsencrypt.org/repository/>.
 
 The following revisions have been made:
 
