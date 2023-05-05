@@ -35,7 +35,7 @@ The following revisions have been made:
 
 | Date              | Changes                                            | Version |
 |-------------------|----------------------------------------------------|---------|
-| X Y, 2023 | CP and CPS documents are combined. See past documents for prior version history. | 5.0 |
+| May 9, 2023 | CP and CPS documents are combined. See past documents for prior version history. | 5.0 |
 
 ## 1.3 PKI Participants
 
