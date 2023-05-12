@@ -36,6 +36,7 @@ The following revisions have been made:
 | Date              | Changes                                            | Version |
 |-------------------|----------------------------------------------------|---------|
 | May 5, 2023 | CP and CPS documents are combined. See past documents for prior version history. | 5.0 |
+| June 15, 2023 | Remove CPS OID and URL from Subscriber Certificate profile. | 5.1 |
 
 ## 1.3 PKI Participants
 
@@ -1044,7 +1045,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Basic Constraints              | Critical.<br> cA=False                                                            |
 | Key Usage                      | Critical.<br> digitalSignature, keyEncipherment                                   |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1)<br>CPS Qualifier: Pointer to this CP/CPS |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                        |
 | Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
 | Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
 | Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
