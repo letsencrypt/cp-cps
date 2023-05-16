@@ -36,7 +36,7 @@ The following revisions have been made:
 | Date              | Changes                                            | Version |
 |-------------------|----------------------------------------------------|---------|
 | May 5, 2023 | CP and CPS documents are combined. See past documents for prior version history. | 5.0 |
-| June 15, 2023 | Make CPS OID and URL in Subscriber Certificates optional. | 5.1 |
+| May 16, 2023 | Make CPS OID and URL in Subscriber Certificates optional. | 5.1 |
 
 ## 1.3 PKI Participants
 
