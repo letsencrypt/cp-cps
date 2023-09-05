@@ -1125,6 +1125,7 @@ For the status of Subordinate CA Certificates:
 | NextUpdate                | Up to ThisUpdate + 1 year                                                      |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
 | CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs  |
+| IssuingDistributionPoint  | Contains a distributionPoint pointing to the CRL's unique URL                  |
 
 For the status of Subscriber Certificates:
 
