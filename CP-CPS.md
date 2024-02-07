@@ -1052,6 +1052,7 @@ Extensions are not marked critical unless specifically described here as critica
 | TLS Feature                    | Contains status_request if requested by the Subscriber in the CSR                  |
 | Precertificate poison          | Per RFC 6962. In Precertificates only.                                             |
 | Signed Certificate Timestamp List | Per RFC 6962. In final certificates only.                                       |
+| CRL Distribution Point         | If present, contains a URI to the CRL shard whose scope includes this certificate. |
 
 ### Root OCSP Signing Certificate
 
