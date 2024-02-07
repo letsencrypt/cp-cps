@@ -1031,7 +1031,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Basic Constraints              | Critical.<br> cA=True, pathLength constraint 0                                    |
 | Key Usage                      | Critical.<br> keyCertSign, cRLSign, digitalSignature                              |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1) with qualifier id-qt-cps pointing to this CP/CPS |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>Optionally, ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1) with qualifier id-qt-cps pointing to this CP/CPS |
 | Authority Information Access   | Contains CA Issuers URL (and optionally an OCSP URL). URLs vary based on Issuer.   |
 | CRL Distribution Points        | Contains a CRL URL. URL varies based on Issuer.                                    |
 
@@ -1046,7 +1046,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Basic Constraints              | Critical.<br> cA=False                                                            |
 | Key Usage                      | Critical.<br> digitalSignature, keyEncipherment                                   |
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>Optionally, ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1) with qualifier id-qt-cps pointing to this CP/CPS |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                        |
 | Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
 | Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
 | Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
