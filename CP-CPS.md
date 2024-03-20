@@ -4,7 +4,7 @@
 
 This combined Certificate Policy ("CP") and Certification Practice Statement ("CPS") document ("CP/CPS") outlines the certification services practices for Internet Security Research Group ("ISRG") Public Key Infrastructure ("ISRG PKI").
 
-ISRG PKI services include, but are not limited to, issuing, managing, validating, revoking, and renewing publicly-trusted Certificates in a manner consistent with this CP/CPS.
+ISRG PKI services include, but are not limited to, issuing, managing, validating, and revoking publicly-trusted Certificates in a manner consistent with this CP/CPS.
 
 These services are provided to the general public with exceptions as ISRG management deems appropriate or in accordance with relevant law.
 
