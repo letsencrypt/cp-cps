@@ -473,11 +473,7 @@ ISRG may administratively revoke certificates if it determines that the Subscrib
 
 ### 4.9.3 Procedure for revocation request
 
-Anyone may make revocation requests, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6.
-
-A successful revocation request signed by the private key corresponding to the public key in the certificate, per the requirements in Section 4.9.12 of this document, will result in the certificate being revoked with reason code `keyCompromise` and the affected key being blocked for future issuance. All currently valid certificates with that key will also be revoked.
-
-A successful revocation request where a subscriber has demonstrated control over all domains in a certificate and has requested revocation with reason code `keyCompromise` may result in the certificate being revoked with reason code `keyCompromise` but will not result in blocking the key for future issuance or revoking other certificates with the same key unless proof of possession of the private key is demonstrated per the requirements in Section 4.9.12 of this document.
+Anyone may make revocation requests, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. See section 4.9.12 for additional information.
 
 Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
@@ -524,9 +520,11 @@ ISRG allows for OCSP stapling.
 
 ### 4.9.12 Special requirements re key compromise
 
-In order for a successful revocation request to result in the blocking of a key for future issuance and revocation of all currently valid certificates with that key, proof of possession of the private key for the certificate must be demonstrated.
+ISRG considers key compromise demonstrated when revocation is successfully requested via the ACME Protocol and the request was signed by the private key of the certificate. Key compromise can be demonstrated via ACME even for certificates that have previously been revoked without demonstrating key compromise.
 
-Proof of possession of a private key corresponding to the public key of a certificate must be demonstrated via the Certificate Revocation method of the ACME Protocol defined in RFC 8555, Section 7.6 by signing the request using the private key corresponding to the public key in the certificate (not the private key corresponding to the account which originally requested the certificate). 
+ISRG may also consider key compromise demonstrated by non-ACME methods.
+
+When key compromise is demonstrated, ISRG blocks the key from use in future issuance and revokes all certificates that used that key.
 
 ### 4.9.13 Circumstances for suspension
 
