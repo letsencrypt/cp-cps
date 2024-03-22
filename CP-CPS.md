@@ -524,7 +524,7 @@ ISRG considers key compromise demonstrated when revocation is successfully reque
 
 ISRG may also consider key compromise demonstrated by non-ACME methods.
 
-When key compromise is demonstrated, ISRG blocks the key from use in future issuance and revokes all certificates that used that key.
+When key compromise is demonstrated, ISRG blocks the key from use in future issuance and revokes all unexpired certificates that used that key.
 
 ### 4.9.13 Circumstances for suspension
 
