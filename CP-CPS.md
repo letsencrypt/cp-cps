@@ -38,6 +38,7 @@ The following revisions have been made:
 | May 5, 2023 | CP and CPS documents are combined. See past documents for prior version history. | 5.0 |
 | May 16, 2023 | Make CPS OID and URL in Subscriber Certificates optional. | 5.1 |
 | Feb 7, 2024 | Add CRL Distribution Point to subscriber certificate profile. Add IssuingDistributionPoint to subordinate CRL profile. Remove id-qt-cps from subscriber certificate profile, make it optional for subordinate certificate profile. Clarify waste disposal procedure. | 5.2 |
+| Mar 22, 2024 | Improve accuracy of information regarding subscriber key compromise in sections 4.9.3 and 4.9.12. | 5.3 |
 
 ## 1.3 PKI Participants
 
