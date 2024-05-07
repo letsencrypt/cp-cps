@@ -3,9 +3,9 @@ package main
 import (
 	"bufio"
 	_ "embed"
-	"errors"
 	"fmt"
 	"os"
+	"slices"
 	"strings"
 )
 
@@ -37,16 +37,24 @@ func main() {
 
 	anyErr := false
 
-	err = lintHeadings(lines)
-	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+	errs := make(chan error)
+	go func() {
+		lintHeadings(lines, errs)
+		close(errs)
+	}()
+	for err = range errs {
 		anyErr = true
+		fmt.Fprintln(os.Stderr, err)
 	}
 
-	err = lintEmptySections(lines)
-	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+	errs = make(chan error)
+	go func() {
+		lintEmptySections(lines, errs)
+		close(errs)
+	}()
+	for err = range errs {
 		anyErr = true
+		fmt.Fprintln(os.Stderr, err)
 	}
 
 	if anyErr {
@@ -56,33 +64,37 @@ func main() {
 	fmt.Println("lint checks complete; no findings")
 }
 
-func lintHeadings(lines []string) error {
+// lintHeadings tries to locate every heading that we expect to exist, and
+// checks that they appear in the correct order.
+func lintHeadings(lines []string, errs chan<- error) {
+	outline = strings.TrimSpace(outline)
 	headings := strings.Split(outline, "\n")
+	headingLines := make([]int, len(headings))
 
-	nextHeadIdx := 0
-	for _, line := range lines {
-		if line == headings[nextHeadIdx] {
-			// If we found the heading we're looking for, start searching for the
-			// next one.
-			nextHeadIdx++
-		}
-
-		if nextHeadIdx == len(headings) {
-			// If we've found all the headings we expect, we're done.
-			break
-		}
+	for i, heading := range headings {
+		headingLines[i] = slices.Index(lines, heading)
 	}
 
-	if nextHeadIdx != len(headings) {
-		return fmt.Errorf("expected heading %q not found", headings[nextHeadIdx])
+	for i, lineNo := range headingLines {
+		if lineNo == -1 {
+			errs <- fmt.Errorf("heading %q not found", headings[i])
+			continue
+		}
+
+		if i > 0 && lineNo <= headingLines[i-1] {
+			errs <- fmt.Errorf("heading %q found out-of-order on line %d", headings[i], lineNo)
+			continue
+		}
 	}
-	return nil
 }
 
-func lintEmptySections(lines []string) error {
+// lintEmptySections looks for places where two section headings occur with
+// nothing other than empty lines between them, and the second section is of
+// equal or lesser depth (being of greater depth is fine, that's a subsection).
+func lintEmptySections(lines []string, errs chan<- error) {
 	lastHeadingDepth := 0
 	sectionBodySeen := false
-	for _, line := range lines {
+	for i, line := range lines {
 		if line == "" {
 			continue
 		}
@@ -90,7 +102,7 @@ func lintEmptySections(lines []string) error {
 		if strings.HasPrefix(line, "#") {
 			currHeadingDepth := len(line) - len(strings.TrimLeft(line, "#"))
 			if currHeadingDepth <= lastHeadingDepth && !sectionBodySeen {
-				return errors.New("empty section found")
+				errs <- fmt.Errorf("empty section found at line %d", i)
 			}
 
 			lastHeadingDepth = currHeadingDepth
@@ -100,6 +112,4 @@ func lintEmptySections(lines []string) error {
 
 		sectionBodySeen = true
 	}
-
-	return nil
 }
