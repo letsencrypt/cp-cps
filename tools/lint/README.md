@@ -46,14 +46,14 @@ procedure:
 The lint tool then ensures that every line in this file appears in the CP/CPS,
 exactly as written, in order.
 
-## No Empty Sections
+### No Empty Sections
 
 The linter also looks for any places where two section header lines separated
 only by whitespace have the same or decreasing section depth (e.g. "1.2.3"
 followed by "1.3"), indicating that the first of the two sections has no
 content.
 
-## Use of "No Stipulation"
+### Use of "No Stipulation"
 
 This linter does **not** check whether the phrase "No Stipulation" has been used
 to mean anything other than that "that the particular document imposes no
