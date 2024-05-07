@@ -7,7 +7,12 @@ lint check is a necessary but not sufficient condition for full compliance.
 Usage:
 
 ```sh
-$ TODO
+$ go run . /path/to/cps.md
+heading "### 3.1.3 Anonymity or pseudonymity of subscribers" found out-of-order on line 199
+heading "### 4.4.2 Publication of the certificate by the CA" not found
+empty section found at line 71
+empty section found at line 272
+exit status 1
 ```
 
 This tool is used by GitHub Actions to check every PR against this repo.
