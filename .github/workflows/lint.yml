@@ -1,0 +1,19 @@
+name: Lint CP/CPS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '**'
+jobs:
+  lint:
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+      - name: Run linter
+        working-directory: ./tools/lint
+        run: go run . ../../CP-CPS.md
