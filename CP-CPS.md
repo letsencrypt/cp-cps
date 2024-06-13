@@ -1055,7 +1055,7 @@ Extensions are not marked critical unless specifically described here as critica
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                        |
 | Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
-| Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
+| Subject Public Key             | RSA with modulus of 2048, 3072, or 4096; or ECDSA namedCurve P-256, P-384, or P521 |
 | Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
 | TLS Feature                    | Contains status_request if requested by the Subscriber in the CSR                  |
 | Precertificate poison          | Per RFC 6962. In Precertificates only.                                             |
