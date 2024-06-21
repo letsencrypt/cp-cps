@@ -929,8 +929,6 @@ ISRG CA Private Keys are always stored on HSMs and deactivated using the mechani
 
 ISRG CA Private Keys are destroyed by Trusted Contributors using a FIPS 140-2 (or higher) validated zeroize method provided by the HSMs storing the keys. Physical destruction of the HSM is not required.
 
-See the Let's Encrypt Subscriber Agreement for information regarding Subscriber private key destruction.
-
 ### 6.2.11 Cryptographic Module Rating
 
 See Section 6.2.1.
