@@ -1013,69 +1013,53 @@ See Section 5.5.5.
 
 ## 7.1 Certificate profile
 
-All fields are as specified in RFC 5280, including fields and extensions not specifically mentioned.
-Extensions are not marked critical unless specifically described here as critical.
+All fields are as specified in RFC 5280 and the Baseline Requirements, including fields and extensions not specifically mentioned.
 
 ### Root CA Certificate
 
-| Field or extension             | Value                                                                              |
-| ------------------------------ | ---------------------------------------------------------------------------------- |
-| Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, CN=ISRG Root X&lt;n&gt;<br> where n is an integer representing the instance of the Root<br> CA Certificate. For example, ISRG Root X1, ISRG Root X2, etc. |
-| Subject Distinguished Name     | Same as Issuer DN                                                                  |
-| Validity Period                | Up to 25 years                                                                     |
-| Basic Constraints              | Critical.<br> cA=True, pathLength constraint absent                               |
-| Key Usage                      | Critical.<br> keyCertSign, cRLSign                                                |
+| Field or extension             | Value                                                         |
+| ------------------------------ | --------------------------------------------------------------|
+| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                  |
+| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, and a meaningful CN |
+| Subject Distinguished Name     | Same as Issuer DN                                             |
+| Validity Period                | Up to 25 years                                                |
+| Basic Constraints              | cA=True, pathLength constraint absent (critical)              |
+| Key Usage                      | keyCertSign, cRLSign (critical)                               |
 
 ### Subordinate CA Certificate
 
-| Field or extension             | Value                                                                              |
-| ------------------------------ | ---------------------------------------------------------------------------------- |
-| Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
-| Subject Distinguished Name     | C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X&lt;n&gt;; or<br> C=US, O=Let's Encrypt, CN=[ER]&lt;n&gt;<br> where n is an integer representing the instance of the Subordinate CA Certificate.|
-| Validity Period                | Up to 8 years                                                                      |
-| Basic Constraints              | Critical.<br> cA=True, pathLength constraint 0                                    |
-| Key Usage                      | Critical.<br> keyCertSign, cRLSign, digitalSignature                              |
-| Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)<br>Optionally, ISRG Domain Validated (1.3.6.1.4.1.44947.1.1.1) with qualifier id-qt-cps pointing to this CP/CPS |
-| Authority Information Access   | Contains CA Issuers URL (and optionally an OCSP URL). URLs vary based on Issuer.   |
-| CRL Distribution Points        | Contains a CRL URL. URL varies based on Issuer.                                    |
+| Field or extension             | Value                                                                         |
+| ------------------------------ | ----------------------------------------------------------------------------- |
+| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                                  |
+| Issuer Distinguished Name      | Derived from Issuer certificate                                               |
+| Subject Distinguished Name     | C=US, O=Let's Encrypt, and a meainingful CN                                   |
+| Validity Period                | Up to 8 years                                                                 |
+| Basic Constraints              | cA=True, pathLength constraint 0 (critical)                                   |
+| Key Usage                      | keyCertSign, cRLSign, digitalSignature (critical)                             |
+| Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                          |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                   |
+| Authority Information Access   | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer |
+| CRL Distribution Points        | Contains a CRL URL; URL varies based on Issuer                                |
 
 ### DV-SSL Subscriber Certificate
 
-| Field or extension             | Value                                                                              |
-| ------------------------------ | ---------------------------------------------------------------------------------- |
-| Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | Derived from Issuer certificate                                                    |
-| Subject Distinguished Name     | CN=none, or one of the values from the Subject Alternative Name extension                   |
-| Validity Period                | Up to 100 days                                                                     |
-| Basic Constraints              | Critical.<br> cA=False                                                            |
-| Key Usage                      | Critical.<br> digitalSignature, keyEncipherment                                   |
-| Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                               |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                        |
-| Authority Information Access   | Contains CA Issuers URL and OCSP URL. URLs vary based on Issuer.                   |
-| Subject Public Key             | RSA with modulus between 2048 and 4096, inclusive; or namedCurve P-256; or namedCurve P-384 |
-| Subject Alternative Name       | A sequence of 1 to 100 dNSNames                                                    |
-| TLS Feature                    | Contains status_request if requested by the Subscriber in the CSR                  |
-| Precertificate poison          | Per RFC 6962. In Precertificates only.                                             |
-| Signed Certificate Timestamp List | Per RFC 6962. In final certificates only.                                       |
-| CRL Distribution Point         | If present, contains a URI to the CRL shard whose scope includes this certificate. |
-
-### Root OCSP Signing Certificate
-
-Signed by a Root CA Certificate, these Certificates may sign OCSP responses for Subordinate CA Certificates.
-
-| Field or extension             | Value                                                                              |
-| ------------------------------ | ---------------------------------------------------------------------------------- |
-| Serial Number                  | Must be unique, with 64 bits of output from a CSPRNG                               |
-| Issuer Distinguished Name      | Derived from Issuer                                                                |
-| Subject Distinguished Name     | C=US, O=Internet Security Research Group, CN=ISRG Root OCSP X&lt;n&gt;<br> where n is an integer depending on the Issuer |
-| Validity Period                | Up to 8 years                                                                      |
-| Basic Constraints              | Critical.<br> cA=False                                                            |
-| Key Usage                      | Critical.<br> digitalSignature                                                    |
-| Extended Key Usage             | Critical.<br> OCSPSigning                                                         |
-| No Check                       | Present
+| Field or extension                | Value                                                                             |
+| --------------------------------- | --------------------------------------------------------------------------------- |
+| Serial Number                     | Unique, with 64 bits of output from a CSPRNG                                      |
+| Issuer Distinguished Name         | Derived from Issuer certificate                                                   |
+| Subject Distinguished Name        | CN=none, or one of the values from the Subject Alternative Name extension         |
+| Validity Period                   | Up to 100 days                                                                    |
+| Basic Constraints                 | cA=False (critical)                                                               |
+| Key Usage                         | digitalSignature, and optionally keyEncipherment (critical)                       |
+| Extended Key Usage                | TLS Server Authentication, TLS Client Authentication                              |
+| Certificate Policies              | CAB Forum Domain Validated (2.23.140.1.2.1)                                       |
+| Authority Information Access      | Contains CA Issuers URL and OCSP URL; URLs vary based on Issuer.                  |
+| Subject Public Key                | RSA with modulus of 2048, 3072, or 4096; or ECDSA with namedCurve P-256 or P-384  |
+| Subject Alternative Name          | A sequence of 1 to 100 dNSNames or ipAddresses (critical if no CN)                |
+| TLS Feature                       | Contains status_request if requested by the Subscriber in the CSR                 |
+| Precertificate poison             | Per RFC 6962 (precertificates only, critical)                                     |
+| Signed Certificate Timestamp List | Per RFC 6962 (final certificates only)                                            |
+| CRL Distribution Point            | If present, contains a URI to the CRL shard whose scope includes this certificate |
 
 ### 7.1.1 Version number(s)
 
@@ -1134,19 +1118,19 @@ For the status of Subordinate CA Certificates:
 | NextUpdate                | Up to ThisUpdate + 1 year                                                      |
 | RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
 | CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs  |
-| IssuingDistributionPoint  | If present, asserts onlyContainsCACerts                                       |
+| IssuingDistributionPoint  | If present, asserts onlyContainsCACerts                                        |
 
 For the status of Subscriber Certificates:
 
-| Field or Extension        | Value                                                                          |
-| ------------------------- | ------------------------------------------------------------------------------ |
-| Version                   | V2                                                                             |
-| Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
-| ThisUpdate                | The date and time when the Certificate revocation list validity begins         |
-| NextUpdate                | Up to ThisUpdate + 10 days                                                     |
-| RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
-| CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs  |
-| IssuingDistributionPoint  | Contains a distributionPoint pointing to the CRL's unique URL                  |
+| Field or Extension        | Value                                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------- |
+| Version                   | V2                                                                                           |
+| Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                                 |
+| ThisUpdate                | The date and time when the Certificate revocation list validity begins                       |
+| NextUpdate                | Up to ThisUpdate + 10 days                                                                   |
+| RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                                        |
+| CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs                |
+| IssuingDistributionPoint  | Contains a distributionPoint pointing to the CRL's unique URL, asserts onlyContainsUserCerts |
 
 ### 7.2.1 Version number(s)
 
