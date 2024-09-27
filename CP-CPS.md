@@ -792,13 +792,7 @@ No stipulation.
 
 ## 5.6 Key changeover
 
-When a CA certificate is nearing expiration, a key changeover procedure is used to transition to a new CA certificate. The following steps constitute a key changeover procedure:
-
-1. Some time prior to CA certificate expiration, the private key associated with the expiring certificate is no longer used to sign new certificates. It is only used to sign CRLs and OCSP responses.
-
-2. A new key pair is generated and a new CA certificate is created containing the new key pair's public key. This new key pair is used to sign new certificates.
-
-3. If necessary or desired, the old private key associated with the expiring certificate may be used to cross-sign the new certificate.
+See Section 2.2.
 
 ## 5.7 Compromise and disaster recovery
 
