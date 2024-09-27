@@ -262,7 +262,7 @@ ISRG does not issue Subscriber Certificates containing Subject Identity Informat
 
 ### 3.2.6 Criteria for interoperation
 
-ISRG discloses Cross Certificates in its Certificate Repository.
+ISRG discloses Cross-Certificates in its Certificate Repository.
 
 ## 3.3 Identification and authentication for re-key requests
 
