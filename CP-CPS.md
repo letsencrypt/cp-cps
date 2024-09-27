@@ -1032,7 +1032,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | ------------------------------ | ----------------------------------------------------------------------------- |
 | Serial Number                  | Unique, with 64 bits of output from a CSPRNG                                  |
 | Issuer Distinguished Name      | Derived from Issuer certificate                                               |
-| Subject Distinguished Name     | C=US, O=Let's Encrypt, and a meainingful CN                                   |
+| Subject Distinguished Name     | C=US, O=Let's Encrypt, and a meaningful CN                                    |
 | Validity Period                | Up to 8 years                                                                 |
 | Basic Constraints              | cA=True, pathLength constraint 0 (critical)                                   |
 | Key Usage                      | keyCertSign, cRLSign, digitalSignature (critical)                             |
