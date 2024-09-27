@@ -200,9 +200,7 @@ Certificate distinguished names and subject alternative names are compliant with
 
 ### 3.1.2 Need for names to be meaningful
 
-ISRG certificates include a "Subject" field which identifies the subject entity (i.e. organization or FQDN). The subject entity is identified using a distinguished name.
-
-ISRG certificates include an "Issuer" field which identifies the issuing entity. The issuing entity is identified using a distinguished name.
+No stipulation.
 
 ### 3.1.3 Anonymity or pseudonymity of subscribers
 
