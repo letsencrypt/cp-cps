@@ -866,13 +866,7 @@ ISRG Public Keys are also available in the Certificate Repository.
 
 ### 6.1.5 Key sizes
 
-ISRG Root CA RSA Private Keys are at least 4096 bits in length.
-
-ISRG Root CA ECDSA Private Keys are at least 384 bits in length.
-
-ISRG Subordinate CA RSA Private Keys are at least 2048 bits in length.
-
-ISRG Subordinate CA ECDSA Private Keys are at least 384 bits in length.
+See the Subject Public Key field of the certificate profiles in Section 7.1.
 
 ### 6.1.6 Public key parameters generation and quality checking
 
@@ -1024,6 +1018,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Subject Distinguished Name     | Same as Issuer DN                                             |
 | Validity Period                | Up to 25 years                                                |
 | Basic Constraints              | cA=True, pathLength constraint absent (critical)              |
+| Subject Public Key             | RSA with modulus of 4096; or ECDSA with namedCurve P-384      |
 | Key Usage                      | keyCertSign, cRLSign (critical)                               |
 
 ### Subordinate CA Certificate
@@ -1039,6 +1034,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                          |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                   |
 | Authority Information Access   | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer |
+| Subject Public Key             | RSA with modulus of 2048; or ECDSA with namedCurve P-384                      |
 | CRL Distribution Points        | Contains a CRL URL; URL varies based on Issuer                                |
 
 ### DV-SSL Subscriber Certificate
