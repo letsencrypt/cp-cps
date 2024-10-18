@@ -688,7 +688,7 @@ No stipulation.
 
 ### 5.3.6 Sanctions for unauthorized actions
 
-Action is be taken to safeguard ISRG and its Subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CP/CPS.
+Action is taken to safeguard ISRG and its Subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CP/CPS.
 
 Actions taken in response to non-compliance may include termination, removal from trusted roles, or reporting to legal authorities.
 
