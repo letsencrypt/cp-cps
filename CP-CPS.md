@@ -123,7 +123,7 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 **Policy and Legal Repository**: A repository of policy and legal documents related to the ISRG PKI. It is located at: <https://letsencrypt.org/repository/>
 
-**Precertificate**: A certificate containing a critical poison extension as defined by RFC 6962 Section 3.1.
+**Precertificate**: As defined by RFC 6962 Section 3.1.
 
 **Secure PKI Facilities**: Facilities designed to protect sensitive PKI infrastructure, including CA private keys.
 
