@@ -162,17 +162,13 @@ Terms not otherwise defined in this CP/CPS shall be as defined in applicable agr
 
 ## 2.1 Repositories
 
-ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in the Policy and Legal Repository, which can be found at:
-
-<https://letsencrypt.org/repository/>
+See Sections 4.9.7 and 4.9.10 for details on revocation information.
 
 ## 2.2 Publication of certification information
 
-Records of all ISRG Root and Subordinate CA certificates, including those that have been revoked, are available in the Certificate Repository:
+ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available in the Policy and Legal Repository at <https://letsencrypt.org/repository/>.
 
-<https://letsencrypt.org/certificates/>
-
-ISRG certificates contain URLs to locations where certificate-related information is published, including revocation information via OCSP and/or CRLs.
+Records of all ISRG Root and Subordinate CA certificates, including valid/expired/revoked test pages, are available in the Certificate Repository at <https://letsencrypt.org/certificates/>.
 
 ## 2.3 Time or frequency of publication
 
