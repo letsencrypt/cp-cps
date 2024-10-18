@@ -158,8 +158,6 @@ See the Baseline Requirements for additional acronyms.
 
 Terms not otherwise defined in this CP/CPS shall be as defined in applicable agreements, user manuals, Certificate Policies, and Certification Practice Statements of the CA.
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this CP/CPS shall be interpreted in accordance with RFC 2119.
-
 # 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
 
 ## 2.1 Repositories
@@ -178,7 +176,7 @@ ISRG certificates contain URLs to locations where certificate-related informatio
 
 ## 2.3 Time or frequency of publication
 
-New or updated ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA will approve and publish updated CP/CPS documents at least annually.
+New or updated ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA approves and publishes updated CP/CPS documents at least annually.
 
 New or updated ISRG Root and Subordinate CA certificates are made publicly available as soon as possible. This typically means within seven days of creation.
 
@@ -208,7 +206,7 @@ Distinguished names in certificates are to be interpreted using X.500 standards 
 
 Certificates do not assert any specific relationship between Subscribers and registrants of domain names contained in certificates.
 
-Regarding Internationalized Domain Names, ISRG will have no objection so long as the domain is resolvable via DNS. It is the CA's position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
+Regarding Internationalized Domain Names, ISRG has no objection so long as the domain is resolvable via DNS. It is the CA's position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
 
 ### 3.1.5 Uniqueness of names
 
@@ -216,9 +214,9 @@ No stipulation.
 
 ### 3.1.6 Recognition, authentication, and role of trademarks
 
-ISRG reserves the right to make all decisions regarding Subscriber names in certificates. Entities requesting certificates will be required to demonstrate their right to use names (e.g. demonstrate control of an FQDN), but trademark rights are not verified.
+ISRG reserves the right to make all decisions regarding Subscriber names in certificates. Entities requesting certificates are required to demonstrate their right to use names (e.g. demonstrate control of an FQDN), but trademark rights are not verified.
 
-While ISRG will comply with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement responsibility for domain names should lie primarily with domain registrars and the legal system.
+While ISRG complies with U.S. law and associated legal orders, it is ISRG's position that trademark enforcement responsibility for domain names should lie primarily with domain registrars and the legal system.
 
 ## 3.2 Initial identity validation
 
@@ -238,7 +236,7 @@ ISRG uses three methods for validating domain control:
 2. Agreed-Upon Change to Website - ACME (Baseline Requirements Section 3.2.2.4.19)
 3. TLS Using ALPN (Baseline Requirements Section 3.2.2.4.20)
 
-Validation for Wildcard Domain Names must be completed using the DNS Change method.
+Validation for Wildcard Domain Names is only performed using the DNS Change method.
 
 All validations are performed in compliance with the current CAB Forum Baseline Requirements at the time of validation.
 
@@ -256,7 +254,7 @@ ISRG does not issue Subscriber Certificates containing Subject Identity Informat
 
 ### 3.2.6 Criteria for interoperation
 
-ISRG discloses Cross Certificates in its Certificate Repository.
+ISRG discloses Cross-Certified Subordinate CA Certificates in its Certificate Repository.
 
 ## 3.3 Identification and authentication for re-key requests
 
@@ -270,7 +268,7 @@ See Section 4.7.
 
 ## 3.4 Identification and authentication for revocation request
 
-Identification and authentication for revocation requests is performed by ISRG in compliance with Section 4.9 of this document.
+Identification and authentication for revocation requests is performed by ISRG as described by Section 4.9 of this document.
 
 Identification and authentication are not required when ISRG is requesting revocation.
 
@@ -280,7 +278,7 @@ Identification and authentication are not required when ISRG is requesting revoc
 
 ### 4.1.1 Who can submit a certificate application
 
-Anyone may submit an application for a certificate via the ACME protocol. Issuance will depend on proper validation and compliance with ISRG policies.
+Anyone may submit an application for a certificate via the ACME protocol. Issuance depends on proper validation and compliance with ISRG policies.
 
 ### 4.1.2 Enrollment process and responsibilities
 
@@ -298,15 +296,15 @@ ISRG performs all identification and authentication functions in accordance with
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
-As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, the CA will do so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
+As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
-ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list will be considered, but will likely require further documentation confirming control of the domain from the Applicant, or other proof as ISRG management deems necessary.
+ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list are considered, but generally require further documentation confirming control of the domain from the Applicant, or other proof as ISRG management deems necessary.
 
 ### 4.2.2 Approval or rejection of certificate applications
 
 Approval requires successful completion of validation per Section 3.2.2 as well as compliance with all CA policies.
 
-Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server will periodically be updated with the latest version of the Public Suffix List and will consult the ICANN domains section for every requested DNS identifier. The CA server will not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section.
+Certificates containing a new gTLD under consideration by ICANN will not be issued. The CA Server is periodically updated with the latest version of the Public Suffix List and consults the ICANN domains section for every requested DNS identifier. The CA server does not validate or issue for DNS identifiers that do not have a Public Suffix in the ICANN domains section.
 
 ### 4.2.3 Time to process certificate applications
 
@@ -454,7 +452,7 @@ No stipulation.
 
 ### 4.9.1 Circumstances for revocation
 
-ISRG will follow the Baseline Requirements and revoke a certificate in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the Baseline Requirements.
+ISRG revokes certificates in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the Baseline Requirements.
 
 ### 4.9.2 Who can request revocation
 
@@ -470,9 +468,9 @@ ISRG may administratively revoke certificates if it determines that the Subscrib
 
 Anyone may make revocation requests, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. See section 4.9.12 for additional information.
 
-Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG will respond to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
+Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG responds to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
-An investigation into whether revocation or other appropriate action is warranted will be based on at least the following criteria:
+An investigation into whether revocation or other appropriate action is warranted is based on at least the following criteria:
 
 1. The nature of the alleged problem;
 2. The number of Certificate Problem Reports received about a particular Certificate or Subscriber;
@@ -485,7 +483,7 @@ There is no grace period for a revocation request. A revocation request must be 
 
 ### 4.9.5 Time within which CA must process the revocation request
 
-Investigation into a revocation request will begin within 24 hours of receiving the request. Revocation, if necessary, will be carried out within the timeframes set by Baseline Requirements Sections 4.9.1.1 and 4.9.1.2.
+Investigation into a revocation request begins within 24 hours of receiving the request. Revocation, if necessary, is carried out within the timeframes set by Baseline Requirements Sections 4.9.1.1 and 4.9.1.2.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
@@ -495,15 +493,15 @@ See Section 4.5.2.
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
-ISRG will issue updated CRLs with the frequency required by the Baseline Requirements.
+ISRG issues updated CRLs with the frequency required by the Baseline Requirements.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
-When a Relying Party requests a CRL, the time to receive a response will be less than ten seconds under normal operating conditions.
+When a Relying Party requests a CRL, the time to receive a response is less than ten seconds under normal operating conditions.
 
 ### 4.9.9 On-line revocation/status checking availability
 
-Revocation information will be made available for all Subscriber Certificates via OCSP. Revocation information may be made available for Subordinate CA certificates via OCSP.
+Revocation information is made available for all Subscriber Certificates via OCSP. Revocation information may be made available for Subordinate CA certificates via OCSP.
 
 ### 4.9.10 On-line revocation checking requirements
 
@@ -543,7 +541,7 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
-ISRG will retain revocation entries on a CRL or OCSP Response as required by the Baseline Requirements.
+ISRG retains revocation entries on a CRL or OCSP Response as required by the Baseline Requirements.
 
 ### 4.10.2 Service availability
 
@@ -617,7 +615,7 @@ ISRG maintains multiple backups of ISRG CA Private Keys at multiple Secure PKI F
 
 ### 5.2.1 Trusted roles
 
-All persons, employees or otherwise, with the ability to materially impact the operation of ISRG PKI systems and services, or the ability to view CA confidential information, must do so while designated as serving in a Trusted Role.
+All persons, employees or otherwise, with the ability to materially impact the operation of ISRG PKI systems and services, or the ability to view CA confidential information, can only do so while designated as serving in a Trusted Role.
 
 Trusted Roles include, but are not limited to:
 
@@ -662,13 +660,13 @@ ISRG management ensures this with appropriate interviewing practices, training, 
 
 ### 5.3.2 Background check procedures
 
-Trusted Contributors must undergo a background check prior to performing in a trusted role. ISRG management will review the results of background checks for problematic issues prior to approving performance of a trusted role.
+Trusted Contributors undergo a background check prior to performing in a trusted role. ISRG management reviews the results of background checks for problematic issues prior to approving performance of a trusted role.
 
 Background checks include, without limitation, criminal background and employment history.
 
 ### 5.3.3 Training requirements
 
-Trusted Contributors must be trained on topics relevant to the role in which they will perform.
+Trusted Contributors are trained on topics relevant to the role in which they will perform.
 
 Training programs are developed for each role by ISRG management and Security Officers.
 
@@ -684,7 +682,7 @@ No stipulation.
 
 ### 5.3.6 Sanctions for unauthorized actions
 
-Action will be taken to safeguard ISRG and its Subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CP/CPS.
+Action is taken to safeguard ISRG and its Subscribers whenever ISRG Trusted Contributors, whether through negligence or malicious intent, fail to comply with ISRG policies including this CP/CPS.
 
 Actions taken in response to non-compliance may include termination, removal from trusted roles, or reporting to legal authorities.
 
