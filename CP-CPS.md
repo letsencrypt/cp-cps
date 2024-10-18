@@ -231,7 +231,7 @@ ISRG may elect not to issue any certificate at its sole discretion.
 
 ### 3.2.1 Method to prove possession of private key
 
-Applicants are required to prove possession of the Private Key corresponding to the Public Key in a Certificate request by signing the CSR provided to the Finalize method of the ACME Protocol defined in RFC 8555, Section 7.4.
+No stipulation.
 
 ### 3.2.2 Authentication of organization identity
 
