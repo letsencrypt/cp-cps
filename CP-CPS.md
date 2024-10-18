@@ -72,7 +72,7 @@ No stipulation.
 
 ### 1.4.2 Prohibited certificate uses
 
-Prohibited certificate usage is goverend by the Let's Encrypt Subscriber Agreement.
+Prohibited certificate usage is governed by the Let's Encrypt Subscriber Agreement.
 
 ## 1.5 Policy administration
 
