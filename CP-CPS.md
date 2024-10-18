@@ -198,15 +198,11 @@ No stipulation.
 
 ### 3.1.3 Anonymity or pseudonymity of subscribers
 
-Subscribers are not identified in DV certificates, which have subject fields identifying only FQDNs (not people or organizations). Relying Parties should consider DV certificate Subscribers to be anonymous.
+Subscribers are not identified in DV certificates. Certificates do not assert any specific relationship between Subscribers and registrants of domain names contained in certificates. Relying Parties should consider DV certificate Subscribers to be anonymous.
 
 ### 3.1.4 Rules for interpreting various name forms
 
-Distinguished names in certificates are to be interpreted using X.500 standards and ASN.1 syntax.
-
-Certificates do not assert any specific relationship between Subscribers and registrants of domain names contained in certificates.
-
-Regarding Internationalized Domain Names, ISRG has no objection so long as the domain is resolvable via DNS. It is the CA's position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
+It is the CA's position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
 
 ### 3.1.5 Uniqueness of names
 
