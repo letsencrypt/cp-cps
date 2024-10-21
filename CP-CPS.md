@@ -228,7 +228,7 @@ No stipulation.
 
 ### 3.2.2 Authentication of organization identity
 
-Prior to issuance of a Subscriber Certificate, ISRG uses the following methods to validate the Applicant's control of each FQDN listed in the Certificate:
+Prior to issuance of a Subscriber Certificate, ISRG uses at least one of the following methods to validate the Applicant's control of each FQDN listed in the Certificate:
 
 1. DNS Change (Baseline Requirements Section 3.2.2.4.7)
 2. Agreed-Upon Change to Website - ACME (Baseline Requirements Section 3.2.2.4.19)
