@@ -866,16 +866,19 @@ ISRG Public Keys are also available in the Certificate Repository.
 
 ### 6.1.5 Key sizes
 
-See the Subject Public Key field of the certificate profiles in Section 7.1.
+ISRG Root CA keys are either RSA with a modulus of length 4096 or ECDSA with namedCurve P-384.
+
+ISRG Subordinate CA keys are either RSA with a modulus of length 2048 or ECDSA with namedCurve P-384.
+
+Public keys in Subscriber Certificates issued by ISRG are either RSA with a modulus of length 2048, 3072, or 4096; or ECDSA with namedCurve P-256, P-384, or P-521.
 
 ### 6.1.6 Public key parameters generation and quality checking
 
 ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
 
-Per NIST SP 800‐89 (<https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf>), section 5.3.3, the CA ensures that:
+Per [NIST SP 800‐89](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-89.pdf), section 5.3.3, the CA ensures that all RSA keys in ISRG CA and Subscriber certificates have a public exponent of 65537 and an odd modulus which has no factors smaller than 752.
 
-* the public exponent of any RSA key used in a DV-SSL Certificate is in the range between 2<sup>16</sup>+1 and 2<sup>256</sup>-1, and
-* the modulus of such a certificate is an odd number, not the power of a prime, and has no factors smaller than 752.
+Per [NIST SP 800-56A (Revision 2)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Ar2.pdf), Section 5.6.2.3.2, the CA ensures that all ECDSA keys in ISRG CA and Subscriber certificates comply with the ECC Full Public Key Validation Routine.
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
@@ -1018,7 +1021,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Subject Distinguished Name     | Same as Issuer DN                                             |
 | Validity Period                | Up to 25 years                                                |
 | Basic Constraints              | cA=True, pathLength constraint absent (critical)              |
-| Subject Public Key             | RSA with modulus of 4096; or ECDSA with namedCurve P-384      |
+| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                        |
 | Key Usage                      | keyCertSign, cRLSign (critical)                               |
 
 ### Subordinate CA Certificate
@@ -1034,7 +1037,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                          |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                   |
 | Authority Information Access   | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer |
-| Subject Public Key             | RSA with modulus of 2048; or ECDSA with namedCurve P-384                      |
+| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                        |
 | CRL Distribution Points        | Contains a CRL URL; URL varies based on Issuer                                |
 
 ### DV-SSL Subscriber Certificate
@@ -1050,7 +1053,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Extended Key Usage                | TLS Server Authentication, TLS Client Authentication                              |
 | Certificate Policies              | CAB Forum Domain Validated (2.23.140.1.2.1)                                       |
 | Authority Information Access      | Contains CA Issuers URL and OCSP URL; URLs vary based on Issuer.                  |
-| Subject Public Key                | RSA with modulus of 2048, 3072, or 4096; or ECDSA with namedCurve P-256 or P-384  |
+| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                               |
 | Subject Alternative Name          | A sequence of 1 to 100 dNSNames or ipAddresses (critical if no CN)                |
 | TLS Feature                       | Contains status_request if requested by the Subscriber in the CSR                 |
 | Precertificate poison             | Per RFC 6962 (precertificates only, critical)                                     |
