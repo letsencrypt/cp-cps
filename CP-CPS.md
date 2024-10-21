@@ -190,7 +190,7 @@ Read only access to the Policy and Legal Repository and certificate information 
 
 ### 3.1.1 Types of names
 
-See Section 7.1 for the kinds of names which may appear in Let's Encrypt certificates.
+See Section 7.1 for the types of names which may appear in Let's Encrypt certificates.
 
 ### 3.1.2 Need for names to be meaningful
 
