@@ -332,7 +332,7 @@ See Section 2.2 of this document for Root and Subordinate CA certificate publica
 
 All Subscriber Certificates are made available to Subscribers via the ACME protocol.
 
-Prior to each Subscriber Certificate issuance, ISRG signs a corresponding Precertificate and submits it to a selection of Certificate Transparency logs. After each Subscriber Certificate issuance, ISRG submits resulting certificate to a selection of Certificate Transparency logs on a best-effort basis.
+Prior to each Subscriber Certificate issuance, ISRG signs a corresponding Precertificate and submits it to a selection of Certificate Transparency logs. After each Subscriber Certificate issuance, ISRG submits the resulting certificate to a selection of Certificate Transparency logs on a best-effort basis.
 
 ISRG does not guarantee issuance of a final certificate for every Precertificate.
 
