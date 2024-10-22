@@ -866,11 +866,11 @@ ISRG Public Keys are also available in the Certificate Repository.
 
 ### 6.1.5 Key sizes
 
-ISRG Root CA keys are either RSA with a modulus of length 4096 or ECDSA with namedCurve P-384.
+ISRG Root CA key pairs are either RSA keys whose encoded modulus size is 4096 bits, or ECDSA keys which are a valid point on the NIST P-384 elliptic curve.
 
-ISRG Subordinate CA keys are either RSA with a modulus of length 2048 or ECDSA with namedCurve P-384.
+ISRG Subordinate CA key pairs are either RSA keys whose encoded modulus size is 2048 bits, or ECDSA keys which are a valid point on the NIST P-384 elliptic curve.
 
-Public keys in Subscriber Certificates issued by ISRG are either RSA with a modulus of length 2048, 3072, or 4096; or ECDSA with namedCurve P-256, P-384, or P-521.
+Public keys in Subscriber Certificates issued by ISRG are either RSA keys whose encoded modulus size is 2048, 3072, or 4096 bits; or ECDSA keys which are a valid point on the NIST P-256, P-384, or P-521 elliptic curves.
 
 ### 6.1.6 Public key parameters generation and quality checking
 
@@ -1083,7 +1083,7 @@ The `AlgorithmIdentifier` field of the `SubjectPublicKeyInfo` field of ISRG Cert
 
 #### 7.1.3.2 Signature AlgorithmIdentifier
 
-The `AlgorithmIdentifier` field of `signature` and `signatureAlgorithm` fields of ISRG Certificates, CRLs, and OCSP Responses has the following (hex-encoded) DER bytes, corresponding to the issuer's key type and signature algorithm:
+When used in the context of a signature, fields of type `AlgorithmIdentifier` of all objects signed by ISRG CAs have the following (hex-encoded) DER bytes, corresponding to the issuer's key type and signature algorithm:
 
 | Type             | Hex AlgorithmIdentifier          |
 | ---------------- | -------------------------------- |
