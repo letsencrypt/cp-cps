@@ -228,9 +228,7 @@ No stipulation.
 
 ### 3.2.2 Authentication of organization identity
 
-ISRG only issues Domain Validation (DV) certificates. All FQDNs which will be listed in the Common Name and list of SANs in the certificate are fully validated prior to issuance.
-
-ISRG uses three methods for validating domain control:
+Prior to issuance of a Subscriber Certificate, ISRG uses at least one of the following methods to validate the Applicant's control of each requested FQDN:
 
 1. DNS Change (Baseline Requirements Section 3.2.2.4.7)
 2. Agreed-Upon Change to Website - ACME (Baseline Requirements Section 3.2.2.4.19)
@@ -242,15 +240,15 @@ All validations are performed in compliance with the current CAB Forum Baseline 
 
 ### 3.2.3 Authentication of individual identity
 
-ISRG does not issue Subscriber Certificates containing Subject Identity Information, and thus does not validate any natural person's identity.
+Not applicable.
 
 ### 3.2.4 Non-verified subscriber information
 
-Non-verified Applicant information is not included in ISRG certificates.
+Not applicable.
 
 ### 3.2.5 Validation of authority
 
-ISRG does not issue Subscriber Certificates containing Subject Identity Information, and thus does not validate any natural person's authority to request certificates on behalf of organizations.
+Not applicable.
 
 ### 3.2.6 Criteria for interoperation
 
