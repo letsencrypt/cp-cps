@@ -925,7 +925,7 @@ See Section 5.5.
 
 ### 6.3.2 Certificate operational periods and key pair usage periods
 
-The validity periods of ISRG Root CA, Subordinate CA, and Subscriber Certificates are profiled in Section 7 of this document.
+See Section 7.1 for Certificate validity periods.
 
 ISRG Root and Subordinate CA key pairs have lifetimes corresponding to their certificates. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
 
