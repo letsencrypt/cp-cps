@@ -286,7 +286,7 @@ ISRG performs all identification and authentication functions in accordance with
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
-As part of the issuance process, ISRG checks for CAA records and follows the processing instructions found, for each dNSName in the subjectAltName extension of the certificate to be issued, as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
+As part of the validation process, ISRG checks for CAA records for each requested FQDN and follows the processing instructions found as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
 ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list are considered, but generally require further documentation confirming control of the domain from the Applicant, or other proof as ISRG management deems necessary.
 
