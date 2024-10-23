@@ -304,7 +304,7 @@ No stipulation.
 
 ### 4.3.1 CA actions during certificate issuance
 
-At a high level, the following steps are taken during issuance of a Subscriber Certificate. ISRG's automated processes confirm that all names which will appear in the Common Name and/or list of SANs of the certificate have been properly validated to be controlled by the Subscriber requesting the certificate. The to-be-signed certificate is linted, then signed by a Subordinate CA in an HSM. After issuance is complete, the certificate is stored in a database and made available to the Subscriber.
+At a high level, the following steps are taken during issuance of a Subscriber Certificate. ISRG's automated processes confirm that all requested names have been properly validated to be controlled by the Subscriber requesting the certificate. The to-be-signed certificate is linted, then signed by a Subordinate CA in an HSM. After issuance is complete, the certificate is stored in a database and made available to the Subscriber.
 
 ### 4.3.2 Notification to subscriber by the CA of issuance of certificate
 
@@ -320,9 +320,7 @@ No stipulation.
 
 See Section 2.2 of this document for Root and Subordinate CA certificate publication information.
 
-All Subscriber Certificates are made available to Subscribers via the ACME protocol.
-
-For each Subscriber Certificate issuance, ISRG signs a Precertificate and submits it to a selection of Certificate Transparency logs. Upon successful submission, ISRG attempts to issue a certificate that matches the Precertificate (per RFC 6962 Section 3.1) and embeds at least two of the resulting Signed Certificate Timestamps (SCTs). ISRG submits the resulting final certificate to a selection of Certificate Transparency logs on a best-effort basis.
+All Subscriber Certificates are made available to Subscribers via the ACME protocol. They are also submitted to Certificate Transparency logs on a best-effort basis.
 
 ISRG does not guarantee issuance of a final certificate for every Precertificate.
 
