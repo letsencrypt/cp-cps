@@ -772,7 +772,7 @@ No stipulation.
 
 ## 5.6 Key changeover
 
-See Section 2.2.
+See Section 6.1.
 
 ## 5.7 Compromise and disaster recovery
 
