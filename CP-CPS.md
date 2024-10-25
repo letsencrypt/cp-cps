@@ -1048,7 +1048,7 @@ The `AlgorithmIdentifier` field of the `SubjectPublicKeyInfo` field of ISRG Cert
 
 #### 7.1.3.2 Signature AlgorithmIdentifier
 
-When used in the context of a signature, fields of type `AlgorithmIdentifier` of all objects signed by ISRG CAs is byte-for-byte identical with one of the hexadecimal encodings specified by Section 7.1.3.2 of the Baseline Requirements.
+When used in the context of a signature, fields of type `AlgorithmIdentifier` of all objects signed by ISRG CAs are byte-for-byte identical with one of the hexadecimal encodings specified by Section 7.1.3.2 of the Baseline Requirements.
 
 ### 7.1.4 Name forms
 
