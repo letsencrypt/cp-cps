@@ -1044,23 +1044,11 @@ See section 7.1.
 
 #### 7.1.3.1 SubjectPublicKeyInfo
 
-The `AlgorithmIdentifier` field of the `SubjectPublicKeyInfo` field of ISRG Certificates has the following (hex-encoded) DER bytes, corresponding to the key type:
-
-| Type        | Hex AlgorithmIdentifier                      |
-| ----------- | -------------------------------------------- |
-| RSA         | `300d06092a864886f70d0101010500`             |
-| ECDSA P-256 | `301306072a8648ce3d020106082a8648ce3d030107` |
-| ECDSA P-384 | `301006072a8648ce3d020106052b81040022`       |
-| ECDSA P-521 | `301006072a8648ce3d020106052b81040023`       |
+The `AlgorithmIdentifier` field of the `SubjectPublicKeyInfo` field of ISRG Certificates is byte-for-byte identical with one of the hexadecimal encodings specified by Section 7.1.3.1 of the Baseline Requirements.
 
 #### 7.1.3.2 Signature AlgorithmIdentifier
 
-When used in the context of a signature, fields of type `AlgorithmIdentifier` of all objects signed by ISRG CAs have the following (hex-encoded) DER bytes, corresponding to the issuer's key type and signature algorithm:
-
-| Type             | Hex AlgorithmIdentifier          |
-| ---------------- | -------------------------------- |
-| RSA with SHA-256 | `300d06092a864886f70d01010b0500` |
-| ECDSA P-384      | `300a06082a8648ce3d040303`       |
+When used in the context of a signature, fields of type `AlgorithmIdentifier` of all objects signed by ISRG CAs is byte-for-byte identical with one of the hexadecimal encodings specified by Section 7.1.3.2 of the Baseline Requirements.
 
 ### 7.1.4 Name forms
 
