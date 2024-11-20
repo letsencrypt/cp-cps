@@ -530,7 +530,7 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
-Revocation entries on a CRL are not removed until after the Expiry Date of the revoked Certificate.
+Revocation entries on a CRL are not removed until they have appeared in at least one CRL issued after the NotAfter date of the revoked Certificate.
 
 ### 4.10.2 Service availability
 
