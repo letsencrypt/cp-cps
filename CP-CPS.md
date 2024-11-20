@@ -1025,8 +1025,8 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Key Usage                         | digitalSignature, and optionally keyEncipherment (critical)                       |
 | Extended Key Usage                | TLS Server Authentication, TLS Client Authentication                              |
 | Certificate Policies              | CAB Forum Domain Validated (2.23.140.1.2.1)                                       |
-| Authority Information Access      | Contains CA Issuers URL and OCSP URL; URLs vary based on Issuer.                  |
-| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                               |
+| Authority Information Access      | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer     |
+| Subject Public Key                | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                            |
 | Subject Alternative Name          | A sequence of 1 to 100 dNSNames or ipAddresses (critical if no CN)                |
 | TLS Feature                       | Contains status_request if requested by the Subscriber in the CSR                 |
 | Precertificate poison             | Per RFC 6962 (precertificates only, critical)                                     |
