@@ -476,7 +476,7 @@ Investigation into a revocation request begins within 24 hours of receiving the 
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
-Relying Parties should verify the validity of certificates via CRL or OCSP prior to relying on certificates. Relying Parties who cannot or choose not to check certificate expiration or revocation status, but decide to rely on a certificate anyway, do so at their own risk.
+It is recommended, but not required, that Relying Parties verify the revocation status of ISRG certificates when revocation information is provided by ISRG. Relying Parties who cannot or choose not to check certificate revocation status, but decide to rely on a certificate anyway, do so at their own risk.
 
 See Section 4.5.2.
 
@@ -490,15 +490,15 @@ When a Relying Party requests a CRL, the time to receive a response is less than
 
 ### 4.9.9 On-line revocation/status checking availability
 
-Revocation information is made available for all Subscriber Certificates via OCSP. Revocation information may be made available for Subordinate CA certificates via OCSP.
+ISRG may provide revocation information via OCSP for Subscriber Certificates and/or Subordinate CA certificates, though ISRG makes no commitment to doing so.
 
 ### 4.9.10 On-line revocation checking requirements
 
-ISRG provides OCSP responses in compliance with Baseline Requirements Section 4.9.10.
+No stipulation.
 
 ### 4.9.11 Other forms of revocation advertisements available
 
-ISRG allows for OCSP stapling.
+No stipulation.
 
 ### 4.9.12 Special requirements re key compromise
 
@@ -530,7 +530,7 @@ Not applicable.
 
 ### 4.10.1 Operational characteristics
 
-ISRG retains revocation entries on a CRL or OCSP Response as required by the Baseline Requirements.
+Revocation entries on a CRL are not removed until they have appeared in at least one CRL issued after the NotAfter date of the revoked Certificate.
 
 ### 4.10.2 Service availability
 
@@ -1025,8 +1025,8 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Key Usage                         | digitalSignature, and optionally keyEncipherment (critical)                       |
 | Extended Key Usage                | TLS Server Authentication, TLS Client Authentication                              |
 | Certificate Policies              | CAB Forum Domain Validated (2.23.140.1.2.1)                                       |
-| Authority Information Access      | Contains CA Issuers URL and OCSP URL; URLs vary based on Issuer.                  |
-| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                               |
+| Authority Information Access      | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer     |
+| Subject Public Key                | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                            |
 | Subject Alternative Name          | A sequence of 1 to 100 dNSNames or ipAddresses (critical if no CN)                |
 | TLS Feature                       | Contains status_request if requested by the Subscriber in the CSR                 |
 | Precertificate poison             | Per RFC 6962 (precertificates only, critical)                                     |
@@ -1111,7 +1111,7 @@ No stipulation.
 
 ## 7.3 OCSP profile
 
-ISRG OCSP responders implement the RFC 5019 profile of RFC 6960.
+ISRG OCSP responders, if made available, implement the RFC 5019 profile of RFC 6960.
 
 ### 7.3.1 Version number(s)
 
@@ -1263,9 +1263,8 @@ Notwithstanding the foregoing, third party software (including open source softw
 Except as expressly stated in this CP/CPS or in a separate agreement with a Subscriber, ISRG does not make any representations or warranties regarding its products or services. ISRG represents and warrants, to the extent specified in this CP/CPS, that:
 
 1. ISRG complies, in all material aspects, with the ISRG CP/CPS,
-2. ISRG publishes and updates CRLs and OCSP responses on a regular basis,
-3. All certificates issued under this CP/CPS will be verified in accordance with this CP/CPS and meet the minimum requirements found herein and in the CAB Forum Baseline Requirements, and
-4. ISRG will maintain a repository of public information on its website.
+2. All certificates issued under this CP/CPS will be verified in accordance with this CP/CPS and meet the minimum requirements found herein and in the CAB Forum Baseline Requirements, and
+3. ISRG will maintain the Policy and Legal Repository on its website.
 
 ### 9.6.2 RA representations and warranties
 
@@ -1288,9 +1287,8 @@ Each Relying Party represents and warrants that, prior to relying on an ISRG cer
 1. Obtained sufficient knowledge on the use of digital certificates and PKI,
 2. Studied the applicable limitations on the usage of certificates and agrees to ISRG's limitations on its liability related to the use of certificates,
 3. Has read, understands, and agrees to this CP/CPS,
-4. Verified both the ISRG certificate and the certificates in the certificate chain using the relevant CRL or OCSP,
-5. Will not use an ISRG certificate if the certificate has expired or been revoked, and
-6. Will take all reasonable steps to minimize the risk associated with relying on a digital signature, including only relying on an ISRG certificate after considering:
+4. Will not use an ISRG certificate if the certificate has expired or been revoked, and
+5. Will take all reasonable steps to minimize the risk associated with relying on a digital signature, including only relying on an ISRG certificate after considering:
    * Applicable law and the legal requirements for identification of a party, protection of the confidentiality or privacy of information, and enforceability of the transaction;
    * The intended use of the certificate as listed in the certificate or this CP/CPS,
    * The data listed in the certificate,
