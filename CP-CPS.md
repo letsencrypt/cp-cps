@@ -544,8 +544,6 @@ No stipulation.
 
 A Subscriber's subscription ends once all of Subscriber's ISRG certificates have expired or been revoked.
 
-Prior to expiration of a Subscriber's certificate, ISRG may send Subscriber a notice regarding upcoming Certificate expiration if a contact email address was provided.
-
 ## 4.12 Key escrow and recovery
 
 ### 4.12.1 Key escrow and recovery policy and practices
