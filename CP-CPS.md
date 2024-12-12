@@ -1181,7 +1181,7 @@ No stipulation.
 
 ### 9.1.3 Revocation or status information access fees
 
-ISRG does not charge any fees for certificate revocation or for checking the validity status of an issued certificate using a CRL or OSCP.
+ISRG does not charge fees for certificate revocation or status information.
 
 ### 9.1.4 Fees for other services
 
