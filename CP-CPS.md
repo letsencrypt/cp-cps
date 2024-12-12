@@ -41,6 +41,7 @@ The following revisions have been made:
 | Mar 22, 2024 | Improve accuracy of information regarding subscriber key compromise in sections 4.9.3 and 4.9.12. | 5.3 |
 | Sep 27, 2024 | Remove statements regarding meaningful names. Format section headers to match RFC 3647. | 5.4 |
 | Oct 25, 2024 | Consolidate statements about certificate contents into Section 7.1. Replace normative language with descriptive language. | 5.5 |
+| Dec 12, 2024 | Make OCSP service optional. | 5.6 |
 
 ## 1.3 PKI participants
 
