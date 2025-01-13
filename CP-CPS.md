@@ -222,11 +222,16 @@ No stipulation.
 
 ### 3.2.2 Authentication of organization identity
 
-Prior to issuance of a Subscriber Certificate, ISRG uses at least one of the following methods to validate the Applicant's control of each requested FQDN:
+Prior to issuance of a Subscriber Certificate, ISRG uses at least one of the following methods to validate the Applicant's control of each requested DNS name:
 
 1. DNS Change (Baseline Requirements Section 3.2.2.4.7)
 2. Agreed-Upon Change to Website - ACME (Baseline Requirements Section 3.2.2.4.19)
 3. TLS Using ALPN (Baseline Requirements Section 3.2.2.4.20)
+
+Similarly, ISRG uses at least one of the following methods to validate the Applicant's control of each requested IP address:
+
+1. ACME "http-01" method for IP Addresses (Baseline Requirements Section 3.2.2.5.6)
+2. ACME "tls-alpn-01" method for IP Addresses (Baseline Requirements Section 3.2.2.5.7)
 
 Validation for Wildcard Domain Names is only performed using the DNS Change method.
 
@@ -288,7 +293,7 @@ ISRG performs all identification and authentication functions in accordance with
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
-As part of the validation process, ISRG checks for CAA records for each requested FQDN and follows the processing instructions found as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
+As part of the validation process, ISRG checks for CAA records for each requested DNS name and follows the processing instructions found as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
 ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list are considered, but generally require further documentation confirming control of the domain from the Applicant, or other proof as ISRG management deems necessary.
 
@@ -448,7 +453,7 @@ ISRG revokes certificates in accordance with Section 4.9.1.1 and Section 4.9.1.2
 
 Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases.
 
-Anyone can revoke any certificate via the ACME API if they can demonstrate control over all FQDNs covered by the certificate. No other information is required in such cases.
+Anyone can revoke any certificate via the ACME API if they can demonstrate control over all Subject Alternative Names covered by the certificate. No other information is required in such cases.
 
 Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases.
 
