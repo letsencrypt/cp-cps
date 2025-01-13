@@ -308,6 +308,8 @@ No stipulation.
 
 At a high level, the following steps are taken during issuance of a Subscriber Certificate. ISRG's automated processes confirm that all requested names have been properly validated to be controlled by the Subscriber requesting the certificate. The to-be-signed certificate is linted, then signed by a Subordinate CA in an HSM. After issuance is complete, the certificate is stored in a database and made available to the Subscriber.
 
+All issuance from ISRG Root CAs requires direct action from an ISRG PKI Administrator.
+
 ### 4.3.2 Notification to subscriber by the CA of issuance of certificate
 
 Subscriber Certificates are made available to Subscribers via the ACME protocol as soon after issuance as reasonably possible. Typically this happens within a few seconds.
