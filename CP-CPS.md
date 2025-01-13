@@ -834,7 +834,7 @@ Subscriber Public Keys are communicated to ISRG electronically via the ACME prot
 
 ### 6.1.4 CA public key delivery to relying parties
 
-ISRG Public Keys are provided to Relying Parties as part of browser, operating system, or other software trusted root certificate lists.
+ISRG Root CA Public Keys are generally provided to Relying Parties as part of browser, operating system, or other software trusted root certificate lists. ISRG Subordinate CA Public Keys are generally provided to Relying Parties by Subscribers as part of a TLS handshake.
 
 ISRG Public Keys are also available in the Certificate Repository.
 
