@@ -563,11 +563,11 @@ Not applicable.
 
 ISRG Secure PKI Facilities are located in the United States, as are all copies of ISRG CA Private Keys.
 
-ISRG maintains at least two Secure PKI Facilities at all times for the sake of redundancy.
+ISRG maintains at least two Secure PKI Facilities for the sake of redundancy.
 
 Secure PKI Facilities are constructed so as to prevent unauthorized entry or interference.
 
-Secure PKI Facilities are monitored at all times (24x7) so as to prevent unauthorized entry or interference.
+Secure PKI Facilities are monitored at all times so as to prevent unauthorized entry or interference.
 
 ### 5.1.2 Physical access
 
