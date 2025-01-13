@@ -230,6 +230,8 @@ Prior to issuance of a Subscriber Certificate, ISRG uses at least one of the fol
 
 Validation for Wildcard Domain Names is only performed using the DNS Change method.
 
+All validations and CAA checks performed by our Primary Network Perspectives are corroborated by multiple Remote Network Perspectives located in at least two distinct Regional Internet Registries. Each Remote Network Perspective has an independent DNS resolver and cache.
+
 All validations are performed in compliance with the current CAB Forum Baseline Requirements at the time of validation.
 
 ### 3.2.3 Authentication of individual identity
