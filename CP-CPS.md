@@ -610,9 +610,9 @@ All persons, employees or otherwise, with the ability to materially impact the o
 
 Trusted Roles include:
 
+* PKI Administrators, whose responsibilities include but are not limited to designing, implementing, and operating CA Infrastructure and Network Equipment.
+* PKI Software Engineers, whose responsibilities include but are not limited to designing and implementing CA Infrastructure. Per the principle of least privilege, PKI Software Engineers have less access to CA Infrastructure and Network Equipment than PKI Administrators.
 * PKI Managers, whose responsibilities include decision-making authority over CA operations.
-* PKI Administrators, whose responsibilities include but are not limited to designing, operating, and maintaining CA Infrastructure and Network Equipment.
-* PKI Software Engineers, whose responsibilities include but are not limited to designing, building, and developing CA Infrastructure. Per the principle of least privilege, PKI Software Engineers have less access to CA Infrastructure and Network Equipment than PKI Administrators.
 
 Each Trusted Role requires an appropriate level of training and legal obligation.
 
