@@ -117,8 +117,6 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 **ACME Protocol**: A protocol used for validation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
 
-**Baseline Requirements**: A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
-
 **CAB Forum**: Certificate Authority / Browser Forum, a group of CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
 
 **Certificate Repository**: A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
@@ -131,9 +129,7 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 **Trusted Contributor**: A contributor who performs in a Trusted Role. Trusted Contributors may be employees, contractors, or community members. Trusted Contributors must be properly trained and qualified, and have the proper legal obligations in place before performing in a Trusted Role.
 
-**Trusted Role**: A role which qualifies a person to access or modify ISRG PKI systems, infrastructure, and confidential information.
-
-See the Baseline Requirements for additional definitions.
+See the Baseline Requirements and NetSec Requirements for additional definitions.
 
 ### 1.6.2 Acronyms
 
@@ -148,13 +144,13 @@ See the Baseline Requirements for additional definitions.
 | SAN | Subject Alternative Name |
 | TLD | Top Level Domain |
 
-See the Baseline Requirements for additional acronyms.
+See the Baseline Requirements and NetSec Requirements for additional acronyms.
 
 ### 1.6.3 References
 
-[CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/)
+The "Baseline Requirements": [CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/)
 
-[CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/)
+The "NetSec Requirements": [CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/)
 
 ### 1.6.4 Conventions
 
@@ -610,26 +606,13 @@ ISRG maintains multiple backups of ISRG CA Private Keys at multiple Secure PKI F
 
 ### 5.2.1 Trusted roles
 
-All persons, employees or otherwise, with the ability to materially impact the operation of ISRG PKI systems and services, or the ability to view CA confidential information, can only do so while designated as serving in a Trusted Role.
+All persons, employees or otherwise, with the ability to materially impact the operation of ISRG PKI systems and services can only do so while designated as serving in a Trusted Role.
 
-Trusted Roles include, but are not limited to:
+Trusted Roles include:
 
-* PKI Administrators
-  * Confidential Information: Direct access on a need-to-know basis
-  * Environment Access: Test yes, production yes
-  * CA Decision-making Authority: Yes
-* PKI Staff
-  * Confidential Information: View on a need-to-know basis
-  * Environment Access: Test yes, production no
-  * CA Decision-making Authority: Yes
-* PKI Partners
-  * Confidential Information: View on a need-to-know basis
-  * Environment Access: Test yes, production no
-  * CA Decision-making Authority: No
-* Non-PKI Staff
-  * Confidential Information: View on a need-to-know basis
-  * Environment Access: Test no, production no
-  * CA Decision-making Authority: No
+* PKI Administrators, whose responsibilities include but are not limited to designing, implementing, and operating CA Infrastructure and Network Equipment.
+* PKI Software Engineers, whose responsibilities include but are not limited to designing and implementing CA Infrastructure. Per the principle of least privilege, PKI Software Engineers have less access to CA Infrastructure and Network Equipment than PKI Administrators.
+* PKI Managers, whose responsibilities include decision-making authority over CA operations.
 
 Each Trusted Role requires an appropriate level of training and legal obligation.
 
@@ -961,7 +944,7 @@ ISRG maintains a CA testing environment separate from the production environment
 
 ISRG has developed and maintains appropriate change control policies and procedures to be followed any time CA systems are modified. Changes to ISRG CA systems require review by qualified Trusted Personnel who are different from the person requesting the change. Change requests are documented, as are any subsequent required reviews or approvals.
 
-When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems (e.g. PKI Administrators) may have the ability to unilaterally commit code to core CA software. The reverse is also true.
+When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems may have the ability to unilaterally commit code to core CA software. The reverse is also true.
 
 ### 6.6.2 Security management controls
 
