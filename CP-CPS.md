@@ -117,8 +117,6 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 **ACME Protocol**: A protocol used for validation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
 
-**Baseline Requirements**: A document published by the CAB Forum which outlines minimum requirements for publicly trusted Certificate Authorities.
-
 **CAB Forum**: Certificate Authority / Browser Forum, a group of CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
 
 **Certificate Repository**: A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
@@ -150,9 +148,9 @@ See the Baseline Requirements and NetSec Requirements for additional acronyms.
 
 ### 1.6.3 References
 
-[CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/), the "Baseline Requirements"
+The "Baseline Requirements": [CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/)
 
-[CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/), the "NetSec Requirements"
+The "NetSec Requirements": [CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/)
 
 ### 1.6.4 Conventions
 
