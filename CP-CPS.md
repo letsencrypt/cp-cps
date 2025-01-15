@@ -1006,7 +1006,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Validity Period                | Up to 8 years                                                                 |
 | Basic Constraints              | cA=True, pathLength constraint 0 (critical)                                   |
 | Key Usage                      | keyCertSign, cRLSign, digitalSignature (critical)                             |
-| Extended Key Usage             | TLS Server Authentication, TLS Client Authentication                          |
+| Extended Key Usage             | TLS Server Authentication and optionally TLS Client Authentication            |
 | Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                   |
 | Authority Information Access   | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer |
 | Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                        |
@@ -1022,7 +1022,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Validity Period                   | Up to 100 days                                                                    |
 | Basic Constraints                 | cA=False (critical)                                                               |
 | Key Usage                         | digitalSignature, and optionally keyEncipherment (critical)                       |
-| Extended Key Usage                | TLS Server Authentication, TLS Client Authentication                              |
+| Extended Key Usage                | TLS Server Authentication and optionally TLS Client Authentication                |
 | Certificate Policies              | CAB Forum Domain Validated (2.23.140.1.2.1)                                       |
 | Authority Information Access      | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer     |
 | Subject Public Key                | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                            |
