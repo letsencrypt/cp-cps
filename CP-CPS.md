@@ -48,7 +48,7 @@ The following revisions have been made:
 
 ### 1.3.1 Certification authorities
 
-This CP/CPS applies to the ISRG CA.
+This CP/CPS applies to the ISRG PKI.
 
 ### 1.3.2 Registration authorities
 
@@ -785,11 +785,11 @@ In the event that an ISRG CA Private Key is compromised, or suspected to be comp
 
 ### 5.7.4 Business continuity capabilities after a disaster
 
-ISRG maintains multiple geographically diverse facilities, each of which is capable of operating ISRG CA systems independently. In the event that a disaster entirely disables one facility, ISRG CA operations will fail over to another facility.
+ISRG maintains multiple geographically diverse facilities, each of which is capable of operating ISRG PKI systems independently. In the event that a disaster entirely disables one facility, ISRG PKI operations will fail over to another facility.
 
 ## 5.8 CA or RA termination
 
-In the event that ISRG CA services are to be terminated:
+In the event that ISRG PKI services are to be terminated:
 
 * All affected parties, including root programs and Subscribers, will be provided with notice as far in advance as reasonably possible.
 * The ISRG PMA will create and review a termination plan.
@@ -925,7 +925,7 @@ No stipulation.
 
 ### 6.5.1 Specific computer security technical requirements
 
-ISRG CA infrastructure and systems are appropriately secured in order to protect CA software and data from unauthorized access or modification. Access to systems is secured via multi-factor authentication whenever possible. Security updates are applied in a timely fashion. Vulnerability scans are run regularly.
+ISRG PKI infrastructure and systems are appropriately secured in order to protect CA software and data from unauthorized access or modification. Access to systems is secured via multi-factor authentication whenever possible. Security updates are applied in a timely fashion. Vulnerability scans are run regularly.
 
 ### 6.5.2 Computer security rating
 
@@ -937,13 +937,13 @@ No stipulation.
 
 ISRG has developed policies and procedures to effectively manage the acquisition and development of its CA systems.
 
-ISRG CA hardware and software is dedicated solely to performing CA functions.
+ISRG PKI hardware and software is dedicated solely to performing CA functions.
 
 Vendor selection includes an evaluation of reputation in the market, ability to deliver a quality product, vulnerability history, and the likelihood of remaining viable in the future. Physical product deliveries are received by Trusted Contributors and inspected for evidence of tampering. HSMs are shipped in tamper-evident packaging and tamper bag serial numbers are confirmed with the vendor upon receipt.
 
 ISRG maintains a CA testing environment separate from the production environment. The testing environment reasonably emulates the production environment but does not have access to ISRG CA Private Keys used in trusted certificates. The purpose of this testing environment is to allow extensive but safe testing of software and systems that are or will be deployed to the CA production environment.
 
-ISRG has developed and maintains appropriate change control policies and procedures to be followed any time CA systems are modified. Changes to ISRG CA systems require review by qualified Trusted Personnel who are different from the person requesting the change. Change requests are documented, as are any subsequent required reviews or approvals.
+ISRG has developed and maintains appropriate change control policies and procedures to be followed any time CA systems are modified. Changes to ISRG PKI systems require review by qualified Trusted Personnel who are different from the person requesting the change. Change requests are documented, as are any subsequent required reviews or approvals.
 
 When ISRG develops software to be used in CA operations, software development policies are put into place and methodologies are followed in order to ensure software quality and integrity. This always includes a requirement for peer review of code changes. Code commit privileges are granted only to qualified and trusted contributors. Nobody with the ability to deploy software to ISRG PKI systems may have the ability to unilaterally commit code to core CA software. The reverse is also true.
 
