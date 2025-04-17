@@ -448,6 +448,8 @@ No stipulation.
 
 ISRG revokes certificates in accordance with Section 4.9.1.1 and Section 4.9.1.2 of the Baseline Requirements.
 
+Depending on the circumstances, revocation timelines can be as short as 24 hours or even less. Therefore, ISRG strongly recommends against using publicly-trusted TLS server certificates on systems that cannot tolerate timely revocation.
+
 ### 4.9.2 Who can request revocation
 
 Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases.
@@ -770,6 +772,8 @@ See Section 6.1.
 ### 5.7.1 Incident and compromise handling procedures
 
 ISRG has created and maintains incident response procedures for a range of potential compromise and disaster situations. Such situations include, but are not limited to, natural disasters, security incidents, and equipment failure. Incident response plans are reviewed, potentially updated, and tested on at least an annual basis.
+
+ISRG maintains a comprehensive and actionable plan for mass revocation events, performs annual testing of its procedures, and incorporates lessons learned to improve preparedness over time.
 
 ### 5.7.2 Computing resources, software, and/or data are corrupted
 
