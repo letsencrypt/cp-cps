@@ -1296,27 +1296,43 @@ No stipulation.
 
 ## 9.7 Disclaimers of warranties
 
-ISRG certificates and services are provided "as-is." ISRG disclaims any and all warranties of any type, whether express or implied, including and without limitation any implied warranty of title, non-infringement, merchantability, or fitness for a particular purpose, in connection with any ISRG service or ISRG certificate.
+Subscribers acknowledge that use of ISRG’s Services is voluntary and at their own risk. ISRG provides Services "as is" and "as available" without warranties of any kind, except as expressly required by the Baseline Requirements.
 
 ## 9.8 Limitations of liability
 
-ISRG does not accept any liability for any loss, harm, claim, or attorney's fees in connection with any certificates. ISRG will not be liable for any damages, attorney's fees, or recovery, regardless of whether such damages are direct, consequential, indirect, incidental, special, exemplary, punitive, or compensatory, even if ISRG has been advised of the possibility of such damages. This limitation on liability applies irrespective of the theory of liability, i.e., whether the theory of liability is based upon contract, warranty, indemnification, contribution, tort, equity, statute or regulation, common law, or any other source of law, standard of care, category of claim, notion of fault or responsibility, or theory of recovery. This disclaimer is intended to be construed to the fullest extent allowed by applicable law.
+(a) ISRG AND OUR AFFILIATES OR LICENSORS SHALL NOT BE LIABLE TO ANY SUBSCRIBER OR THIRD PARTY FOR ANY DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES (INCLUDING DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES), WHETHER IN AN ACTION IN CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OR INABILITY TO USE OUR SERVICES, EXCEPT AS OTHERWISE REQUIRED BY THE BASELINE REQUIREMENTS. EXAMPLES OF NONLIABILITY INCLUDE ANY COMPENSATION, REIMBURSEMENT, OR DAMAGES ARISING IN CONNECTION WITH: A SUBSCRIBER’S INABILITY TO USE A CERTIFICATE; THE COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; ANY INVESTMENTS, EXPENDITURES, OR COMMITMENTS BY SUBSCRIBER IN CONNECTION WITH THIS CP/CPS OR SUBSCRIBER’S USE OF OR ACCESS TO ISRG’S PKI SERVICE OFFERINGS; OR AN UNAUTHORIZED ACCESS TO, ALTERATION OF, OR THE DELETION, DESTRUCTION, DAMAGE, LOSS, OR FAILURE TO STORE ANY SUBSCRIBER CONTENT OR OTHER DATA. ISRG DISCLAIMS ALL LIABILITY TO CERTIFICATE BENEFICIARIES AND ANY THIRD PARTIES FOR LOSSES RESULTING FROM USE OF OR RELIANCE ON CERTIFICATES.
 
-Without waiving or limiting the foregoing in any way, ISRG does not make, and ISRG expressly disclaims, any warranty regarding its right to use any technology, invention, technical design, process, or business method used in either issuing certificates or providing any of ISRG's services. Each Subscriber affirmatively and expressly waives the right to hold ISRG responsible in any way, or seek indemnification against ISRG, for any infringement of intellectual property rights, including patent, trademark, trade secret, or copyright.
+(b) Each Subscriber affirmatively and expressly waives the right to hold ISRG responsible in any way, or seek indemnification against ISRG, for any infringement of intellectual property rights, including patent, trademark, trade secret, or copyright.
 
 ## 9.9 Indemnities
 
-### 9.9.1 Indemnification by ISRG
+(A) Indemnification by ISRG
+    (i) ISRG shall indemnify each Application Software Supplier who has a Root Certificate distribution agreement in place with the Root CA against any damage or loss suffered by such an Application Software Supplier related to or arising out of any third-party allegation, claim, lawsuit, or proceeding (a “Claim”) to the extent such Claim is based on a Certificate issued by ISRG except where the claim, damage, or loss suffered by the Application Software Supplier was directly caused by the Application Software Supplier’s software or service displaying either:
+        (a) a valid and trustworthy Certificate as not valid or trustworthy, or
+        (b) displaying as trustworthy
+            (i) an Certificate that has expired, or
+            (ii) a revoked Certificate, where the revocation status is available online but the Application Software Supplier’s software or service failed to check or ignored the status.
+    (ii) In connection with any Claim described in the foregoing paragraph (A)(i), the indemnified party will:
+        (a) give ISRG prompt written notice of the Claim (provided that any delay in notification will not relieve ISRG of its indemnity obligations except to the extent that the delay impairs its ability to defend);
+        (b) cooperate reasonably with ISRG (at ISRG’s expense) in connection with the defense and settlement of the Claim; and
+        (c) permit ISRG to control the defense and settlement of the Claim, provided that ISRG may not settle the Claim without the indemnified party’s prior written consent (which will not be unreasonably withheld or delayed), and provided further that the indemnified party (at its cost) may participate in the defense and settlement of the Claim with counsel of its own choosing. ISRG’s duty to indemnify under this Section 9.9 is independent from its other obligations under this CP/CPS.
 
-ISRG does not provide any indemnification.
+(B) Indemnification by Subscribers
 
-### 9.9.2 Indemnification by Subscribers
+To the extent permitted by law, each Subscriber shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney’s fees, arising out of or related to:
 
-Each Subscriber will indemnify and hold harmless ISRG and its directors, officers, employees, agents, and affiliates from any and all liabilities, claims, demands, damages, losses, costs, and expenses, including attorneys' fees, arising out of or related to: (i) any misrepresentation or omission of material fact by Subscriber to ISRG, irrespective of whether such misrepresentation or omission was intentional, (ii) Subscriber's violation of the Subscriber Agreement, (iii) any compromise or unauthorized use of an ISRG certificate or corresponding Private Key, or (iv) Subscriber's misuse of an ISRG certificate. If applicable law prohibits Subscriber from providing indemnification for another party's negligence or acts, such restriction, or any other restriction required by law for this indemnification provision to be enforceable, shall be deemed to be part of this indemnification provision.
+    (i) any misrepresentation or omission by Subscriber, regardless of whether the misrepresentation or omission was intentional or unintentional;
+    (ii) Subscriber’s breach of its Subscriber Agreement, this CP/CPS, or applicable law;
+    (iii) the compromise or unauthorized use of a certificate or Private Key caused by the Subscriber’s negligence or intentional acts; or
+    (iv) Subscriber’s misuse of a certificate or Private Key.
 
-### 9.9.3 Indemnification by Relying Parties
+(C) Indemnification by Relying Parties
 
-To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, entities that have cross-signed or issued sub-CAs for ISRG, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, related to the Relying Party's (i) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CP/CPS, or applicable law; (ii) unreasonable reliance on a certificate; or (iii) failure to check the certificate's status prior to use.
+To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney’s fees, arising out of or related to:
+
+    (i) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CP/CPS, or applicable law;
+    (ii) unreasonable reliance on a Certificate; or
+    (iii) failure to check the Certificate’s status prior to use.
 
 ## 9.10 Term and termination
 
