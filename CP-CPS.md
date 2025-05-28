@@ -1321,7 +1321,7 @@ In connection with any Claim described in the foregoing paragraph 9.9.1.1, the i
 
 (a) give ISRG prompt written notice of the Claim (provided that any delay in notification will not relieve ISRG of its indemnity obligations except to the extent that the delay impairs its ability to defend);  
 (b) cooperate reasonably with ISRG (at ISRG's expense) in connection with the defense and settlement of the Claim; and  
-(c) permit ISRG to control the defense and settlement of the Claim, provided that ISRG may not settle the Claim without the indemnified party’s prior written consent (which will not be unreasonably withheld or delayed), and provided further that the indemnified party (at its cost) may participate in the defense and settlement of the Claim with counsel of its own choosing. ISRG's duty to indemnify under this Section 9.9.1 is independent from its other obligations under this CP/CPS.
+(c) permit ISRG to control the defense and settlement of the Claim, provided that ISRG may not settle the Claim without the indemnified party's prior written consent (which will not be unreasonably withheld or delayed), and provided further that the indemnified party (at its cost) may participate in the defense and settlement of the Claim with counsel of its own choosing. ISRG's duty to indemnify under this Section 9.9.1 is independent from its other obligations under this CP/CPS.
 
 ### 9.9.2 Indemnification by Subscribers
 
