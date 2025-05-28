@@ -1334,7 +1334,7 @@ To the extent permitted by law, each Subscriber shall indemnify ISRG, its partne
 
 ### 9.9.3	Indemnification by Relying Parties
 
-To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney’s fees, arising out of or related to: 
+To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, arising out of or related to: 
 
 (a) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CP/CPS, or applicable law;  
 (b) unreasonable reliance on a Certificate; or  
