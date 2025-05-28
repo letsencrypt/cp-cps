@@ -1325,7 +1325,7 @@ In connection with any Claim described in the foregoing paragraph 9.9.1.1, the i
 
 ### 9.9.2 Indemnification by Subscribers
 
-To the extent permitted by law, each Subscriber shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney’s fees, arising out of or related to:
+To the extent permitted by law, each Subscriber shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, arising out of or related to:
 
 (a) any misrepresentation or omission by Subscriber, regardless of whether the misrepresentation or omission was intentional or unintentional;  
 (b) Subscriber’s breach of its Subscriber Agreement, this CP/CPS, or applicable law;  
