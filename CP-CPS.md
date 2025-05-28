@@ -1296,7 +1296,7 @@ No stipulation.
 
 ## 9.7 Disclaimers of warranties
 
-Subscribers acknowledge that use of ISRG’s Services is voluntary and at their own risk. ISRG provides Services “as is” and “as available” without warranties of any kind, except as expressly required by the Baseline Requirements.
+Subscribers acknowledge that use of ISRG's Services is voluntary and at their own risk. ISRG provides Services "as is" and "as available" without warranties of any kind, except as expressly required by the Baseline Requirements.
 
 ## 9.8 Limitations of liability
 
