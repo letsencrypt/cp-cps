@@ -1310,7 +1310,7 @@ Without waiving or limiting the foregoing in any way, ISRG does not make, and IS
 
 #### 9.9.1.1 Indemnification of Application Software Suppliers
 
-ISRG shall indemnify each Application Software Supplier that has a Root Certificate distribution agreement in place with the Root CA against any damage or loss suffered by such an Application Software Supplier related to or arising out of any third-party allegation, claim, lawsuit, or proceeding (a "Claim") to the extent such Claim is based on a Certificate issued by ISRG except where the claim, damage, or loss suffered by the Application Software Supplier was directly caused by the Application Software Supplier’s software or service displaying either:
+ISRG shall indemnify each Application Software Supplier that has a Root Certificate distribution agreement in place with the Root CA against any damage or loss suffered by such an Application Software Supplier related to or arising out of any third-party allegation, claim, lawsuit, or proceeding (a "Claim") to the extent such Claim is based on a Certificate issued by ISRG except where the claim, damage, or loss suffered by the Application Software Supplier was directly caused by the Application Software Supplier's software or service displaying either:
 
 (a) a valid and trustworthy Certificate as not valid or trustworthy, or  
 (b) displaying as trustworthy either (i) a Certificate that has expired, or (ii) a revoked Certificate, where the revocation status is available online but the Application Software Supplier's software or service failed to check or ignored the status.
