@@ -1328,9 +1328,9 @@ In connection with any Claim described in the foregoing paragraph 9.9.1.1, the i
 To the extent permitted by law, each Subscriber shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, arising out of or related to:
 
 (a) any misrepresentation or omission by Subscriber, regardless of whether the misrepresentation or omission was intentional or unintentional;  
-(b) Subscriber’s breach of its Subscriber Agreement, this CP/CPS, or applicable law;  
-(c) the compromise or unauthorized use of a certificate or Private Key caused by the Subscriber’s negligence or intentional acts; or  
-(d) Subscriber’s misuse of a certificate or Private Key.
+(b) Subscriber's breach of its Subscriber Agreement, this CP/CPS, or applicable law;  
+(c) the compromise or unauthorized use of a certificate or Private Key caused by the Subscriber's negligence or intentional acts; or  
+(d) Subscriber's misuse of a certificate or Private Key.
 
 ### 9.9.3	Indemnification by Relying Parties
 
