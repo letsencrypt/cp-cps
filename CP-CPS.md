@@ -1338,7 +1338,7 @@ To the extent permitted by law, each Relying Party shall indemnify ISRG, its par
 
 (a) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CP/CPS, or applicable law;  
 (b) unreasonable reliance on a Certificate; or  
-(c) failure to check the Certificate’s status prior to use.
+(c) failure to check the Certificate's status prior to use.
 
 ## 9.10 Term and termination
 
