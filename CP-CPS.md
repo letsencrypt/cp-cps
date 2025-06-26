@@ -597,7 +597,7 @@ ISRG Secure PKI Facilities are designed to prevent accidental damage or unauthor
 
 ### 5.1.7 Waste disposal
 
-ISRG prohibits any media that contains or has contained sensitive data from leaving organizational control in such a state that it may still be operational, or contain recoverable data. Such media may include printed documents or digital storage devices. When media that has contained sensitive information reaches its end of life, the media is securely erased or physically destroyed such that recovery is reasonably believed to be impossible.
+ISRG prohibits any media that contains or has contained sensitive data from leaving organizational control unless action has been taken to render any data practically unrecoverable. Such media may include printed documents or digital storage devices. When media that has contained sensitive information reaches its end of life, the media is securely erased or physically destroyed such that recovery is reasonably believed to be impossible.
 
 ### 5.1.8 Off-site backup
 
