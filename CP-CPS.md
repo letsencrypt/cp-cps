@@ -1296,7 +1296,7 @@ No stipulation.
 
 ## 9.7 Disclaimers of warranties
 
-ISRG certificates and services are provided "as-is." ISRG disclaims any and all warranties of any type, whether express or implied, including and without limitation any implied warranty of title, non-infringement, merchantability, or fitness for a particular purpose, in connection with any ISRG service or ISRG certificate.
+The use of Services is voluntary and at the Subscriber's own risk. ISRG provides Services "as is" and "as available" without warranties of any kind, except as expressly required by the Baseline Requirements.
 
 ## 9.8 Limitations of liability
 
