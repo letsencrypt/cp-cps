@@ -122,6 +122,8 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 **Certificate Repository**: A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
 
+**Identifier**: A value included, or requested to be included, in a Certificate's Subject or Subject Alternative Name field, such as a Fully-Qualified Domain Name (FQDN) or an Internet Protocol (IP) address.
+
 **Policy and Legal Repository**: A repository of policy and legal documents related to the ISRG PKI. It is located at: <https://letsencrypt.org/repository/>
 
 **Precertificate**: As defined by RFC 6962 Section 3.1.
@@ -193,7 +195,7 @@ No stipulation.
 
 ### 3.1.3 Anonymity or pseudonymity of subscribers
 
-Subscribers are not identified in DV certificates. Certificates do not assert any specific relationship between Subscribers and registrants of domain names contained in certificates. Relying Parties should consider DV certificate Subscribers to be anonymous.
+Subscribers are not identified in DV certificates. Certificates do not assert any specific relationship between Subscribers and registrants of Identifiers contained in certificates. Relying Parties should consider DV certificate Subscribers to be anonymous.
 
 ### 3.1.4 Rules for interpreting various name forms
 
@@ -292,7 +294,7 @@ Certificate information is verified using data and documents obtained no more th
 
 As part of the validation process, ISRG checks for CAA records for each requested DNS name and follows the processing instructions found as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
-ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains. Requests for removal from the high-risk domains list are considered, but generally require further documentation confirming control of the domain from the Applicant, or other proof as ISRG management deems necessary.
+ISRG maintains a list of high-risk domains and IP addresses and blocks issuance of certificates containing Identifiers on the high-risk list.
 
 ### 4.2.2 Approval or rejection of certificate applications
 
@@ -1262,9 +1264,9 @@ ISRG does not use RA services from third parties.
 
 ### 9.6.3 Subscriber representations and warranties
 
-1. Each Subscriber warrants to ISRG and the public-at-large that Subscriber is the legitimate registrant of the Internet domain name that is, or is going to be, the subject of the ISRG certificate issued to Subscriber, or that Subscriber is the duly authorized agent of such registrant.
-2. Each Subscriber warrants to ISRG and the public-at-large that either (a) Subscriber did not obtain control of such domain name as the result of a seizure of such domain name, or (b) such domain name had no ongoing lawful uses at the time of such seizure.
-3. Each Subscriber warrants that all information in the ISRG certificate issued to Subscriber regarding Subscriber or its domain name is accurate, current, reliable, complete, and not misleading.
+1. Each Subscriber warrants to ISRG and the public-at-large that Subscriber is the legitimate registrant of the Identifier that is, or is going to be, the subject of the ISRG certificate issued to Subscriber, or that Subscriber is the duly authorized agent of such registrant.
+2. Each Subscriber warrants to ISRG and the public-at-large that either (a) Subscriber did not obtain control of such Identifier as the result of a seizure of such Identifier, or (b) such Identifier had no ongoing lawful uses at the time of such seizure.
+3. Each Subscriber warrants that all information in the ISRG certificate issued to Subscriber regarding Subscriber or its Identifier is accurate, current, reliable, complete, and not misleading.
 4. Each Subscriber warrants that all information provided by Subscriber to ISRG is accurate, current, complete, reliable, complete, and not misleading.
 5. Each Subscriber warrants that Subscriber rightfully holds the Private Key corresponding to the Public Key listed in the ISRG certificate issued to Subscriber.
 6. Each Subscriber warrants that Subscriber has taken all appropriate, reasonable, and necessary steps to secure and keep Subscriber's Private Key secret.
