@@ -122,7 +122,7 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 **Certificate Repository**: A repository of information about ISRG certificates. It is located at: <https://letsencrypt.org/certificates/>
 
-**Identifier**: A value included, or requested to be included, in a Certificate's Subject or Subject Alternative Name field, such as a Fully-Qualified Domain Name (FQDN) or an Internet Protocol (IP) address.
+**Identifier**: A value included, or requested to be included, in a Subscriber Certificate's Subject Common Name field or Subject Alternative Name extension, such as a Fully-Qualified Domain Name (FQDN) or an Internet Protocol (IP) address.
 
 **Policy and Legal Repository**: A repository of policy and legal documents related to the ISRG PKI. It is located at: <https://letsencrypt.org/repository/>
 
