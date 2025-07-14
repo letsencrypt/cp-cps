@@ -294,7 +294,7 @@ Certificate information is verified using data and documents obtained no more th
 
 As part of the validation process, ISRG checks for CAA records for each requested DNS name and follows the processing instructions found as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
-ISRG maintains a list of high-risk domains and IP addresses and blocks issuance of certificates containing Identifiers on the high-risk list.
+ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains.
 
 ### 4.2.2 Approval or rejection of certificate applications
 
