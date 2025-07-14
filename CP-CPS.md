@@ -232,6 +232,8 @@ Similarly, ISRG uses at least one of the following methods to validate the Appli
 
 Validation for Wildcard Domain Names is only performed using the DNS Change method.
 
+All successful validations and CAA checks performed by our Primary Network Perspectives are corroborated by multiple remote Network Perspectives located in at least two distinct Regional Internet Registries. Each remote Network Perspective has an independent DNS resolver and cache.
+
 All validations are performed in compliance with the current CAB Forum Baseline Requirements at the time of validation.
 
 ### 3.2.3 Authentication of individual identity
