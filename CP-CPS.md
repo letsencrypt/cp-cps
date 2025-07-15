@@ -1129,7 +1129,7 @@ See Section 8.7 for information about the frequency of self-audits.
 
 ## 8.2 Identity/qualifications of assessor
 
-ISRG's compliance audits are performed by a licensed WebTrust auditor who is independent from ISRG and Qualified per the criteria in Section 8.2 of the Baseline Requirements. 
+ISRG's WebTrust compliance audits are performed by a licensed WebTrust auditor who is independent from ISRG and qualified per the criteria in Section 8.2 of the Baseline Requirements. 
 
 ## 8.3 Assessor's relationship to assessed entity
 
