@@ -456,19 +456,21 @@ Depending on the circumstances, revocation timelines can be as short as 24 hours
 
 ### 4.9.2 Who can request revocation
 
-Anyone can revoke any certificate via the ACME API if they can sign the revocation request with the private key associated with the certificate. No other information is required in such cases.
+Anyone can request revocation at any time via the Certificate Revocation interface of the ACME Protocol, as defined in Section 7.6 of RFC 8555.
 
-Anyone can revoke any certificate via the ACME API if they can demonstrate control over all Subject Alternative Names covered by the certificate. No other information is required in such cases.
-
-Subscribers can revoke certificates belonging to their accounts via the ACME API if they can sign the revocation request with the associated account private key. No other information is required in such cases.
+Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org).
 
 ISRG may administratively revoke certificates if it determines that the Subscriber has failed to meet obligations under this CP/CPS, the relevant Subscriber Agreement, or any other applicable agreement, regulation, or law. Certificates may also be administratively revoked at ISRG management's discretion.
 
 ### 4.9.3 Procedure for revocation request
 
-Anyone may make revocation requests, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. See section 4.9.2 for additional information.
+Revocation requests made via the ACME API are processed automatically. The certificate identified in the revocation request is revoked if:
 
-Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG responds to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
+* the request is signed with the private key associated with the certificate;
+* the request is signed with the account key of the Subscriber which originally requested issuance of the certificate; or
+* the request is signed with the account key of a Subscriber who has demonstrated control over all Subject Alternative Names in the certificate.
+
+ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG responds to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
 An investigation into whether revocation or other appropriate action is warranted is based on at least the following criteria:
 
@@ -476,6 +478,8 @@ An investigation into whether revocation or other appropriate action is warrante
 2. The number of Certificate Problem Reports received about a particular Certificate or Subscriber;
 3. The entity making the complaint; and
 4. Relevant legislation.
+
+In all cases, requests to revoke Short-Lived Subscriber Certificates may be ignored.
 
 ### 4.9.4 Revocation request grace period
 
@@ -517,7 +521,7 @@ ISRG considers key compromise demonstrated when revocation is successfully reque
 
 ISRG may also consider key compromise demonstrated by non-ACME methods.
 
-When key compromise is demonstrated, ISRG blocks the key from use in future issuance and revokes all unexpired certificates that used that key.
+When key compromise is demonstrated, ISRG blocks the key from use in future issuance and revokes all unexpired non-Short-Lived Subscriber Certificates that used that key.
 
 ISRG does not consider a key compromised unless key compromise is demonstrated, but may revoke a certificate with reason code `keyCompromise` for other reasons. In these cases ISRG may not block the key from future use or revoke certificates using that key, even if the stated reason code is `keyCompromise`.
 
@@ -807,7 +811,7 @@ If a suitable successor entity exists, the following steps will be taken:
 
 If a suitable successor entity does not exist, the following steps will be taken:
 
-* All certificates issued will be revoked and final CRLs will be published.
+* All unexpired Subordinate CA Certificates and non-Short-Lived Subscriber Certificates will be revoked and final CRLs will be published.
 * ISRG CA Private Keys will be destroyed.
 * CA records, logs, and other critical documentation will be transferred to a third party or government entity with appropriate legal controls in place to protect information while allowing its use in compliance with relevant policies and the law.
 
