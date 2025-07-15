@@ -1134,9 +1134,9 @@ ISRG's WebTrust compliance audits are performed by a qualified auditor. A qualif
 1. Independence from the subject of the audit (which is ISRG);
 2. The ability to conduct an audit that addresses the relevant criteria specified in an Eligible Audit Scheme (see Section 8.4);
 3. Employs individuals who have proficiency in examining Public Key Infrastructure technology, information security tools and techniques, information technology and security auditing, and the third-party attestation function;
-5. Licensed by WebTrust;
-6. Bound by law, government regulation, or professional code of ethics; and
-7. Except in the case of an Internal Government Auditing Agency, maintains Professional Liability/Errors & Omissions insurance with policy limits of at least one million US dollars in coverage
+4. Licensed by WebTrust;
+5. Bound by law, government regulation, or professional code of ethics; and
+6. Except in the case of an Internal Government Auditing Agency, maintains Professional Liability/Errors & Omissions insurance with policy limits of at least one million US dollars in coverage
 
 ## 8.3 Assessor's relationship to assessed entity
 
