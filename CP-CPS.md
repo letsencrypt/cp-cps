@@ -466,7 +466,7 @@ ISRG may administratively revoke certificates if it determines that the Subscrib
 
 ### 4.9.3 Procedure for revocation request
 
-Anyone may make revocation requests, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. See section 4.9.12 for additional information.
+Anyone may make revocation requests, at any time, via the Certificate Revocation interface of the ACME Protocol defined in RFC 8555 section 7.6. See section 4.9.2 for additional information.
 
 Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org). ISRG maintains a continuous (24x7) ability to accept and respond to revocation requests and Certificate Problem Reports. ISRG responds to such requests within 24 hours, though an investigation into the legitimacy of the request may take longer.
 
