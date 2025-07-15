@@ -1129,15 +1129,7 @@ See Section 8.7 for information about the frequency of self-audits.
 
 ## 8.2 Identity/qualifications of assessor
 
-ISRG's WebTrust compliance audits are performed by a qualified auditor. A qualified auditor means a natural person, legal entity, or group of natural persons or legal entities that collectively possess the following qualifications and skills:
-
-1. Independence from the subject of the audit (which is ISRG);
-2. The ability to conduct an audit that addresses the relevant criteria specified in an Eligible Audit Scheme (see Section 8.4);
-3. Employs individuals who have proficiency in examining Public Key Infrastructure technology, information security tools and techniques, information technology and security auditing, and the third-party attestation function;
-4. (For audits conducted in accordance with any one of the ETSI standards) accredited in accordance with ISO 17065 applying the requirements specified in ETSI EN 319 403;
-5. (For audits conducted in accordance with the WebTrust standard) licensed by WebTrust;
-6. Bound by law, government regulation, or professional code of ethics; and
-7. Except in the case of an Internal Government Auditing Agency, maintains Professional Liability/Errors & Omissions insurance with policy limits of at least one million US dollars in coverage
+ISRG's WebTrust compliance audits are performed by a licensed WebTrust auditor who is independent from ISRG and qualified per the criteria in Section 8.2 of the Baseline Requirements. 
 
 ## 8.3 Assessor's relationship to assessed entity
 
