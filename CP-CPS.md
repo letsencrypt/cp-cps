@@ -456,7 +456,7 @@ Depending on the circumstances, revocation timelines can be as short as 24 hours
 
 ### 4.9.2 Who can request revocation
 
-Anyone can request revocation at any time via the Certificate Revocation interface of the ACME Protocol, as defined in Section 7.6 of RFC 8555.
+Anyone can request revocation at any time via the certificate revocation interface of the ACME Protocol, as defined in Section 7.6 of RFC 8555.
 
 Requests for revocation may also be made by emailing [cert-prob-reports@letsencrypt.org](mailto:cert-prob-reports@letsencrypt.org).
 
@@ -479,7 +479,7 @@ An investigation into whether revocation or other appropriate action is warrante
 3. The entity making the complaint; and
 4. Relevant legislation.
 
-In all cases, requests to revoke Short-Lived Subscriber Certificates may be ignored.
+In all cases, requests to revoke Short-lived Subscriber Certificates may be ignored.
 
 ### 4.9.4 Revocation request grace period
 
