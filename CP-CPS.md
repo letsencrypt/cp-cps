@@ -52,15 +52,15 @@ This CP/CPS applies to the ISRG PKI.
 
 ### 1.3.2 Registration authorities
 
-ISRG does not delegate any of the Section 3.2 requirements to a Delegated Third Party. ISRG serves as its own RA.
+ISRG does not delegate any of the [Section 3.2](#32-initial-identity-validation) activities to a Delegated Third Party. ISRG serves as its own RA.
 
 ### 1.3.3 Subscribers
 
-See definition of "Subscriber" in Section 1.6.1 Definitions.
+See definition of "Subscriber" in [Section 1.6.1](#161-definitions).
 
 ### 1.3.4 Relying parties
 
-See definition of "Relying Party" in Section 1.6.1 Definitions.
+See definition of "Relying Party" in [Section 1.6.1](#161-definitions).
 
 ### 1.3.5 Other participants
 
@@ -94,7 +94,7 @@ P.O. Box 18666<br>
 Minneapolis, MN 55418-0666<br>
 USA<br>
 
-Certificate revocation requests can be made via the ACME API. Please see Section 4.9.3 for more information.
+Certificate revocation requests can be made via the ACME API. Please see [Section 4.9.3](#493-procedure-for-revocation-request) for more information.
 
 Certificate Problem Reports can be submitted via email to:
 
@@ -258,15 +258,15 @@ ISRG discloses Cross-Certified Subordinate CA Certificates in its Certificate Re
 
 ### 3.3.1 Identification and authentication for routine re-key
 
-See Section 4.7.
+See [Section 4.7](#47-certificate-re-key).
 
 ### 3.3.2 Identification and authentication for re-key after revocation
 
-See Section 4.7.
+See [Section 4.7](#47-certificate-re-key).
 
 ## 3.4 Identification and authentication for revocation request
 
-Identification and authentication for revocation requests is performed by ISRG as described by Section 4.9 of this document.
+Identification and authentication for revocation requests is performed by ISRG as described by [Section 4.9](#49-certificate-revocation-and-suspension).
 
 Identification and authentication are not required when ISRG is requesting revocation.
 
@@ -290,7 +290,7 @@ The enrollment process involves the following steps, in no particular order:
 
 ### 4.2.1 Performing identification and authentication functions
 
-ISRG performs all identification and authentication functions in accordance with this CP/CPS. This includes validation per Section 3.2.2.
+ISRG performs all identification and authentication functions in accordance with this CP/CPS. This includes validation per [Section 3.2.2](#322-authentication-of-organization-identity).
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
@@ -300,7 +300,7 @@ ISRG maintains a list of high-risk domains and blocks issuance of certificates f
 
 ### 4.2.2 Approval or rejection of certificate applications
 
-Approval requires successful completion of validation per Section 3.2.2 as well as compliance with all CA policies.
+Approval requires successful completion of validation per [Section 3.2.2](#322-authentication-of-organization-identity) as well as compliance with all CA policies.
 
 The CA Server is periodically updated with the latest version of the Public Suffix List and consults the ICANN domains section for every requested DNS identifier. The CA server rejects issuance requests for DNS identifiers that do not have a Public Suffix in the ICANN domains section.
 
@@ -328,7 +328,7 @@ No stipulation.
 
 ### 4.4.2 Publication of the certificate by the CA
 
-See Section 2.2 of this document for Root and Subordinate CA certificate publication information.
+See [Section 2.2](#22-publication-of-certification-information) for Root and Subordinate CA certificate publication information.
 
 All Subscriber Certificates are made available to Subscribers via the ACME protocol. They are also submitted to Certificate Transparency logs on a best-effort basis.
 
@@ -336,7 +336,7 @@ ISRG does not guarantee issuance of a final certificate for every Precertificate
 
 ### 4.4.3 Notification of certificate issuance by the CA to other entities
 
-See Section 4.4.2.
+See [Section 4.4.2](#422-approval-or-rejection-of-certificate-applications).
 
 ## 4.5 Key pair and certificate usage
 
@@ -483,17 +483,17 @@ There is no grace period for a revocation request. A revocation request must be 
 
 ### 4.9.5 Time within which CA must process the revocation request
 
-Investigation into a revocation request begins within 24 hours of receiving the request. Revocation, if necessary, is carried out within the timeframes set by Baseline Requirements Sections 4.9.1.1 and 4.9.1.2.
+Investigation into a revocation request begins within 24 hours of receiving the request. Revocation, if necessary, is carried out within the timeframes set by Sections 4.9.1.1 and 4.9.1.2 of the Baseline Requirements.
 
 ### 4.9.6 Revocation checking requirement for relying parties
 
 It is recommended, but not required, that Relying Parties verify the revocation status of ISRG certificates when revocation information is provided by ISRG. Relying Parties who cannot or choose not to check certificate revocation status, but decide to rely on a certificate anyway, do so at their own risk.
 
-See Section 4.5.2.
+See [Section 4.5.2](#452-relying-party-public-key-and-certificate-usage).
 
 ### 4.9.7 CRL issuance frequency (if applicable)
 
-ISRG issues updated CRLs with the frequency required by the Baseline Requirements.
+ISRG issues updated CRLs with the frequency required by Section 4.9.7 of the Baseline Requirements.
 
 ### 4.9.8 Maximum latency for CRLs (if applicable)
 
@@ -633,7 +633,7 @@ Anyone performing work in a Trusted Role must identify and authenticate themselv
 
 ### 5.2.4 Roles requiring separation of duties
 
-See Section 6.6.1.
+See [Section 6.6.1](#661-system-development-controls).
 
 ## 5.3 Personnel controls
 
@@ -675,7 +675,7 @@ Once management becomes aware of non-compliance the Trusted Contributor(s) in qu
 
 ### 5.3.7 Independent contractor requirements
 
-Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CP/CPS. This includes those described in Section 5.3. Potential sanctions for unauthorized activities by independent contractors are described in Section 5.3.6.
+Independent contractors who are assigned to perform Trusted Roles are subject to the duties and requirements specified for such roles in this CP/CPS. This includes those described in [Section 5.3](#53-personnel-controls). Potential sanctions for unauthorized activities by independent contractors are described in [Section 5.3.6](#536-sanctions-for-unauthorized-actions).
 
 ### 5.3.8 Documentation supplied to personnel
 
@@ -737,7 +737,7 @@ ISRG Security Officers perform a risk assessment at least annually. This risk as
 
 ### 5.5.1 Types of records archived
 
-ISRG archives all audit logs, the contents of which are described in Section 5.4.1. ISRG also archives other documents and information critical to understanding the historical security and performance of the CA's duties.
+ISRG archives all audit logs, the contents of which are described in [Section 5.4.1](#541-types-of-events-recorded). ISRG also archives other documents and information critical to understanding the historical security and performance of the CA's duties.
 
 ### 5.5.2 Retention period for archive
 
@@ -769,7 +769,7 @@ No stipulation.
 
 ## 5.6 Key changeover
 
-See Section 6.1.
+See [Section 6.1](#61-key-pair-generation-and-installation).
 
 ## 5.7 Compromise and disaster recovery
 
@@ -817,7 +817,7 @@ If a suitable successor entity does not exist, the following steps will be taken
 
 ### 6.1.1 Key pair generation
 
-ISRG CA Private Keys are generated by HSMs meeting the requirements of Section 6.2.1. This occurs during a ceremony meeting the requirements of this CP/CPS.
+ISRG CA Private Keys are generated by HSMs meeting the specifications described in [Section 6.2.1](#621-cryptographic-module-standards-and-controls). This occurs during a ceremony meeting the requirements of this CP/CPS.
 
 See the Let's Encrypt Subscriber Agreement for information regarding Subscriber key pair generation. Once submitted as part of a certificate request, Subscriber Public Keys are rejected if they do not meet our size requirements (see Section 6.1.5), can be easily compromised by certain attacks (e.g. ROCA, Fermat factorization), or appear in our database of known-weak and known-compromised keys.
 
@@ -847,13 +847,13 @@ Public keys in Subscriber Certificates issued by ISRG are either RSA keys whose 
 
 ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
 
-Per [NIST SP 800‐89](https://doi.org/10.6028/NIST.SP.800-89), section 5.3.3, the CA ensures that all RSA keys in ISRG CA and Subscriber certificates have a public exponent of 65537 and an odd modulus which has no factors smaller than 752.
+Per [NIST SP 800‐89](https://doi.org/10.6028/NIST.SP.800-89) Section 5.3.3, the CA ensures that all RSA keys in ISRG CA and Subscriber certificates have a public exponent of 65537 and an odd modulus which has no factors smaller than 752.
 
-Per [NIST SP 800-56A (Revision 2)](https://doi.org/10.6028/NIST.SP.800-56Ar2), Section 5.6.2.3.2, the CA ensures that all ECDSA keys in ISRG CA and Subscriber certificates comply with the ECC Full Public Key Validation Routine.
+Per [NIST SP 800-56A (Revision 2)](https://doi.org/10.6028/NIST.SP.800-56Ar2) Section 5.6.2.3.2, the CA ensures that all ECDSA keys in ISRG CA and Subscriber certificates comply with the ECC Full Public Key Validation Routine.
 
 ### 6.1.7 Key usage purposes (as per X.509 v3 key usage field)
 
-See Section 7, Certificate Profiles.
+See [Section 7](#7-certificate-crl-and-ocsp-profiles).
 
 ## 6.2 Private Key Protection and Cryptographic Module Engineering Controls
 
@@ -883,7 +883,7 @@ ISRG CA Private Keys are generated inside HSMs and are only transferred between 
 
 ### 6.2.7 Private key storage on cryptographic module
 
-ISRG CA Private Keys are stored on HSMs meeting the requirements stated in Section 6.2.1.
+ISRG CA Private Keys are stored on HSMs meeting the requirements stated in [Section 6.2.1](#621-cryptographic-module-standards-and-controls).
 
 ### 6.2.8 Method of activating private key
 
@@ -899,17 +899,17 @@ ISRG CA Private Keys are destroyed by Trusted Contributors using a FIPS 140-2 (o
 
 ### 6.2.11 Cryptographic Module Rating
 
-See Section 6.2.1.
+See [Section 6.2.1](#621-cryptographic-module-standards-and-controls).
 
 ## 6.3 Other aspects of key pair management
 
 ### 6.3.1 Public key archival
 
-See Section 5.5.
+See [Section 5.5](#55-records-archival).
 
 ### 6.3.2 Certificate operational periods and key pair usage periods
 
-See Section 7.1 for Certificate validity periods.
+See [Section 7.1](#71-certificate-profile) for Certificate validity periods.
 
 ISRG Root and Subordinate CA key pairs have lifetimes corresponding to their certificates. Subscriber key pairs may be re-used indefinitely provided that there is no suspicion or confirmation of Private Key compromise.
 
@@ -973,7 +973,7 @@ ISRG Root CA Private Keys are stored offline in a secure manner.
 
 ## 6.8 Time-stamping
 
-See Section 5.5.5.
+See [Section 5.5.5](#555-requirements-for-time-stamping-of-records).
 
 # 7. CERTIFICATE, CRL, AND OCSP PROFILES
 
@@ -1125,11 +1125,11 @@ WebTrust compliance audits are intended to ensure a CA's compliance with its CP 
 
 WebTrust compliance audit periods cover no more than one year and are scheduled by ISRG annually, every year with no gaps.
 
-See Section 8.7 for information about the frequency of self-audits.
+See [Section 8.7](#87-self-audits) for information about the frequency of self-audits.
 
 ## 8.2 Identity/qualifications of assessor
 
-ISRG's WebTrust compliance audits are performed by a licensed WebTrust auditor who is independent from ISRG and qualified per the criteria in Section 8.2 of the Baseline Requirements. 
+ISRG's WebTrust compliance audits are performed by a licensed WebTrust auditor who is independent from ISRG and qualified per the criteria in Section 8.2 of the Baseline Requirements.
 
 ## 8.3 Assessor's relationship to assessed entity
 
@@ -1360,7 +1360,7 @@ ISRG will communicate the conditions and effect of this CP/CPS's termination via
 
 ## 9.11 Individual notices and communications with participants
 
-ISRG accepts notices related to this CP/CPS at the locations specified in Section 1.5.2 of this CP/CPS. Notices are deemed effective after the sender receives a valid and digitally signed acknowledgment of receipt from ISRG. If an acknowledgement of receipt is not received within five days, the sender must resend the notice in paper form to the street address specified in Section 1.5.2 of this CP/CPS using either a courier service that confirms delivery or via certified or registered mail with postage prepaid and return receipt requested. ISRG may allow other forms of notice in its Subscriber Agreements.
+ISRG accepts notices related to this CP/CPS at the locations specified in [Section 1.5.2](#152-contact-person). Notices are deemed effective after the sender receives a valid and digitally signed acknowledgment of receipt from ISRG. If an acknowledgement of receipt is not received within five days, the sender must resend the notice in paper form to the street address specified in [Section 1.5.2](#152-contact-person) using either a courier service that confirms delivery or via certified or registered mail with postage prepaid and return receipt requested. ISRG may allow other forms of notice in its Subscriber Agreements.
 
 ## 9.12 Amendments
 
