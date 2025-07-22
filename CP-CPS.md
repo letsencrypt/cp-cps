@@ -521,7 +521,7 @@ ISRG considers key compromise demonstrated when revocation is successfully reque
 
 ISRG may also consider key compromise demonstrated by non-ACME methods.
 
-When key compromise is demonstrated, ISRG blocks the key from use in future issuance and revokes at least all unexpired non-Short-Lived Subscriber Certificates that used that key.
+When key compromise is demonstrated, ISRG blocks the key from use in future issuance and revokes at least all unexpired non-Short-lived Subscriber Certificates that used that key.
 
 ISRG does not consider a key compromised unless key compromise is demonstrated, but may revoke a certificate with reason code `keyCompromise` for other reasons. In these cases ISRG may not block the key from future use or revoke certificates using that key, even if the stated reason code is `keyCompromise`.
 
@@ -811,7 +811,7 @@ If a suitable successor entity exists, the following steps will be taken:
 
 If a suitable successor entity does not exist, the following steps will be taken:
 
-* All unexpired Subordinate CA Certificates and non-Short-Lived Subscriber Certificates will be revoked and final CRLs will be published.
+* All unexpired Subordinate CA Certificates and non-Short-lived Subscriber Certificates will be revoked and final CRLs will be published.
 * ISRG CA Private Keys will be destroyed.
 * CA records, logs, and other critical documentation will be transferred to a third party or government entity with appropriate legal controls in place to protect information while allowing its use in compliance with relevant policies and the law.
 
