@@ -863,7 +863,7 @@ See [Section 7](#7-certificate-crl-and-ocsp-profiles).
 
 ### 6.2.1 Cryptographic module standards and controls
 
-ISRG uses HSMs validated as meeting at least FIPS 140-2 level 3, FIPS 140-3 level 3, or an appropriate Common Criteria Protection Profile or Security Target, EAL 4 (or higher).
+ISRG uses HSMs validated as meeting FIPS 140-2 level 3 or FIPS 140-3 level 3 (or higher) requirements.
 
 ### 6.2.2 Private key (n out of m) multi-person control
 
