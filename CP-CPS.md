@@ -611,7 +611,7 @@ ISRG prohibits any media that contains or has contained sensitive data from leav
 
 ### 5.1.8 Off-site backup
 
-ISRG maintains multiple backups of ISRG CA Private Keys at multiple Secure PKI Facilities. All backups are stored on devices validated as meeting FIPS 140-2 Level 3 (or higher) criteria.
+ISRG maintains multiple backups of ISRG CA Private Keys at multiple Secure PKI Facilities. All backups are stored on devices validated as meeting at least FIPS 140-2 level 3, FIPS 140-3 level 3, or an appropriate Common Criteria Protection Profile or Security Target, EAL 4 (or higher), which includes requirements to protect the Private Key and other assets against known threats.
 
 ## 5.2 Procedural controls
 
@@ -849,7 +849,7 @@ Public keys in Subscriber Certificates issued by ISRG are either RSA keys whose 
 
 ### 6.1.6 Public key parameters generation and quality checking
 
-ISRG uses HSMs conforming to FIPS 186-4, capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
+ISRG uses HSMs capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
 
 Per [NIST SP 800‐89](https://doi.org/10.6028/NIST.SP.800-89) Section 5.3.3, the CA ensures that all RSA keys in ISRG CA and Subscriber certificates have a public exponent of 65537 and an odd modulus which has no factors smaller than 752.
 
@@ -863,7 +863,7 @@ See [Section 7](#7-certificate-crl-and-ocsp-profiles).
 
 ### 6.2.1 Cryptographic module standards and controls
 
-ISRG uses HSMs validated as meeting FIPS 140-2 Level 3 (or higher) requirements.
+ISRG uses HSMs validated as meeting at least FIPS 140-2 level 3, FIPS 140-3 level 3, or an appropriate Common Criteria Protection Profile or Security Target, EAL 4 (or higher), which includes requirements to protect the Private Key and other assets against known threats.
 
 ### 6.2.2 Private key (n out of m) multi-person control
 
@@ -899,7 +899,7 @@ ISRG CA Private Keys are always stored on HSMs and deactivated using the mechani
 
 ### 6.2.10 Method of destroying private key
 
-ISRG CA Private Keys are destroyed by Trusted Contributors using a FIPS 140-2 (or higher) validated zeroize method provided by the HSMs storing the keys. Physical destruction of the HSM is not required.
+ISRG CA Private Keys are destroyed by Trusted Contributors using a validated zeroize method provided by the HSMs storing the keys, such that recovery is reasonably believed to be impossible. Physical destruction of the HSM is not required.
 
 ### 6.2.11 Cryptographic Module Rating
 
