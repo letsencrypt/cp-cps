@@ -849,8 +849,6 @@ Public keys in Subscriber Certificates issued by ISRG are either RSA keys whose 
 
 ### 6.1.6 Public key parameters generation and quality checking
 
-ISRG uses HSMs capable of providing random number generation and on-board creation of at least 2048-bit RSA keys and at least 384-bit ECDSA keys.
-
 Per [NIST SP 800‐89](https://doi.org/10.6028/NIST.SP.800-89) Section 5.3.3, the CA ensures that all RSA keys in ISRG CA and Subscriber certificates have a public exponent of 65537 and an odd modulus which has no factors smaller than 752.
 
 Per [NIST SP 800-56A (Revision 2)](https://doi.org/10.6028/NIST.SP.800-56Ar2) Section 5.6.2.3.2, the CA ensures that all ECDSA keys in ISRG CA and Subscriber certificates comply with the ECC Full Public Key Validation Routine.
