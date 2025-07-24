@@ -1271,7 +1271,7 @@ ISRG does not use RA services from third parties.
 ### 9.6.3 Subscriber representations and warranties
 
 1. Each Subscriber warrants to ISRG and the public-at-large that Subscriber is the legitimate registrant or assignee of each Identifier that is, or is going to be, a subject of an ISRG certificate issued to Subscriber, or that Subscriber is the duly authorized agent of such entity.
-2. Each Subscriber warrants to ISRG and the public-at-large that either (a) Subscriber did not obtain control of any such Identifiers as the result of a seizure, or (b) any such Identifiers had no ongoing lawful uses at the time of such seizure.
+2. Each Subscriber warrants to ISRG and the public-at-large that either (a) Subscriber did not obtain control of any Identifiers as the result of a seizure, or (b) any such Identifiers had no ongoing lawful uses at the time of such seizure.
 3. Each Subscriber warrants that all information in an ISRG certificate issued to Subscriber regarding Subscriber and all Identifiers is accurate, current, reliable, complete, and not misleading.
 4. Each Subscriber warrants that all information provided by Subscriber to ISRG is accurate, current, complete, reliable, and not misleading.
 5. Each Subscriber warrants that Subscriber rightfully holds the Private Keys corresponding to the Public Keys listed in ISRG certificates issued to Subscriber.
