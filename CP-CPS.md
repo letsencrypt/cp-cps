@@ -985,15 +985,15 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 
 ### Root CA Certificate
 
-| Field or extension             | Value                                                         |
-| ------------------------------ | --------------------------------------------------------------|
-| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                  |
-| Issuer Distinguished Name      | C=US, O=Internet Security Research Group, and a meaningful CN |
-| Subject Distinguished Name     | Same as Issuer DN                                             |
-| Validity Period                | Up to 25 years                                                |
-| Basic Constraints              | cA=True, pathLength constraint absent (critical)              |
-| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                        |
-| Key Usage                      | keyCertSign, cRLSign (critical)                               |
+| Field or extension             | Value                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------|
+| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                            |
+| Issuer Distinguished Name      | C=US, O=Internet Security Research Group or O=ISRG, and a meaningful CN |
+| Subject Distinguished Name     | Same as Issuer DN                                                       |
+| Validity Period                | Up to 25 years                                                          |
+| Basic Constraints              | cA=True, pathLength constraint absent (critical)                        |
+| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                  |
+| Key Usage                      | keyCertSign, cRLSign (critical)                                         |
 
 ### Subordinate CA Certificate
 
