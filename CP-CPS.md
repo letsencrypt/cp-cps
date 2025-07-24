@@ -897,7 +897,7 @@ ISRG CA Private Keys are always stored on HSMs and deactivated using the mechani
 
 ### 6.2.10 Method of destroying private key
 
-ISRG CA Private Keys are destroyed by Trusted Contributors using a validated zeroize method provided by the HSMs storing the keys, such that recovery is reasonably believed to be impossible. Physical destruction of the HSM is not required.
+ISRG CA Private Keys are destroyed by Trusted Contributors using a zeroize method provided by the HSMs storing the keys, such that recovery is reasonably believed to be impossible. Physical destruction of the HSM is not required.
 
 ### 6.2.11 Cryptographic Module Rating
 
