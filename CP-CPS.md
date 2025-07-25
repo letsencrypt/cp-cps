@@ -885,7 +885,7 @@ ISRG CA Private Keys are generated inside HSMs and are only transferred between 
 
 ### 6.2.7 Private key storage on cryptographic module
 
-ISRG CA Private Keys are stored on HSMs meeting the requirements stated in [Section 6.2.1](#621-cryptographic-module-standards-and-controls).
+ISRG CA Private Keys are stored on HSMs meeting the specifications described in [Section 6.2.1](#621-cryptographic-module-standards-and-controls).
 
 ### 6.2.8 Method of activating private key
 
