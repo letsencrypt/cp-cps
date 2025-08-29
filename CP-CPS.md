@@ -1321,33 +1321,33 @@ Without waiving or limiting the foregoing in any way, ISRG does not make, and IS
 
 ISRG shall indemnify each Application Software Supplier that has a Root Certificate distribution agreement in place with the Root CA against any damage or loss suffered by such an Application Software Supplier related to or arising out of any third-party allegation, claim, lawsuit, or proceeding (a "Claim") to the extent such Claim is based on a Certificate issued by ISRG except where the claim, damage, or loss suffered by the Application Software Supplier was directly caused by the Application Software Supplier's software or service displaying either:
 
-(a) a valid and trustworthy Certificate as not valid or trustworthy, or  
-(b) displaying as trustworthy either (i) a Certificate that has expired, or (ii) a revoked Certificate, where the revocation status is available online but the Application Software Supplier's software or service failed to check or ignored the status.
+1. a valid and trustworthy Certificate as not valid or trustworthy, or  
+2. displaying as trustworthy either (i) a Certificate that has expired, or (ii) a revoked Certificate, where the revocation status is available online but the Application Software Supplier's software or service failed to check or ignored the status.
 
 #### 9.9.1.2 Indemnification Process
 
 In connection with any Claim described in the foregoing paragraph 9.9.1.1, the indemnified party will:
 
-(a) give ISRG prompt written notice of the Claim (provided that any delay in notification will not relieve ISRG of its indemnity obligations except to the extent that the delay impairs its ability to defend);  
-(b) cooperate reasonably with ISRG (at ISRG's expense) in connection with the defense and settlement of the Claim; and  
-(c) permit ISRG to control the defense and settlement of the Claim, provided that ISRG may not settle the Claim without the indemnified party's prior written consent (which will not be unreasonably withheld or delayed), and provided further that the indemnified party (at its cost) may participate in the defense and settlement of the Claim with counsel of its own choosing. ISRG's duty to indemnify under this Section 9.9.1 is independent from its other obligations under this CP/CPS.
+1. give ISRG prompt written notice of the Claim (provided that any delay in notification will not relieve ISRG of its indemnity obligations except to the extent that the delay impairs its ability to defend);  
+2. cooperate reasonably with ISRG (at ISRG's expense) in connection with the defense and settlement of the Claim; and  
+3. permit ISRG to control the defense and settlement of the Claim, provided that ISRG may not settle the Claim without the indemnified party's prior written consent (which will not be unreasonably withheld or delayed), and provided further that the indemnified party (at its cost) may participate in the defense and settlement of the Claim with counsel of its own choosing. ISRG's duty to indemnify under this Section 9.9.1 is independent from its other obligations under this CP/CPS.
 
 ### 9.9.2 Indemnification by Subscribers
 
 To the extent permitted by law, each Subscriber shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, arising out of or related to:
 
-(a) any misrepresentation or omission by Subscriber, regardless of whether the misrepresentation or omission was intentional or unintentional;  
-(b) Subscriber's breach of its Subscriber Agreement, this CP/CPS, or applicable law;  
-(c) the compromise or unauthorized use of a certificate or Private Key caused by the Subscriber's negligence or intentional acts; or  
-(d) Subscriber's misuse of a certificate or Private Key.
+1. any misrepresentation or omission by Subscriber, regardless of whether the misrepresentation or omission was intentional or unintentional;  
+2. Subscriber's breach of its Subscriber Agreement, this CP/CPS, or applicable law;  
+3. the compromise or unauthorized use of a certificate or Private Key caused by the Subscriber's negligence or intentional acts; or  
+4. Subscriber's misuse of a certificate or Private Key.
 
 ### 9.9.3 Indemnification by Relying Parties
 
 To the extent permitted by law, each Relying Party shall indemnify ISRG, its partners, and any cross-signed entities, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, arising out of or related to: 
 
-(a) breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CP/CPS, or applicable law;  
-(b) unreasonable reliance on a Certificate; or  
-(c) failure to check the Certificate's status prior to use.
+1. breach of any service terms applicable to the services provided by ISRG or its affiliates and used by the Relying Party, this CP/CPS, or applicable law;  
+2. unreasonable reliance on a Certificate; or  
+3. failure to check the Certificate's status prior to use.
 
 ## 9.10 Term and termination
 
