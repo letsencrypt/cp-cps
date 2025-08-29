@@ -44,7 +44,7 @@ The following revisions have been made:
 | Dec 12, 2024 | Make OCSP service optional. | 5.6 |
 | Jan 15, 2025 | Update trusted roles, make TLS Client Auth optional, document IP Address validation. | 5.7 |
 | Jul 30, 2025 | Updates regarding MPIC, Short-lived Certificate revocation, Root CA Certificate profile, WebTrust audits, and HSM validation standards. Minor language consistency and clarity updates throughout. | 5.8 |
-| Aug 28, 2025 | Add mass revocation readiness language. | 5.9 |
+| Aug 29, 2025 | Add mass revocation readiness language. | 5.9 |
 
 ## 1.3 PKI participants
 
