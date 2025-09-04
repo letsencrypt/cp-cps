@@ -22,6 +22,8 @@ The following Certification Authorities are covered under this document:
 |---------|--------------------|------------------------------|--------------------------|-----------------|
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X1 | RSA, n has 4096 bits, e=65537 | 96:BC:EC:06:26:49:76:F3:<br>74:60:77:9A:CF:28:C5:A7:<br>CF:E8:A3:C0:AA:E1:1A:8F:<br>FC:EE:05:C0:BD:DF:08:C6 | Not Before: Jun  4 11:04:38 2015 GMT,<br>Not After: Jun  4 11:04:38 2035 GMT |
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9B:8E:15:A8:6E:FC:<br>17:7A:57:AF:B7:17:1D:FC:<br>64:AD:D2:8C:2F:CA:8C:F1:<br>50:7E:34:45:3C:CB:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
+| Root CA | C=US,<br>O=ISRG,<br>CN=Root YE | ECDSA, NIST curve P-384 | E1:4F:FC:AD:5B:00:25:73:<br>10:06:CA:A4:3A:12:1A:22:<br>D8:E9:70:0F:4F:B9:CF:85:<br>2F:02:A7:08:AA:5D:56:66 | Not Before: Sep 3 00:00:00 2025 GMT,<br>Not After: Sep 2 23:59:59 2045 GMT |
+| Root CA | C=US,<br>O=ISRG,<br>CN=Root YR | RSA, n has 4096 bits, e=65537 | E5:7B:7E:6F:15:0C:41:91:<br>02:E8:D5:C0:55:72:9F:F9:<br>67:B9:D1:A8:29:BF:00:CE:<br>C8:9C:A6:04:EB:F4:A8:6F | Not Before: Sep 3 00:00:00 2025 GMT,<br>Not After: Sep 2 23:59:59 2045 GMT |
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. To
 view a copy of this license, visit <https://creativecommons.org/licenses/by/4.0/> or send a letter to Creative
@@ -45,6 +47,7 @@ The following revisions have been made:
 | Jan 15, 2025 | Update trusted roles, make TLS Client Auth optional, document IP Address validation. | 5.7 |
 | Jul 30, 2025 | Updates regarding MPIC, Short-lived Certificate revocation, Root CA Certificate profile, WebTrust audits, and HSM validation standards. Minor language consistency and clarity updates throughout. | 5.8 |
 | Aug 29, 2025 | Add mass revocation readiness language. | 5.9 |
+| Sep TKTK, 2025 | Add ISRG Root YE and Root YR. | 6.0 |
 
 ## 1.3 PKI participants
 
