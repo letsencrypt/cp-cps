@@ -153,9 +153,9 @@ See the Baseline Requirements and NetSec Requirements for additional acronyms.
 
 ### 1.6.3 References
 
-The "Baseline Requirements": [CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/)
+"Baseline Requirements": [CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/)
 
-The "NetSec Requirements": [CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/)
+"NetSec Requirements": [CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/)
 
 ### 1.6.4 Conventions
 
