@@ -47,7 +47,7 @@ The following revisions have been made:
 | Jan 15, 2025 | Update trusted roles, make TLS Client Auth optional, document IP Address validation. | 5.7 |
 | Jul 30, 2025 | Updates regarding MPIC, Short-lived Certificate revocation, Root CA Certificate profile, WebTrust audits, and HSM validation standards. Minor language consistency and clarity updates throughout. | 5.8 |
 | Aug 29, 2025 | Add mass revocation readiness language. | 5.9 |
-| Sep TKTK, 2025 | Add ISRG Root YE and Root YR. | 6.0 |
+| Nov 5, 2025 | Add ISRG Root YE and Root YR. | 6.0 |
 
 ## 1.3 PKI participants
 
