@@ -972,11 +972,9 @@ No stipulation.
 
 ## 6.7 Network security controls
 
-ISRG implements reasonable network security safeguards and controls to prevent unauthorized access to CA systems and infrastructure. ISRG complies with the CA/Browser Forum's Network and Certificate System Security Requirements.
+ISRG implements reasonable network security safeguards and controls to prevent unauthorized access to CA systems and infrastructure. ISRG complies with the CA/Browser Forum's Network and Certificate System Security Requirements. Identified vulnerabilities are responded to within 96 hours of review, and remediated within a timeframe based on their risk profile: critical vulnerabilities within 96 hours, high-risk within one month, medium-risk within three months, and low-risk within six months.
 
-ISRG's network is multi-tiered and utilizes the principle of defense in depth.
-
-Firewalls and other critical CA systems are configured based on a necessary-traffic-only allowlisting policy whenever possible.
+ISRG's network is multi-tiered and utilizes the principle of defense in depth. Firewalls and other critical CA systems are configured based on a necessary-traffic-only allowlisting policy whenever possible.
 
 ISRG Root CA Private Keys are stored offline in a secure manner.
 
