@@ -998,9 +998,9 @@ All certificates issued by ISRG are issued in accordance with exactly one of the
 |     `version`                  | See [Section 7.1.1](#711-version-numbers) |
 |     `serialNumber`             | Approximately 128 bits, including at least 64 bits of output from a CSPRNG |
 |     `signature`                | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
-|     `issuer`                   | C=US, O=ISRG, and a meaningful CN |
+|     `issuer`                   | Byte-for-byte identical to the `subject` field |
 |     `validity`                 | At most 9132 days |
-|     `subject`                  | Byte-for-byte identical to the `issuer` field |
+|     `subject`                  | C=US, O=ISRG, and a unique CN |
 |     `subjectPublicKeyInfo`     | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
 |     `issuerUniqueID`           | Not present |
 |     `subjectUniqueID`          | Not present |
@@ -1048,7 +1048,7 @@ All certificates issued by ISRG are issued in accordance with exactly one of the
 |     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
 |     `validity`                       | At most 8 years |
-|     `subject`                        | C=US, O=Let's Encrypt, and a meaningful CN |
+|     `subject`                        | C=US, O=Let's Encrypt, and a unique CN |
 |     `subjectPublicKeyInfo`           | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
 |     `issuerUniqueID`                 | Not present |
 |     `subjectUniqueID`                | Not present |
