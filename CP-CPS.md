@@ -184,7 +184,7 @@ New or updated ISRG Root and Subordinate CA certificates are made publicly avail
 
 ## 2.4 Access controls on repositories
 
-Read only access to the Policy and Legal Repository and certificate information is unrestricted. Write access is protected by logical and physical controls.
+Read only access to the Policy and Legal Repository and certificate information is unrestricted. Write access is protected by logical controls.
 
 # 3. IDENTIFICATION AND AUTHENTICATION
 
