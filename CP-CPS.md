@@ -121,7 +121,7 @@ The ISRG PMA approves any revisions to this CP/CPS after formal review.
 
 ### 1.6.1 Definitions
 
-**ACME Protocol**: A protocol used for validation, issuance, and management of certificates. The protocol is an open standard managed by the IETF.
+**ACME Protocol**: A protocol used for validation, issuance, and management of certificates. The protocol is an open standard specified in [RFC 8555](https://datatracker.ietf.org/doc/rfc8555/) and managed by the [IETF ACME Working Group](https://datatracker.ietf.org/wg/acme/about/).
 
 **CAB Forum**: Certificate Authority / Browser Forum, a group of CAs and browsers which come together to discuss technical and policy issues related to PKI systems. (<https://cabforum.org/>)
 
