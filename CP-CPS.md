@@ -1166,7 +1166,7 @@ ISRG is not required to publicly disclose any audit finding that does not impact
 
 ## 8.7 Self-Audits
 
-ISRG performs a quarterly internal audit of at least a random 3% of issuance since the last WebTrust audit period. This audit includes linting of the selected certificates. Results are saved and provided to auditors upon request.
+ISRG uses automated systems to perform a post-hoc self-audit of all certificates within 48 hours of their issuance in the normal case. Even in case of failure of those systems, ISRG guarantees that at least 3% of all certificates issued since the last self-audit undergo a self-audit at least quarterly. This audit includes linting of the selected certificates. Results are saved and provided to auditors upon request.
 
 # 9. OTHER BUSINESS AND LEGAL MATTERS
 
