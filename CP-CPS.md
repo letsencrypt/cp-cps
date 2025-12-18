@@ -488,7 +488,7 @@ In all cases, requests to revoke Short-lived Subscriber Certificates may be igno
 
 ### 4.9.4 Revocation request grace period
 
-There is no grace period for a revocation request. A revocation request must be made as soon as circumstances requiring revocation are confirmed.
+There is no grace period for a revocation request. A revocation request must be made as soon as reasonably possible after circumstances requiring revocation are confirmed.
 
 ### 4.9.5 Time within which CA must process the revocation request
 
