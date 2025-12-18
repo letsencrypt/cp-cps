@@ -162,7 +162,7 @@ See the Baseline Requirements and NetSec Requirements for additional acronyms.
 
 ### 1.6.4 Conventions
 
-Terms not otherwise defined in this CP/CPS shall be as defined in applicable agreements, user manuals, Certificate Policies, and Certification Practice Statements of the CA.
+No stipulation.
 
 # 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
 
