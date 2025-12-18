@@ -204,7 +204,7 @@ Subscribers are not identified in DV certificates. Certificates do not assert an
 
 ### 3.1.4 Rules for interpreting various name forms
 
-It is the CA's position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
+It is ISRG's position that homoglyph spoofing should be dealt with by registrars, and Web browsers should have sensible policies for when to display the punycode versions of names.
 
 ### 3.1.5 Uniqueness of names
 
