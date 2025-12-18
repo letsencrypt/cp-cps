@@ -178,9 +178,9 @@ Records of all ISRG Root and Subordinate CA certificates, including valid/expire
 
 ## 2.3 Time or frequency of publication
 
-New or updated ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as possible. This typically means within seven days of receipt or approval. The ISRG PMA approves and publishes updated CP/CPS documents at least annually.
+New or updated ISRG Combined CP/CPS, Privacy Policy, Subscriber Agreement, and WebTrust audit documents are made publicly available as soon as reasonably possible. This typically means within seven days of receipt or approval. The ISRG PMA approves and publishes updated CP/CPS documents at least annually.
 
-New or updated ISRG Root and Subordinate CA certificates are made publicly available as soon as possible. This typically means within seven days of creation.
+New or updated ISRG Root and Subordinate CA certificates are made publicly available as soon as reasonably possible. This typically means within seven days of creation.
 
 ## 2.4 Access controls on repositories
 
