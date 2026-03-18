@@ -341,7 +341,7 @@ ISRG does not guarantee issuance of a final certificate for every Precertificate
 
 ### 4.4.3 Notification of certificate issuance by the CA to other entities
 
-See [Section 4.4.2](#422-approval-or-rejection-of-certificate-applications).
+See [Section 4.4.2](#442-publication-of-the-certificate-by-the-ca).
 
 ## 4.5 Key pair and certificate usage
 
