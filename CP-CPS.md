@@ -1143,12 +1143,7 @@ ISRG's WebTrust auditors shall have no financial interest in, or other type of r
 
 ## 8.4 Topics covered by assessment
 
-WebTrust compliance audits cover ISRG's compliance with the ISRG CP/CPS, as well as one of the following two sets of WebTrust principles and criteria:
-
-* Principles and Criteria for Certification Authorities
-* WebTrust Principles and Criteria for Certification Authorities – SSL Baseline with Network Security
-
-or
+WebTrust compliance audits cover ISRG's compliance with the ISRG CP/CPS, as well as the following set of WebTrust principles and criteria:
 
 * Principles and Criteria for Certification Authorities
 * WebTrust Principles and Criteria for Certification Authorities – SSL Baseline
