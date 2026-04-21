@@ -7,15 +7,15 @@ body:
   attributes:
     label: CP/CPS Version
     description: What is the current CP/CPS version number?
+    placeholder: "5.9"
+  validations:
     required: true
-    placeholder: 5.9
 - type: dropdown
   id: sections
   attributes:
     label: Sections
     description: What sections does your change affect?
     multiple: true
-    required: true
     options:
       - 0. Whole Document
       - 1. Introduction
@@ -27,9 +27,12 @@ body:
       - 7. Certificate, CRL, and OCSP Profiles
       - 8. Compliance Audit and Other Assessments
       - 9. Other Business and Legal Matters
+  validations:
+    required: true
 - type: textarea
   id: body
   attributes:
     label: What is your proposed change?
-    required: true
     placeholder: If your proposal touches Section 9 "Other Business and Legal Matters", strongly consider consulting counsel before describing it here.
+  validations:
+    required: true
