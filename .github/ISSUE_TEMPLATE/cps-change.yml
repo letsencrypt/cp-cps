@@ -1,0 +1,35 @@
+name: CP/CPS Change Request
+description: Suggest a change to the Let's Encrypt CP/CPS
+type: bug
+body:
+- type: input
+  id: version
+  attributes:
+    label: CP/CPS Version
+    description: What is the current CP/CPS version number?
+    required: true
+    placeholder: 5.9
+- type: dropdown
+  id: sections
+  attributes:
+    label: Sections
+    description: What sections does your change affect?
+    multiple: true
+    required: true
+    options:
+      - 0. Whole Document
+      - 1. Introduction
+      - 2. Publication and Repository Responsibilities
+      - 3. Identification and Authentication
+      - 4. Certificate Life-Cycle Operational Requirements
+      - 5. Facility, Management, and Operational Controls
+      - 6. Technical Security Controls
+      - 7. Certificate, CRL, and OCSP Profiles
+      - 8. Compliance Audit and Other Assessments
+      - 9. Other Business and Legal Matters
+- type: textarea
+  id: body
+  attributes:
+    label: What is your proposed change?
+    required: true
+    placeholder: If your proposal touches Section 9 "Other Business and Legal Matters", strongly consider consulting counsel before describing it here.
