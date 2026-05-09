@@ -986,9 +986,9 @@ See [Section 5.5.5](#555-requirements-for-time-stamping-of-records).
 
 ## 7.1 Certificate profile
 
-All fields are as specified in RFC 5280 and the Baseline Requirements, including fields and extensions not specifically mentioned.
+All ISRG Certificates comply with one of the following Certificate Profiles, which are derived from the profiles with the same names found in Section 7.1.2 of the Baseline Requirements. Fields and extensions not specifically mentioned are as specified in RFC 5280 and the Baseline Requirements.
 
-### Root CA Certificate
+### Root CA Certificate Profile
 
 | Field or extension             | Value                                                                   |
 | ------------------------------ | ------------------------------------------------------------------------|
@@ -1000,7 +1000,23 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                  |
 | Key Usage                      | keyCertSign, cRLSign (critical)                                         |
 
-### Subordinate CA Certificate
+### Cross-Certified Subordinate CA Certificate Profile
+
+| Field or extension             | Value                                                                         |
+| ------------------------------ | ----------------------------------------------------------------------------- |
+| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                                  |
+| Issuer Distinguished Name      | Derived from Issuer certificate                                               |
+| Subject Distinguished Name     | Identical to the existing CA certificate                                      |
+| Validity Period                | Up to 8 years                                                                 |
+| Basic Constraints              | Identical to the existing CA certificate                                      |
+| Key Usage                      | Identical to the existing CA certificate                                      |
+| Extended Key Usage             | TLS Server Authentication and optionally TLS Client Authentication            |
+| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                   |
+| Authority Information Access   | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer |
+| Subject Public Key             | Identical to the existing CA certificate                                      |
+| CRL Distribution Points        | Contains a CRL URL; URL varies based on Issuer                                |
+
+### TLS Subordinate CA Certificate Profile
 
 | Field or extension             | Value                                                                         |
 | ------------------------------ | ----------------------------------------------------------------------------- |
@@ -1016,7 +1032,7 @@ All fields are as specified in RFC 5280 and the Baseline Requirements, including
 | Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                        |
 | CRL Distribution Points        | Contains a CRL URL; URL varies based on Issuer                                |
 
-### DV-SSL Subscriber Certificate
+### Subscriber (End-Entity) Certificate and Precertificate Profile
 
 | Field or extension                | Value                                                                             |
 | --------------------------------- | --------------------------------------------------------------------------------- |
