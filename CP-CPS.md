@@ -12,6 +12,8 @@ ISRG PKI services are most commonly, but not necessarily exclusively, provided u
 
 The ISRG PKI conforms to the current version of the Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <https://www.cabforum.org>. In the event of any inconsistency between this document and those Requirements, those Requirements take precedence over this document.
 
+The ISRG PKI conforms to the latest version of the Apple Root Certificate Program, the CCADB Policy, the Chrome Root Program Policy, the Microsoft Root Program Requirements, and the Mozilla Root Store Policy.
+
 Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found in the Policy and Legal Repository.
 
 Per IETF PKIX RFC 3647, this CP/CPS is divided into nine components that cover security controls, practices, and procedures for certification services provided by the ISRG PKI.
@@ -157,9 +159,19 @@ See the Baseline Requirements and NetSec Requirements for additional acronyms.
 
 ### 1.6.3 References
 
-"Baseline Requirements": [CA/Browser Forum Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates](https://cabforum.org/baseline-requirements-documents/)
+_Apple Root Certificate Program_, Apple, <https://www.apple.com/certificateauthority/ca_program.html>
 
-"NetSec Requirements": [CA/Browser Forum Network and Certificate System Security Requirements](https://cabforum.org/network-security-requirements/)
+_Baseline Requirements for the Issuance and Management of Publicly‐Trusted TLS Server Certificates_ ("Baseline Requirements"), CA/Browser Forum, <https://cabforum.org/baseline-requirements-documents/>
+
+_CCADB Policy_, The Linux Foundation, <https://www.ccadb.org/policy>
+
+_Chrome Root Program Policy_, Google, <https://g.co/chrome/root-policy>
+
+_Microsoft Root Program Requirements_, Microsoft, <https://aka.ms/rootcert>
+
+_Mozilla Root Store Policy_, Mozilla, <https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/>
+
+_Network and Certificate System Security Requirements_ ("NetSec Requirements"), CA/Browser Forum, <https://cabforum.org/network-security-requirements/>
 
 ### 1.6.4 Conventions
 
