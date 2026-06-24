@@ -21,7 +21,7 @@ The following Certification Authorities are covered under this document:
 | CA Type | Distinguished Name | Key Pair Type and Parameters | Cert SHA-256 Fingerprint | Validity Period |
 |---------|--------------------|------------------------------|--------------------------|-----------------|
 | Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X1 | RSA, n has 4096 bits, e=65537 | 96:BC:EC:06:26:49:76:F3:<br>74:60:77:9A:CF:28:C5:A7:<br>CF:E8:A3:C0:AA:E1:1A:8F:<br>FC:EE:05:C0:BD:DF:08:C6 | Not Before: Jun  4 11:04:38 2015 GMT,<br>Not After: Jun  4 11:04:38 2035 GMT |
-| Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9B:8E:15:A8:6E:FC:<br>17:7A:57:AF:B7:17:1D:FC:<br>64:AD:D2:8C:2F:CA:8C:F1:<br>50:7E:34:45:3C:CB:14:70 | Not Before: Sept  4 00:00:00 2020 GMT,<br>Not After: Sept 17 16:00:00 2040 GMT |
+| Root CA | C=US,<br>O=Internet Security Research Group,<br>CN=ISRG Root X2 | ECDSA, NIST curve P-384 | 69:72:9B:8E:15:A8:6E:FC:<br>17:7A:57:AF:B7:17:1D:FC:<br>64:AD:D2:8C:2F:CA:8C:F1:<br>50:7E:34:45:3C:CB:14:70 | Not Before: Sep 4 00:00:00 2020 GMT,<br>Not After: Sep 17 16:00:00 2040 GMT |
 | Root CA | C=US,<br>O=ISRG,<br>CN=Root YE | ECDSA, NIST curve P-384 | E1:4F:FC:AD:5B:00:25:73:<br>10:06:CA:A4:3A:12:1A:22:<br>D8:E9:70:0F:4F:B9:CF:85:<br>2F:02:A7:08:AA:5D:56:66 | Not Before: Sep 3 00:00:00 2025 GMT,<br>Not After: Sep 2 23:59:59 2045 GMT |
 | Root CA | C=US,<br>O=ISRG,<br>CN=Root YR | RSA, n has 4096 bits, e=65537 | E5:7B:7E:6F:15:0C:41:91:<br>02:E8:D5:C0:55:72:9F:F9:<br>67:B9:D1:A8:29:BF:00:CE:<br>C8:9C:A6:04:EB:F4:A8:6F | Not Before: Sep 3 00:00:00 2025 GMT,<br>Not After: Sep 2 23:59:59 2045 GMT |
 
@@ -300,7 +300,7 @@ ISRG performs all identification and authentication functions in accordance with
 
 Certificate information is verified using data and documents obtained no more than 90 days prior to issuance of the Certificate.
 
-As part of the validation process, ISRG checks for CAA records for each requested DNS name and follows the processing instructions found as specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
+As part of the validation process, ISRG checks for CAA records for each requested DNS name and follows the processing instructions specified in RFC 8659 and Section 3.2.2.8 of the Baseline Requirements. The CA acts in accordance with CAA records if present. If the CA issues, it does so within the TTL of the CAA record, or 8 hours, whichever is greater. The CA's CAA identifying domain is `letsencrypt.org`.
 
 ISRG maintains a list of high-risk domains and blocks issuance of certificates for those domains.
 
@@ -308,7 +308,7 @@ ISRG maintains a list of high-risk domains and blocks issuance of certificates f
 
 Approval requires successful completion of validation per [Section 3.2.2](#322-authentication-of-organization-identity) as well as compliance with all CA policies.
 
-The CA Server is periodically updated with the latest version of the Public Suffix List and consults the ICANN domains section for every requested DNS identifier. The CA server rejects issuance requests for DNS identifiers that do not have a Public Suffix in the ICANN domains section.
+The CA server is periodically updated with the latest version of the Public Suffix List and consults the ICANN domains section for every requested DNS identifier. The CA server rejects issuance requests for DNS identifiers that do not have a Public Suffix in the ICANN domains section.
 
 ### 4.2.3 Time to process certificate applications
 
@@ -342,7 +342,7 @@ ISRG does not guarantee issuance of a final certificate for every Precertificate
 
 ### 4.4.3 Notification of certificate issuance by the CA to other entities
 
-See [Section 4.4.2](#422-approval-or-rejection-of-certificate-applications).
+See [Section 4.4.2](#442-publication-of-the-certificate-by-the-ca).
 
 ## 4.5 Key pair and certificate usage
 
@@ -1058,7 +1058,7 @@ All certificates use X.509 version 3.
 
 ### 7.1.2 Certificate extensions
 
-See section 7.1.
+See Section 7.1.
 
 ### 7.1.3 Algorithm object identifiers
 
@@ -1080,7 +1080,7 @@ No stipulation.
 
 ### 7.1.6 Certificate policy object identifier
 
-See section 7.1.
+See Section 7.1.
 
 ### 7.1.7 Usage of Policy Constraints extension
 
@@ -1088,7 +1088,7 @@ Not applicable.
 
 ### 7.1.8 Policy qualifiers syntax and semantics
 
-See section 7.1.
+See Section 7.1.
 
 ### 7.1.9 Processing semantics for the critical Certificate Policies extension
 
@@ -1122,7 +1122,7 @@ For the status of Subscriber Certificates:
 
 ### 7.2.1 Version number(s)
 
-See section 7.2.
+See Section 7.2.
 
 ### 7.2.2 CRL and CRL entry extensions
 
@@ -1383,7 +1383,7 @@ ISRG will communicate the conditions and effect of this CP/CPS's termination via
 
 ## 9.11 Individual notices and communications with participants
 
-ISRG accepts notices related to this CP/CPS at the locations specified in [Section 1.5.2](#152-contact-person). Notices are deemed effective after the sender receives a valid and digitally signed acknowledgment of receipt from ISRG. If an acknowledgement of receipt is not received within five days, the sender must resend the notice in paper form to the street address specified in [Section 1.5.2](#152-contact-person) using either a courier service that confirms delivery or via certified or registered mail with postage prepaid and return receipt requested. ISRG may allow other forms of notice in its Subscriber Agreements.
+ISRG accepts notices related to this CP/CPS at the locations specified in [Section 1.5.2](#152-contact-person). Notices are deemed effective after the sender receives a valid and digitally signed acknowledgment of receipt from ISRG. If an acknowledgment of receipt is not received within five days, the sender must resend the notice in paper form to the street address specified in [Section 1.5.2](#152-contact-person) using either a courier service that confirms delivery or via certified or registered mail with postage prepaid and return receipt requested. ISRG may allow other forms of notice in its Subscriber Agreements.
 
 ## 9.12 Amendments
 
