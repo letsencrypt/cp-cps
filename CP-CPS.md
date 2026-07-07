@@ -987,8 +987,7 @@ See [Section 5.5.5](#555-requirements-for-time-stamping-of-records).
 
 ## 7.1 Certificate profile
 
-All certificates issued by ISRG are issued in accordance with exactly one of the following profiles, which are derived from the profiles with the same names
-found in Section 7.1.2 of the Baseline Requirements.
+All ISRG Certificates adhere to one of the following Certificate Profiles, which are derived from the profiles with the same names found in Section 7.1.2 of the Baseline Requirements.
 
 ### Root CA Certificate Profile
 
