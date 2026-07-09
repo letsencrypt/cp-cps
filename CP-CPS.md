@@ -987,7 +987,7 @@ See [Section 5.5.5](#555-requirements-for-time-stamping-of-records).
 
 ## 7.1 Certificate profile
 
-All ISRG Certificates adhere to one of the following Certificate Profiles, which are derived from the profiles with the same names found in Section 7.1.2 of the Baseline Requirements.
+All ISRG Certificates are issued in accordance with one of the following Certificate Profiles, which are derived from the profiles with the same names found in Section 7.1.2 of the Baseline Requirements.
 
 ### Root CA Certificate Profile
 
@@ -1005,7 +1005,7 @@ All ISRG Certificates adhere to one of the following Certificate Profiles, which
 |     `subjectUniqueID`          | Not present |
 |     `extensions`               | |
 |         `basicConstraints`     | Critical, with `cA` set to true |
-|         `keyUsage`             | Critical, with the `keyCertSign` (5) and `cRLSign` (6) bits set |
+|         `keyUsage`             | Critical, with only the `keyCertSign` (5) and `cRLSign` (6) bits set |
 |         `subjectKeyIdentifier` | Contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
 |         Any other extension    | Not present |
 | `signatureAlgorithm`           | Byte-for-byte identical to the `tbsCertificate.signature` |
@@ -1027,12 +1027,12 @@ All ISRG Certificates adhere to one of the following Certificate Profiles, which
 |     `subjectUniqueID`                | Not present |
 |     `extensions`                     | |
 |         `authorityInformationAccess` | Contains the HTTP URI of the Issuing CA's Certificate |
-|         `authorityKeyIdentifier`     | Byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `authorityKeyIdentifier`     | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
 |         `basicConstraints`           | Critical, with `cA` set to true and `pathLenConstraint` identical to the existing CA Certificate |
-|         `certificatePolicies`        | Contains the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
-|         `crlDistributionPoints`      | Contains the HTTP URI of a CRL issued by the Issuing CA |
-|         `extKeyUsage`                | Contains `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
-|         `keyUsage`                   | Critical, with the `keyCertSign` (5) and `cRLSign` (6) bits set |
+|         `certificatePolicies`        | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
+|         `crlDistributionPoints`      | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
+|         `extKeyUsage`                | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
+|         `keyUsage`                   | Critical, with only the `keyCertSign` (5) and `cRLSign` (6) bits set |
 |         `subjectKeyIdentifier`       | Byte-for-byte identical to the `subjectKeyIdentifier` of the existing CA Certificate |
 |         Any other extension          | Not present |
 | `signatureAlgorithm`                 | Byte-for-byte identical to the `tbsCertificate.signature` |
@@ -1054,12 +1054,12 @@ All ISRG Certificates adhere to one of the following Certificate Profiles, which
 |     `subjectUniqueID`                | Not present |
 |     `extensions`                     | |
 |         `authorityInformationAccess` | Contains the HTTP URI of the Issuing CA's Certificate |
-|         `authorityKeyIdentifier`     | Byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `authorityKeyIdentifier`     | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
 |         `basicConstraints`           | Critical, with `cA` set to true and `pathLenConstraint` set to 0 |
-|         `certificatePolicies`        | Contains the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
-|         `crlDistributionPoints`      | Contains the HTTP URI of a CRL issued by the Issuing CA |
-|         `extKeyUsage`                | Contains `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
-|         `keyUsage`                   | Critical, with the `digitalSignature` (0), `keyCertSign` (5), and `cRLSign` (6) bits set |
+|         `certificatePolicies`        | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
+|         `crlDistributionPoints`      | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
+|         `extKeyUsage`                | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
+|         `keyUsage`                   | Critical, with only the `digitalSignature` (0), `keyCertSign` (5), and `cRLSign` (6) bits set |
 |         `subjectKeyIdentifier`       | Contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
 |         Any other extension          | Not present |
 | `signatureAlgorithm`                 | Byte-for-byte identical to the `tbsCertificate.signature` |
@@ -1081,12 +1081,12 @@ All ISRG Certificates adhere to one of the following Certificate Profiles, which
 |     `subjectUniqueID`                    | Not present |
 |     `extensions`                         | |
 |         `authorityInformationAccess`     | Contains the HTTP URI of the Issuing CA's Certificate |
-|         `authorityKeyIdentifier`         | Byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `authorityKeyIdentifier`         | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
 |         `basicConstraints`               | Critical, with `cA` set to false |
-|         `certificatePolicies`            | Contains the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
-|         `crlDistributionPoints`          | Contains the HTTP URI of a CRL issued by the Issuing CA |
-|         `extKeyUsage`                    | Contains `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
-|         `keyUsage`                       | Critical, with the `digitalSignature` (0) bit set, and optionally the `keyEnciperment` (2) bit set |
+|         `certificatePolicies`            | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
+|         `crlDistributionPoints`          | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
+|         `extKeyUsage`                    | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
+|         `keyUsage`                       | Critical, with only the `digitalSignature` (0) bit (and the `keyEncipherment` (2) bit, for RSA keys) set |
 |         `SignedCertificateTimestampList` | Contains at least two SCTs from logs run by different operators |
 |         `subjectAltName`                 | A sequence of 1 to 100 names of type `dNSName` or `ipAddress` (critical if CN omitted) |
 |         `subjectKeyIdentifier`           | Optionally contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
