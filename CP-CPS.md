@@ -998,7 +998,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 |     `serialNumber`             | Approximately 128 bits, including at least 64 bits of output from a CSPRNG |
 |     `signature`                | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                   | Byte-for-byte identical to the `subject` field |
-|     `validity`                 | At most 9132 days |
+|     `validity`                 | At most 3660 days (approx. 10 years) |
 |     `subject`                  | C=US, O=ISRG, and a unique CN |
 |     `subjectPublicKeyInfo`     | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
 |     `issuerUniqueID`           | Not present |
@@ -1020,7 +1020,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 |     `serialNumber`                   | Approximately 128 bits, including at least 64 bits of output from a CSPRNG |
 |     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
-|     `validity`                       | At most 8 years |
+|     `validity`                       | At most 1098 days (approx. 3 years) |
 |     `subject`                        | Byte-for-byte identical to the `subject` field of the existing CA Certificate |
 |     `subjectPublicKeyInfo`           | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
 |     `issuerUniqueID`                 | Not present |
@@ -1047,7 +1047,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 |     `serialNumber`                   | Approximately 128 bits, including at least 64 bits of output from a CSPRNG |
 |     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
-|     `validity`                       | At most 8 years |
+|     `validity`                       | At most 1098 days (approx. 3 years) |
 |     `subject`                        | C=US, O=Let's Encrypt, and a unique CN |
 |     `subjectPublicKeyInfo`           | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
 |     `issuerUniqueID`                 | Not present |
