@@ -995,7 +995,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | ----                           | ------          |
 | `tbsCertificate`               | |
 |     `version`                  | See [Section 7.1.1](#711-version-numbers) |
-|     `serialNumber`             | 128 bits of output from a CSPRNG, optionally with additional bits |
+|     `serialNumber`             | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                   | Byte-for-byte identical to the `subject` field |
 |     `validity`                 | At most 3660 days (approx. 10 years) |
@@ -1017,7 +1017,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | ----                                 | ------          |
 | `tbsCertificate`                     | |
 |     `version`                        | See [Section 7.1.1](#711-version-numbers) |
-|     `serialNumber`                   | 128 bits of output from a CSPRNG, optionally with additional bits |
+|     `serialNumber`                   | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
 |     `validity`                       | At most 1098 days (approx. 3 years) |
@@ -1044,7 +1044,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | ----                                 | ------          |
 | `tbsCertificate`                     | |
 |     `version`                        | See [Section 7.1.1](#711-version-numbers) |
-|     `serialNumber`                   | 128 bits of output from a CSPRNG, optionally with additional bits |
+|     `serialNumber`                   | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
 |     `validity`                       | At most 1098 days (approx. 3 years) |
@@ -1071,7 +1071,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | ----                                     | ------          |
 | `tbsCertificate`                         | |
 |     `version`                            | See [Section 7.1.1](#711-version-numbers) |
-|     `serialNumber`                       | 136 bits of output from a CSPRNG, optionally with additional bits |
+|     `serialNumber`                       | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                          | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                             | Byte-for-byte identical to the `subject` field of the Issuing CA |
 |     `validity`                           | At most 100 days |
