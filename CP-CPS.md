@@ -1086,7 +1086,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 |         `certificatePolicies`            | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
 |         `crlDistributionPoints`          | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
 |         `extKeyUsage`                    | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
-|         `keyUsage`                       | Critical, with only the `digitalSignature` (0) bit (and the `keyEncipherment` (2) bit, for RSA keys) set |
+|         `keyUsage`                       | Critical, with only the `digitalSignature` (0) bit (and optionally the `keyEncipherment` (2) bit, for RSA keys) set |
 |         `SignedCertificateTimestampList` | Contains at least two SCTs from logs run by different operators |
 |         `subjectAltName`                 | A sequence of 1 to 100 names of type `dNSName` or `ipAddress` (critical if CN omitted) |
 |         `subjectKeyIdentifier`           | Optionally contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
