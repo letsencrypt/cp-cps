@@ -1022,7 +1022,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
 |     `validity`                       | At most 1098 days (approx. 3 years) |
 |     `subject`                        | Byte-for-byte identical to the `subject` field of the existing CA Certificate |
-|     `subjectPublicKeyInfo`           | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
+|     `subjectPublicKeyInfo`           | Byte-for-byte identical to the `subjectPublicKeyInfo` field of the existing CA Certificate. See also Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
 |     `issuerUniqueID`                 | Not present |
 |     `subjectUniqueID`                | Not present |
 |     `extensions`                     | |
