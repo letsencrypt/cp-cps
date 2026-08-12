@@ -51,6 +51,7 @@ The following revisions have been made:
 | Aug 29, 2025 | Add mass revocation readiness language. | 5.9 |
 | Nov 5, 2025 | Add ISRG Root YE and Root YR. | 6.0 |
 | May 12, 2026 | Add Cross-Certified Subordinate CA Profile, minor clean-ups. | 6.1 |
+| Aug 12, 2026 | Modernize certificate profiles, state adherence to root program policies. | 6.2 |
 
 ## 1.3 PKI participants
 
