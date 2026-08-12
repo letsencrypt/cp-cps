@@ -12,7 +12,7 @@ ISRG PKI services are most commonly, but not necessarily exclusively, provided u
 
 The ISRG PKI conforms to the current version of the Baseline Requirements for the Issuance and Management of Publicly-Trusted Certificates published at <https://www.cabforum.org>. In the event of any inconsistency between this document and those Requirements, those Requirements take precedence over this document.
 
-The ISRG PKI conforms to the latest version of the Apple Root Certificate Program, the CCADB Policy, the Chrome Root Program Policy, the Microsoft Root Program Requirements, and the Mozilla Root Store Policy.
+The ISRG PKI conforms to the latest published version of the Apple Root Certificate Program, the CCADB Policy, the Chrome Root Program Policy, the Microsoft Root Program Requirements, and the Mozilla Root Store Policy.
 
 Other documents related to the behavior and control of the ISRG PKI, such as a Subscriber Agreement and Privacy Policy, can be found in the Policy and Legal Repository.
 
