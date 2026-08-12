@@ -999,70 +999,116 @@ See [Section 5.5.5](#555-requirements-for-time-stamping-of-records).
 
 ## 7.1 Certificate profile
 
-All ISRG Certificates adhere to one of the following Certificate Profiles, which are derived from the profiles with the same names found in Section 7.1.2 of the Baseline Requirements. Fields and extensions not specifically mentioned are as specified in RFC 5280 and the Baseline Requirements.
+All ISRG Certificates are issued in accordance with one of the following Certificate Profiles, which are derived from the profiles with the same names found in Section 7.1.2 of the Baseline Requirements.
 
 ### Root CA Certificate Profile
 
-| Field or extension             | Value                                                                   |
-| ------------------------------ | ------------------------------------------------------------------------|
-| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                            |
-| Issuer Distinguished Name      | C=US, O=Internet Security Research Group or O=ISRG, and a meaningful CN |
-| Subject Distinguished Name     | Same as Issuer DN                                                       |
-| Validity Period                | Up to 25 years                                                          |
-| Basic Constraints              | cA=True, pathLength constraint absent (critical)                        |
-| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                  |
-| Key Usage                      | keyCertSign, cRLSign (critical)                                         |
+| **Field**                      | **Description** |
+| ----                           | ------          |
+| `tbsCertificate`               | |
+|     `version`                  | See [Section 7.1.1](#711-version-numbers) |
+|     `serialNumber`             | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
+|     `signature`                | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
+|     `issuer`                   | Byte-for-byte identical to the `subject` field |
+|     `validity`                 | At most 3660 days (approx. 10 years) |
+|     `subject`                  | C=US, O=ISRG, and a unique CN |
+|     `subjectPublicKeyInfo`     | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
+|     `issuerUniqueID`           | Not present |
+|     `subjectUniqueID`          | Not present |
+|     `extensions`               | |
+|         `basicConstraints`     | Critical, with `cA` set to true |
+|         `keyUsage`             | Critical, with only the `keyCertSign` (5) and `cRLSign` (6) bits set |
+|         `subjectKeyIdentifier` | Contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
+|         Any other extension    | Not present |
+| `signatureAlgorithm`           | Byte-for-byte identical to the `tbsCertificate.signature` |
+| `signatureValue`               | A signature appropriate to the `signatureAlgorithm` field |
 
 ### Cross-Certified Subordinate CA Certificate Profile
 
-| Field or extension             | Value                                                                         |
-| ------------------------------ | ----------------------------------------------------------------------------- |
-| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                                  |
-| Issuer Distinguished Name      | Derived from Issuer certificate                                               |
-| Subject Distinguished Name     | Identical to the existing CA certificate                                      |
-| Validity Period                | Up to 8 years                                                                 |
-| Basic Constraints              | Identical to the existing CA certificate                                      |
-| Key Usage                      | Identical to the existing CA certificate                                      |
-| Extended Key Usage             | TLS Server Authentication and optionally TLS Client Authentication            |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                   |
-| Authority Information Access   | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer |
-| Subject Public Key             | Identical to the existing CA certificate                                      |
-| CRL Distribution Points        | Contains a CRL URL; URL varies based on Issuer                                |
+| **Field**                            | **Description** |
+| ----                                 | ------          |
+| `tbsCertificate`                     | |
+|     `version`                        | See [Section 7.1.1](#711-version-numbers) |
+|     `serialNumber`                   | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
+|     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
+|     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
+|     `validity`                       | At most 1098 days (approx. 3 years) |
+|     `subject`                        | Byte-for-byte identical to the `subject` field of the existing CA Certificate |
+|     `subjectPublicKeyInfo`           | Byte-for-byte identical to the `subjectPublicKeyInfo` field of the existing CA Certificate. See also Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
+|     `issuerUniqueID`                 | Not present |
+|     `subjectUniqueID`                | Not present |
+|     `extensions`                     | |
+|         `authorityInformationAccess` | Contains the HTTP URI of the Issuing CA's Certificate |
+|         `authorityKeyIdentifier`     | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `basicConstraints`           | Critical, with `cA` set to true and `pathLenConstraint` identical to the existing CA Certificate |
+|         `certificatePolicies`        | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
+|         `crlDistributionPoints`      | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
+|         `extKeyUsage`                | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
+|         `keyUsage`                   | Critical, with only the `keyCertSign` (5) and `cRLSign` (6) bits set |
+|         `subjectKeyIdentifier`       | Byte-for-byte identical to the `subjectKeyIdentifier` of the existing CA Certificate |
+|         Any other extension          | Not present |
+| `signatureAlgorithm`                 | Byte-for-byte identical to the `tbsCertificate.signature` |
+| `signatureValue`                     | A signature appropriate to the `signatureAlgorithm` field |
 
 ### TLS Subordinate CA Certificate Profile
 
-| Field or extension             | Value                                                                         |
-| ------------------------------ | ----------------------------------------------------------------------------- |
-| Serial Number                  | Unique, with 64 bits of output from a CSPRNG                                  |
-| Issuer Distinguished Name      | Derived from Issuer certificate                                               |
-| Subject Distinguished Name     | C=US, O=Let's Encrypt, and a meaningful CN                                    |
-| Validity Period                | Up to 8 years                                                                 |
-| Basic Constraints              | cA=True, pathLength constraint 0 (critical)                                   |
-| Key Usage                      | keyCertSign, cRLSign, digitalSignature (critical)                             |
-| Extended Key Usage             | TLS Server Authentication and optionally TLS Client Authentication            |
-| Certificate Policies           | CAB Forum Domain Validated (2.23.140.1.2.1)                                   |
-| Authority Information Access   | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer |
-| Subject Public Key             | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                        |
-| CRL Distribution Points        | Contains a CRL URL; URL varies based on Issuer                                |
+| **Field**                            | **Description** |
+| ----                                 | ------          |
+| `tbsCertificate`                     | |
+|     `version`                        | See [Section 7.1.1](#711-version-numbers) |
+|     `serialNumber`                   | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
+|     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
+|     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
+|     `validity`                       | At most 1098 days (approx. 3 years) |
+|     `subject`                        | C=US, O=Let's Encrypt, and a unique CN |
+|     `subjectPublicKeyInfo`           | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
+|     `issuerUniqueID`                 | Not present |
+|     `subjectUniqueID`                | Not present |
+|     `extensions`                     | |
+|         `authorityInformationAccess` | Contains the HTTP URI of the Issuing CA's Certificate |
+|         `authorityKeyIdentifier`     | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `basicConstraints`           | Critical, with `cA` set to true and `pathLenConstraint` set to 0 |
+|         `certificatePolicies`        | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
+|         `crlDistributionPoints`      | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
+|         `extKeyUsage`                | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
+|         `keyUsage`                   | Critical, with only the `digitalSignature` (0), `keyCertSign` (5), and `cRLSign` (6) bits set |
+|         `subjectKeyIdentifier`       | Contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
+|         Any other extension          | Not present |
+| `signatureAlgorithm`                 | Byte-for-byte identical to the `tbsCertificate.signature` |
+| `signatureValue`                     | A signature appropriate to the `signatureAlgorithm` field |
 
-### Subscriber (End-Entity) Certificate and Precertificate Profile
+### Subscriber (Server) Certificate Profile
 
-| Field or extension                | Value                                                                             |
-| --------------------------------- | --------------------------------------------------------------------------------- |
-| Serial Number                     | Unique, with 64 bits of output from a CSPRNG                                      |
-| Issuer Distinguished Name         | Derived from Issuer certificate                                                   |
-| Subject Distinguished Name        | CN=none, or one of the values from the Subject Alternative Name extension         |
-| Validity Period                   | Up to 100 days                                                                    |
-| Basic Constraints                 | cA=False (critical)                                                               |
-| Key Usage                         | digitalSignature, and optionally keyEncipherment (critical)                       |
-| Extended Key Usage                | TLS Server Authentication and optionally TLS Client Authentication                |
-| Certificate Policies              | CAB Forum Domain Validated (2.23.140.1.2.1)                                       |
-| Authority Information Access      | Contains CA Issuers URL and optionally an OCSP URL; URLs vary based on Issuer     |
-| Subject Public Key                | See Sections 6.1.5, 6.1.6, and 7.1.3.1                                            |
-| Subject Alternative Name          | A sequence of 1 to 100 dNSNames or ipAddresses (critical if no CN)                |
-| Precertificate poison             | Per RFC 6962 (precertificates only, critical)                                     |
-| Signed Certificate Timestamp List | Per RFC 6962 (final certificates only)                                            |
-| CRL Distribution Point            | If present, contains a URI to the CRL shard whose scope includes this certificate |
+| **Field**                                | **Description** |
+| ----                                     | ------          |
+| `tbsCertificate`                         | |
+|     `version`                            | See [Section 7.1.1](#711-version-numbers) |
+|     `serialNumber`                       | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
+|     `signature`                          | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
+|     `issuer`                             | Byte-for-byte identical to the `subject` field of the Issuing CA |
+|     `validity`                           | At most 100 days |
+|     `subject`                            | CN omitted, or optionally contains one of the values from the Subject Alternative Name extension |
+|     `subjectPublicKeyInfo`               | See Sections [6.1.5](#615-key-sizes), [6.1.6](#616-public-key-parameters-generation-and-quality-checking), and [7.1.3.1](#7131-subjectpublickeyinfo) |
+|     `issuerUniqueID`                     | Not present |
+|     `subjectUniqueID`                    | Not present |
+|     `extensions`                         | |
+|         `authorityInformationAccess`     | Contains the HTTP URI of the Issuing CA's Certificate |
+|         `authorityKeyIdentifier`         | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `basicConstraints`               | Critical, with `cA` set to false |
+|         `certificatePolicies`            | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
+|         `crlDistributionPoints`          | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
+|         `extKeyUsage`                    | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
+|         `keyUsage`                       | Critical, with only the `digitalSignature` (0) bit (and optionally the `keyEncipherment` (2) bit, for RSA keys) set |
+|         `SignedCertificateTimestampList` | Contains at least two SCTs from logs run by different operators |
+|         `subjectAltName`                 | A sequence of 1 to 100 names of type `dNSName` or `ipAddress` (critical if CN omitted) |
+|         `subjectKeyIdentifier`           | Optionally contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
+|         Any other extension              | Not present |
+| `signatureAlgorithm`                     | Byte-for-byte identical to the `tbsCertificate.signature` |
+| `signatureValue`                         | A signature appropriate to the `signatureAlgorithm` field |
+
+### Precertificate Profile
+
+Identical to the Subscriber (Server) Certificate Profile, except that the `SignedCertificateTimestampList` extension is omitted, and a critical "CT poison" extension (OID 1.3.6.1.4.1.11129.2.4.3) is included. ISRG Precertificates are issued directly by the Issuing CA, not by a delegated Precertificate Signing CA.
 
 ### 7.1.1 Version number(s)
 
