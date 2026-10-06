@@ -524,7 +524,7 @@ When a Relying Party requests a CRL, the time to receive a response is less than
 
 ### 4.9.9 On-line revocation/status checking availability
 
-ISRG may provide revocation information via OCSP for Subscriber Certificates and/or Subordinate CA certificates, though ISRG makes no commitment to doing so.
+ISRG does not provide revocation information via OCSP.
 
 ### 4.9.10 On-line revocation checking requirements
 
@@ -1189,7 +1189,7 @@ No stipulation.
 
 ## 7.3 OCSP profile
 
-ISRG OCSP responders, if made available, implement the RFC 5019 profile of RFC 6960.
+No stipulation.
 
 ### 7.3.1 Version number(s)
 
