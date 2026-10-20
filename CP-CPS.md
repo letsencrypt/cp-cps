@@ -1323,7 +1323,7 @@ ISRG may disclose personal information under other circumstances that are descri
 
 ## 9.5 Intellectual property rights
 
-ISRG and/or its business partners own the intellectual property rights in ISRG's services, including the certificates, trademarks used in providing the services, and this CP/CPS. Certificate and revocation information are the property of ISRG. ISRG grants permission to reproduce and distribute certificates on a non-exclusive and royalty-free basis, provided that they are reproduced and distributed in full. Private Keys and Public Keys remain the property of the Subscribers who rightfully hold them.
+ISRG owns the intellectual property rights in ISRG's services, including the certificates ISRG issues, trademarks used in providing the services, and this CP/CPS. Certificate and revocation information are the property of ISRG. ISRG grants permission to reproduce and distribute certificates on a non-exclusive and royalty-free basis, provided that they are reproduced and distributed in full. Private Keys and Public Keys remain the property of the Subscribers who rightfully hold them.
 
 Notwithstanding the foregoing, third party software (including open source software) used by ISRG to provide its services is licensed, not owned, by ISRG.
 
@@ -1463,7 +1463,7 @@ The laws of the state of California, United States of America, govern the interp
 
 ## 9.15 Compliance with applicable law
 
-This CP/CPS is subject to all applicable laws and regulations, including United States restrictions on the export of software and cryptography products.
+ISRG issues Certificates and operates the ISRG PKI in accordance with all applicable laws.
 
 ## 9.16 Miscellaneous provisions
 
