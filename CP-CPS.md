@@ -1185,7 +1185,7 @@ See Section 7.2.
 
 ### 7.2.2 CRL and CRL entry extensions
 
-No stipulation.
+See Section 7.2.
 
 ## 7.3 OCSP profile
 
