@@ -1245,7 +1245,7 @@ ISRG performs a quarterly internal audit of at least a random 3% of issuance sin
 
 ### 9.1.1 Certificate issuance or renewal fees
 
-ISRG does not charge any fees for certificate issuance or renewal.
+ISRG does not charge any fees for certificate issuance.
 
 ### 9.1.2 Certificate access fees
 
