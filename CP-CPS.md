@@ -52,6 +52,7 @@ The following revisions have been made:
 | Nov 5, 2025 | Add ISRG Root YE and Root YR. | 6.0 |
 | May 12, 2026 | Add Cross-Certified Subordinate CA Profile, minor clean-ups. | 6.1 |
 | Aug 12, 2026 | Modernize certificate profiles, state adherence to root program policies. | 6.2 |
+| Oct 29, 2026 | Modernize CRL profiles, remove references to OCSP. | 6.3 |
 
 ## 1.3 PKI participants
 
