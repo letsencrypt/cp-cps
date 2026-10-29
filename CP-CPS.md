@@ -1072,7 +1072,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 |         `certificatePolicies`        | Contains only the Baseline Requirements Domain Validated Reserved Policy Identifier (OID 2.23.140.1.2.1) |
 |         `crlDistributionPoints`      | Contains the HTTP URI of a CRL issued by the Issuing CA whose scope includes this certificate |
 |         `extKeyUsage`                | Contains only `id-kp-serverAuth` (OID 1.3.6.1.5.5.7.3.1) |
-|         `keyUsage`                   | Critical, with only the `digitalSignature` (0), `keyCertSign` (5), and `cRLSign` (6) bits set |
+|         `keyUsage`                   | Critical, with only the `keyCertSign` (5), `cRLSign` (6), and optionally `digitalSignature` (0) bits set |
 |         `subjectKeyIdentifier`       | Contains a truncated hash of the `subjectPublicKey`, per Section 2(1) of RFC 7093 |
 |         Any other extension          | Not present |
 | `signatureAlgorithm`                 | Byte-for-byte identical to the `tbsCertificate.signature` |
