@@ -848,7 +848,7 @@ See the Let's Encrypt Subscriber Agreement for information regarding Subscriber 
 
 ### 6.1.2 Private key delivery to subscriber
 
-ISRG never generates or has access to Subscriber Private Keys.
+ISRG never generates or has access to Subscriber Private Keys, except in cases where ISRG is the Subscriber (such as for test sites).
 
 ### 6.1.3 Public key delivery to certificate issuer
 
