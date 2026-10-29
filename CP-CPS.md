@@ -160,7 +160,7 @@ See the Baseline Requirements and NetSec Requirements for additional acronyms.
 
 ### 1.6.3 References
 
-_Apple Root Certificate Program_, Apple, <https://www.apple.com/certificateauthority/ca_program.html>
+_Apple Root Certificate Program_, Apple, <https://github.com/apple/apple-root-program/blob/main/policy.md>
 
 _Baseline Requirements for the Issuance and Management of Publicly‐Trusted TLS Server Certificates_ ("Baseline Requirements"), CA/Browser Forum, <https://cabforum.org/baseline-requirements-documents/>
 
