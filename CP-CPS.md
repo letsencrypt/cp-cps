@@ -1198,7 +1198,7 @@ ISRG CRLs whose scope includes Subscriber Certificates are partitioned CRLs.
 |     `revokedCertificates`              | Present if and only if there is at least one revoked certificate entry |
 |         `serialNumber`                 | Byte-for-byte identical to the `serialNumber` of the revoked Certificate |
 |         `revocationDate`               | The date and time at which ISRG recorded the Certificate as revoked, no later than `thisUpdate` |
-|         `crlEntryExtensions`           | |
+|         `crlEntryExtensions`           | Present if and only if there is at least one CRL entry extension |
 |              `reasonCode`              | Contains the most appropriate revocation reason code from among 1, 4, 5, or 9, or not present if the revocation reason is unspecified (0) |
 |              Any other extension       | Not present |
 |     `extensions`                       | |
