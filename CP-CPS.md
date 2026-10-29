@@ -1007,7 +1007,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | **Field**                      | **Description** |
 | ----                           | ------          |
 | `tbsCertificate`               | |
-|     `version`                  | See [Section 7.1.1](#711-version-numbers) |
+|     `version`                  | X.509 v3 (integer value 2) |
 |     `serialNumber`             | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                   | Byte-for-byte identical to the `subject` field |
@@ -1029,7 +1029,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | **Field**                            | **Description** |
 | ----                                 | ------          |
 | `tbsCertificate`                     | |
-|     `version`                        | See [Section 7.1.1](#711-version-numbers) |
+|     `version`                        | X.509 v3 (integer value 2) |
 |     `serialNumber`                   | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
@@ -1056,7 +1056,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | **Field**                            | **Description** |
 | ----                                 | ------          |
 | `tbsCertificate`                     | |
-|     `version`                        | See [Section 7.1.1](#711-version-numbers) |
+|     `version`                        | X.509 v3 (integer value 2) |
 |     `serialNumber`                   | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                      | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                         | Byte-for-byte identical to the `subject` field of the Issuing CA |
@@ -1083,7 +1083,7 @@ All ISRG Certificates are issued in accordance with one of the following Certifi
 | **Field**                                | **Description** |
 | ----                                     | ------          |
 | `tbsCertificate`                         | |
-|     `version`                            | See [Section 7.1.1](#711-version-numbers) |
+|     `version`                            | X.509 v3 (integer value 2) |
 |     `serialNumber`                       | More than 100 bits of output from a CSPRNG, optionally with additional non-random bits |
 |     `signature`                          | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
 |     `issuer`                             | Byte-for-byte identical to the `subject` field of the Issuing CA |
@@ -1113,11 +1113,11 @@ Identical to the Subscriber (Server) Certificate Profile, except that the `Signe
 
 ### 7.1.1 Version number(s)
 
-All certificates use X.509 version 3.
+See [Section 7.1](#71-certificate-profile).
 
 ### 7.1.2 Certificate extensions
 
-See Section 7.1.
+See [Section 7.1](#71-certificate-profile).
 
 ### 7.1.3 Algorithm object identifiers
 
@@ -1139,7 +1139,7 @@ No stipulation.
 
 ### 7.1.6 Certificate policy object identifier
 
-See Section 7.1.
+See [Section 7.1](#71-certificate-profile).
 
 ### 7.1.7 Usage of Policy Constraints extension
 
@@ -1147,7 +1147,7 @@ Not applicable.
 
 ### 7.1.8 Policy qualifiers syntax and semantics
 
-See Section 7.1.
+See [Section 7.1](#71-certificate-profile).
 
 ### 7.1.9 Processing semantics for the critical Certificate Policies extension
 
@@ -1155,37 +1155,67 @@ Not applicable.
 
 ## 7.2 CRL profile
 
-For the status of Subordinate CA Certificates:
+All ISRG CRLs are issued in accordance with one of the following CRL Profiles. ISRG does not issue any CRLs whose scope includes both CA and Subscriber Certificates.
 
-| Field or Extension        | Value                                                                          |
-| ------------------------- | ------------------------------------------------------------------------------ |
-| Version                   | V2                                                                             |
-| Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                   |
-| ThisUpdate                | The date and time when the Certificate revocation list validity begins         |
-| NextUpdate                | Up to ThisUpdate + 1 year                                                      |
-| RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                          |
-| CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs  |
-| IssuingDistributionPoint  | If present, asserts onlyContainsCACerts                                        |
+### CA CRL Profile
 
-For the status of Subscriber Certificates:
+ISRG CRLs whose scope includes CA Certificates are full and complete CRLs.
 
-| Field or Extension        | Value                                                                                        |
-| ------------------------- | -------------------------------------------------------------------------------------------- |
-| Version                   | V2                                                                                           |
-| Signature Algorithm       | sha256WithRSAEncryption or ecdsa-with-SHA384                                                 |
-| ThisUpdate                | The date and time when the Certificate revocation list validity begins                       |
-| NextUpdate                | Up to ThisUpdate + 10 days                                                                   |
-| RevokedCertificates       | Contains: userCertificate, revocationDate, reasonCode                                        |
-| CRLnumber                 | The serial number of this CRL in an incrementally increasing sequence of CRLs                |
-| IssuingDistributionPoint  | Contains a distributionPoint pointing to the CRL's unique URL, asserts onlyContainsUserCerts |
+| **Field**                              | **Description** |
+| ---                                    | -----           |
+| `tbsCertList`                          |                 |
+|     `version`                          | X.509 v2 (integer value 1) |
+|     `signature`                        | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
+|     `issuer`                           | Byte-for-byte identical to the `subject` field of the Issuing CA |
+|     `thisUpdate`                       | The date and time at which the CRL validity begins |
+|     `nextUpdate`                       | At most 365 days after the `thisUpdate` |
+|     `revokedCertificates`              | Present if and only if there is at least one revoked certificate entry |
+|         `serialNumber`                 | Byte-for-byte identical to the `serialNumber` of the revoked Certificate |
+|         `revocationDate`               | The date and time at which ISRG recorded the Certificate as revoked, no later than `thisUpdate` |
+|         `crlEntryExtensions`           | |
+|              `reasonCode`              | Contains the most appropriate revocation reason code from among 1, 4, 5, or 9 |
+|              Any other extension       | Not present |
+|     `extensions`                       | |
+|         `authorityKeyIdentifier`       | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `CRLNumber`                    | Contains a strictly-increasing positive integer less than 2^159 |
+|         `issuingDistributionPoint`     | Critical, with only `onlyContainsCACerts` set to true |
+|         Any other extension            | Not present |
+| `signatureAlgorithm`                   | Byte-for-byte identical to the `tbsCertList.signature` |
+| `signatureValue`                       | A signature appropriate to the `signatureAlgorithm` field |
+
+### Subscriber CRL Profile
+
+ISRG CRLs whose scope includes Subscriber Certificates are partitioned CRLs.
+
+| **Field**                              | **Description** |
+| ---                                    | -----           |
+| `tbsCertList`                          |                 |
+|     `version`                          | X.509 v2 (integer value 1) |
+|     `signature`                        | See [Section 7.1.3.2](#7132-signature-algorithmidentifier) |
+|     `issuer`                           | Byte-for-byte identical to the `subject` field of the Issuing CA |
+|     `thisUpdate`                       | The date and time at which the CRL validity begins |
+|     `nextUpdate`                       | At most 10 days after the `thisUpdate` |
+|     `revokedCertificates`              | Present if and only if there is at least one revoked certificate entry |
+|         `serialNumber`                 | Byte-for-byte identical to the `serialNumber` of the revoked Certificate |
+|         `revocationDate`               | The date and time at which ISRG recorded the Certificate as revoked, no later than `thisUpdate` |
+|         `crlEntryExtensions`           | Present if and only if there is at least one CRL entry extension |
+|              `reasonCode`              | Contains the most appropriate revocation reason code from among 1, 4, 5, or 9, or not present if the revocation reason is unspecified (0) |
+|              Any other extension       | Not present |
+|     `extensions`                       | |
+|         `authorityKeyIdentifier`       | Contains a `keyIdentifier` byte-for-byte identical to the `subjectKeyIdentifier` of the Issuing CA |
+|         `CRLNumber`                    | Contains a strictly-increasing positive integer less than 2^159 |
+|         `issuingDistributionPoint`     | Critical, with only `onlyContainsUserCerts` set to true, and contains an HTTP URI byte-for-byte identical to that contained in the `crlDistributionPoints` extension of each Certificate in the CRL's scope |
+|         Any other extension            | Not present |
+| `signatureAlgorithm`                   | Byte-for-byte identical to the `tbsCertList.signature` |
+| `signatureValue`                       | A signature appropriate to the `signatureAlgorithm` field |
 
 ### 7.2.1 Version number(s)
 
-See Section 7.2.
+See [Section 7.2](#72-crl-profile).
 
 ### 7.2.2 CRL and CRL entry extensions
 
-No stipulation.
+See [Section 7.2](#72-crl-profile).
 
 ## 7.3 OCSP profile
 
